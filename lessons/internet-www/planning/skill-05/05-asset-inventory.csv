@@ -1,0 +1,9 @@
+Asset ID,Type,File,Activity,Status,Notes
+V01,SVG diagram,assets/visuals/internet_vs_www.svg,ACT-01,READY,Original diagram for Internet vs WWW
+V02,SVG diagram,assets/visuals/url_anatomy.svg,ACT-03,READY,Original URL breakdown diagram
+V03,SVG diagram,assets/visuals/rendering_pipeline.svg,ACT-06A,READY,Original rendering comparison diagram
+A04-GIF,Animated GIF,assets/animations/dns_query_flow.gif,ACT-04,READY,Looping explainer for DNS flow
+A05-GIF,Animated GIF,assets/animations/http_request_response.gif,ACT-05,READY,Looping explainer for HTTP request/response
+B01,Offline browser pages,assets/browser_offline/index.html (+ related files),ACT-02,READY,Used in real browser practice
+SIM01,Simulation fixtures,assets/simulation-fixtures.json,ACT-04/05/06,READY,Data fixtures for future interactive models
+SPEC04,Resource spec,05-activity-asset-specs.md,ALL,READY,Lesson-specific resource specification
