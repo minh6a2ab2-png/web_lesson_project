@@ -1,0 +1,544 @@
+{
+  "schema": "skill09-website-architecture-v1",
+  "lesson": "5.1 – The Internet and the World Wide Web",
+  "version": "3.2",
+  "stage": "DESIGN_ONLY",
+  "status": "PASS_CORE__SKILL08_PENDING",
+  "durationMinutes": 120,
+  "breakMinutes": 5,
+  "lessonMinutes": 115,
+  "languageCodes": [
+    "vi",
+    "en"
+  ],
+  "slides": [
+    {
+      "id": "SL-00",
+      "act": "ACT-00",
+      "minutes": 8,
+      "name": "The Web Is Down!",
+      "goal": "Phân loại dự đoán có điều kiện, ghi lý do và mức chắc chắn",
+      "action": "Chọn 1 trong 3 trạng thái cho sáu tình huống, viết lý do, được phép sửa",
+      "evidence": "EV-DIAG",
+      "resources": [
+        "A00-CASES"
+      ],
+      "input": [
+        "caseConditions"
+      ],
+      "output": [
+        "predictions",
+        "openQuestion"
+      ],
+      "completion": "Ghi ít nhất 1 lý do và 1 câu hỏi còn băn khoăn; không ép đáp đúng",
+      "objective": [
+        "OBJ-01",
+        "OBJ-09"
+      ],
+      "ku": [
+        "KU-01",
+        "KU-02",
+        "KU-03"
+      ],
+      "notes": "Không chấm điểm kiến thức chưa học; không công bố định nghĩa Internet/WWW."
+    },
+    {
+      "id": "SL-01",
+      "act": "ACT-01",
+      "minutes": 8,
+      "name": "Evidence desk",
+      "goal": "Tự nghiên cứu bằng chứng phân biệt mạng và tài nguyên Web",
+      "action": "Đọc CARD-01/02, chọn bằng chứng, vẽ hoặc xếp khái niệm",
+      "evidence": "EV-01",
+      "resources": [
+        "CARD-01",
+        "CARD-02"
+      ],
+      "input": [
+        "openQuestion"
+      ],
+      "output": [
+        "conceptClaims",
+        "networkMapDraft"
+      ],
+      "completion": "Có ít nhất hai nhận định sơ bộ kèm nguồn bằng chứng",
+      "objective": [
+        "OBJ-01",
+        "OBJ-08"
+      ],
+      "ku": [
+        "KU-01",
+        "KU-02",
+        "KU-03"
+      ],
+      "notes": "Thẻ bằng chứng mở theo yêu cầu, không điền đáp án vào sơ đồ trước."
+    },
+    {
+      "id": "SL-02",
+      "act": "ACT-01",
+      "minutes": 5,
+      "name": "Defend and revise",
+      "goal": "Giải thích và tự sửa quan hệ Internet–WWW",
+      "action": "Giảng sơ đồ, xử lý phản ví dụ webmail; tự nhớ lại qua 3 cue và ghi vở",
+      "evidence": "EV-01",
+      "resources": [
+        "V01",
+        "CARD-01",
+        "CARD-02"
+      ],
+      "input": [
+        "networkMapDraft",
+        "conceptClaims"
+      ],
+      "output": [
+        "networkMapFinal",
+        "conceptReflection",
+        "recall01"
+      ],
+      "completion": "Học sinh đã trình bày và có cơ hội đối chiếu bằng chứng; mức đạt do GV đánh giá",
+      "objective": [
+        "OBJ-01",
+        "OBJ-08"
+      ],
+      "ku": [
+        "KU-01",
+        "KU-02",
+        "KU-03"
+      ],
+      "notes": "Mở V01 sau khi học sinh trình bày, không tiết lộ sơ đồ chuẩn quá sớm."
+    },
+    {
+      "id": "SL-03",
+      "act": "ACT-02",
+      "minutes": 15,
+      "name": "Real Browser Mission",
+      "goal": "Tự khám phá công cụ truy cập Web trên trình duyệt thật",
+      "action": "Thao tác Chrome/Edge/Firefox; quay lại ghi mục đích→công cụ→kết quả; recall ngay ở cuối",
+      "evidence": "EV-02",
+      "resources": [
+        "B01",
+        "CARD-03",
+        "A02-HINTS"
+      ],
+      "input": [
+        "networkMapFinal"
+      ],
+      "output": [
+        "browserObserved",
+        "browserUrlExample",
+        "recall02"
+      ],
+      "completion": "Thao tác thực được quan sát; người học tự giải thích ≥3 chức năng",
+      "objective": [
+        "OBJ-02",
+        "OBJ-08"
+      ],
+      "ku": [
+        "KU-04",
+        "KU-05"
+      ],
+      "notes": "Không virtual browser; không tự kiểm tra history hay bookmark bằng JS của bài học; browser offline qua file:// không phải DNS/HTTP."
+    },
+    {
+      "id": "SL-04",
+      "act": "ACT-03",
+      "minutes": 8,
+      "name": "Compare URL examples",
+      "goal": "Nhận diện điểm chung và khác của các URL",
+      "action": "Quan sát URL thật đã dùng, so U1/U2; mở CARD-04, gắn nhãn U3/U4",
+      "evidence": "EV-03",
+      "resources": [
+        "CARD-04",
+        "A03-URL"
+      ],
+      "input": [
+        "browserUrlExample"
+      ],
+      "output": [
+        "urlHypothesis",
+        "urlLabels"
+      ],
+      "completion": "Có nhận định host/path và bằng chứng đối chiếu",
+      "objective": [
+        "OBJ-03",
+        "OBJ-08"
+      ],
+      "ku": [
+        "KU-07",
+        "KU-08",
+        "KU-09"
+      ],
+      "notes": "Không mở URL ví dụ trên mạng thật; các địa chỉ example.org chỉ là tài liệu."
+    },
+    {
+      "id": "SL-05",
+      "act": "ACT-03",
+      "minutes": 7,
+      "name": "URL transfer",
+      "goal": "Áp dụng quy tắc với URL chưa gặp và trường hợp ngoại lệ",
+      "action": "Phân tích U5; phát biểu không bắt buộc www/.html; recall trên URL chưa tô màu",
+      "evidence": "EV-03",
+      "resources": [
+        "V02",
+        "CARD-04"
+      ],
+      "input": [
+        "urlLabels",
+        "urlHypothesis"
+      ],
+      "output": [
+        "parsedReferenceUrl",
+        "dnsHost",
+        "recall03"
+      ],
+      "completion": "HS phân tích URL lạ và nêu lý do; cho xem V02 sau khi thử",
+      "objective": [
+        "OBJ-03",
+        "OBJ-08"
+      ],
+      "ku": [
+        "KU-07",
+        "KU-08",
+        "KU-09"
+      ],
+      "notes": "Cố định host bài học mô phỏng school.example.org để bước DNS nhất quán."
+    },
+    {
+      "id": "SL-06",
+      "act": "ACT-04",
+      "minutes": 4,
+      "name": "DNS question and prediction",
+      "goal": "Dự đoán tác động của cache và tên miền không tồn tại",
+      "action": "Đọc điều kiện ba ca DNS-A/B/C; ghi dự đoán trước khi chạy",
+      "evidence": "EV-04",
+      "resources": [
+        "CARD-05",
+        "SIM01"
+      ],
+      "input": [
+        "dnsHost"
+      ],
+      "output": [
+        "dnsPrediction"
+      ],
+      "completion": "Đã dự đoán tối thiểu ca A/B; chưa cần đúng",
+      "objective": [
+        "OBJ-04",
+        "OBJ-08",
+        "OBJ-09"
+      ],
+      "ku": [
+        "KU-12",
+        "KU-13"
+      ],
+      "notes": "Hiển thị rõ là simulated; không tự lookup DNS thật."
+    },
+    {
+      "id": "SL-07",
+      "act": "ACT-04",
+      "minutes": 11,
+      "name": "DNS Evidence Lab",
+      "goal": "Điều tra A/B/C, thu log và giải thích khác biệt",
+      "action": "Chọn ca, Step/Run/Pause/Reset; quan sát event log; điền bảng bằng chứng",
+      "evidence": "EV-04",
+      "resources": [
+        "SIM01",
+        "A04-GIF"
+      ],
+      "input": [
+        "dnsPrediction",
+        "dnsHost"
+      ],
+      "output": [
+        "dnsTrials",
+        "dnsSelectedAnswer",
+        "dnsExplanation"
+      ],
+      "completion": "A/B có log và lời giải thích; C được làm nếu còn thời gian",
+      "objective": [
+        "OBJ-04",
+        "OBJ-08",
+        "OBJ-09"
+      ],
+      "ku": [
+        "KU-12",
+        "KU-13"
+      ],
+      "notes": "A04-GIF chỉ minh họa sau dự đoán. Khi chưa có lab chạy bằng fixture log và thẻ sự kiện."
+    },
+    {
+      "id": "SL-08",
+      "act": "ACT-04",
+      "minutes": 3,
+      "name": "DNS conclusion",
+      "goal": "Phân biệt DNS trả địa chỉ và lỗi DNS so với HTTP 404",
+      "action": "So sánh A/B/C, trả lời phản biện, recall domain/IP/cache",
+      "evidence": "EV-04",
+      "resources": [
+        "CARD-05"
+      ],
+      "input": [
+        "dnsTrials"
+      ],
+      "output": [
+        "dnsConclusion",
+        "recall04",
+        "chosenResolvedAddress"
+      ],
+      "completion": "Có kết luận có dẫn log; lỗi NXDOMAIN không được sinh IP",
+      "objective": [
+        "OBJ-04",
+        "OBJ-08",
+        "OBJ-09"
+      ],
+      "ku": [
+        "KU-12",
+        "KU-13"
+      ],
+      "notes": "Nếu ca C đang được chọn thì nhắc quay về A/B trước khi nối sang HTTP."
+    },
+    {
+      "id": "SL-09",
+      "act": "ACT-05",
+      "minutes": 10,
+      "name": "Request–response workshop",
+      "goal": "Phân tích chiều trao đổi GET/response với 200 và 404",
+      "action": "Dự đoán rồi Step/Run các message, gắn sender/receiver, ghi status",
+      "evidence": "EV-05",
+      "resources": [
+        "SIM01",
+        "CARD-06",
+        "A05-GIF"
+      ],
+      "input": [
+        "chosenResolvedAddress",
+        "parsedReferenceUrl"
+      ],
+      "output": [
+        "httpCases",
+        "httpEvidence"
+      ],
+      "completion": "Có bằng chứng về request/response và giải thích 200/404",
+      "objective": [
+        "OBJ-05",
+        "OBJ-08"
+      ],
+      "ku": [
+        "KU-10"
+      ],
+      "notes": "Nếu chưa có địa chỉ ví dụ hợp lệ, chỉ chạy ca tách rời đã gắn nhãn, không tiếp nối giả."
+    },
+    {
+      "id": "SL-10",
+      "act": "ACT-05",
+      "minutes": 8,
+      "name": "HTTPS claim check",
+      "goal": "Giải thích chính xác HTTPS bảo vệ gì, không chứng minh gì",
+      "action": "Phân tích ca HTTP/HTTPS giả lập; tự lập luận về độ tin cậy nội dung; recall",
+      "evidence": "EV-05",
+      "resources": [
+        "CARD-07",
+        "SIM01"
+      ],
+      "input": [
+        "httpEvidence"
+      ],
+      "output": [
+        "httpsClaim",
+        "recall05"
+      ],
+      "completion": "Nêu một điều HTTPS hỗ trợ và một điều HTTPS không bảo đảm",
+      "objective": [
+        "OBJ-05",
+        "OBJ-09"
+      ],
+      "ku": [
+        "KU-10",
+        "KU-11"
+      ],
+      "notes": "Không thể hiện mô phỏng như packet capture TLS thật; không coi khóa là bằng chứng nội dung đúng."
+    },
+    {
+      "id": "SL-11",
+      "act": "ACT-06A",
+      "minutes": 6,
+      "name": "Same HTML, different experience",
+      "goal": "So sánh HTML/CSS/JS trong cùng nội dung",
+      "action": "Quan sát nội dung chưa style → áp CSS → nhấn nút bật JS; ghi thay đổi",
+      "evidence": "EV-06",
+      "resources": [
+        "CARD-08",
+        "V03",
+        "SIM01"
+      ],
+      "input": [
+        "httpCases"
+      ],
+      "output": [
+        "renderObservations",
+        "renderTrial"
+      ],
+      "completion": "Nêu được khác biệt cấu trúc, trình bày, hành vi trên cùng nguồn HTML",
+      "objective": [
+        "OBJ-06",
+        "OBJ-08"
+      ],
+      "ku": [
+        "KU-06"
+      ],
+      "notes": "V03 là ảnh giải thích sau quan sát; mô hình tương tác cần đảm bảo HTML giữ nguyên giữa S1/S2."
+    },
+    {
+      "id": "SL-12",
+      "act": "ACT-06A",
+      "minutes": 4,
+      "name": "What does the browser remember?",
+      "goal": "Phân biệt bookmark/history/cache/cookie",
+      "action": "Phân loại bốn ca, giải thích một lựa chọn; recall HTML/CSS/JS và history/cache",
+      "evidence": "EV-06",
+      "resources": [
+        "CARD-09"
+      ],
+      "input": [
+        "renderObservations",
+        "browserObserved"
+      ],
+      "output": [
+        "browserDataMatch",
+        "recall06"
+      ],
+      "completion": "≥3/4 phân loại đúng và giải thích được; chưa đòi hỏi cookie chuyên sâu",
+      "objective": [
+        "OBJ-06",
+        "OBJ-08"
+      ],
+      "ku": [
+        "KU-15"
+      ],
+      "notes": "Không thu cookie/history thật; không giả định private mode vẫn ghi history."
+    },
+    {
+      "id": "SL-13",
+      "act": "ACT-06B",
+      "minutes": 13,
+      "name": "Build and Teach the Web Journey",
+      "goal": "Tích hợp bằng chứng thành sơ đồ có điều kiện và giảng lại",
+      "action": "Sắp khối có mũi tên và nhánh; học sinh giảng 2–3 phút; tự sửa sau phản biện; recall",
+      "evidence": "EV-07",
+      "resources": [
+        "CARD-10"
+      ],
+      "input": [
+        "parsedReferenceUrl",
+        "dnsTrials",
+        "httpCases",
+        "renderTrial",
+        "networkMapFinal"
+      ],
+      "output": [
+        "journeyGraph",
+        "teachBackNotes",
+        "recall07"
+      ],
+      "completion": "Có ≥5/6 vai trò, ≥1 nhánh có căn cứ; ghi mức hỗ trợ H0–H3",
+      "objective": [
+        "OBJ-07",
+        "OBJ-08",
+        "OBJ-09"
+      ],
+      "ku": [
+        "KU-14"
+      ],
+      "notes": "Không khóa thứ tự như một chuỗi luôn bắt buộc; DNS khi cần, 404 có thể render trang lỗi."
+    },
+    {
+      "id": "SL-14",
+      "act": "ACT-07",
+      "minutes": 5,
+      "name": "Exit ticket",
+      "goal": "Đánh giá chuyển giao độc lập và xác định nội dung cần ôn",
+      "action": "Phân tích URL mới; viết giải thích gọn về DNS/HTTP/render & HTTPS; tự chấm M1–M4",
+      "evidence": "EV-EXIT",
+      "resources": [
+        "07-student-task-sheets"
+      ],
+      "input": [
+        "journeyGraph"
+      ],
+      "output": [
+        "exitSubmission",
+        "selfRating",
+        "reviewNeeds"
+      ],
+      "completion": "Học sinh nộp câu trả lời mà không xem đáp án trước; GV đối chiếu rubric",
+      "objective": [
+        "OBJ-03",
+        "OBJ-04",
+        "OBJ-05",
+        "OBJ-06",
+        "OBJ-07",
+        "OBJ-08",
+        "OBJ-09"
+      ],
+      "ku": [
+        "KU-07",
+        "KU-10",
+        "KU-11",
+        "KU-12",
+        "KU-14"
+      ],
+      "notes": "Homework từ Skill08 chưa có; chỉ ghi danh sách mục cần ôn, không tự tạo bài giao hoàn chỉnh."
+    }
+  ],
+  "break": {
+    "id": "BREAK-05",
+    "minutes": 5,
+    "after": "SL-05",
+    "before": "SL-06"
+  },
+  "activities": [
+    "ACT-00",
+    "ACT-01",
+    "ACT-02",
+    "ACT-03",
+    "ACT-04",
+    "ACT-05",
+    "ACT-06A",
+    "ACT-06B",
+    "ACT-07"
+  ],
+  "evidenceIds": [
+    "EV-DIAG",
+    "EV-01",
+    "EV-02",
+    "EV-03",
+    "EV-04",
+    "EV-05",
+    "EV-06",
+    "EV-07",
+    "EV-EXIT"
+  ],
+  "upstream": {
+    "01": "01-content-map-internet-www-v3.1.md",
+    "02": "02-resource-bank-internet-www-v3.1.md",
+    "03": "03-lesson-blueprint.md",
+    "04": "04-activity-concepts.md (real browser revision)",
+    "05": "Skill05_Internet_WWW_v3.2",
+    "06": "06-ke-hoach-bai-day-5512.md",
+    "07": "07-scenarios.md",
+    "08": null
+  },
+  "simulationFixtures": "Skill05_Internet_WWW_v3.2/assets/simulation-fixtures.json",
+  "homework": {
+    "status": "PENDING_SKILL_08",
+    "slot": "HW-08-PENDING"
+  },
+  "constraints": {
+    "noVirtualBrowser": true,
+    "plainHtmlCssJsOnly": true,
+    "offlineCore": true,
+    "mustNotInventNetworkTraffic": true,
+    "languageToggleEveryVisibleString": true,
+    "studentSpeechNotMachineVerifiable": true
+  }
+}
