@@ -1,0 +1,46 @@
+{
+  "version": "3.3-prerun",
+  "status": "SKILL09_DEFINITION_UPDATED_LESSON_NOT_RERUN",
+  "files": [
+    {
+      "file": "SKILL.md",
+      "bytes": 21062,
+      "sha256": "c789f902b719fc8d8172b33ff5888f16b66a19e2134954deef0de36c73676256"
+    },
+    {
+      "file": "README.md",
+      "bytes": 830,
+      "sha256": "6884d078240014fb131fd41056e461ea1be33c64ce64629458a24344ada6b8d2"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "bytes": 1677,
+      "sha256": "c09698ccb377d84ee1add0405f6c60d066b5121aa6c8cba913e6fa13f926ebd1"
+    },
+    {
+      "file": "references/mode-selection-rubric.md",
+      "bytes": 1685,
+      "sha256": "4ef19f0cf832b2ea2f6825b30ac4ea9e6ef32a7d427605568c6858f0e678e7b6"
+    },
+    {
+      "file": "references/tutor-script-policy.md",
+      "bytes": 1819,
+      "sha256": "ba4748c9e2aa19671717889d200baad4f5c779888d6bcd313ca40eb28cfad8a2"
+    },
+    {
+      "file": "references/scene-contract-example.json",
+      "bytes": 2795,
+      "sha256": "cdc09a814bca9cbbc83ed5422c8af5a46a09ba16798b1c47bb3462cd39e56784"
+    },
+    {
+      "file": "Skill09_v3_3_Huong_dan_cap_nhat.docx",
+      "bytes": 32947,
+      "sha256": "c10dcc7db7f1ac60572cfc4a9113604f2e610c67d3e3c4728215eb66569b6acb"
+    },
+    {
+      "file": "Skill09_v3_3_Huong_dan_cap_nhat.pdf",
+      "bytes": 125875,
+      "sha256": "f71ec90f796915677bf81d762f526928fa1e91173b3e8f97b71325d566ff2480"
+    }
+  ]
+}
