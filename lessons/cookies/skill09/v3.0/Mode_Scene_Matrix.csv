@@ -1,0 +1,23 @@
+﻿scene_id,section,title,base_layout,recommended_modes,asset,asset_status,reveal_rule
+P00-01,P00,Một website có thể nhớ em?,cover,"presentation, story",,TEXT_OR_GENERATED_UI,opening_question
+D0-01,D0,Ai xin trang? Ai trả trang?,diagram,"presentation, story, focus, dual",browser_server_blank.svg,READY_SOURCE,prediction_before_explanation
+D0-02,D0,Một mẩu dữ liệu có ý nghĩa gì?,question,"presentation, story, focus",,TEXT_OR_GENERATED_UI,prediction_before_explanation
+A1-01,ACT01,Vì sao lần sau vẫn là tiếng Việt?,compare,"presentation, story, dual",,P0_CREATE_UI_PAIR,prediction_before_explanation
+A1-02,ACT01,Cookie là một mẩu dữ liệu,focus,"presentation, story, map",,TEXT_OR_GENERATED_UI,prediction_before_explanation
+A1-03,ACT01,Thẻ nào là dữ liệu ghi nhớ?,practice,"presentation, focus, dual",,TEXT_OR_GENERATED_UI,prediction_before_explanation
+A2-01,ACT02,Bước 1 · Browser xin trang,progressive,"presentation, story, lab, dual",browser_server_blank.svg,READY_SOURCE,prediction_before_explanation
+A2-02,ACT02,Ai gửi Set-Cookie?,practice,"presentation, lab, focus, dual",,P0_REUSE_INTERACTIVE,prediction_before_explanation
+A2-03,ACT02,Browser có thể lưu hoặc từ chối,compare,"presentation, story, lab, dual",,P0_REUSE_INTERACTIVE,prediction_before_explanation
+A2-04,ACT02,Lượt sau: Cookie đi hướng nào?,progressive,"presentation, story, lab, dual",cookie_lifecycle.svg,READY_SOURCE,prediction_before_explanation
+A2-05,ACT02,Nhận Cookie và chặn Cookie,compare,"presentation, lab, dual",cookie_accept_block.svg,READY_SOURCE,prediction_before_explanation
+A2-06,ACT02,Vẽ lại hai chiều không nhìn mẫu,recall,"presentation, focus, map",,TEXT_OR_GENERATED_UI,prediction_before_explanation
+A3-01,ACT03,Cookie nào còn vào ngày mai?,timeline,"presentation, story, lab, dual",,P0_CREATE_BLANK_TIMELINE,prediction_before_explanation
+A3-02,ACT03,"Đổi thời hạn, đổi loại Cookie",compare,"presentation, lab, dual",session_persistent_timeline.svg,READY_SOURCE,prediction_before_explanation
+A3-03,ACT03,Hai loại khác nhau ở đâu?,recall,"presentation, focus, map",,TEXT_OR_GENERATED_UI,prediction_before_explanation
+A4-01,ACT04,Ba công dụng của Cookie,trio,"presentation, story, map, dual",,P1_CREATE_SCENARIO_CARDS,prediction_before_explanation
+A4-02,ACT04,Sống lâu có phải là tracking?,compare,"presentation, focus, dual",,P1_CREATE_PURPOSE_LIFETIME_MATRIX,prediction_before_explanation
+A4-03,ACT04,Em hãy dạy lại một tình huống,recall,"presentation, focus, map",,TEXT_OR_GENERATED_UI,prediction_before_explanation
+A5-01,ACT05,Thử sức độc lập: website câu lạc bộ,exit,assessment,,TEXT_OR_GENERATED_UI,student_assessment_isolated
+A5-02,ACT05,EXIT: ba ô A · B · C,exit,assessment,,TEXT_OR_GENERATED_UI,student_assessment_isolated
+P07-01,P07,Nhớ lại bằng sơ đồ trống,recall,"presentation, focus, map",cookies_mindmap_blank.svg,READY_SOURCE,prediction_before_explanation
+P07-02,P07,Flashcards và dạy lại,trio,"presentation, focus, map",,P1_CREATE_FLASHCARDS,prediction_before_explanation
