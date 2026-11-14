@@ -1,0 +1,23 @@
+﻿scene_id,mode_candidate,score_pedagogy,score_interaction,score_resource,score_attention,score_resilience,score_self_learning,total,selected_mode,fallback_mode,decision_reason,self_learning_gate
+P00-01,presentation,2,1,2,2,2,2,11,presentation,presentation,Mô hình slide đáp ứng mục tiêu mà không cần Lab phức tạp,DESIGN_PASS_NOT_PILOTED
+D0-01,presentation,2,1,2,2,2,2,11,presentation,presentation,Mô hình slide đáp ứng mục tiêu mà không cần Lab phức tạp,DESIGN_PASS_NOT_PILOTED
+D0-02,presentation,2,1,2,2,2,2,11,presentation,presentation,Mô hình slide đáp ứng mục tiêu mà không cần Lab phức tạp,DESIGN_PASS_NOT_PILOTED
+A1-01,story,2,2,1,2,2,2,11,story,presentation,UI pair mới ở mức mô phỏng; cần sản xuất asset P0 chính thức,DESIGN_PASS_NOT_PILOTED
+A1-02,presentation,2,1,2,2,2,2,11,presentation,presentation,Mô hình slide đáp ứng mục tiêu mà không cần Lab phức tạp,DESIGN_PASS_NOT_PILOTED
+A1-03,presentation,2,1,2,2,2,2,11,presentation,presentation,Mô hình slide đáp ứng mục tiêu mà không cần Lab phức tạp,DESIGN_PASS_NOT_PILOTED
+A2-01,presentation,2,1,2,2,2,2,11,presentation,presentation,Mô hình slide đáp ứng mục tiêu mà không cần Lab phức tạp,DESIGN_PASS_NOT_PILOTED
+A2-02,presentation,2,1,2,2,2,2,11,presentation,presentation,Mô hình slide đáp ứng mục tiêu mà không cần Lab phức tạp,DESIGN_PASS_NOT_PILOTED
+A2-03,lab-prototype,2,2,1,2,2,2,11,lab,presentation,Lab giả lập chứng minh bố cục; Skill11 cần tích hợp lab thật,DESIGN_PASS_NOT_PILOTED
+A2-04,lab-prototype,2,2,1,2,2,2,11,lab,presentation,Lab giả lập chứng minh bố cục; Skill11 cần tích hợp lab thật,DESIGN_PASS_NOT_PILOTED
+A2-05,lab-prototype,2,2,1,2,2,2,11,lab,presentation,Lab giả lập chứng minh bố cục; Skill11 cần tích hợp lab thật,DESIGN_PASS_NOT_PILOTED
+A2-06,focus,2,2,2,2,2,2,12,focus,presentation,"Học sinh tự nói/viết, chỉ cần textarea hoặc giấy",DESIGN_PASS_NOT_PILOTED
+A3-01,presentation,2,1,1,2,2,2,10,presentation,presentation,Mô hình slide đáp ứng mục tiêu mà không cần Lab phức tạp,DESIGN_PASS_NOT_PILOTED
+A3-02,presentation,2,1,2,2,2,2,11,presentation,presentation,Mô hình slide đáp ứng mục tiêu mà không cần Lab phức tạp,DESIGN_PASS_NOT_PILOTED
+A3-03,focus,2,2,2,2,2,2,12,focus,presentation,"Học sinh tự nói/viết, chỉ cần textarea hoặc giấy",DESIGN_PASS_NOT_PILOTED
+A4-01,presentation,2,1,2,2,2,2,11,presentation,presentation,Mô hình slide đáp ứng mục tiêu mà không cần Lab phức tạp,DESIGN_PASS_NOT_PILOTED
+A4-02,presentation,2,1,2,2,2,2,11,presentation,presentation,Mô hình slide đáp ứng mục tiêu mà không cần Lab phức tạp,DESIGN_PASS_NOT_PILOTED
+A4-03,focus,2,2,2,2,2,2,12,focus,presentation,"Học sinh tự nói/viết, chỉ cần textarea hoặc giấy",DESIGN_PASS_NOT_PILOTED
+A5-01,assessment,2,0,2,2,2,2,10,assessment,assessment khóa,Yêu cầu độc lập; cấm gợi ý nội dung,DESIGN_PASS_NOT_PILOTED
+A5-02,assessment,2,0,2,2,2,2,10,assessment,assessment khóa,Yêu cầu độc lập; cấm gợi ý nội dung,DESIGN_PASS_NOT_PILOTED
+P07-01,map,2,2,2,2,2,2,12,map,presentation,"Sơ đồ trắng gắn sẵn, không hiển thị đáp án",DESIGN_PASS_NOT_PILOTED
+P07-02,presentation,2,1,2,2,2,2,11,presentation,presentation,Mô hình slide đáp ứng mục tiêu mà không cần Lab phức tạp,DESIGN_PASS_NOT_PILOTED
