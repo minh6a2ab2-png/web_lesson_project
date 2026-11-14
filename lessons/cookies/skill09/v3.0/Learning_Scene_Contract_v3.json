@@ -1,0 +1,428 @@
+{
+  "version": "3.0-design-agreed",
+  "source_version": "2.1-preview",
+  "total_scenes": 22,
+  "notes": "The structure remains D0–ACT05 (42 min) plus intro and postlesson. Prototype is not completed teaching engine. Modes are presentation/story/lab/dual/map/focus, assessment isolated.",
+  "scenes": [
+    {
+      "id": "P00-01",
+      "section": "P00",
+      "title": "Một website có thể nhớ em?",
+      "layout": "cover",
+      "subtitle": "Bài học Cookies · 42 phút · gia sư 1–1",
+      "prompt": "Hôm trước em chọn Tiếng Việt, hôm nay website vẫn hiện tiếng Việt. Điều gì có thể giúp website ghi nhớ?",
+      "asset": "",
+      "note": "Câu hỏi mở – chưa định nghĩa Cookie.",
+      "learner_action": "HS nói một dự đoán trước khi bắt đầu",
+      "recommended_modes": [
+        "presentation",
+        "story"
+      ],
+      "asset_status": "TEXT_OR_GENERATED_UI",
+      "reveal_rule": "opening_question",
+      "learner_evidence": "HS nói một dự đoán trước khi bắt đầu"
+    },
+    {
+      "id": "D0-01",
+      "section": "D0",
+      "title": "Ai xin trang? Ai trả trang?",
+      "layout": "diagram",
+      "subtitle": "D0 · Chẩn đoán kiến thức nền",
+      "prompt": "Hãy chỉ hướng xin trang và hướng trả trang giữa Browser và Server.",
+      "asset": "browser_server_blank.svg",
+      "note": "Không hiển thị key khi học sinh đang làm.",
+      "learner_action": "HS đặt hai mũi tên và nêu lý do",
+      "recommended_modes": [
+        "presentation",
+        "story",
+        "focus",
+        "dual"
+      ],
+      "asset_status": "READY_SOURCE",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS đặt hai mũi tên và nêu lý do"
+    },
+    {
+      "id": "D0-02",
+      "section": "D0",
+      "title": "Một mẩu dữ liệu có ý nghĩa gì?",
+      "layout": "question",
+      "subtitle": "Từ kiến thức nền đến tình huống Cookies",
+      "prompt": "Theo em, language=vi có thể biểu diễn thông tin gì?",
+      "asset": "",
+      "note": "Không cần biết thuật ngữ Cookie.",
+      "learner_action": "HS nói suy đoán; GV ghi mức hỗ trợ",
+      "recommended_modes": [
+        "presentation",
+        "story",
+        "focus"
+      ],
+      "asset_status": "TEXT_OR_GENERATED_UI",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS nói suy đoán; GV ghi mức hỗ trợ"
+    },
+    {
+      "id": "A1-01",
+      "section": "ACT01",
+      "title": "Vì sao lần sau vẫn là tiếng Việt?",
+      "layout": "compare",
+      "subtitle": "ACT01 · Hiện tượng trước khái niệm",
+      "prompt": "Quan sát hai trạng thái trước/sau khi lựa chọn ngôn ngữ. Thông tin tối thiểu cần nhớ là gì?",
+      "asset": "",
+      "note": "Dùng hình hai trạng thái cùng một website, không thay ngữ cảnh.",
+      "learner_action": "HS dự đoán dữ liệu tối thiểu",
+      "recommended_modes": [
+        "presentation",
+        "story",
+        "dual"
+      ],
+      "asset_status": "P0_CREATE_UI_PAIR",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS dự đoán dữ liệu tối thiểu"
+    },
+    {
+      "id": "A1-02",
+      "section": "ACT01",
+      "title": "Cookie là một mẩu dữ liệu",
+      "layout": "focus",
+      "subtitle": "ACT01 · Kiến thức mới ngắn gọn",
+      "prompt": "Cookie là dữ liệu nhỏ mà trình duyệt có thể quản lý cho website; nó không phải HTML hay một chương trình tự chạy.",
+      "asset": "",
+      "note": "Ví dụ language=vi chỉ là dữ liệu hư cấu.",
+      "learner_action": "HS diễn giải lại bằng lời riêng",
+      "recommended_modes": [
+        "presentation",
+        "story",
+        "map"
+      ],
+      "asset_status": "TEXT_OR_GENERATED_UI",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS diễn giải lại bằng lời riêng"
+    },
+    {
+      "id": "A1-03",
+      "section": "ACT01",
+      "title": "Thẻ nào là dữ liệu ghi nhớ?",
+      "layout": "practice",
+      "subtitle": "ACT01 · Thử và nhớ lại",
+      "prompt": "Phân loại: language=vi, <h1>Xin chào</h1>, run.exe. Sau đó che thẻ và nêu một việc Cookie có thể giúp.",
+      "asset": "",
+      "note": "Đáp án chỉ xuất hiện sau lượt thử; đây là layout prototype.",
+      "learner_action": "HS chọn nhóm và giải thích lý do",
+      "recommended_modes": [
+        "presentation",
+        "focus",
+        "dual"
+      ],
+      "asset_status": "TEXT_OR_GENERATED_UI",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS chọn nhóm và giải thích lý do"
+    },
+    {
+      "id": "A2-01",
+      "section": "ACT02",
+      "title": "Bước 1 · Browser xin trang",
+      "layout": "progressive",
+      "subtitle": "ACT02 · Một bước mẫu",
+      "prompt": "Lượt truy cập đầu, Browser gửi HTTP Request đến Server. Bước tiếp theo có thể là gì?",
+      "asset": "browser_server_blank.svg",
+      "note": "Chỉ làm mẫu request, chưa vẽ toàn bộ vòng đời.",
+      "learner_action": "HS dự đoán bước kế tiếp",
+      "recommended_modes": [
+        "presentation",
+        "story",
+        "lab",
+        "dual"
+      ],
+      "asset_status": "READY_SOURCE",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS dự đoán bước kế tiếp"
+    },
+    {
+      "id": "A2-02",
+      "section": "ACT02",
+      "title": "Ai gửi Set-Cookie?",
+      "layout": "practice",
+      "subtitle": "ACT02 · Học sinh tự ghép",
+      "prompt": "Hãy chọn hướng của HTTP Response có thể mang Set-Cookie: language=vi.",
+      "asset": "",
+      "note": "Không đưa next move ngay khi chọn sai; chỉ phản hồi về quy tắc request/response.",
+      "learner_action": "HS đặt message và giải thích",
+      "recommended_modes": [
+        "presentation",
+        "lab",
+        "focus",
+        "dual"
+      ],
+      "asset_status": "P0_REUSE_INTERACTIVE",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS đặt message và giải thích"
+    },
+    {
+      "id": "A2-03",
+      "section": "ACT02",
+      "title": "Browser có thể lưu hoặc từ chối",
+      "layout": "compare",
+      "subtitle": "ACT02 · Hai khả năng cùng một chỉ dẫn",
+      "prompt": "Server gửi chỉ dẫn, nhưng Browser là bên quyết định có lưu cookie theo điều kiện áp dụng.",
+      "asset": "",
+      "note": "Không diễn đạt Server trực tiếp ghi vào bộ nhớ trình duyệt.",
+      "learner_action": "HS dự đoán trạng thái Browser",
+      "recommended_modes": [
+        "presentation",
+        "story",
+        "lab",
+        "dual"
+      ],
+      "asset_status": "P0_REUSE_INTERACTIVE",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS dự đoán trạng thái Browser"
+    },
+    {
+      "id": "A2-04",
+      "section": "ACT02",
+      "title": "Lượt sau: Cookie đi hướng nào?",
+      "layout": "progressive",
+      "subtitle": "ACT02 · Quay lại cùng website",
+      "prompt": "Nếu Browser có cookie còn hợp lệ và phù hợp phạm vi, cookie có thể đi trong Request từ Browser đến Server.",
+      "asset": "cookie_lifecycle.svg",
+      "note": "Chỉ mở sơ đồ đầy đủ sau khi học sinh đã thử. Hình ở đây minh họa bố cục giai đoạn đối chiếu.",
+      "learner_action": "HS chọn hướng và giải thích vì sao",
+      "recommended_modes": [
+        "presentation",
+        "story",
+        "lab",
+        "dual"
+      ],
+      "asset_status": "READY_SOURCE",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS chọn hướng và giải thích vì sao"
+    },
+    {
+      "id": "A2-05",
+      "section": "ACT02",
+      "title": "Nhận Cookie và chặn Cookie",
+      "layout": "compare",
+      "subtitle": "ACT02 · Cùng tình huống, hai trạng thái",
+      "prompt": "Nếu Browser không lưu cookie được đề nghị, lần sau không thể gửi lại chính cookie ấy.",
+      "asset": "cookie_accept_block.svg",
+      "note": "Không khẳng định website chắc chắn quên bằng mọi cơ chế khác.",
+      "learner_action": "HS dự đoán khác biệt trước khi xem đối chiếu",
+      "recommended_modes": [
+        "presentation",
+        "lab",
+        "dual"
+      ],
+      "asset_status": "READY_SOURCE",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS dự đoán khác biệt trước khi xem đối chiếu"
+    },
+    {
+      "id": "A2-06",
+      "section": "ACT02",
+      "title": "Vẽ lại hai chiều không nhìn mẫu",
+      "layout": "recall",
+      "subtitle": "ACT02 · Active Recall",
+      "prompt": "Không nhìn hình: em hãy vẽ Server → Browser với Set-Cookie và Browser → Server với Cookie trong request phù hợp.",
+      "asset": "",
+      "note": "Chỉ hiển thị nhắc nhớ, không lộ sơ đồ chuẩn trước lượt recall.",
+      "learner_action": "HS nói và vẽ vào vở",
+      "recommended_modes": [
+        "presentation",
+        "focus",
+        "map"
+      ],
+      "asset_status": "TEXT_OR_GENERATED_UI",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS nói và vẽ vào vở"
+    },
+    {
+      "id": "A3-01",
+      "section": "ACT03",
+      "title": "Cookie nào còn vào ngày mai?",
+      "layout": "timeline",
+      "subtitle": "ACT03 · Quan sát thời hạn",
+      "prompt": "Ba mốc: đang duyệt → phiên kết thúc → ngày hôm sau. Đánh dấu nơi mỗi cookie còn có thể dùng.",
+      "asset": "",
+      "note": "Chỉ hiện timeline không giải sẵn; học sinh dự đoán trước khi xem bản chuẩn.",
+      "learner_action": "HS đặt thẻ session/persistent",
+      "recommended_modes": [
+        "presentation",
+        "story",
+        "lab",
+        "dual"
+      ],
+      "asset_status": "P0_CREATE_BLANK_TIMELINE",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS đặt thẻ session/persistent"
+    },
+    {
+      "id": "A3-02",
+      "section": "ACT03",
+      "title": "Đổi thời hạn, đổi loại Cookie",
+      "layout": "compare",
+      "subtitle": "ACT03 · Phản ví dụ",
+      "prompt": "Nếu cart_id=C104 được thêm thời hạn 7 ngày, tên và mục đích giữ nguyên nhưng phân loại theo thời hạn thay đổi.",
+      "asset": "session_persistent_timeline.svg",
+      "note": "Chỉ xem hình chuẩn sau khi HS tự đoán; session restore là ngoại lệ cần nhắc đúng.",
+      "learner_action": "HS giải thích sự thay đổi",
+      "recommended_modes": [
+        "presentation",
+        "lab",
+        "dual"
+      ],
+      "asset_status": "READY_SOURCE",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS giải thích sự thay đổi"
+    },
+    {
+      "id": "A3-03",
+      "section": "ACT03",
+      "title": "Hai loại khác nhau ở đâu?",
+      "layout": "recall",
+      "subtitle": "ACT03 · Ghi nhớ có lý do",
+      "prompt": "Hãy nêu hai điểm khác nhau theo vòng đời và một điều kiện khiến cookie không còn.",
+      "asset": "",
+      "note": "Không định nghĩa bằng RAM/ổ cứng hoặc đóng tab.",
+      "learner_action": "HS nói rồi ghi trong vở",
+      "recommended_modes": [
+        "presentation",
+        "focus",
+        "map"
+      ],
+      "asset_status": "TEXT_OR_GENERATED_UI",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS nói rồi ghi trong vở"
+    },
+    {
+      "id": "A4-01",
+      "section": "ACT04",
+      "title": "Ba công dụng của Cookie",
+      "layout": "trio",
+      "subtitle": "ACT04 · Phân loại tình huống",
+      "prompt": "SHOP – giỏ hàng; LANGUAGE – lựa chọn ngôn ngữ; ANALYTICS – phân tích lượt xem. Hãy ghép với mục đích phù hợp.",
+      "asset": "",
+      "note": "Ba thẻ cùng ngữ cảnh và mức thông tin tương đương.",
+      "learner_action": "HS phân nhóm và nêu nguyên nhân",
+      "recommended_modes": [
+        "presentation",
+        "story",
+        "map",
+        "dual"
+      ],
+      "asset_status": "P1_CREATE_SCENARIO_CARDS",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS phân nhóm và nêu nguyên nhân"
+    },
+    {
+      "id": "A4-02",
+      "section": "ACT04",
+      "title": "Sống lâu có phải là tracking?",
+      "layout": "compare",
+      "subtitle": "ACT04 · Phản biện",
+      "prompt": "Nhận định: Mọi Persistent Cookie đều là Tracking Cookie. Em đồng ý không? Lấy ví dụ language=vi để giải thích.",
+      "asset": "",
+      "note": "Tracking là mục đích; persistent mô tả vòng đời.",
+      "learner_action": "HS phản biện và nêu hai căn cứ tracking",
+      "recommended_modes": [
+        "presentation",
+        "focus",
+        "dual"
+      ],
+      "asset_status": "P1_CREATE_PURPOSE_LIFETIME_MATRIX",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS phản biện và nêu hai căn cứ tracking"
+    },
+    {
+      "id": "A4-03",
+      "section": "ACT04",
+      "title": "Em hãy dạy lại một tình huống",
+      "layout": "recall",
+      "subtitle": "ACT04 · Learning by Teaching",
+      "prompt": "Chọn một trong ba trường hợp rồi giải thích cho bạn mới học trong khoảng 30 giây.",
+      "asset": "",
+      "note": "Không ngắt lời khi HS đang giải thích; GV hỏi thêm một câu phản biện.",
+      "learner_action": "HS dạy lại và recall ba nhóm",
+      "recommended_modes": [
+        "presentation",
+        "focus",
+        "map"
+      ],
+      "asset_status": "TEXT_OR_GENERATED_UI",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS dạy lại và recall ba nhóm"
+    },
+    {
+      "id": "A5-01",
+      "section": "ACT05",
+      "title": "Thử sức độc lập: website câu lạc bộ",
+      "layout": "exit",
+      "subtitle": "ACT05 · EXIT · 8 phút",
+      "prompt": "club.example.org giả lập: theme=dark có hạn 5 ngày; session_id=K25 không đặt hạn lâu dài; có tình huống phân tích.",
+      "asset": "",
+      "note": "Đóng/che nguồn luyện tập; không mở teacher key.",
+      "learner_action": "HS đọc dữ kiện, chuẩn bị làm 3 ô",
+      "recommended_modes": [
+        "assessment"
+      ],
+      "asset_status": "TEXT_OR_GENERATED_UI",
+      "reveal_rule": "student_assessment_isolated",
+      "learner_evidence": "HS đọc dữ kiện, chuẩn bị làm 3 ô"
+    },
+    {
+      "id": "A5-02",
+      "section": "ACT05",
+      "title": "EXIT: ba ô A · B · C",
+      "layout": "exit",
+      "subtitle": "ACT05 · Đánh giá độc lập",
+      "prompt": "A: cơ chế mũi tên; B: thời hạn; C: công dụng và quyền riêng tư. Trả lời bằng ký hiệu hoặc câu ngắn.",
+      "asset": "",
+      "note": "Chỉ dùng exit_independent.html/PDF tách riêng trong Skill07; bản layout này không có đáp án.",
+      "learner_action": "HS làm độc lập và nộp bài",
+      "recommended_modes": [
+        "assessment"
+      ],
+      "asset_status": "TEXT_OR_GENERATED_UI",
+      "reveal_rule": "student_assessment_isolated",
+      "learner_evidence": "HS làm độc lập và nộp bài"
+    },
+    {
+      "id": "P07-01",
+      "section": "P07",
+      "title": "Nhớ lại bằng sơ đồ trống",
+      "layout": "recall",
+      "subtitle": "Sau giờ · Active Recall và mind-map",
+      "prompt": "Che tài liệu; nói và ghi lại năm từ khóa, sau đó tự vẽ bốn nhánh: cơ chế, loại, công dụng, quyền riêng tư.",
+      "asset": "cookies_mindmap_blank.svg",
+      "note": "Không đếm vào 42 phút nếu lớp đã hoàn thành EXIT.",
+      "learner_action": "HS tự vẽ sơ đồ và nhắc lại",
+      "recommended_modes": [
+        "presentation",
+        "focus",
+        "map"
+      ],
+      "asset_status": "READY_SOURCE",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS tự vẽ sơ đồ và nhắc lại"
+    },
+    {
+      "id": "P07-02",
+      "section": "P07",
+      "title": "Flashcards và dạy lại",
+      "layout": "trio",
+      "subtitle": "Sau giờ · Duy trì trí nhớ",
+      "prompt": "Ôn thuật ngữ; dạy lại vòng đời Cookie; chơi ghép chiều mũi tên và công dụng.",
+      "asset": "",
+      "note": "Trò chơi không dùng thời gian trả lời để đánh giá hiểu biết.",
+      "learner_action": "HS sử dụng flashcards trước buổi sau",
+      "recommended_modes": [
+        "presentation",
+        "focus",
+        "map"
+      ],
+      "asset_status": "P1_CREATE_FLASHCARDS",
+      "reveal_rule": "prediction_before_explanation",
+      "learner_evidence": "HS sử dụng flashcards trước buổi sau"
+    }
+  ]
+}
