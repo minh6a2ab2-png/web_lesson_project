@@ -1,0 +1,23 @@
+﻿scene_id,task,fit_presentation_0_3,fit_story_0_3,fit_lab_0_3,fit_map_0_3,fit_focus_0_3,fit_dual_manual_0_3,candidate,pedagogy_0_2,interaction_0_2,resources_0_2,attention_0_2,resilience_0_2,self_learning_0_2,gate_total_12,selected_renderer,selection_justification,fallback,dual_always_available
+P00-01,Một website có thể nhớ em?,3,1,0,1,1,0,presentation,2,1,2,2,2,2,11,presentation,"Một nhiệm vụ rõ; slide gọn giữ tập trung, không thêm hoạt ảnh.",presentation,True: only manually toggled
+D0-01,Ai xin trang? Ai trả trang?,3,1,0,1,1,2,presentation,2,1,2,2,2,2,11,presentation,"Một nhiệm vụ rõ; slide gọn giữ tập trung, không thêm hoạt ảnh.",presentation,True: only manually toggled
+D0-02,Một mẩu dữ liệu có ý nghĩa gì?,3,1,0,1,1,0,presentation,2,1,2,2,2,2,11,presentation,"Một nhiệm vụ rõ; slide gọn giữ tập trung, không thêm hoạt ảnh.",presentation,True: only manually toggled
+A1-01,Vì sao lần sau vẫn là tiếng Việt?,1,3,2,1,1,2,story,2,2,2,2,2,2,12,story,"Có diễn biến trước/sau, cần quan sát–dự đoán; tài nguyên là mock chứ không phải ảnh thật.",presentation,True: only manually toggled
+A1-02,Cookie là một mẩu dữ liệu,3,1,0,1,1,0,presentation,2,1,2,2,2,2,11,presentation,"Một nhiệm vụ rõ; slide gọn giữ tập trung, không thêm hoạt ảnh.",presentation,True: only manually toggled
+A1-03,Thẻ nào là dữ liệu ghi nhớ?,3,1,0,1,1,0,presentation,2,1,2,2,2,2,11,presentation,"Một nhiệm vụ rõ; slide gọn giữ tập trung, không thêm hoạt ảnh.",presentation,True: only manually toggled
+A2-01,Bước 1 · Browser xin trang,3,1,0,1,1,0,presentation,2,1,2,2,2,2,11,presentation,"Một nhiệm vụ rõ; slide gọn giữ tập trung, không thêm hoạt ảnh.",presentation,True: only manually toggled
+A2-02,Ai gửi Set-Cookie?,3,1,0,1,1,0,presentation,2,1,2,2,2,2,11,presentation,"Một nhiệm vụ rõ; slide gọn giữ tập trung, không thêm hoạt ảnh.",presentation,True: only manually toggled
+A2-03,Browser có thể lưu hoặc từ chối,1,2,3,0,1,2,lab,2,2,2,2,2,2,12,lab,"Có ca điều kiện→dự đoán→quan sát; mô phỏng demo chỉ chứng minh bố cục, Skill11 phải tích hợp logic thật.",presentation,True: only manually toggled
+A2-04,Lượt sau: Cookie đi hướng nào?,1,2,3,0,1,2,lab,2,2,2,2,2,2,12,lab,"Có ca điều kiện→dự đoán→quan sát; mô phỏng demo chỉ chứng minh bố cục, Skill11 phải tích hợp logic thật.",presentation,True: only manually toggled
+A2-05,Nhận Cookie và chặn Cookie,1,2,3,0,1,3,lab,2,2,2,2,2,2,12,lab,"Có ca điều kiện→dự đoán→quan sát; mô phỏng demo chỉ chứng minh bố cục, Skill11 phải tích hợp logic thật.",presentation,True: only manually toggled
+A2-06,Vẽ lại hai chiều không nhìn mẫu,1,0,0,1,3,1,focus,2,2,2,2,2,2,12,focus,Mục tiêu truy hồi; ẩn sơ đồ chuẩn để tự viết/nói/vẽ.,presentation,True: only manually toggled
+A3-01,Cookie nào còn vào ngày mai?,3,1,0,1,1,0,presentation,2,1,1,2,2,2,10,presentation,"Một nhiệm vụ rõ; slide gọn giữ tập trung, không thêm hoạt ảnh.",presentation,True: only manually toggled
+A3-02,"Đổi thời hạn, đổi loại Cookie",3,1,0,1,1,3,presentation,2,1,2,2,2,2,11,presentation,"Một nhiệm vụ rõ; slide gọn giữ tập trung, không thêm hoạt ảnh.",presentation,True: only manually toggled
+A3-03,Hai loại khác nhau ở đâu?,1,0,0,1,3,1,focus,2,2,2,2,2,2,12,focus,Mục tiêu truy hồi; ẩn sơ đồ chuẩn để tự viết/nói/vẽ.,presentation,True: only manually toggled
+A4-01,Ba công dụng của Cookie,3,1,0,1,1,0,presentation,2,1,1,2,2,2,10,presentation,"Một nhiệm vụ rõ; slide gọn giữ tập trung, không thêm hoạt ảnh.",presentation,True: only manually toggled
+A4-02,Sống lâu có phải là tracking?,3,1,0,1,1,3,presentation,2,1,1,2,2,2,10,presentation,"Một nhiệm vụ rõ; slide gọn giữ tập trung, không thêm hoạt ảnh.",presentation,True: only manually toggled
+A4-03,Em hãy dạy lại một tình huống,1,0,0,1,3,1,focus,2,2,2,2,2,2,12,focus,Mục tiêu truy hồi; ẩn sơ đồ chuẩn để tự viết/nói/vẽ.,presentation,True: only manually toggled
+A5-01,Thử sức độc lập: website câu lạc bộ,0,0,0,0,0,0,assessment,2,1,2,2,2,2,11,assessment,EXIT riêng; cấm hints nội dung và Sổ tay trong lúc làm.,presentation,True: only manually toggled
+A5-02,EXIT: ba ô A · B · C,0,0,0,0,0,0,assessment,2,1,2,2,2,2,11,assessment,EXIT riêng; cấm hints nội dung và Sổ tay trong lúc làm.,presentation,True: only manually toggled
+P07-01,Nhớ lại bằng sơ đồ trống,1,1,0,3,2,2,map,2,2,2,2,2,2,12,map,Cần tự vẽ bốn nhánh và nối kiến thức; bản sơ đồ trống có nguồn.,presentation,True: only manually toggled
+P07-02,Flashcards và dạy lại,3,1,0,1,1,0,presentation,2,1,1,2,2,2,10,presentation,"Một nhiệm vụ rõ; slide gọn giữ tập trung, không thêm hoạt ảnh.",presentation,True: only manually toggled
