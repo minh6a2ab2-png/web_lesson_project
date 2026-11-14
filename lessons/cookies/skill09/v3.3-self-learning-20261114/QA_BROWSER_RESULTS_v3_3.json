@@ -1,0 +1,74 @@
+[
+  {
+    "viewport": "1440x900",
+    "initial": "Một website có thể nhớ em?",
+    "has_tutor": true,
+    "has_purpose": true,
+    "has_dual": true,
+    "hint1": "Có điều gì giống nhau ở hai lần em mở trang?",
+    "premature_explanation_blocked": true,
+    "notebook_note": "Một website có thể nhớ em?\nP00-01 · saved_ungraded · 2026-11-14T15:16:20.264Z\n\nMục đích: Nhận ra một website c",
+    "knowledge_on_first_page": "Chưa có bản ghi phù hợp. Hãy thử và lưu một nhiệm vụ trước.",
+    "dual_panes": 2,
+    "dual_selected": [
+      "Ai gửi Set-Cookie?",
+      "Nhớ lại bằng sơ đồ trống"
+    ],
+    "dual_60_40": "--left:1.5fr;--right:1fr",
+    "exit_locked_prev": true,
+    "exit_notebook_locked": true,
+    "exit_no_hint": true,
+    "exit_dual_exam_scratch": true,
+    "post_exit": "Nhớ lại bằng sơ đồ trống",
+    "js_errors": [],
+    "horizontal_overflow": false
+  },
+  {
+    "viewport": "820x950",
+    "initial": "Một website có thể nhớ em?",
+    "has_tutor": true,
+    "has_purpose": true,
+    "has_dual": true,
+    "hint1": "Có điều gì giống nhau ở hai lần em mở trang?",
+    "premature_explanation_blocked": true,
+    "notebook_note": "Một website có thể nhớ em?\nP00-01 · saved_ungraded · 2026-11-14T15:16:22.316Z\n\nMục đích: Nhận ra một website c",
+    "knowledge_on_first_page": "Chưa có bản ghi phù hợp. Hãy thử và lưu một nhiệm vụ trước.",
+    "dual_panes": 2,
+    "dual_selected": [
+      "Ai gửi Set-Cookie?",
+      "Nhớ lại bằng sơ đồ trống"
+    ],
+    "dual_60_40": "--left:1.5fr;--right:1fr",
+    "exit_locked_prev": true,
+    "exit_notebook_locked": true,
+    "exit_no_hint": true,
+    "exit_dual_exam_scratch": true,
+    "post_exit": "Nhớ lại bằng sơ đồ trống",
+    "js_errors": [],
+    "horizontal_overflow": false
+  },
+  {
+    "viewport": "375x812",
+    "initial": "Một website có thể nhớ em?",
+    "has_tutor": true,
+    "has_purpose": true,
+    "has_dual": true,
+    "hint1": "Có điều gì giống nhau ở hai lần em mở trang?",
+    "premature_explanation_blocked": true,
+    "notebook_note": "Một website có thể nhớ em?\nP00-01 · saved_ungraded · 2026-11-14T15:16:24.548Z\n\nMục đích: Nhận ra một website c",
+    "knowledge_on_first_page": "Chưa có bản ghi phù hợp. Hãy thử và lưu một nhiệm vụ trước.",
+    "dual_panes": 2,
+    "dual_selected": [
+      "Ai gửi Set-Cookie?",
+      "Nhớ lại bằng sơ đồ trống"
+    ],
+    "dual_60_40": "--left:1.5fr;--right:1fr",
+    "exit_locked_prev": true,
+    "exit_notebook_locked": true,
+    "exit_no_hint": true,
+    "exit_dual_exam_scratch": true,
+    "post_exit": "Nhớ lại bằng sơ đồ trống",
+    "js_errors": [],
+    "horizontal_overflow": false
+  }
+]
