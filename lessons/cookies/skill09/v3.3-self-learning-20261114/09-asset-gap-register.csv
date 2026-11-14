@@ -1,0 +1,11 @@
+﻿scene,asset,priority,status,owner,gap,fallback
+A1-01,Website UI hai trạng thái tiếng Việt,P0,PROTOTYPE,Skill05/07 + Skill10,"Một mock cùng ngữ cảnh đã có trong low-fi, cần bản chuẩn + test state",Bản 2 thẻ văn bản
+A2-02,Ghép chiều Set-Cookie thực,P0,SPEC_ONLY,Skill07/11,visual_lab.html chưa tích hợp vào scene engine,Thẻ chọn hướng trên giấy
+A2-03..05,Tích hợp mô phỏng accept/block/return,P0,PROTOTYPE,Skill07/11,"Mock hoạt động, cần liên kết evidence thật và toàn diện",SVG/phiếu hai trường hợp
+A3-01,Timeline trống có thao tác,P0,SPEC_ONLY,Skill05/07,Cần bản timeline trống và trạng thái sau thử,Ba mốc giấy
+A4-01,Thẻ SHOP/LANGUAGE/ANALYTICS đồng bộ,P1,SPEC_ONLY,Skill05/07/10,"Có text, chưa có bộ ảnh tương thích",Thẻ chữ
+A4-02,Ma trận hai trục tuổi thọ/mục đích,P1,SPEC_ONLY,Skill05/07,Cần giải thích và nhãn không chồng lấn,Bảng chữ 2×2
+P07-02,Flashcards song ngữ có kết quả,P1,SPEC_ONLY,Skill07/11,"Phiếu giấy hiện có, chưa có trình điều khiển cards thật",Bản giấy print_pack trang 4
+ALL,Avatar/mascot và voice tự chọn,P1,SPEC_ONLY,Skill10,"Prototype dùng biểu tượng trợ giảng, không có animation gốc",Biểu tượng văn bản + lời thoại
+ALL,Bộ thuật ngữ/lời thoại EN/VI,P1,SPEC_ONLY,Skill10/11,Copy tiếng Việt đã có; bản dịch chưa sản xuất,Bản tiếng Việt
+EXIT,Import bài EXIT vào engine có cô lập,P0,SPEC_ONLY,Skill11/12,Prototype không thay bài thi độc lập của Skill07,exit_independent.html hoặc PDF riêng
