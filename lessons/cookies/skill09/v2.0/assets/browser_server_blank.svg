@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d" viewBox="0 0 900 310">
+<title id="t">Sơ đồ trống Browser và Web Server / Blank browser-server diagram</title>
+<desc id="d">Hai khối Browser bên trái và Web server bên phải, giữa có hai đường nét đứt chưa có mũi tên để học sinh tự ghi hướng request và response. / Two labeled blocks with blank dotted paths for students to determine message directions.</desc>
+<rect width="900" height="310" rx="24" fill="#f2f7fd"/>
+<rect x="28" y="45" width="236" height="210" rx="18" fill="white" stroke="#387db7" stroke-width="3"/>
+<rect x="636" y="45" width="236" height="210" rx="18" fill="white" stroke="#387db7" stroke-width="3"/>
+<text x="146" y="122" font-family="DejaVu Sans,sans-serif" font-size="27" font-weight="bold" text-anchor="middle" fill="#194a70">BROWSER</text>
+<text x="146" y="162" font-family="DejaVu Sans,sans-serif" font-size="19" text-anchor="middle" fill="#194a70">Trình duyệt</text>
+<text x="754" y="122" font-family="DejaVu Sans,sans-serif" font-size="26" font-weight="bold" text-anchor="middle" fill="#194a70">WEB SERVER</text>
+<text x="754" y="162" font-family="DejaVu Sans,sans-serif" font-size="19" text-anchor="middle" fill="#194a70">Máy chủ web</text>
+<path d="M292 113 H608" stroke="#7993ad" stroke-width="4" stroke-dasharray="9 9"/>
+<path d="M292 207 H608" stroke="#7993ad" stroke-width="4" stroke-dasharray="9 9"/>
+<text x="450" y="93" font-family="DejaVu Sans,sans-serif" font-size="17" text-anchor="middle" fill="#52718d">request: ............</text>
+<text x="450" y="246" font-family="DejaVu Sans,sans-serif" font-size="17" text-anchor="middle" fill="#52718d">response: ............</text>
+</svg>
