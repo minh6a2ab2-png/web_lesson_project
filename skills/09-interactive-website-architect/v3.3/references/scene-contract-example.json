@@ -1,0 +1,38 @@
+{
+  "_comment": "SCHEMA EXAMPLE ONLY. Not a rerun of Cookies. Output contract for Skill 09 v3.3.",
+  "skill_version": "3.3-prerun",
+  "lesson_id": "EXAMPLE_ONLY",
+  "scenes": [
+    {
+      "scene_id": "D0-01",
+      "source_refs": ["Skill08.ACT_D0", "Skill07.browser_server_blank.svg"],
+      "page_purpose": "Xác định ai gửi yêu cầu và ai trả phản hồi khi mở trang web.",
+      "student_task": "Đặt hai mũi tên Request và Response vào đúng chiều giữa Browser và Server.",
+      "steps": [
+        {"step": 1, "text": "Quan sát hai ô Browser và Server."},
+        {"step": 2, "text": "Dự đoán ai đang cần trang web."},
+        {"step": 3, "text": "Chọn chiều của Request và Response."},
+        {"step": 4, "text": "Kiểm tra và giải thích lý do."}
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Trước khi học Cookie, em cần biết trình duyệt và máy chủ trao đổi với nhau theo hướng nào. Hãy xem hai ô trước nhé.",
+        "remind_task": "Em hãy chọn chiều của hai mũi tên, rồi nói tại sao em chọn như vậy.",
+        "hint_1": "Ai là người đang muốn xem nội dung của trang web?",
+        "hint_2": "Yêu cầu xin trang bắt đầu ở trình duyệt; phản hồi quay ngược về đó.",
+        "hint_3": "Hãy thử ví dụ tương tự: em gửi lời hỏi tới thư viện, thư viện gửi câu trả lời về cho em.",
+        "correct_feedback": "Đúng chiều rồi. Em thử nói lại vì sao Request và Response ngược nhau nhé.",
+        "incorrect_feedback": "Hãy kiểm tra lại ai là bên muốn xem trang. Đổi vị trí một mũi tên rồi thử lại.",
+        "common_mistake": "Cho rằng server là bên luôn bắt đầu gửi trang khi người dùng mở website.",
+        "transition": "Bây giờ ta sẽ xét một mẩu dữ liệu mà website có thể cần ghi nhớ."
+      },
+      "completion_criteria": ["Chọn đúng hai chiều", "Giải thích được Request là yêu cầu và Response là phản hồi"],
+      "evidence": {"type": "arrow_placement_and_explanation", "capture": "local_exercise_or_manual_confirmation"},
+      "knowledge_capsule": {"text": "Khi duyệt web cơ bản, Browser gửi Request đến Server; Server trả Response về Browser.", "unlock": "after_attempt_and_completion"},
+      "layout": {"default": "presentation", "dual_toggle_always_visible": true, "tutor_collapsible": true},
+      "reveal_gate": "answer_hidden_until_attempt",
+      "asset": {"id": "browser_server_blank.svg", "status": "READY_SOURCE", "alt": "Sơ đồ trống hai đối tượng Browser và Server"},
+      "implementation_status": "EXAMPLE_ONLY_NOT_IMPLEMENTED"
+    }
+  ]
+}
