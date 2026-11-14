@@ -1,0 +1,38 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "route": "inline",
+    "initial": "Một website có thể nhớ em?",
+    "errors": [],
+    "horizontal_overflow": false,
+    "dual": "pass",
+    "hints": "pass",
+    "notebook": "pass",
+    "exit": "pass"
+  },
+  {
+    "width": 820,
+    "height": 980,
+    "route": "inline",
+    "initial": "Một website có thể nhớ em?",
+    "errors": [],
+    "horizontal_overflow": false,
+    "dual": "pass",
+    "hints": "pass",
+    "notebook": "pass",
+    "exit": "pass"
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "route": "inline",
+    "initial": "Một website có thể nhớ em?",
+    "errors": [],
+    "horizontal_overflow": false,
+    "dual": "pass",
+    "hints": "pass",
+    "notebook": "pass",
+    "exit": "pass"
+  }
+]
