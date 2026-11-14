@@ -1,0 +1,1336 @@
+{
+  "skill_version": "3.3",
+  "lesson_id": "cookies",
+  "name": "Cookies: cơ chế và công dụng",
+  "duration_minutes": 42,
+  "source": "Skill08 v1.0; Skill07 v1.1; Skill09 v3.2; Skill09 definition v3.3",
+  "timeline": {
+    "D0": 3,
+    "ACT01": 6,
+    "ACT02": 12,
+    "ACT03": 7,
+    "ACT04": 6,
+    "ACT05": 8,
+    "P00": "outside",
+    "P07": "outside"
+  },
+  "invariants": [
+    "22 IDs retained",
+    "No test key included",
+    "Tutor is scripted not generative AI",
+    "Dual toggle always visible",
+    "Assessment isolation",
+    "notebook save is not mastery"
+  ],
+  "scenes": [
+    {
+      "scene_id": "P00-01",
+      "index": 1,
+      "section": "P00",
+      "source_ref": "Skill09_v3.2:P00-01; Skill08:P00",
+      "title": "Một website có thể nhớ em?",
+      "source_prompt_preserved": "Hôm trước em chọn Tiếng Việt, hôm nay website vẫn hiện tiếng Việt. Điều gì có thể giúp website ghi nhớ?",
+      "page_purpose": "Nhận ra một website có thể ghi nhớ lựa chọn giữa hai lần truy cập.",
+      "student_task": "Đọc câu chuyện và ghi một dự đoán về điều website cần nhớ.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Đọc tình huống hôm qua và hôm nay."
+        },
+        {
+          "index": 2,
+          "label": "Nghĩ xem thông tin nào vẫn được giữ lại."
+        },
+        {
+          "index": 3,
+          "label": "Ghi một giả thuyết bằng lời của em."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Hôm qua em chọn tiếng Việt, hôm nay trang vẫn hiện tiếng Việt. Chúng ta sẽ tìm hiểu hiện tượng này. Em thử dự đoán trước nhé!",
+        "remind_task": "Chỉ cần viết một điều mà trang web có thể đang ghi nhớ.",
+        "hint_1": "Có điều gì giống nhau ở hai lần em mở trang?",
+        "hint_2": "Hãy tập trung vào lựa chọn ngôn ngữ.",
+        "hint_3": "Một ví dụ tương tự: ứng dụng nhớ em đã bật chế độ tối.",
+        "feedback_correct": "Em đã có giả thuyết để kiểm tra trong bài. Chưa cần đúng ngay.",
+        "feedback_incorrect": "Chưa có dự đoán. Em có thể bắt đầu bằng câu: “Có lẽ trang nhớ…”",
+        "common_mistake": "Cho rằng website phải ghi nhớ toàn bộ mọi việc người dùng từng làm.",
+        "transition": "Trước khi tìm dữ liệu ghi nhớ, em ôn nhanh ai gửi và ai trả trang web."
+      },
+      "completion_criteria": [
+        "Ghi được ít nhất một dự đoán có liên quan đến hiện tượng."
+      ],
+      "learning_evidence": "Một câu dự đoán nói/ghi.",
+      "knowledge_capsule": null,
+      "layout": "presentation",
+      "layout_pattern": "Context Hero",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Tình huống: hôm trước em chọn Tiếng Việt; hôm nay trang vẫn hiện tiếng Việt.",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "Hiển thị câu hỏi và website mock đơn giản; không vẽ cơ chế.",
+      "feedback_gate": "Giáo viên nghe suy đoán; ghi một giả thuyết để quay lại cuối bài.",
+      "conceptual_guardrail": "Ảnh web trước/sau chỉ là mock chưa phải ảnh chụp trình duyệt.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "D0-01",
+      "index": 2,
+      "section": "D0",
+      "source_ref": "Skill09_v3.2:D0-01; Skill08:D0",
+      "title": "Ai xin trang? Ai trả trang?",
+      "source_prompt_preserved": "Hãy chỉ hướng xin trang và hướng trả trang giữa Browser và Server.",
+      "page_purpose": "Xác định chiều trao đổi giữa Browser và Server khi mở một trang.",
+      "student_task": "Chỉ hoặc vẽ chiều Request và Response giữa hai ô Browser–Server.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Quan sát ô Browser và Server."
+        },
+        {
+          "index": 2,
+          "label": "Quyết định ai cần xem trang trước."
+        },
+        {
+          "index": 3,
+          "label": "Vẽ chiều xin trang và chiều trả lời."
+        },
+        {
+          "index": 4,
+          "label": "Nói lý do mỗi mũi tên."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Muốn hiểu Cookie, ta cần chắc một bước nền: khi mở trang, bên nào yêu cầu và bên nào trả lời?",
+        "remind_task": "Em vẽ hai mũi tên ngược chiều và giải thích từng mũi tên.",
+        "hint_1": "Ai đang muốn xem nội dung của website?",
+        "hint_2": "Bên cần nội dung sẽ gửi yêu cầu; bên cung cấp nội dung sẽ trả phản hồi.",
+        "hint_3": "Nghĩ tới việc em hỏi thủ thư về một cuốn sách, rồi thủ thư trả lời.",
+        "feedback_correct": "Hai chiều đã hợp lý. Em hãy dùng đúng từ Request và Response để nói lại.",
+        "feedback_incorrect": "Em hãy xem lại ai là bên chủ động xin nội dung; đừng đổi cả hai mũi tên cùng lúc.",
+        "common_mistake": "Cho rằng server luôn gửi trang trước mà không cần request.",
+        "transition": "Giờ thử xem một chuỗi dữ liệu ngắn có thể biểu diễn điều gì."
+      },
+      "completion_criteria": [
+        "Đặt đúng Request và Response.",
+        "Giải thích được vì sao hai chiều ngược nhau."
+      ],
+      "learning_evidence": "Sơ đồ hai chiều, mức hỗ trợ H0–H3.",
+      "knowledge_capsule": "Trong trao đổi web cơ bản, Browser gửi yêu cầu (Request) đến Server; Server trả lời (Response) về Browser.",
+      "layout": "presentation",
+      "layout_pattern": "Sơ đồ trắng hai đối tượng",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Hai ô Browser và Server, không đặt sẵn tên chiều mũi tên.",
+      "source_asset": "browser_server_blank.svg",
+      "asset_status": "SOURCE_SVG_READY",
+      "asset_plan": "browser_server_blank.svg; bản in print_pack trang 1.",
+      "feedback_gate": "Nếu sai hỏi “Ai đang cần trang?”; chưa mở sơ đồ giải đáp.",
+      "conceptual_guardrail": "Không suy ra học sinh đã thành thạo Cookies từ D0.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "D0-02",
+      "index": 3,
+      "section": "D0",
+      "source_ref": "Skill09_v3.2:D0-02; Skill08:D0",
+      "title": "Một mẩu dữ liệu có ý nghĩa gì?",
+      "source_prompt_preserved": "Theo em, language=vi có thể biểu diễn thông tin gì?",
+      "page_purpose": "Nhận biết dạng tên–giá trị trong ví dụ dữ liệu.",
+      "student_task": "Giải thích chuỗi language=vi bằng lời của em.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Đọc chuỗi language=vi."
+        },
+        {
+          "index": 2,
+          "label": "Phân biệt phần trước và phần sau dấu =."
+        },
+        {
+          "index": 3,
+          "label": "Đoán lựa chọn mà chuỗi biểu diễn."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Em chưa cần biết Cookie là gì. Chỉ cần nhìn một dòng dữ liệu nhỏ và đoán ý nghĩa của nó.",
+        "remind_task": "Hãy nói language là gì và vi có thể biểu diễn điều gì.",
+        "hint_1": "Từ “language” thường liên quan tới thông tin nào?",
+        "hint_2": "Phần sau dấu bằng thường biểu diễn giá trị được chọn.",
+        "hint_3": "Tương tự, theme=dark có thể biểu diễn lựa chọn giao diện tối.",
+        "feedback_correct": "Cách diễn giải này có căn cứ. Em đã phân biệt được dữ liệu với câu lệnh.",
+        "feedback_incorrect": "Hãy tách language và vi, rồi liên hệ với tình huống chọn tiếng Việt.",
+        "common_mistake": "Nghĩ rằng một chuỗi có dấu = luôn là lệnh chạy.",
+        "transition": "Quay về hai lần truy cập và dự đoán chính xác cần ghi nhớ thứ gì."
+      },
+      "completion_criteria": [
+        "Nêu được một ý nghĩa hợp lý của language=vi."
+      ],
+      "learning_evidence": "Một dự đoán ý nghĩa language=vi.",
+      "knowledge_capsule": "Ví dụ language=vi biểu diễn lựa chọn tiếng Việt; bản thân chuỗi này là dữ liệu, không phải lệnh chạy.",
+      "layout": "presentation",
+      "layout_pattern": "Question Focus",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Thẻ dữ liệu giả định: language=vi.",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "Thẻ code cỡ lớn; không cần ảnh.",
+      "feedback_gate": "Chấp nhận giả thuyết có căn cứ; chưa giới thiệu đáp án vòng đời Cookie.",
+      "conceptual_guardrail": "Giữ bối cảnh trước định nghĩa.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A1-01",
+      "index": 4,
+      "section": "ACT01",
+      "source_ref": "Skill09_v3.2:A1-01; Skill08:ACT01",
+      "title": "Vì sao lần sau vẫn là tiếng Việt?",
+      "source_prompt_preserved": "Quan sát hai trạng thái trước/sau khi lựa chọn ngôn ngữ. Thông tin tối thiểu cần nhớ là gì?",
+      "page_purpose": "Xác định thông tin tối thiểu cần giữ lại giữa hai lần truy cập.",
+      "student_task": "So sánh cùng một website trước và sau khi chọn tiếng Việt; ghi điều có thể được lưu.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Quan sát trạng thái ban đầu của website."
+        },
+        {
+          "index": 2,
+          "label": "Chuyển sang trạng thái sau khi chọn tiếng Việt."
+        },
+        {
+          "index": 3,
+          "label": "Chỉ ra điểm khác nhau và ghi thông tin cần nhớ."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Đây là cùng một website ở hai thời điểm. Em chú ý xem điều gì đã thay đổi, rồi thử đoán dữ liệu nào cần lưu.",
+        "remind_task": "So sánh hai trạng thái và viết đúng một thông tin mà website có thể cần giữ.",
+        "hint_1": "Trang khác nhau ở ngôn ngữ hay địa chỉ website?",
+        "hint_2": "Tìm lựa chọn được giữ lại giữa hai lần xem.",
+        "hint_3": "Một dạng dữ liệu có thể là tên lựa chọn đi kèm giá trị.",
+        "feedback_correct": "Em đã tìm ra điều cần ghi nhớ. Tiếp theo ta đặt tên cho một cơ chế có thể làm điều đó.",
+        "feedback_incorrect": "Hãy nhìn lại nhãn ngôn ngữ ở hai trạng thái và chỉ một thay đổi duy nhất.",
+        "common_mistake": "Suy ra ngay rằng mọi website đều phải dùng Cookie.",
+        "transition": "Ta sẽ làm quen với khái niệm Cookie nhưng chưa học toàn bộ cơ chế."
+      },
+      "completion_criteria": [
+        "Nêu được dữ liệu liên quan đến lựa chọn ngôn ngữ."
+      ],
+      "learning_evidence": "Dự đoán thông tin cần ghi nhớ.",
+      "knowledge_capsule": "Một website có thể nhớ lựa chọn ngôn ngữ nhờ dữ liệu trình duyệt lưu giữ cho website, trong đó cookie là một cơ chế có thể dùng.",
+      "layout": "story",
+      "layout_pattern": "Before / After Story",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Hai trạng thái của cùng website giả lập: chưa chọn ngôn ngữ → đã chọn Tiếng Việt.",
+      "source_asset": null,
+      "asset_status": "UI_DEMO_READY; real screenshot not produced",
+      "asset_plan": "Bộ 2 trạng thái website HTML mock; bản dự phòng ảnh cùng ngữ cảnh.",
+      "feedback_gate": "Mở trạng thái sau theo thao tác; không hiện Set-Cookie khi chưa đến ACT02.",
+      "conceptual_guardrail": "Cần sản xuất UI pair chính thức (P0).",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A1-02",
+      "index": 5,
+      "section": "ACT01",
+      "source_ref": "Skill09_v3.2:A1-02; Skill08:ACT01",
+      "title": "Cookie là một mẩu dữ liệu",
+      "source_prompt_preserved": "Cookie là dữ liệu nhỏ mà trình duyệt có thể quản lý cho website; nó không phải HTML hay một chương trình tự chạy.",
+      "page_purpose": "Diễn đạt Cookie là dữ liệu, không phải một chương trình tự chạy.",
+      "student_task": "Viết một câu giải thích Cookie là gì và một điều Cookie không phải.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Đọc câu mô tả ngắn về Cookie."
+        },
+        {
+          "index": 2,
+          "label": "Quan sát ví dụ language=vi."
+        },
+        {
+          "index": 3,
+          "label": "Viết lại bằng lời của em, thêm một điều Cookie không phải."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Một Cookie là một mẩu dữ liệu được trình duyệt quản lý theo quy tắc. Em thử giải thích lại mà không chép nguyên câu.",
+        "remind_task": "Em cần viết “Cookie là…” và “Cookie không phải…”.",
+        "hint_1": "Cookie được mô tả là dữ liệu hay chương trình?",
+        "hint_2": "Hãy nghĩ xem dữ liệu có tự vẽ trang web hoặc tự chạy mã không.",
+        "hint_3": "Ví dụ thẻ <h1> thuộc HTML, khác với một giá trị language=vi.",
+        "feedback_correct": "Em đã tách được khái niệm dữ liệu khỏi mã HTML và chương trình.",
+        "feedback_incorrect": "Câu trả lời vẫn lẫn Cookie với thẻ HTML hoặc tệp thực thi; em hãy sửa phần đó.",
+        "common_mistake": "Cho rằng Cookie là một chương trình tự chạy hoặc chính là mã HTML.",
+        "transition": "Ta dùng ba thẻ cụ thể để tự kiểm tra sự phân biệt này."
+      },
+      "completion_criteria": [
+        "Viết được một câu định nghĩa hợp lý.",
+        "Nêu được một điều Cookie không phải."
+      ],
+      "learning_evidence": "Mô tả “dữ liệu, không phải HTML hay chương trình”.",
+      "knowledge_capsule": "Cookie là dữ liệu do trình duyệt quản lý theo quy tắc; không phải mã HTML hoặc chương trình tự chạy.",
+      "layout": "presentation",
+      "layout_pattern": "Concept Focus",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Cookie là dữ liệu nhỏ do trình duyệt có thể quản lý cho website; ví dụ language=vi.",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "Text/code card; không bắt buộc video.",
+      "feedback_gate": "Chỉ sau HS thử mới so sánh với HTML và chương trình.",
+      "conceptual_guardrail": "Không nói website nào cũng dùng cookie.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A1-03",
+      "index": 6,
+      "section": "ACT01",
+      "source_ref": "Skill09_v3.2:A1-03; Skill08:ACT01",
+      "title": "Thẻ nào là dữ liệu ghi nhớ?",
+      "source_prompt_preserved": "Phân loại: language=vi, <h1>Xin chào</h1>, run.exe. Sau đó che thẻ và nêu một việc Cookie có thể giúp.",
+      "page_purpose": "Phân biệt dữ liệu minh họa, thẻ HTML và tên tệp chương trình.",
+      "student_task": "Phân loại language=vi, <h1>Xin chào</h1>, run.exe và giải thích ít nhất một lựa chọn.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Đọc từng thẻ."
+        },
+        {
+          "index": 2,
+          "label": "Chọn nhóm dữ liệu, HTML hoặc tên tệp chương trình."
+        },
+        {
+          "index": 3,
+          "label": "Giải thích lựa chọn khó nhất."
+        },
+        {
+          "index": 4,
+          "label": "Che thẻ và nói lại một công dụng có thể có của Cookie."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Ba thẻ trông đều giống chữ trên màn hình, nhưng vai trò của chúng khác nhau. Em thử phân nhóm trước nhé.",
+        "remind_task": "Hãy phân loại đủ ba thẻ rồi viết lý do cho một thẻ.",
+        "hint_1": "Thẻ nào mang thông tin về lựa chọn của người dùng?",
+        "hint_2": "Dấu <h1> là cú pháp đánh dấu nội dung trong HTML.",
+        "hint_3": "Đuôi .exe thường xuất hiện trong tên tệp thực thi, không phải mẫu dữ liệu Cookie.",
+        "feedback_correct": "Em đã phân biệt ba dạng biểu diễn. Thử nói lại mà không nhìn thẻ.",
+        "feedback_incorrect": "Xem lại thẻ HTML: nó đánh dấu cách tổ chức nội dung, không phải dữ liệu lựa chọn.",
+        "common_mistake": "Nghĩ run.exe là một cookie có thể chạy mã.",
+        "transition": "Đã biết Cookie là dữ liệu; giờ xem nó xuất hiện ở lượt truy cập nào."
+      },
+      "completion_criteria": [
+        "Phân loại cả ba thẻ.",
+        "Giải thích được ít nhất một thẻ và nêu một ý recall."
+      ],
+      "learning_evidence": "P1: 3 thẻ + lý do + recall.",
+      "knowledge_capsule": "language=vi là dữ liệu minh họa; <h1>…</h1> là thẻ HTML; run.exe là tên tệp chương trình ví dụ.",
+      "layout": "presentation",
+      "layout_pattern": "Interactive Classification Cards",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Ba thẻ: language=vi ; <h1>Xin chào</h1> ; run.exe.",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "Thẻ dữ liệu HTML/CSS; bản in trang 1.",
+      "feedback_gate": "Sai: hỏi “Thẻ này lưu lựa chọn hay vẽ giao diện hay chỉ tên tập tin?”; không tiết lộ đáp án tức thì.",
+      "conceptual_guardrail": "Không nhầm run.exe là một cookie chạy lệnh.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A2-01",
+      "index": 7,
+      "section": "ACT02",
+      "source_ref": "Skill09_v3.2:A2-01; Skill08:ACT02",
+      "title": "Bước 1 · Browser xin trang",
+      "source_prompt_preserved": "Lượt truy cập đầu, Browser gửi HTTP Request đến Server. Bước tiếp theo có thể là gì?",
+      "page_purpose": "Xác định bước đầu tiên trong một lượt truy cập website.",
+      "student_task": "Chọn chiều HTTP Request và dự đoán phản hồi sẽ đến từ đâu.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Quan sát Browser và Server."
+        },
+        {
+          "index": 2,
+          "label": "Chỉ chiều của yêu cầu xin trang."
+        },
+        {
+          "index": 3,
+          "label": "Dự đoán ai trả lời sau đó."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Mình chỉ xem bước đầu tiên, chưa xem toàn bộ vòng đời. Khi em mở website, yêu cầu đầu tiên đi từ đâu?",
+        "remind_task": "Vẽ hoặc chọn chiều Request rồi dự đoán bước sau.",
+        "hint_1": "Ai thực hiện hành động mở trang?",
+        "hint_2": "Yêu cầu xin tài nguyên bắt đầu từ phía người dùng.",
+        "hint_3": "Tưởng tượng em gửi yêu cầu lấy một tài liệu rồi chờ phản hồi.",
+        "feedback_correct": "Chiều Request hợp lý. Sang màn sau em sẽ xem Response có thể chứa thêm gì.",
+        "feedback_incorrect": "Đừng bắt đầu từ bên gửi nội dung; hãy bắt đầu từ bên muốn nhận nội dung.",
+        "common_mistake": "Bắt đầu vòng đời bằng việc Server chủ động đẩy Cookie đến Browser.",
+        "transition": "Tiếp theo em sẽ xác định ai có thể gửi Set-Cookie."
+      },
+      "completion_criteria": [
+        "Đặt đúng chiều Request.",
+        "Dự đoán được có một Response trả về."
+      ],
+      "learning_evidence": "Mũi tên B→S kèm lý do.",
+      "knowledge_capsule": "Browser → Server: HTTP Request là yêu cầu xin tài nguyên.",
+      "layout": "presentation",
+      "layout_pattern": "Progressive Diagram – Step 1",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Lượt truy cập 1: Browser gửi HTTP Request đến Server.",
+      "source_asset": "browser_server_blank.svg",
+      "asset_status": "SOURCE_SVG_READY",
+      "asset_plan": "browser_server_blank.svg; print_pack trang 2.",
+      "feedback_gate": "Hiện duy nhất request, ẩn các chiều tiếp theo.",
+      "conceptual_guardrail": "Không mở sớm vòng đời chuẩn.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A2-02",
+      "index": 8,
+      "section": "ACT02",
+      "source_ref": "Skill09_v3.2:A2-02; Skill08:ACT02",
+      "title": "Ai gửi Set-Cookie?",
+      "source_prompt_preserved": "Hãy chọn hướng của HTTP Response có thể mang Set-Cookie: language=vi.",
+      "page_purpose": "Phân biệt thông điệp Set-Cookie với HTTP Request.",
+      "student_task": "Chọn bên gửi HTTP Response có thể mang Set-Cookie: language=vi.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Nhớ lại chiều Request."
+        },
+        {
+          "index": 2,
+          "label": "Xác định chiều Response ngược lại."
+        },
+        {
+          "index": 3,
+          "label": "Gắn Set-Cookie vào chiều phù hợp."
+        },
+        {
+          "index": 4,
+          "label": "Nói bên nào có thể lưu dữ liệu."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Tên Set-Cookie dễ gây nhầm. Em đừng đoán theo tên; hãy xác định nó đi cùng loại thông điệp nào.",
+        "remind_task": "Em đặt Set-Cookie đúng chiều rồi giải thích vai trò của Browser.",
+        "hint_1": "Response đi từ bên nào về bên nào?",
+        "hint_2": "Set-Cookie có thể nằm trong Response do Server gửi.",
+        "hint_3": "Hãy so sánh hai nhãn: Set-Cookie trong Response và Cookie trong Request ở lượt sau.",
+        "feedback_correct": "Em đã đặt Set-Cookie trong chiều phản hồi. Đừng quên Browser còn có điều kiện lưu riêng.",
+        "feedback_incorrect": "Em đã đặt Set-Cookie vào nhầm chiều; quay về quy tắc Request xin, Response trả.",
+        "common_mistake": "Cho rằng Set-Cookie đi từ Browser đến Server.",
+        "transition": "Bây giờ thử trường hợp Browser chấp nhận và trường hợp từ chối lưu."
+      },
+      "completion_criteria": [
+        "Nêu đúng chiều của Response mang Set-Cookie.",
+        "Phân biệt bên gửi và bên quản lý lưu."
+      ],
+      "learning_evidence": "P2-1: chiều Set-Cookie và vai trò Browser.",
+      "knowledge_capsule": "Server → Browser: HTTP Response có thể chứa Set-Cookie; Browser có thể chấp nhận và lưu tùy điều kiện.",
+      "layout": "presentation",
+      "layout_pattern": "Worked Example → Your Turn",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Server có thể gửi HTTP Response kèm Set-Cookie: language=vi.",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "Dùng lại visual_lab.html ở Skill11; có phương án ghép thẻ giấy.",
+      "feedback_gate": "Nếu đảo chiều, nhắc quy tắc Request/Response; chỉ bật mũi tên đúng sau lượt thử.",
+      "conceptual_guardrail": "Chưa tích hợp engine ghép thẻ trong nguyên mẫu hiện tại.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A2-03",
+      "index": 9,
+      "section": "ACT02",
+      "source_ref": "Skill09_v3.2:A2-03; Skill08:ACT02",
+      "title": "Browser có thể lưu hoặc từ chối",
+      "source_prompt_preserved": "Server gửi chỉ dẫn, nhưng Browser là bên quyết định có lưu cookie theo điều kiện áp dụng.",
+      "page_purpose": "Nhận ra Browser có thể chấp nhận hoặc từ chối lưu Cookie.",
+      "student_task": "Dự đoán kết quả ở hai chế độ chấp nhận và chặn Cookie.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Chọn trạng thái Browser trong mô phỏng."
+        },
+        {
+          "index": 2,
+          "label": "Dự đoán Cookie có được lưu không."
+        },
+        {
+          "index": 3,
+          "label": "Chạy kiểm tra và so sánh kết quả."
+        },
+        {
+          "index": 4,
+          "label": "Giải thích vì sao hai ca khác nhau."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Server có thể đề nghị lưu Cookie, nhưng đề nghị đó chưa bảo đảm Browser sẽ lưu. Em thử hai trường hợp.",
+        "remind_task": "Chọn chấp nhận hoặc chặn, đưa ra dự đoán rồi mới chạy mô phỏng.",
+        "hint_1": "Ai là nơi quản lý Cookie được lưu?",
+        "hint_2": "Trình duyệt áp dụng điều kiện và cài đặt của mình trước khi lưu.",
+        "hint_3": "Ví dụ một trình duyệt đang cài chế độ chặn loại Cookie được đề nghị.",
+        "feedback_correct": "Em đã quan sát đúng vai trò Browser. Hãy nói thêm vì sao chỉ có Set-Cookie là chưa đủ.",
+        "feedback_incorrect": "Em đang xem Server như bên có quyền ghi trực tiếp; thử lại khi Browser đặt chế độ chặn.",
+        "common_mistake": "Nghĩ Server luôn ghi được Cookie vào Browser.",
+        "transition": "Sau khi lưu, Cookie có thể xuất hiện ở lượt yêu cầu tiếp theo như thế nào?"
+      },
+      "completion_criteria": [
+        "Dự đoán được hai ca chấp nhận/chặn.",
+        "Giải thích vai trò của Browser."
+      ],
+      "learning_evidence": "P2-2: khác biệt hai trạng thái.",
+      "knowledge_capsule": "Một Set-Cookie được gửi không bảo đảm Cookie chắc chắn đã được lưu; Browser có thể từ chối.",
+      "layout": "lab",
+      "layout_pattern": "Lab – Accept / Block",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Phản hồi có Set-Cookie; Browser có thể chấp nhận hoặc từ chối lưu.",
+      "source_asset": null,
+      "asset_status": "LAB_DEMO_READY",
+      "asset_plan": "Cookie Lab mock, visual_lab.html; SVG compare.",
+      "feedback_gate": "Hiện kết quả sau nút Kiểm tra; lưu cả dự đoán và điều kiện.",
+      "conceptual_guardrail": "Không mô phỏng mạng HTTP thật; dùng điều kiện hợp lệ.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A2-04",
+      "index": 10,
+      "section": "ACT02",
+      "source_ref": "Skill09_v3.2:A2-04; Skill08:ACT02",
+      "title": "Lượt sau: Cookie đi hướng nào?",
+      "source_prompt_preserved": "Nếu Browser có cookie còn hợp lệ và phù hợp phạm vi, cookie có thể đi trong Request từ Browser đến Server.",
+      "page_purpose": "Xác định điều kiện Cookie được gửi lại ở lượt truy cập tiếp.",
+      "student_task": "Dự đoán khi nào Browser gửi Cookie trong HTTP Request trở lại Server.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Xem Cookie đã được lưu hay chưa."
+        },
+        {
+          "index": 2,
+          "label": "Kiểm tra còn hiệu lực và đúng phạm vi hay không."
+        },
+        {
+          "index": 3,
+          "label": "Dự đoán hướng gửi ở lượt sau."
+        },
+        {
+          "index": 4,
+          "label": "Đối chiếu với kết quả mô phỏng."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Sau lượt đầu, câu hỏi đổi rồi: Cookie có được gửi lại hay không? Chỉ nhìn tên Cookie thì chưa đủ đâu.",
+        "remind_task": "Em kiểm tra lần lượt lưu – còn hạn – đúng phạm vi rồi dự đoán.",
+        "hint_1": "Cookie không được lưu thì Browser có gì để gửi lại?",
+        "hint_2": "Lần gửi lại cần phù hợp phạm vi và còn hiệu lực.",
+        "hint_3": "Ví dụ Cookie của trang A không mặc nhiên gửi cho trang B không phù hợp phạm vi.",
+        "feedback_correct": "Em đã xét đủ điều kiện, không chỉ học thuộc chiều mũi tên.",
+        "feedback_incorrect": "Em hãy kiểm tra lại ba điều kiện trước khi kết luận Cookie luôn được gửi.",
+        "common_mistake": "Nghĩ mọi Cookie đã lưu đều gửi trong mọi request.",
+        "transition": "Ta đối chiếu trực tiếp hai ca chấp nhận và chặn."
+      },
+      "completion_criteria": [
+        "Nêu đúng chiều Cookie trong Request phù hợp.",
+        "Kể được ít nhất hai điều kiện gửi lại."
+      ],
+      "learning_evidence": "P2-3: chiều Cookie B→S và điều kiện.",
+      "knowledge_capsule": "Nếu Cookie đã lưu, còn hiệu lực và phù hợp phạm vi, Browser có thể gửi Cookie trong HTTP Request tiếp theo đến Server.",
+      "layout": "lab",
+      "layout_pattern": "Lab – Return Request",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Lần quay lại: Cookie chỉ có thể nằm trong Request phù hợp nếu đã lưu, còn hiệu lực và đúng phạm vi.",
+      "source_asset": "cookie_lifecycle.svg",
+      "asset_status": "LAB_DEMO_READY",
+      "asset_plan": "cookie_lifecycle.svg chỉ sau HS dự đoán.",
+      "feedback_gate": "Phản hồi dựa trên accept, validity và scope; giải thích từng điều kiện.",
+      "conceptual_guardrail": "Cookie dùng trong Request, không đồng nhất với Set-Cookie.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A2-05",
+      "index": 11,
+      "section": "ACT02",
+      "source_ref": "Skill09_v3.2:A2-05; Skill08:ACT02",
+      "title": "Nhận Cookie và chặn Cookie",
+      "source_prompt_preserved": "Nếu Browser không lưu cookie được đề nghị, lần sau không thể gửi lại chính cookie ấy.",
+      "page_purpose": "So sánh hệ quả của việc chấp nhận và chặn cùng một Cookie.",
+      "student_task": "Đối chiếu hai lượt quay lại: một trường hợp đã lưu Cookie, một trường hợp đã chặn.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Dự đoán lượt quay lại nếu Cookie được lưu."
+        },
+        {
+          "index": 2,
+          "label": "Dự đoán lượt quay lại nếu Cookie bị chặn."
+        },
+        {
+          "index": 3,
+          "label": "So sánh kết quả hai ca."
+        },
+        {
+          "index": 4,
+          "label": "Nêu một điều không thể kết luận chắc chắn."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Hãy giữ nguyên website và chỉ thay cài đặt của Browser. Em tìm ra khác biệt nào ở lượt quay lại?",
+        "remind_task": "So sánh có/không gửi lại chính Cookie ấy, đừng suy ra toàn bộ website sẽ quên.",
+        "hint_1": "Browser chặn Cookie ấy thì lần sau có cùng Cookie để gửi không?",
+        "hint_2": "Một website có thể còn những phương thức nhớ khác ngoài chính Cookie đó.",
+        "hint_3": "Cùng trang, cùng dữ liệu đề nghị, chỉ khác chấp nhận/chặn.",
+        "feedback_correct": "Em đã so sánh đúng và không kết luận quá mức từ một Cookie.",
+        "feedback_incorrect": "Tránh nói “website chắc chắn quên mọi thứ”; hãy chỉ phát biểu về Cookie đang xét.",
+        "common_mistake": "Cho rằng chặn Cookie đồng nghĩa website không thể ghi nhớ bằng cách khác.",
+        "transition": "Bây giờ tắt mẫu và tự vẽ lại hai chiều quan trọng."
+      },
+      "completion_criteria": [
+        "Nêu khác biệt của hai ca.",
+        "Không khẳng định website chắc chắn quên bằng mọi cách."
+      ],
+      "learning_evidence": "P2-4: dự đoán đúng hai ca, có căn cứ.",
+      "knowledge_capsule": "Khi Browser chặn Cookie cụ thể, request lần sau không gửi lại chính cookie ấy; website vẫn có thể có cách ghi nhớ khác.",
+      "layout": "lab",
+      "layout_pattern": "Compare / Lab",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "So sánh Browser chấp nhận Cookie và Browser chặn Cookie trong cùng tình huống.",
+      "source_asset": "cookie_accept_block.svg",
+      "asset_status": "LAB_DEMO_READY",
+      "asset_plan": "cookie_accept_block.svg; hoặc so sánh hai trang ở Dual View.",
+      "feedback_gate": "Không kết luận website chắc chắn không thể nhớ bằng cách khác.",
+      "conceptual_guardrail": "Không mở hai hình có đáp án trước HS thử.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A2-06",
+      "index": 12,
+      "section": "ACT02",
+      "source_ref": "Skill09_v3.2:A2-06; Skill08:ACT02",
+      "title": "Vẽ lại hai chiều không nhìn mẫu",
+      "source_prompt_preserved": "Không nhìn hình: em hãy vẽ Server → Browser với Set-Cookie và Browser → Server với Cookie trong request phù hợp.",
+      "page_purpose": "Tự nhớ lại hai chiều Set-Cookie và Cookie mà không nhìn mẫu.",
+      "student_task": "Vẽ hai mũi tên rồi giải thích ngắn tên thông điệp trên mỗi chiều.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Che mọi sơ đồ tham chiếu."
+        },
+        {
+          "index": 2,
+          "label": "Vẽ Server và Browser trên giấy."
+        },
+        {
+          "index": 3,
+          "label": "Điền hai mũi tên và nhãn Set-Cookie, Cookie."
+        },
+        {
+          "index": 4,
+          "label": "Đối chiếu sau khi đã nộp bản vẽ."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Đây là bài nhớ lại. Em thử tự vẽ trước, không cần vẽ đẹp; quan trọng là đúng chiều và tên thông điệp.",
+        "remind_task": "Chỉ nhìn đề bài, vẽ hai chiều trong vở rồi tự nói lý do.",
+        "hint_1": "Hãy nhớ có một chiều phản hồi và một chiều yêu cầu ở lượt sau.",
+        "hint_2": "Phản hồi đến Browser; yêu cầu lượt sau đi đến Server.",
+        "hint_3": "Sau khi vẽ xong, dùng Sổ tay để đối chiếu nếu đã ra khỏi lượt recall.",
+        "feedback_correct": "Em đã hoàn thành một lần truy hồi độc lập. Lưu bản vẽ hoặc ghi mô tả của em.",
+        "feedback_incorrect": "Nếu chưa chắc, đặt tên Request/Response trước rồi mới thêm nhãn Cookie.",
+        "common_mistake": "Viết Set-Cookie trên Request hoặc Cookie trên Response.",
+        "transition": "Ta đã đi qua hai lượt truy cập; giờ xem Cookie tồn tại bao lâu."
+      },
+      "completion_criteria": [
+        "Có bản vẽ hai chiều và lời giải thích."
+      ],
+      "learning_evidence": "P2 tổng hợp, mức hỗ trợ H0–H3.",
+      "knowledge_capsule": "Hai chiều cần nhớ: Set-Cookie ở Response từ Server về Browser; Cookie ở Request phù hợp từ Browser đến Server.",
+      "layout": "focus",
+      "layout_pattern": "Focus / Active Recall",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Ẩn sơ đồ chuẩn, chỉ để lại yêu cầu vẽ chiều Set-Cookie và Cookie.",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "Chỉ câu hỏi và vùng ghi chú; print_pack trang 2.",
+      "feedback_gate": "GV chuẩn hóa sau khi HS nộp bản vẽ; cho sửa theo bằng chứng.",
+      "conceptual_guardrail": "Dual View vẫn có nút, không tự mở slide giải đáp.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A3-01",
+      "index": 13,
+      "section": "ACT03",
+      "source_ref": "Skill09_v3.2:A3-01; Skill08:ACT03",
+      "title": "Cookie nào còn vào ngày mai?",
+      "source_prompt_preserved": "Ba mốc: đang duyệt → phiên kết thúc → ngày hôm sau. Đánh dấu nơi mỗi cookie còn có thể dùng.",
+      "page_purpose": "Dự đoán vòng đời của hai loại Cookie theo mốc thời gian.",
+      "student_task": "Điền hoặc mô tả trạng thái Cookie trên timeline: đang duyệt, kết thúc phiên, ngày sau.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Đọc ba mốc thời gian."
+        },
+        {
+          "index": 2,
+          "label": "Đặt dự đoán về Session Cookie."
+        },
+        {
+          "index": 3,
+          "label": "Đặt dự đoán về Persistent Cookie."
+        },
+        {
+          "index": 4,
+          "label": "Ghi điều kiện khiến dự đoán có thể thay đổi."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Tên Session và Persistent liên quan đến thời gian tồn tại. Em thử đánh dấu ba mốc trước khi xem quy tắc.",
+        "remind_task": "Hãy nói cookie nào có thể còn ở ngày sau, kèm một điều kiện.",
+        "hint_1": "Tên “persistent” gợi ý điều gì về thời hạn?",
+        "hint_2": "Đừng quên Cookie có thể bị xóa hoặc bị chặn sớm.",
+        "hint_3": "Ví dụ Cookie có thời hạn bảy ngày có thể còn qua hôm sau nếu chưa bị xóa.",
+        "feedback_correct": "Em đã đưa thời hạn vào lời giải thích thay vì đoán theo tên Cookie.",
+        "feedback_incorrect": "Em đang coi đóng một tab luôn là kết thúc mọi session; hãy xét khôi phục phiên.",
+        "common_mistake": "Định nghĩa Session/Persistent chỉ theo RAM hay ổ cứng.",
+        "transition": "Bây giờ ta chỉ đổi thời hạn của một Cookie để kiểm tra cách phân loại."
+      },
+      "completion_criteria": [
+        "Điền được hai loại theo ba mốc với lý do."
+      ],
+      "learning_evidence": "P3-1: timeline + giải thích vì sao.",
+      "knowledge_capsule": "Session Cookie thường gắn với phiên duyệt; Persistent Cookie có thời hạn. Tình trạng thực tế còn phụ thuộc xóa/chặn và khôi phục phiên.",
+      "layout": "presentation",
+      "layout_pattern": "Timeline Blank",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Ba mốc: đang duyệt → phiên kết thúc → ngày hôm sau.",
+      "source_asset": null,
+      "asset_status": "TIMELINE_BLANK_PENDING",
+      "asset_plan": "Timeline trống cần tạo P0; hiện là thẻ ba mốc, chưa là bản kéo thả.",
+      "feedback_gate": "Sau khi đoán mới cho xem ví dụ có điều kiện; không tự đồng nhất đóng tab với kết thúc phiên.",
+      "conceptual_guardrail": "Browser có thể khôi phục phiên; cookie có thể bị xóa sớm.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A3-02",
+      "index": 14,
+      "section": "ACT03",
+      "source_ref": "Skill09_v3.2:A3-02; Skill08:ACT03",
+      "title": "Đổi thời hạn, đổi loại Cookie",
+      "source_prompt_preserved": "Nếu cart_id=C104 được thêm thời hạn 7 ngày, tên và mục đích giữ nguyên nhưng phân loại theo thời hạn thay đổi.",
+      "page_purpose": "Nhận biết tuổi thọ Cookie thay đổi khi thay đổi thời hạn.",
+      "student_task": "So sánh cart_id=C104 trước/sau khi được đặt hạn bảy ngày; giải thích loại Cookie.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Đọc tên và mục đích Cookie."
+        },
+        {
+          "index": 2,
+          "label": "So sánh thông tin thời hạn trước/sau."
+        },
+        {
+          "index": 3,
+          "label": "Chọn phân loại theo thời hạn."
+        },
+        {
+          "index": 4,
+          "label": "Giải thích thứ không thay đổi."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Tên và chức năng giỏ hàng giữ nguyên. Chỉ thay thời hạn thành bảy ngày thì em sẽ phân loại khác đi không?",
+        "remind_task": "Dựa vào vòng đời, không dựa vào chữ cart_id.",
+        "hint_1": "Điều gì vừa được thay đổi trong ví dụ?",
+        "hint_2": "Session/Persistent là cách phân biệt theo thời hạn hoặc vòng đời.",
+        "hint_3": "Một Cookie giữ ngôn ngữ cũng có thể là Persistent nếu được đặt thời hạn.",
+        "feedback_correct": "Em đã tách được tuổi thọ khỏi tên và mục đích Cookie.",
+        "feedback_incorrect": "Em đang dùng công dụng giỏ hàng làm căn cứ phân loại; hãy nhìn thời hạn.",
+        "common_mistake": "Cho rằng tên giỏ hàng quyết định Session hay Persistent.",
+        "transition": "Tự nói lại hai điểm khác nhau của hai loại, không nhìn timeline."
+      },
+      "completion_criteria": [
+        "Nêu được loại theo thời hạn trước và sau.",
+        "Giải thích vì sao mục đích không quyết định loại."
+      ],
+      "learning_evidence": "P3-2: phản ví dụ đổi thời hạn.",
+      "knowledge_capsule": "Loại Cookie theo tuổi thọ phụ thuộc thời hạn/lifecycle, không phụ thuộc tên hay mục đích sử dụng.",
+      "layout": "presentation",
+      "layout_pattern": "Contrast – Change One Variable",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Thêm hạn 7 ngày vào cart_id=C104, tên và công dụng giữ nguyên.",
+      "source_asset": "session_persistent_timeline.svg",
+      "asset_status": "SOURCE_SVG_READY",
+      "asset_plan": "session_persistent_timeline.svg chỉ sau HS trả lời.",
+      "feedback_gate": "Sai: hỏi “Điều gì thay đổi: tên hay thời hạn?”",
+      "conceptual_guardrail": "Persistent không đồng nghĩa Tracking.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A3-03",
+      "index": 15,
+      "section": "ACT03",
+      "source_ref": "Skill09_v3.2:A3-03; Skill08:ACT03",
+      "title": "Hai loại khác nhau ở đâu?",
+      "source_prompt_preserved": "Hãy nêu hai điểm khác nhau theo vòng đời và một điều kiện khiến cookie không còn.",
+      "page_purpose": "Tự phân biệt Session và Persistent theo vòng đời.",
+      "student_task": "Nói hai khác biệt và một điều kiện có thể làm Cookie không còn.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Che timeline."
+        },
+        {
+          "index": 2,
+          "label": "Nói khác biệt thứ nhất về thời hạn."
+        },
+        {
+          "index": 3,
+          "label": "Nói khác biệt thứ hai về khả năng tồn tại qua phiên."
+        },
+        {
+          "index": 4,
+          "label": "Thêm một trường hợp Cookie bị mất sớm."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Em thử nhớ lại không nhìn sơ đồ. Đừng dựa vào việc Cookie có nằm trong RAM hay không nhé.",
+        "remind_task": "Hãy ghi hai khác biệt và một điều kiện ngoại lệ.",
+        "hint_1": "Một Cookie được đặt thời hạn cụ thể có thể tồn tại thế nào?",
+        "hint_2": "Việc xóa, chặn và khôi phục phiên có thể ảnh hưởng kết quả.",
+        "hint_3": "Ví dụ Cookie hạn bảy ngày vẫn biến mất nếu người dùng xóa sớm.",
+        "feedback_correct": "Em đã diễn giải theo vòng đời và biết kết luận phải có điều kiện.",
+        "feedback_incorrect": "Hãy tránh câu “đóng tab là mọi Cookie Session biến mất ngay”.",
+        "common_mistake": "Hiểu nhầm kết thúc tab luôn trùng kết thúc phiên duyệt.",
+        "transition": "Giờ phân loại Cookie theo công dụng thay vì theo thời gian."
+      },
+      "completion_criteria": [
+        "Nêu được hai khác biệt.",
+        "Nêu được một điều kiện ảnh hưởng thời gian tồn tại."
+      ],
+      "learning_evidence": "P3 hoàn chỉnh.",
+      "knowledge_capsule": "Persistent có thể còn qua phiên nếu chưa hết hạn và không bị xóa; Session thường theo phiên nhưng có thể được khôi phục.",
+      "layout": "focus",
+      "layout_pattern": "Focus / Recall",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Che timeline; yêu cầu nói 2 khác biệt theo thời hạn và một điều kiện làm Cookie mất đi.",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "Focus canvas; không cần media mới.",
+      "feedback_gate": "GV hỏi thêm trường hợp khôi phục phiên/xóa thủ công nếu đủ thời gian.",
+      "conceptual_guardrail": "Không định nghĩa dựa vào RAM/ổ cứng.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A4-01",
+      "index": 16,
+      "section": "ACT04",
+      "source_ref": "Skill09_v3.2:A4-01; Skill08:ACT04",
+      "title": "Ba công dụng của Cookie",
+      "source_prompt_preserved": "SHOP – giỏ hàng; LANGUAGE – lựa chọn ngôn ngữ; ANALYTICS – phân tích lượt xem. Hãy ghép với mục đích phù hợp.",
+      "page_purpose": "Phân biệt ba nhóm công dụng Cookie qua tình huống.",
+      "student_task": "Ghép SHOP, LANGUAGE và ANALYTICS với công dụng phù hợp rồi giải thích.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Đọc hành vi cần ghi nhớ ở từng tình huống."
+        },
+        {
+          "index": 2,
+          "label": "Xác định giỏ hàng, ngôn ngữ và lượt xem."
+        },
+        {
+          "index": 3,
+          "label": "Ghép với nhóm công dụng."
+        },
+        {
+          "index": 4,
+          "label": "Chọn một trường hợp và giải thích lý do."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Cùng là Cookie nhưng mỗi website có thể dùng cho một mục đích khác nhau. Em thử ghép các trường hợp cụ thể.",
+        "remind_task": "Ghép đủ ba ca rồi giải thích một ca bằng lời của em.",
+        "hint_1": "Ca nào giúp duy trì việc mua sắm?",
+        "hint_2": "Ca nào giữ lựa chọn cá nhân? Ca nào liên hệ hoạt động qua các lượt?",
+        "hint_3": "Em hãy dùng khung: “Website cần nhớ…, vì vậy nhóm phù hợp là…”.",
+        "feedback_correct": "Em đã dựa vào mục đích thay vì chỉ nhìn thời hạn.",
+        "feedback_incorrect": "Hãy xem lại dữ kiện hoạt động mà mỗi ca theo dõi hoặc ghi nhớ.",
+        "common_mistake": "Cho rằng mọi Cookie được lưu lâu đều có mục đích tracking.",
+        "transition": "Ta kiểm tra một nhận định dễ nhầm giữa thời hạn và mục đích."
+      },
+      "completion_criteria": [
+        "Ghép ba ca với công dụng.",
+        "Giải thích được ít nhất một ca."
+      ],
+      "learning_evidence": "P4-1: ba nhóm công dụng và lý do.",
+      "knowledge_capsule": "Các công dụng thường gặp: quản lý phiên, cá nhân hóa và theo dõi/phân tích hoạt động.",
+      "layout": "presentation",
+      "layout_pattern": "Three Use Cases",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Ba ca: SHOP giỏ hàng, LANGUAGE ngôn ngữ, ANALYTICS nhận diện lượt xem.",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "Ba thẻ tình huống cần thiết kế thống nhất P1.",
+      "feedback_gate": "Phản hồi sau mỗi lần phân loại; giải thích căn cứ từ tình huống.",
+      "conceptual_guardrail": "Không dùng dữ liệu cá nhân hoặc cookie thật.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A4-02",
+      "index": 17,
+      "section": "ACT04",
+      "source_ref": "Skill09_v3.2:A4-02; Skill08:ACT04",
+      "title": "Sống lâu có phải là tracking?",
+      "source_prompt_preserved": "Nhận định: Mọi Persistent Cookie đều là Tracking Cookie. Em đồng ý không? Lấy ví dụ language=vi để giải thích.",
+      "page_purpose": "Phân biệt thời hạn lưu và mục đích theo dõi.",
+      "student_task": "Đánh giá câu “Mọi Persistent Cookie đều là Tracking Cookie” và đưa một phản ví dụ.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Đọc nhận định."
+        },
+        {
+          "index": 2,
+          "label": "Nhớ Persistent nói về đặc điểm gì."
+        },
+        {
+          "index": 3,
+          "label": "Nhớ Tracking nói về mục đích gì."
+        },
+        {
+          "index": 4,
+          "label": "Nêu phản ví dụ dựa trên lựa chọn ngôn ngữ."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Hai từ Persistent và Tracking thường bị ghép làm một. Em hãy kiểm tra xem chúng có nói về cùng một đặc điểm không.",
+        "remind_task": "Nêu đồng ý/không đồng ý, kèm ít nhất một lý do và ví dụ.",
+        "hint_1": "Persistent mô tả tuổi thọ hay hành động theo dõi?",
+        "hint_2": "Tracking dựa vào việc liên hệ hoạt động, không chỉ ở thời gian tồn tại.",
+        "hint_3": "Hãy nghĩ đến Cookie ghi nhớ ngôn ngữ với thời hạn nhiều ngày.",
+        "feedback_correct": "Em đã chỉ ra thời hạn và mục đích là hai trục khác nhau.",
+        "feedback_incorrect": "Câu trả lời mới xét thời hạn, chưa xét tác dụng của Cookie.",
+        "common_mistake": "Suy ra tracking chỉ vì Cookie tồn tại lâu.",
+        "transition": "Em tự chọn một ca và thử dạy lại cho người mới học."
+      },
+      "completion_criteria": [
+        "Đánh giá nhận định có căn cứ.",
+        "Nêu được một phản ví dụ phù hợp."
+      ],
+      "learning_evidence": "P4-2: phản ví dụ + căn cứ tracking.",
+      "knowledge_capsule": "Persistent chỉ nói về thời hạn; tracking nói về mục đích và khả năng liên kết hoạt động, nên không đồng nghĩa.",
+      "layout": "presentation",
+      "layout_pattern": "2×2 Concept Matrix",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Trục 1: thời hạn (session/persistent); trục 2: mục đích (theo dõi hay không).",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "Ma trận mục đích-vòng đời P1; fallback 2 thẻ đối chiếu.",
+      "feedback_gate": "Sau trả lời, giải thích rằng mục đích khác tuổi thọ.",
+      "conceptual_guardrail": "Không suy ra tracking chỉ từ thời hạn.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A4-03",
+      "index": 18,
+      "section": "ACT04",
+      "source_ref": "Skill09_v3.2:A4-03; Skill08:ACT04",
+      "title": "Em hãy dạy lại một tình huống",
+      "source_prompt_preserved": "Chọn một trong ba trường hợp rồi giải thích cho bạn mới học trong khoảng 30 giây.",
+      "page_purpose": "Tự giải thích cơ chế, công dụng và lưu ý quyền riêng tư.",
+      "student_task": "Chọn một tình huống rồi giải thích như dạy một bạn mới trong 30–60 giây.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Chọn SHOP, LANGUAGE hoặc ANALYTICS."
+        },
+        {
+          "index": 2,
+          "label": "Nói dữ liệu nào có thể được nhớ."
+        },
+        {
+          "index": 3,
+          "label": "Nêu điều kiện gửi lại và công dụng."
+        },
+        {
+          "index": 4,
+          "label": "Bổ sung một lưu ý quyền riêng tư."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Em thử trở thành người hướng dẫn. Hãy chọn một tình huống và giải thích từng ý để người chưa học cũng hiểu.",
+        "remind_task": "Giải thích theo bốn ý: dữ liệu, gửi lại, mục đích, quyền riêng tư.",
+        "hint_1": "Nếu em là người nghe, em cần biết dữ liệu gì được ghi nhớ?",
+        "hint_2": "Một lời giải thích tốt nên nêu khi nào dữ liệu có thể được gửi lại.",
+        "hint_3": "Em có thể mở đầu: “Trong trường hợp này website cần nhớ…”",
+        "feedback_correct": "Em đã tạo bản giải thích có thể kiểm tra, không chỉ nhắc lại thuật ngữ.",
+        "feedback_incorrect": "Lời giải thích còn thiếu một trong bốn ý; hãy bổ sung phần chưa nói.",
+        "common_mistake": "Chỉ nêu công dụng mà không nói điều kiện hoặc quyền riêng tư.",
+        "transition": "Tiếp theo là lượt vận dụng độc lập; em sẽ không xem gợi ý nội dung."
+      },
+      "completion_criteria": [
+        "Có bản giải thích đủ dữ liệu, cơ chế, mục đích và quyền riêng tư."
+      ],
+      "learning_evidence": "P4 teach-back + recall ba nhóm.",
+      "knowledge_capsule": "Giải thích Cookie nên nêu: dữ liệu gì được lưu, điều kiện gửi lại, mục đích và điểm cần chú ý về quyền riêng tư.",
+      "layout": "focus",
+      "layout_pattern": "Teach Back / Focus",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Hãy giải thích một tình huống cookie như đang dạy cho bạn khác.",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "Đề bài lớn, vùng ghi chú; có thể ghi âm nếu có cho phép nhưng không cần.",
+      "feedback_gate": "GV hỏi một câu phản biện; đánh giá lời giải thích chứ không theo tốc độ.",
+      "conceptual_guardrail": "Tránh thu âm mặc định.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A5-01",
+      "index": 19,
+      "section": "ACT05",
+      "source_ref": "Skill09_v3.2:A5-01; Skill08:ACT05",
+      "title": "Thử sức độc lập: website câu lạc bộ",
+      "source_prompt_preserved": "club.example.org giả lập: theme=dark có hạn 5 ngày; session_id=K25 không đặt hạn lâu dài; có tình huống phân tích.",
+      "page_purpose": "Chuẩn bị làm bài vận dụng độc lập không xem tài liệu.",
+      "student_task": "Đọc tình huống website câu lạc bộ và xác nhận bắt đầu bài EXIT.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Đọc tình huống club.example.org và dữ kiện đề cho."
+        },
+        {
+          "index": 2,
+          "label": "Đóng Sổ tay và tài liệu học trước."
+        },
+        {
+          "index": 3,
+          "label": "Chọn bắt đầu khi sẵn sàng."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Đây là phần tự làm. Em chỉ cần đọc đề và chuẩn bị giấy nháp; trợ giảng sẽ không đưa gợi ý kiến thức trong bài này.",
+        "remind_task": "Đọc hết tình huống rồi chọn bắt đầu. Em có thể dùng giấy nháp.",
+        "hint_1": "",
+        "hint_2": "",
+        "hint_3": "",
+        "feedback_correct": "Em đã xác nhận bắt đầu phần vận dụng độc lập.",
+        "feedback_incorrect": "Nếu chưa đọc xong, em có thể xem lại chính đề và hướng dẫn thao tác.",
+        "common_mistake": "",
+        "transition": "Bài tiếp theo có ba ô A, B, C. Em trả lời từng ô rồi nộp."
+      },
+      "completion_criteria": [
+        "Đã đọc đề và xác nhận bắt đầu EXIT."
+      ],
+      "learning_evidence": "Xác nhận bắt đầu EXIT, H0–H3 ghi riêng nếu cần.",
+      "knowledge_capsule": null,
+      "layout": "assessment",
+      "layout_pattern": "Assessment Entry / Isolation",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": true
+      },
+      "content": "Website giả lập club.example.org: theme=dark hạn 5 ngày; session_id=K25 không khai báo hạn lâu dài.",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "Tệp EXIT student-only / PDF riêng; không có key teacher trong gói.",
+      "feedback_gate": "Không mở lại nội dung/học liệu/sổ tay trong thời gian kiểm tra.",
+      "conceptual_guardrail": "Dual nút luôn sẵn, nhưng ở EXIT chỉ đề + giấy nháp, không truy cập cảnh cũ.",
+      "assessment_isolated": true,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "A5-02",
+      "index": 20,
+      "section": "ACT05",
+      "source_ref": "Skill09_v3.2:A5-02; Skill08:ACT05",
+      "title": "EXIT: ba ô A · B · C",
+      "source_prompt_preserved": "A: cơ chế mũi tên; B: thời hạn; C: công dụng và quyền riêng tư. Trả lời bằng ký hiệu hoặc câu ngắn.",
+      "page_purpose": "Vận dụng độc lập kiến thức về cơ chế, thời hạn và mục đích Cookie.",
+      "student_task": "Trả lời ba phần A (chiều thông điệp), B (thời hạn), C (công dụng/quyền riêng tư).",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Đọc ba phần A, B, C trong đề."
+        },
+        {
+          "index": 2,
+          "label": "Tự viết câu trả lời vào mỗi ô."
+        },
+        {
+          "index": 3,
+          "label": "Kiểm tra xem đủ ba ô."
+        },
+        {
+          "index": 4,
+          "label": "Nộp bài khi hoàn thành."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Bây giờ em tự trả lời A, B và C. Em có thể đọc lại yêu cầu, nhưng sẽ không có gợi ý về đáp án.",
+        "remind_task": "Hãy hoàn thành cả ba ô trước khi nộp.",
+        "hint_1": "",
+        "hint_2": "",
+        "hint_3": "",
+        "feedback_correct": "Bài làm đã được ghi nhận. Nội dung đúng/sai cần được đánh giá theo quy trình riêng.",
+        "feedback_incorrect": "Nếu có ô còn trống, hãy hoàn thiện trước khi nộp hoặc xác nhận bỏ trống.",
+        "common_mistake": "",
+        "transition": "Sau khi kết thúc phần đánh giá, em có thể tiếp tục ôn lại bằng sơ đồ trống."
+      },
+      "completion_criteria": [
+        "Đã nộp câu trả lời cho ba phần hoặc xác nhận ô bỏ trống."
+      ],
+      "learning_evidence": "EXIT ba ô và mức hỗ trợ.",
+      "knowledge_capsule": null,
+      "layout": "assessment",
+      "layout_pattern": "EXIT A / B / C",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": true
+      },
+      "content": "A: chiều request/response/Set-Cookie/Cookie; B: phân loại theo thời hạn; C: mục đích, tracking và quyền riêng tư.",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "exit_independent.html/.pdf (Skill07), chưa nhúng đáp án hoặc engine chấm.",
+      "feedback_gate": "Chỉ báo tiếp nhận bài, không gợi ý/chấm công khai trước nộp.",
+      "conceptual_guardrail": "Không biến xem slide thành hoàn thành bài.",
+      "assessment_isolated": true,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "P07-01",
+      "index": 21,
+      "section": "P07",
+      "source_ref": "Skill09_v3.2:P07-01; Skill08:P07",
+      "title": "Nhớ lại bằng sơ đồ trống",
+      "source_prompt_preserved": "Che tài liệu; nói và ghi lại năm từ khóa, sau đó tự vẽ bốn nhánh: cơ chế, loại, công dụng, quyền riêng tư.",
+      "page_purpose": "Kết nối các khái niệm Cookies từ trí nhớ mà không nhìn lời giải.",
+      "student_task": "Vẽ sơ đồ trống với bốn nhánh: cơ chế, loại, công dụng, quyền riêng tư.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Che nội dung cũ."
+        },
+        {
+          "index": 2,
+          "label": "Viết trung tâm là Cookies."
+        },
+        {
+          "index": 3,
+          "label": "Điền bốn nhánh và các từ khóa em nhớ."
+        },
+        {
+          "index": 4,
+          "label": "Mở lại Sổ tay để đối chiếu sau khi vẽ."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Đến bước ôn tập rồi. Hãy xem em còn nhớ những mối liên hệ nào trước khi mở lại Sổ tay.",
+        "remind_task": "Vẽ sơ đồ theo bốn nhánh và tự ghi năm từ khóa.",
+        "hint_1": "Nghĩ về hai chiều HTTP trước.",
+        "hint_2": "Tiếp tục với Session/Persistent và ba công dụng.",
+        "hint_3": "Lưu ý nhánh quyền riêng tư không đồng nghĩa với một loại Cookie mới.",
+        "feedback_correct": "Em có bản sơ đồ của riêng mình để đối chiếu và sửa.",
+        "feedback_incorrect": "Nếu sơ đồ còn ít ý, hãy điền trước bốn nhánh lớn rồi mở rộng dần.",
+        "common_mistake": "Lẫn tracking (mục đích) với persistent (thời hạn).",
+        "transition": "Cuối cùng dùng thẻ thuật ngữ để tự dạy lại toàn bộ cơ chế."
+      },
+      "completion_criteria": [
+        "Vẽ được bốn nhánh và ghi các từ khóa bản thân nhớ."
+      ],
+      "learning_evidence": "Bản mind-map tự vẽ/ghi chú.",
+      "knowledge_capsule": "Mạng kiến thức Cookies: khái niệm → hai lượt HTTP → session/persistent → công dụng và quyền riêng tư.",
+      "layout": "map",
+      "layout_pattern": "Knowledge Map / Blank Recall",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Sơ đồ Cookies 4 nhánh: cơ chế, phân loại, công dụng, quyền riêng tư.",
+      "source_asset": "cookies_mindmap_blank.svg",
+      "asset_status": "SOURCE_SVG_READY",
+      "asset_plan": "cookies_mindmap_blank.svg; phiếu in.",
+      "feedback_gate": "Sau khi HS vẽ, GV mới so sánh nội dung đã dạy.",
+      "conceptual_guardrail": "Không mở map đáp án trong thời gian EXIT.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    },
+    {
+      "scene_id": "P07-02",
+      "index": 22,
+      "section": "P07",
+      "source_ref": "Skill09_v3.2:P07-02; Skill08:P07",
+      "title": "Flashcards và dạy lại",
+      "source_prompt_preserved": "Ôn thuật ngữ; dạy lại vòng đời Cookie; chơi ghép chiều mũi tên và công dụng.",
+      "page_purpose": "Ôn thuật ngữ và dạy lại Cookie bằng sơ đồ tự vẽ.",
+      "student_task": "Ôn bộ thẻ thuật ngữ và diễn giải vòng đời Cookie trong 1–2 phút.",
+      "steps": [
+        {
+          "index": 1,
+          "label": "Đọc mặt trước thẻ và tự đoán nghĩa."
+        },
+        {
+          "index": 2,
+          "label": "Đối chiếu sau khi tự trả lời."
+        },
+        {
+          "index": 3,
+          "label": "Chọn sơ đồ do mình vẽ."
+        },
+        {
+          "index": 4,
+          "label": "Dạy lại hành trình hai lần truy cập bằng lời."
+        }
+      ],
+      "tutor": {
+        "type": "SCRIPTED_TUTOR",
+        "intro": "Hãy dùng thẻ để kiểm tra trí nhớ, sau đó thử giải thích toàn bộ hành trình cho người chưa học.",
+        "remind_task": "Tự gọi nghĩa thuật ngữ trước khi mở đáp án; dạy lại bằng sơ đồ của em.",
+        "hint_1": "Bắt đầu bằng Browser và Server.",
+        "hint_2": "Nhớ hai từ gần giống nhau Set-Cookie và Cookie.",
+        "hint_3": "Dùng thứ tự: Request đầu → Response → lưu có điều kiện → Request sau.",
+        "feedback_correct": "Em đã có một lượt ôn tập chủ động. Hãy ghi lại thẻ còn hay nhầm.",
+        "feedback_incorrect": "Nếu nhầm từ nào, đánh dấu để ôn lại; không cần chạy theo thời gian.",
+        "common_mistake": "Nhớ được từ nhưng không giải thích cơ chế theo trình tự.",
+        "transition": "Em có thể quay lại Sổ tay để tự ôn phần cần cải thiện."
+      },
+      "completion_criteria": [
+        "Tự trả lời các thẻ.",
+        "Có một lượt giải thích cơ chế bằng lời hoặc ghi chú."
+      ],
+      "learning_evidence": "Flashcard tự học, sản phẩm teach-back.",
+      "knowledge_capsule": "Ôn bằng cách tự gọi tên thuật ngữ, giải thích theo ví dụ rồi dạy lại toàn bộ cơ chế bằng sơ đồ.",
+      "layout": "presentation",
+      "layout_pattern": "Flashcards / Learning by Teaching",
+      "dual_view": {
+        "always_visible": true,
+        "activation": "manual",
+        "exit_lock": false
+      },
+      "content": "Thẻ Browser, Server, Request, Response, Cookie, Set-Cookie, Session, Persistent, Tracking.",
+      "source_asset": null,
+      "asset_status": "TEXT_OR_LAYOUT_ONLY",
+      "asset_plan": "Flashcards tương tác P1; bản giấy print_pack trang 4.",
+      "feedback_gate": "Đảo thứ tự thẻ, nhận xét lỗi cần ôn; không xếp hạng bằng thời gian.",
+      "conceptual_guardrail": "Không cần nằm trong 42 phút; có thể dùng sau buổi học.",
+      "assessment_isolated": false,
+      "implementation_state": "DESIGN_SPEC_WITH_LOW_FI_PREVIEW"
+    }
+  ]
+}
