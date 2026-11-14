@@ -1,0 +1,135 @@
+{
+  "version": "3.2",
+  "files": [
+    {
+      "file": "Studio_Standalone_v3_2.html",
+      "bytes": 62930,
+      "sha256": "0a7fcf8d0cdc372f1c83ab2bf34014c48a55128f7858f5e225fb09695f192f19"
+    },
+    {
+      "file": "preview_notebook_v3_2.png",
+      "bytes": 111084,
+      "sha256": "9af1185180a896998275ca41f932946dab8f74e1bfc472aac8895a8aa15f1a3e"
+    },
+    {
+      "file": "preview_exit_mobile_v3_2.png",
+      "bytes": 74659,
+      "sha256": "20e2107c8da7e29922054359f058ea4c654b41904b03007febb203ceef763e98"
+    },
+    {
+      "file": "Asset_Backlog_v3_2.csv",
+      "bytes": 1339,
+      "sha256": "3b83ac0f1606dd5742d6de204cdcf19546198524762c741a7d964f8e501b3fdb"
+    },
+    {
+      "file": "Skill10_11_12_Handoff_v3_2.md",
+      "bytes": 1766,
+      "sha256": "23c19c3d829b69810f5d776b39e83a987bc81f827ccc270bfa5e67fbb003fa31"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1422,
+      "sha256": "9d43f31ae5f9da83895fd719c784b15f04eb3901b72ac7bc39c5032e3a0e22e8"
+    },
+    {
+      "file": "studio_v3_2.css",
+      "bytes": 8977,
+      "sha256": "de4ae2da41b3af4a62b198c4d152a5dcf410550c95ddef6abf82991907c42bd3"
+    },
+    {
+      "file": "22_Scene_Mode_Asset_Matrix.csv",
+      "bytes": 8157,
+      "sha256": "2cec190ad5a90465d8964a6cfb24ad3aa96009b66871b86dd9a99eb25b4425be"
+    },
+    {
+      "file": "Learning_Scene_Contract_v3_2.json",
+      "bytes": 44222,
+      "sha256": "9ef5126a933fde4558e9e5ced82d5f5bb814ca154359082eaa217f3f53dbbce2"
+    },
+    {
+      "file": "Studio_Prototype_v3_2.html",
+      "bytes": 4164,
+      "sha256": "35af8e45b6e3b63c97fa47d5aa6d09526444a3ffaba9cfb3249428c8a23e71cc"
+    },
+    {
+      "file": "preview_dual_v3_2.png",
+      "bytes": 98374,
+      "sha256": "1f6212d0d3f6ddc9c37bf0603a375c9d52326873a16aea4a2e2219c7898afe3b"
+    },
+    {
+      "file": "preview_lab_v3_2.png",
+      "bytes": 117046,
+      "sha256": "913b9048784507b86a2fad1ce092c0373510302825b488615449dfaa9737a654"
+    },
+    {
+      "file": "Skill09_Architecture_Master_v3_2.md",
+      "bytes": 6425,
+      "sha256": "5f6bdb0849e90cc68435d403c767c57dbc1171fc39a2a5fd2bc68b127c6c746b"
+    },
+    {
+      "file": "studio_v3_2.js",
+      "bytes": 49841,
+      "sha256": "57a9256ff8776c0333b8f36920b65a18ae60586b13225a1721491d1f500157d4"
+    },
+    {
+      "file": "QA_REPORT_v3_2.md",
+      "bytes": 2172,
+      "sha256": "89db777e26db4c8b5b0b8a66979c90ca49f0d2bf90aca15f88a69dcb205d4bab"
+    },
+    {
+      "file": "QA_BROWSER_RESULTS_v3_2.json",
+      "bytes": 850,
+      "sha256": "4ef052f45566bda104988bc24fb0084f2ab6d83074d117766bc38a73e9d3c9c3"
+    },
+    {
+      "file": "Mode_Suitability_Rubric_v3_2.md",
+      "bytes": 3334,
+      "sha256": "749e47a1931a18fe898fb800c5c33ec966780ca68ea67f20a1e442aa32fe01f4"
+    },
+    {
+      "file": "Page_by_Page_22_Scenes_v3_2.md",
+      "bytes": 28479,
+      "sha256": "e3704995f627ec5ed1c0b51b90d910c215228fabdff3f02141d73b3fa0e867c6"
+    },
+    {
+      "file": "Interface_Interaction_Contract_v3_2.md",
+      "bytes": 4722,
+      "sha256": "5209a5bba245a527355aef787c6274fca9371ca22581fb25e7948647d6e1ef87"
+    },
+    {
+      "file": "assets/cookie_lifecycle.svg",
+      "bytes": 1384,
+      "sha256": "fe25efbb08f2983c7c40172355ec72993f722399fea2e7885008e32f4e536259"
+    },
+    {
+      "file": "assets/cookie_accept_block.svg",
+      "bytes": 1145,
+      "sha256": "e18860db7b33782cae1fbcdd36384c01c30ebeab617ede0984e1cacdb92e139e"
+    },
+    {
+      "file": "assets/browser_server_blank.svg",
+      "bytes": 1740,
+      "sha256": "2532c273e23a1f460abd76593ac7beee5ab3424a10f9f2d662ab4bd257cea037"
+    },
+    {
+      "file": "assets/session_persistent_timeline.svg",
+      "bytes": 1323,
+      "sha256": "e389be5157631a2ba7497fa01fc867e8d636ef40daa9d1cfb2e06c5384b9b19d"
+    },
+    {
+      "file": "assets/learning_lab.html",
+      "bytes": 26046,
+      "sha256": "3ca9202984604dc31b5755bee752da46325bc3dcf3554eca237bd0e797ce1766"
+    },
+    {
+      "file": "assets/visual_lab.html",
+      "bytes": 14460,
+      "sha256": "f5b47f03f64b50ffc8fc6121149221657ec006778c403e5cda651f6a249511bf"
+    },
+    {
+      "file": "assets/cookies_mindmap_blank.svg",
+      "bytes": 1488,
+      "sha256": "d11a1c2adaf8dfb3af7fb07f00790226778416f592eb6ebe1aeeebc36e9a1481"
+    }
+  ]
+}
