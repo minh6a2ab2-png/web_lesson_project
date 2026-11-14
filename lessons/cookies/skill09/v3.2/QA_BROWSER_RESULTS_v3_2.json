@@ -1,0 +1,38 @@
+{
+  "browsers": [
+    {
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "js_errors": [],
+      "controls": "pass",
+      "dual": "pass",
+      "notebook": "pass",
+      "lab": "pass",
+      "exit": "pass"
+    },
+    {
+      "width": 820,
+      "height": 980,
+      "overflow": false,
+      "js_errors": [],
+      "controls": "pass",
+      "dual": "pass",
+      "notebook": "pass",
+      "lab": "pass",
+      "exit": "pass"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "overflow": false,
+      "js_errors": [],
+      "controls": "pass",
+      "dual": "pass",
+      "notebook": "pass",
+      "lab": "pass",
+      "exit": "pass"
+    }
+  ],
+  "file_open_test": "blocked: Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///mnt/data/Cookies_Skill09_Interactive_Learning_Studio_v3_2/Studio_Standalone_v3_2.htm"
+}
