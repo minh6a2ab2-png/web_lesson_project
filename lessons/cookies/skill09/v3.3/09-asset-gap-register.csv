@@ -1,0 +1,13 @@
+﻿asset_id,scene,asset,status,origin_license,source_path,alt_caption_and_fallback,owner,priority
+RES-UI-LANGUAGE,A1-01,HTML mock same website before/after,PROTOTYPE,Own original interface,HTML mock working from v3.2,"Screenshot static, student sees two states after prediction",Skill07/10,P0 before Skill11
+RES-REQUEST-RESPONSE,D0-01 A2-01,browser_server_blank.svg,READY,Original SVG supplied,assets/browser_server_blank.svg,ASCII two blocks on paper,Skill07,ready
+RES-COOKIE-LIFECYCLE,A2-04,cookie_lifecycle.svg,READY,Original SVG supplied,assets/cookie_lifecycle.svg,Text steps only after attempt,Skill07,ready
+RES-ACCEPT-BLOCK,A2-05,cookie_accept_block.svg,READY,Original SVG supplied,assets/cookie_accept_block.svg,Two text conditions,Skill07,ready
+RES-TIMELINE,A3-01 A3-02,session_persistent_timeline.svg + blank interactive,PARTIAL / SPEC_ONLY,Original SVG supplied,assets/session_persistent_timeline.svg (answer-gated),Blank three-point text timeline,Skill07,P0 create blank interactive
+RES-CARDS,A4-01,3 purpose cards,SPEC_ONLY,Create original,Pending,Three plain text cards,Skill07/10,P1
+RES-MATRIX,A4-02,lifetime vs purpose 2x2,SPEC_ONLY,Create original,Pending,Textual 2-axis comparison,Skill07/10,P1
+RES-MINDMAP,P07-01,cookies_mindmap_blank.svg,READY,Original SVG supplied,assets/cookies_mindmap_blank.svg,Draw 4 branches by hand,Skill07,ready
+RES-FLASHCARD,P07-02,Interactive flashcards,SPEC_ONLY,Create original,Pending,Print pack sheet,Skill07/11,P1
+RES-EXIT,A5-01 A5-02,Exit independently assessed,PROTOTYPE,Original student-only file,Skill07 student/exit_independent.html (not bundled here),Separate student PDF; teacher keys isolated,Skill07/11,P0 integrate isolated assessment
+RES-TUTOR-AVATAR,all non-EXIT,Mascot/icon & speech bubble,SPEC_ONLY,Create original icon/avatar,Prototype uses accessible text icon,Text-only tutor panel,Skill10,P0 visual asset
+RES-VISUAL-LAB,A2-02 A2-05,visual_lab.html,PROTOTYPE,Original Skill07,Skill07 student/visual_lab.html (not bundled here),Text/paper arrow activities,Skill07/11,P0 result binding
