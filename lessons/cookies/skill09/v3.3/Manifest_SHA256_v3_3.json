@@ -1,0 +1,170 @@
+{
+  "version": "3.3",
+  "files": [
+    {
+      "file": "00_Tong_quan_Kien_truc_Skill09_v3_3.docx",
+      "bytes": 31238,
+      "sha256": "ec5e0a0c215f5858610bdf0742b0dd26853de5cdd361d30d9c240f371fc00173"
+    },
+    {
+      "file": "00_Tong_quan_Kien_truc_Skill09_v3_3.md",
+      "bytes": 13374,
+      "sha256": "577672bb49672aa9e932368d05e4748fd868e8d8a195743d20ffe1fa85b7c5a6"
+    },
+    {
+      "file": "00_Tong_quan_Kien_truc_Skill09_v3_3.pdf",
+      "bytes": 152889,
+      "sha256": "1452d4d112724a384320a1bc8830eb7b95010c125cbe096cc133348862d34913"
+    },
+    {
+      "file": "01_Noi_dung_22_man_tu_hoc.docx",
+      "bytes": 33828,
+      "sha256": "fc4dd18f915371e97e9dbf25819570a20883513d593cdd2fbe4c4b54ca5fd434"
+    },
+    {
+      "file": "01_Noi_dung_22_man_tu_hoc.md",
+      "bytes": 36267,
+      "sha256": "79075c72c999565f87e002202f91d8763d8c91c040de461b998d9d957d9b393e"
+    },
+    {
+      "file": "01_Noi_dung_22_man_tu_hoc.pdf",
+      "bytes": 177534,
+      "sha256": "da689b123a265780fbff081599402c05f08deb6827b50a5aa344e49e682623a4"
+    },
+    {
+      "file": "02_Loi_thoai_tro_giang_22_man.docx",
+      "bytes": 34157,
+      "sha256": "eda46fad80e2cf30a847e7c417d5613d5205596be95bc4a2d1b1cdd241779c3b"
+    },
+    {
+      "file": "02_Loi_thoai_tro_giang_22_man.md",
+      "bytes": 32367,
+      "sha256": "596a3d94d88d47398f6a8e4782cb5fe30b6c0b5742e1ab8820cd6862c516bf23"
+    },
+    {
+      "file": "02_Loi_thoai_tro_giang_22_man.pdf",
+      "bytes": 226648,
+      "sha256": "d4588c7dabb9322d4d89afb32fd923b60987afaf3e43ee23a5902129678c4fe3"
+    },
+    {
+      "file": "09-ai-tutor-script.md",
+      "bytes": 31687,
+      "sha256": "dfea913a21930d855fedd73bb1b79be1941dd95211112acf08a7af70d6386f11"
+    },
+    {
+      "file": "09-asset-gap-register.csv",
+      "bytes": 2066,
+      "sha256": "a5af8f7a89352fa1928f8a1cff8297c897691cbbb758d3c83dfe2b107ddd77ef"
+    },
+    {
+      "file": "09-handoff-to-10-11-12.md",
+      "bytes": 2182,
+      "sha256": "5b154ee4aeb3b03dfbdbab74d2a5879ec8a0841ef5c06ddccf3d5b150d9e4cbb"
+    },
+    {
+      "file": "09-implementation-contract.json",
+      "bytes": 129987,
+      "sha256": "dbd8fc6b8440bf1d18a2e74244166a743a59fe506c325d3ac41029b1e0de559d"
+    },
+    {
+      "file": "09-interaction-spec.md",
+      "bytes": 2600,
+      "sha256": "caae8f657f708219274c263e7306e6eff9ad8b0d498edb7a1e573cf98204bcae"
+    },
+    {
+      "file": "09-lowfi-demo.html",
+      "bytes": 133637,
+      "sha256": "f83e07f81313d4d67461fee973d2de0eb70c46b7e7dc960505533fa099e1366e"
+    },
+    {
+      "file": "09-lowfi-standalone.html",
+      "bytes": 159714,
+      "sha256": "2ea9df730907bd48de3d4e03b52117a7e504c1357e3b73dc93098f6f134673e6"
+    },
+    {
+      "file": "09-lowfi.css",
+      "bytes": 9475,
+      "sha256": "8a8f61af4295ad8ed0d387885f935c146417bed9ad80c39bd26a353bbde6a3c5"
+    },
+    {
+      "file": "09-lowfi.js",
+      "bytes": 16648,
+      "sha256": "fde9d5b04c8ee8392c02315d683bfaeff886332a00ce59417f2f0481df3baf28"
+    },
+    {
+      "file": "09-mode-suitability-matrix.csv",
+      "bytes": 5172,
+      "sha256": "44f74bf251c8747d9f4fcb455367fe5154e9ef586a00428dcad1167cf7987bb8"
+    },
+    {
+      "file": "09-navigation-i18n-a11y.md",
+      "bytes": 1943,
+      "sha256": "4c1c8fabc07fd17dc10253aa8d99285829eaea9e02af9aa5b204ea5ff184942c"
+    },
+    {
+      "file": "09-page-by-page-content.md",
+      "bytes": 35605,
+      "sha256": "663ce2a419dc6271d3299749791916f13e513b50ed8afa971084985d0c70ff34"
+    },
+    {
+      "file": "09-slide-map.md",
+      "bytes": 5390,
+      "sha256": "b6cd1912a9b678e6578e77ae30e2f5dfb95537732251e61ea5e411ee22adedf5"
+    },
+    {
+      "file": "09-state-model.md",
+      "bytes": 1887,
+      "sha256": "33027a4b9a2febf1dc8bbdcf8ecd3b3fc23f9b15a2fc58de8d1751c60ceacccf"
+    },
+    {
+      "file": "09-traceability-gate.md",
+      "bytes": 6901,
+      "sha256": "fb0620289172da7d68ec12712f97b53a4a9f0307a927e71c0c34cc80c1d05404"
+    },
+    {
+      "file": "09-wireframe-spec.md",
+      "bytes": 2150,
+      "sha256": "e6f01b13e33052916660331eaeed093290a7a37bc1826449bd1408901e944325"
+    },
+    {
+      "file": "QA_BROWSER_RESULTS_v3_3.json",
+      "bytes": 774,
+      "sha256": "153299f9a62d337e8848935e7b44a7ee4acade2b6e6e69b61c873bc2bf46fea6"
+    },
+    {
+      "file": "QA_REPORT_v3_3.md",
+      "bytes": 2426,
+      "sha256": "8458a0f8197dbcdfc939f92a3be62bfc4b3bf53b8eddd8b093d10eee606f31fb"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1002,
+      "sha256": "afea0702af6c5409cb5f43d0b8bfcc8300a7efe2aa7a59d2738a833a012cfd15"
+    },
+    {
+      "file": "contact_00_Tong_quan_Kien_truc_Skill09_v3_3.png",
+      "bytes": 248833,
+      "sha256": "37764aecd70e5e6f34dc57f9d99e19eb0dd3c7c259700eaaf366e04b5db123f7"
+    },
+    {
+      "file": "contact_01_Noi_dung_22_man_tu_hoc.png",
+      "bytes": 721758,
+      "sha256": "cecd442eb2bc968b1e285ecce1e761d3fe4d162a4f70d25afc01bf3ed140c6d5"
+    },
+    {
+      "file": "contact_02_Loi_thoai_tro_giang_22_man.png",
+      "bytes": 628314,
+      "sha256": "cc5718479408301f1649e2d16e2d0d6ba60dd606cba4fb8cef352c3ad1bf20ca"
+    },
+    {
+      "file": "preview_tutor_desktop.png",
+      "bytes": 103075,
+      "sha256": "d0d159bce3b5eb20c8f38c738fb63c0419585f7678ee23ac38ccc7ec79a0e6bc"
+    },
+    {
+      "file": "preview_tutor_mobile.png",
+      "bytes": 60846,
+      "sha256": "8cabd662a327ec9adfe6d23789588b77c5f4f0d2a123d2f45b29ccd5b248d836"
+    }
+  ]
+}
