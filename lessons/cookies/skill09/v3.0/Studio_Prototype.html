@@ -1,0 +1,54 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cookies • Kiến trúc slide-web v2</title><link rel="stylesheet" href="prototype.css"></head><body><div class="app"><header class="sitehead"><div><div class="brand">COOKIES / BÀI GIẢNG TƯƠNG TÁC</div><div class="hmeta">Skill 09–10 v3.0 · Modern Learning Studio (bản concept)</div></div><nav class="nav" id="nav" aria-label="Danh sách chặng học"></nav></header><section class="studio-modebar" aria-label="Các không gian học tập">
+  <div class="studio-modebar-head"><div><span class="studio-kicker">INTERACTIVE LEARNING STUDIO · v3.0 CONCEPT</span><h2>Chọn không gian học tập</h2></div><span class="studio-count">22 learning scenes · 6 chế độ</span></div>
+  <div class="studio-tabs" role="group" aria-label="Chế độ học">
+   <button class="studio-tab is-active" type="button" data-studio-mode="presentation" aria-pressed="true">▣ Trình bày</button>
+   <button class="studio-tab" type="button" data-studio-mode="story" aria-pressed="false">▤ Câu chuyện</button>
+   <button class="studio-tab" type="button" data-studio-mode="lab" aria-pressed="false">◈ Mô phỏng Lab</button>
+   <button class="studio-tab" type="button" data-studio-mode="dual" aria-pressed="false">▣▣ Dual View</button>
+   <button class="studio-tab" type="button" data-studio-mode="map" aria-pressed="false">⌘ Bản đồ kiến thức</button>
+   <button class="studio-tab" type="button" data-studio-mode="focus" aria-pressed="false">◎ Active Recall</button>
+  </div><p id="studioStatus" class="studio-status" aria-live="polite">Một màn rộng để giảng giải và dẫn dắt học sinh.</p>
+ </section>
+<section id="dualToolbar" class="view-toolbar" hidden aria-label="Chế độ trình bày">
+  <div class="view-main-controls">
+    <span class="tool-label">BỐ CỤC:</span>
+    <button type="button" class="tool-btn is-selected" id="singleMode" aria-pressed="true">▣ Một slide</button>
+    <button type="button" class="tool-btn" id="dualMode" aria-pressed="false">▣▣ Hai slide</button>
+    <span class="tool-label">KIỂU GHÉP:</span>
+    <button type="button" class="tool-btn" id="adjacentMode" aria-pressed="true" disabled>Liền kề</button>
+    <button type="button" class="tool-btn" id="freeMode" aria-pressed="false" disabled>Bất kỳ</button>
+    <label class="ratio-label">Tỷ lệ <select id="ratioSelect" disabled><option value="50">50 / 50</option><option value="60">60 / 40</option><option value="40">40 / 60</option></select></label>
+  </div>
+  <p class="toolbar-help" id="dualHelp">Một slide lớn để giảng giải. Bật “Hai slide” để so sánh hoặc tham chiếu song song.</p>
+</section>
+<main id="singleCanvas" class="canvas"><div class="scenehead"><div class="eyebrow" id="section"></div><h1 id="title"></h1><p class="subtitle" id="subtitle"></p></div><div id="stage" class="stage" aria-live="polite"></div><div class="footer"><button class="control" id="prev">← Quay lại</button><div style="display:flex;align-items:center;gap:14px"><div class="progressdots" id="dots" aria-hidden="true"></div><span id="counter" class="count"></span></div><button class="control primary" id="next">Tiếp theo →</button></div></main>
+<div id="dualRoot" class="dual-root" hidden>
+  <div class="dual-pair-controls">
+    <span id="pairInfo" class="pair-info">Xem hai màn hình</span>
+    <label class="select-label">Slide trái <select id="leftSelect" aria-label="Chọn slide trái"></select></label>
+    <label class="select-label">Slide phải <select id="rightSelect" aria-label="Chọn slide phải"></select></label>
+    <button type="button" class="tool-btn" id="swapSlides" title="Đổi vị trí hai slide">⇄ Đảo vị trí</button>
+    <button type="button" class="tool-btn" id="nextPair" title="Chuyển cặp slide liền kề">Cặp kế tiếp →</button>
+  </div>
+  <div id="dualGrid" class="dual-grid" aria-label="Hai slide song song">
+    <article class="canvas dual-canvas" id="leftPane" aria-label="Slide bên trái">
+      <div class="dual-pane-title"><span class="pane-label">TRÁI</span><span class="pane-id" id="leftId"></span><span class="pane-count" id="leftCount"></span></div>
+      <div class="scenehead"><div class="eyebrow" id="leftSection"></div><h2 id="leftTitle"></h2><p class="subtitle" id="leftSubtitle"></p></div>
+      <div class="stage" id="leftStage"></div>
+      <div class="footer dual-footer"><button type="button" class="control" id="leftPrev">←</button><span class="count">Điều hướng bên trái</span><button type="button" class="control primary" id="leftNext">→</button></div>
+    </article>
+    <article class="canvas dual-canvas" id="rightPane" aria-label="Slide bên phải">
+      <div class="dual-pane-title"><span class="pane-label">PHẢI</span><span class="pane-id" id="rightId"></span><span class="pane-count" id="rightCount"></span></div>
+      <div class="scenehead"><div class="eyebrow" id="rightSection"></div><h2 id="rightTitle"></h2><p class="subtitle" id="rightSubtitle"></p></div>
+      <div class="stage" id="rightStage"></div>
+      <div class="footer dual-footer"><button type="button" class="control" id="rightPrev">←</button><span class="count">Điều hướng bên phải</span><button type="button" class="control primary" id="rightNext">→</button></div>
+    </article>
+  </div>
+</div>
+<section id="studioRoot" class="studio-root" hidden aria-label="Không gian học tập tương tác">
+  <div class="studio-head"><div><span class="studio-kicker" id="studioEyebrow"></span><h2 id="studioTitle"></h2><p id="studioDesc"></p></div><button class="studio-back" type="button" id="studioReturn">Về trình bày →</button></div>
+  <div id="studioBody" class="studio-body"></div>
+  <p class="studio-caution">Bản thử giao diện Skill 09–10. Tương tác minh họa không phải bộ đánh giá hoặc tiến độ học tập chính thức.</p>
+ </section>
+<p class="note" id="note"></p><p class="note">Bản xem cấu trúc (prototype) cho Skills 10–11. Có thể dùng phím ←/→ để chuyển màn; đây chưa phải bài học có tương tác và đánh giá hoàn chỉnh.</p></div><script src="prototype.js"></script><script src="dual-view.js"></script>
+<script src="studio-modes.js"></script></body></html>
