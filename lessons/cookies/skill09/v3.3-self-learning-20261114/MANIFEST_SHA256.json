@@ -1,0 +1,195 @@
+{
+  "version": "skill09-cookies-run-v3.3",
+  "files": [
+    {
+      "path": "01_Skill09_v3_3_Kien_truc.docx",
+      "size": 41026,
+      "sha256": "f22238898705137dff22929ac03736dc63e697513517beeed3a414e4e09d37dc"
+    },
+    {
+      "path": "01_Skill09_v3_3_Kien_truc.pdf",
+      "size": 133454,
+      "sha256": "ca279a00005b1e4c0f16c2910397b3a1e797c2c0a295a2de0d1a497cea25e39e"
+    },
+    {
+      "path": "02_Skill09_v3_3_Dac_ta_22_man.docx",
+      "size": 44412,
+      "sha256": "a8e48280f606047aadf7f07ff741faa0db9bc576d5df5fb0b37150da02ae5527"
+    },
+    {
+      "path": "02_Skill09_v3_3_Dac_ta_22_man.pdf",
+      "size": 187978,
+      "sha256": "df8d072159053c429677be85380448daa92245cbc188ffda376876f64039303a"
+    },
+    {
+      "path": "03_Skill09_v3_3_Kich_ban_tro_giang.docx",
+      "size": 45417,
+      "sha256": "3be9ecec5e0f4c2a5e4ac09a0d5945acc5e13372a367c059d6ed3531013d9c05"
+    },
+    {
+      "path": "03_Skill09_v3_3_Kich_ban_tro_giang.pdf",
+      "size": 146092,
+      "sha256": "e15b7e1ad258aab41503bc1249ddcab3934f7f32afe47b60e59ab8d3560dd1bc"
+    },
+    {
+      "path": "09-ai-tutor-script.md",
+      "size": 26718,
+      "sha256": "1039eb085e364379952971f48e93184c2c523585ae9289d49291c5c08f236791"
+    },
+    {
+      "path": "09-asset-gap-register.csv",
+      "size": 1683,
+      "sha256": "68ae878337024eb572826db698a162c580ff64a72b951e6ae47dc1a831f2c72e"
+    },
+    {
+      "path": "09-handoff-to-10-11-12.md",
+      "size": 2323,
+      "sha256": "99455e77db3803df4d59bf20d9b26230c59f73ffc0bb06bd015f04214275376d"
+    },
+    {
+      "path": "09-implementation-contract.json",
+      "size": 70089,
+      "sha256": "f7f6f868c83a0d2b3da59c4cffd2309f8edfe93f3483b9113c7844a5203e0de1"
+    },
+    {
+      "path": "09-interaction-spec.md",
+      "size": 8070,
+      "sha256": "dbe9cde688805d6fd414863b0fb9728777d43ad39f6d3c33afea501380687ca1"
+    },
+    {
+      "path": "09-mode-selection-rubric.md",
+      "size": 1381,
+      "sha256": "04219771cd8b9779d759e4c104a1e092f5cd1c1fc5f0a8d20047797bbc752b6b"
+    },
+    {
+      "path": "09-mode-suitability-matrix.csv",
+      "size": 3537,
+      "sha256": "ccb79711578f066c0922cdc6a524e168beeff533469b5472c0276833ca3265a2"
+    },
+    {
+      "path": "09-navigation-i18n-a11y.md",
+      "size": 2520,
+      "sha256": "8aa3c4aa20eebc3047c0c5ef89022b49c367d75ad51a8b571d817f940703cf46"
+    },
+    {
+      "path": "09-page-by-page-content.md",
+      "size": 23940,
+      "sha256": "8c40d10d25abdd74180e6dd80765590a0cc9fa43f1fc05043c2ca5fef8fc4984"
+    },
+    {
+      "path": "09-slide-map.md",
+      "size": 5591,
+      "sha256": "9967c5ba0ef97e9e31ec30bb790185f3d4aa24262ee6f3e71f892cad7dd724fe"
+    },
+    {
+      "path": "09-state-model.md",
+      "size": 2306,
+      "sha256": "4722d7d3364d71170e147e2e15dab21699568117b5e7592f101ba6c7876cbbca"
+    },
+    {
+      "path": "09-traceability-gate.md",
+      "size": 9662,
+      "sha256": "9a68c5f4dbfd7947e0736f5c3dd324f6e0b8f2a5bc44907d7ceea50e79fefd24"
+    },
+    {
+      "path": "09-tutor-ui-data.js",
+      "size": 69497,
+      "sha256": "643ca089aff9fa1c4cbbb1458fa85f1cb7ea3ab558c5d4efc0fbcc804b9ef21c"
+    },
+    {
+      "path": "09-tutor-ui-demo.js",
+      "size": 20542,
+      "sha256": "d4f3879a59d51818d3781c06d57ae2e6a25bd99e69170f207bf09ec621105892"
+    },
+    {
+      "path": "09-tutor-ui-theme.css",
+      "size": 8320,
+      "sha256": "4c7bceabb767fe2ab3fc334dc6e391ffce0d82f56e7f7784f787d04a8c26aaa0"
+    },
+    {
+      "path": "09-wireframe-spec.md",
+      "size": 2934,
+      "sha256": "1f0d1e4a4ba7f5330c8f5e8f309b9114886cf798b95753a1f651c799cf7d9d4e"
+    },
+    {
+      "path": "QA_BROWSER_RESULTS_v3_3.json",
+      "size": 2865,
+      "sha256": "e1570ef443a59a9a1287a7166c45907c58b15dd46dc3a32b7aa442900a0b959c"
+    },
+    {
+      "path": "QA_REPORT_v3_3.md",
+      "size": 3099,
+      "sha256": "163df9fa92d30e331ccd0a11dd398054966483b6591cd8458c269c9ef2ed2269"
+    },
+    {
+      "path": "QA_RUNTIME_LOG.txt",
+      "size": 2560,
+      "sha256": "5fb371e8abb577277061d13e44e205626cb059a7b10995010c28ce25511afd58"
+    },
+    {
+      "path": "README.md",
+      "size": 1834,
+      "sha256": "636c6d67b5e6391d17119e21a51a6ac2886f2a451d7eec7954070ea0538c3dc5"
+    },
+    {
+      "path": "SOURCE_REFERENCES.md",
+      "size": 955,
+      "sha256": "7c4b14834936d73742c8ce51eee8ceaa169ddd17559176f9ba37e339472da43b"
+    },
+    {
+      "path": "Skill09_Definition_v3_3.md",
+      "size": 21062,
+      "sha256": "c789f902b719fc8d8172b33ff5888f16b66a19e2134954deef0de36c73676256"
+    },
+    {
+      "path": "Studio_Prototype_v3_3.html",
+      "size": 3292,
+      "sha256": "c85091a4b86746a85f5019bfc93116c0c51310be97cceeae50082b2d9b0375d7"
+    },
+    {
+      "path": "Studio_Standalone_v3_3.html",
+      "size": 101561,
+      "sha256": "66b7830190dd5231c415863c8991d0d395a4cd902d593d1c747bde0da8c763dd"
+    },
+    {
+      "path": "assets/browser_server_blank.svg",
+      "size": 1740,
+      "sha256": "2532c273e23a1f460abd76593ac7beee5ab3424a10f9f2d662ab4bd257cea037"
+    },
+    {
+      "path": "assets/cookie_accept_block.svg",
+      "size": 1145,
+      "sha256": "e18860db7b33782cae1fbcdd36384c01c30ebeab617ede0984e1cacdb92e139e"
+    },
+    {
+      "path": "assets/cookie_lifecycle.svg",
+      "size": 1384,
+      "sha256": "fe25efbb08f2983c7c40172355ec72993f722399fea2e7885008e32f4e536259"
+    },
+    {
+      "path": "assets/cookies_mindmap_blank.svg",
+      "size": 1488,
+      "sha256": "d11a1c2adaf8dfb3af7fb07f00790226778416f592eb6ebe1aeeebc36e9a1481"
+    },
+    {
+      "path": "assets/session_persistent_timeline.svg",
+      "size": 1323,
+      "sha256": "e389be5157631a2ba7497fa01fc867e8d636ef40daa9d1cfb2e06c5384b9b19d"
+    },
+    {
+      "path": "preview_dual_tutor_desktop.png",
+      "size": 196502,
+      "sha256": "da99f3820bd23e1e713f5f04c3000f050757f89eb455aa0335bbf7115c0154fd"
+    },
+    {
+      "path": "preview_tutor_desktop.png",
+      "size": 166172,
+      "sha256": "a9097115caec9715a4fc10570bdb7cbd2250b3659e8e2472b7c93c273a49de7f"
+    },
+    {
+      "path": "preview_tutor_mobile.png",
+      "size": 131631,
+      "sha256": "c49d3d8b096fb5e8a408fabec792dadc612147c48576e9f5d5c8016d45bc4f94"
+    }
+  ]
+}
