@@ -1,0 +1,9 @@
+﻿priority,scene,need,production_spec,current_status,owner_stage,risk_note
+P0,A1-01,"2 states, same fake website",HTML mock two states + static screenshot fallback,SPEC_ONLY,Skill07 create and verify,Would support visual comparison
+P0,A2-02,Interactive message placement for Set-Cookie,Reuse Skill07 visual_lab + integrate into scene,PROTOTYPE,Skill11 integration,Currently not a working drag/drop in Skill09
+P0,A3-01,Blank timeline for prediction,SVG editable timeline + print fallback,SPEC_ONLY,Skill07 production,Show completed diagram only after prediction
+P1,A4-01,SHOP / LANGUAGE / ANALYTICS cards,"Three consistent, original scenarios as HTML cards",SPEC_ONLY,Skill07 / Skill10,Not decorative images
+P1,A4-02,Lifespan vs purpose matrix,2x2 interactive or static blank matrix,SPEC_ONLY,Skill07 / Skill10,Avoid persistent=tracking misconception
+P1,P07-02,Front/back flashcards,Actual interactive flashcards + PDF offline,PROTOTYPE,Skill07/Skill11,Current prototype text only
+P0,system-wide,Source-to-scene answer capture,"Per activity evidence adapter, local JSON export",SPEC_ONLY,Skill11 engine,Notebook currently manual notes only
+P0,ACT05,Independent assessment import,"Use student-only exit_independent.html and PDF, no key",READY_SOURCE_NOT_INTEGRATED,Skill11 integration,Exclude old questions and answers during EXIT
