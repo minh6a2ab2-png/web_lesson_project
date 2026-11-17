@@ -1,0 +1,151 @@
+[
+  {
+    "question_id": "D-QUIZ-Q1",
+    "section_id": "SEC-DNS",
+    "objective_ids": [
+      "OBJ-DNS-A",
+      "OBJ-DNS-B"
+    ],
+    "type": "single",
+    "prompt": "Khi gõ example.org, phần nào là tên miền?",
+    "options": [
+      "Một đoạn HTML",
+      "example.org",
+      "Một Cookie"
+    ],
+    "retry_policy": "HINT_BEFORE_REVEAL",
+    "student_answer_visible_before_attempt": false
+  },
+  {
+    "question_id": "D-QUIZ-Q2",
+    "section_id": "SEC-DNS",
+    "objective_ids": [
+      "OBJ-DNS-A",
+      "OBJ-DNS-B"
+    ],
+    "type": "order",
+    "prompt": "Sắp xếp các bước theo mô hình nhập tên miền và liên hệ máy chủ.",
+    "options": [
+      "Trình duyệt liên hệ máy chủ",
+      "Trình duyệt dùng tên miền",
+      "Hệ thống DNS hỗ trợ tìm địa chỉ"
+    ],
+    "retry_policy": "HINT_BEFORE_REVEAL",
+    "student_answer_visible_before_attempt": false
+  },
+  {
+    "question_id": "D-QUIZ-Q3",
+    "section_id": "SEC-DNS",
+    "objective_ids": [
+      "OBJ-DNS-A",
+      "OBJ-DNS-B"
+    ],
+    "type": "tf",
+    "prompt": "DNS có nhiệm vụ viết nội dung HTML của trang web?",
+    "options": [],
+    "retry_policy": "HINT_BEFORE_REVEAL",
+    "student_answer_visible_before_attempt": false
+  },
+  {
+    "question_id": "H-QUIZ-Q1",
+    "section_id": "SEC-HTML",
+    "objective_ids": [
+      "OBJ-HTML-A",
+      "OBJ-HTML-B"
+    ],
+    "type": "single",
+    "prompt": "HTML chủ yếu mô tả gì?",
+    "options": [
+      "Cấu trúc/nội dung trang",
+      "Tất cả cookie của trình duyệt",
+      "Danh sách máy chủ DNS"
+    ],
+    "retry_policy": "HINT_BEFORE_REVEAL",
+    "student_answer_visible_before_attempt": false
+  },
+  {
+    "question_id": "H-QUIZ-Q2",
+    "section_id": "SEC-HTML",
+    "objective_ids": [
+      "OBJ-HTML-A",
+      "OBJ-HTML-B"
+    ],
+    "type": "match",
+    "prompt": "Ghép thẻ HTML với vai trò.",
+    "options": {
+      "left": [
+        "h1",
+        "p"
+      ],
+      "right": [
+        "đoạn văn",
+        "tiêu đề chính"
+      ]
+    },
+    "retry_policy": "HINT_BEFORE_REVEAL",
+    "student_answer_visible_before_attempt": false
+  },
+  {
+    "question_id": "H-QUIZ-Q3",
+    "section_id": "SEC-HTML",
+    "objective_ids": [
+      "OBJ-HTML-A",
+      "OBJ-HTML-B"
+    ],
+    "type": "order",
+    "prompt": "Sắp xếp chuỗi cơ bản khi mở trang.",
+    "options": [
+      "Browser hiển thị tài liệu HTML",
+      "Server trả HTTP Response",
+      "Browser gửi HTTP Request"
+    ],
+    "retry_policy": "HINT_BEFORE_REVEAL",
+    "student_answer_visible_before_attempt": false
+  },
+  {
+    "question_id": "C-QUIZ-Q1",
+    "section_id": "SEC-COOKIE",
+    "objective_ids": [
+      "OBJ-COOKIE-A",
+      "OBJ-COOKIE-B"
+    ],
+    "type": "tf",
+    "prompt": "Cookie tự chạy như một chương trình máy tính?",
+    "options": [],
+    "retry_policy": "HINT_BEFORE_REVEAL",
+    "student_answer_visible_before_attempt": false
+  },
+  {
+    "question_id": "C-QUIZ-Q2",
+    "section_id": "SEC-COOKIE",
+    "objective_ids": [
+      "OBJ-COOKIE-A",
+      "OBJ-COOKIE-B"
+    ],
+    "type": "order",
+    "prompt": "Xếp đúng hành trình cơ bản của Cookie.",
+    "options": [
+      "Ở request phù hợp về sau Browser có thể gửi Cookie",
+      "Server có thể gửi Set-Cookie trong Response",
+      "Browser có thể lưu Cookie"
+    ],
+    "retry_policy": "HINT_BEFORE_REVEAL",
+    "student_answer_visible_before_attempt": false
+  },
+  {
+    "question_id": "C-QUIZ-Q3",
+    "section_id": "SEC-COOKIE",
+    "objective_ids": [
+      "OBJ-COOKIE-A",
+      "OBJ-COOKIE-B"
+    ],
+    "type": "single",
+    "prompt": "Một Cookie có thời hạn 7 ngày có chắc chắn dùng để theo dõi?",
+    "options": [
+      "Có, mọi Persistent Cookie đều theo dõi",
+      "Không, thời hạn không xác định mục đích"
+    ],
+    "retry_policy": "HINT_BEFORE_REVEAL",
+    "student_answer_visible_before_attempt": false
+  }
+]
