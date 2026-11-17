@@ -1,0 +1,36 @@
+{
+  "source_files": [
+    {
+      "file": "/mnt/data/Cookies_Skill11_v1.2_Repair_2026-11-17/Cookies_Skill11_v1.2_30Man_Offline.html",
+      "size": 155506,
+      "sha256": "19828b24c7a1bddc5ece00d69f5d72394335be8eb794dd8937530f202ed4a968"
+    },
+    {
+      "file": "/mnt/data/Cookies_Skill11_v1.2_Repair_2026-11-17/contract/09-10-approved-contract.json",
+      "size": 290123,
+      "sha256": "eef7a6630109098c070c6a7a96b5b9a0ae09bcfbed09f2ee15115dbd9484fd3b"
+    },
+    {
+      "file": "/mnt/data/Cookies_Skill11_v1.2_Repair_2026-11-17/11-production-site/app.js",
+      "size": 70383,
+      "sha256": "c67e7f1662a4755c6077495aab8cb56b81b534bf2cc8d29411d779fc58d8c2f6"
+    },
+    {
+      "file": "/mnt/data/Cookies_Skill11_v1.2_Repair_2026-11-17/11-production-site/review-bank.js",
+      "size": 8241,
+      "sha256": "46ea3512d241671937de575de0f0296d80b86d7971ceb8896e7bc8a2234b166c"
+    },
+    {
+      "file": "/mnt/data/Cookies_Skill11_v1.2_Repair_2026-11-17/11-production-site/recall-bank.js",
+      "size": 3428,
+      "sha256": "46ffc4b65b0fe89e460c56bf0377d32e506507d6fdc3c5d554448cbe93b516d5"
+    },
+    {
+      "file": "/mnt/data/Cookies_Skill11_v1.2_Repair_2026-11-17/11-production-site/data.js",
+      "size": 49016,
+      "sha256": "820bffe9fe53f22a6de8729b851d365666d00eb254d3d0cbfb5f8715e761c637"
+    }
+  ],
+  "artifact_modified": false,
+  "audit_date": "2026-11-17"
+}
