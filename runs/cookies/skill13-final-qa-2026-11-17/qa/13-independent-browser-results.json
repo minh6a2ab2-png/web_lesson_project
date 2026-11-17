@@ -1,0 +1,237 @@
+{
+  "audit_name": "Cookies Skill13 Independent Final QA",
+  "source_version": "Skill11 v1.2 (2026-11-17)",
+  "source_sha256": "19828b24c7a1bddc5ece00d69f5d72394335be8eb794dd8937530f202ed4a968",
+  "scope": "Static content, core contract and independent Chromium simulated interactions; NOT actual Windows or learner field test",
+  "case_count": 30,
+  "pass": 29,
+  "fail": 1,
+  "results": [
+    {
+      "id": "STRUCT-01-IDs",
+      "passed": true,
+      "detail": "30 scenes, 30 unique IDs",
+      "gate": "STRUCTURE"
+    },
+    {
+      "id": "STRUCT-02-CATEGORIES",
+      "passed": true,
+      "detail": "25 core, 3 optional, 2 conditional recovery",
+      "gate": "STRUCTURE"
+    },
+    {
+      "id": "STRUCT-03-TIME",
+      "passed": true,
+      "detail": "Core 3270 seconds approved; optional P00/P07 and recovery excluded",
+      "gate": "TIME"
+    },
+    {
+      "id": "STRUCT-Pair-ACT01",
+      "passed": true,
+      "detail": "ACT01: recall=A1-04, review=A1-05; indices 8/9",
+      "gate": "STRUCTURE"
+    },
+    {
+      "id": "STRUCT-Pair-ACT02",
+      "passed": true,
+      "detail": "ACT02: recall=A2-06, review=A2-07; indices 15/16",
+      "gate": "STRUCTURE"
+    },
+    {
+      "id": "STRUCT-Pair-ACT03",
+      "passed": true,
+      "detail": "ACT03: recall=A3-03, review=A3-04; indices 20/21",
+      "gate": "STRUCTURE"
+    },
+    {
+      "id": "STRUCT-Pair-ACT04",
+      "passed": true,
+      "detail": "ACT04: recall=A4-03, review=A4-04; indices 24/25",
+      "gate": "STRUCTURE"
+    },
+    {
+      "id": "TIME-02-SUM",
+      "passed": true,
+      "detail": "Sum of estimated_seconds for 25 core scenes = 3270, target 3270",
+      "gate": "TIME"
+    },
+    {
+      "id": "TECH-01-OFFLINE",
+      "passed": true,
+      "detail": "Standalone HTML has no external script or CSS refs",
+      "gate": "RUNTIME"
+    },
+    {
+      "id": "TECH-02-NODUAL",
+      "passed": true,
+      "detail": "No Dual View interactions in runtime",
+      "gate": "RUNTIME"
+    },
+    {
+      "id": "SEC-01-NO-TEACHER-KEY",
+      "passed": true,
+      "detail": "Teacher guide and EXIT answer key not embedded",
+      "gate": "ASSESSMENT"
+    },
+    {
+      "id": "SEC-02-NO-AUTOGRADE-EXIT",
+      "passed": true,
+      "detail": "EXIT stores submission without automatic grading",
+      "gate": "ASSESSMENT"
+    },
+    {
+      "id": "UX-01-VI-ONLY",
+      "passed": true,
+      "detail": "Only Vietnamese content; English mode not shipped. Explicit bilingual requirement remains unresolved.",
+      "gate": "SCOPE"
+    },
+    {
+      "id": "RENDER-1366x768",
+      "passed": true,
+      "detail": {
+        "scenes": 30,
+        "horizontal_overflow": [],
+        "unreachable_footer": [],
+        "scroll_exceptions_count": 0,
+        "js_errors": []
+      },
+      "gate": "RUNTIME"
+    },
+    {
+      "id": "RENDER-1024x768",
+      "passed": true,
+      "detail": {
+        "scenes": 30,
+        "horizontal_overflow": [],
+        "unreachable_footer": [],
+        "scroll_exceptions_count": 0,
+        "js_errors": []
+      },
+      "gate": "RUNTIME"
+    },
+    {
+      "id": "RENDER-768x900",
+      "passed": true,
+      "detail": {
+        "scenes": 30,
+        "horizontal_overflow": [],
+        "unreachable_footer": [],
+        "scroll_exceptions_count": 0,
+        "js_errors": []
+      },
+      "gate": "RUNTIME"
+    },
+    {
+      "id": "RENDER-390x844",
+      "passed": true,
+      "detail": {
+        "scenes": 30,
+        "horizontal_overflow": [],
+        "unreachable_footer": [],
+        "scroll_exceptions_count": 0,
+        "js_errors": []
+      },
+      "gate": "RUNTIME"
+    },
+    {
+      "id": "RENDER-360x740",
+      "passed": true,
+      "detail": {
+        "scenes": 30,
+        "horizontal_overflow": [],
+        "unreachable_footer": [],
+        "scroll_exceptions_count": 0,
+        "js_errors": []
+      },
+      "gate": "RUNTIME"
+    },
+    {
+      "id": "RENDER-740x360",
+      "passed": true,
+      "detail": {
+        "scenes": 30,
+        "horizontal_overflow": [],
+        "unreachable_footer": [],
+        "scroll_exceptions_count": 30,
+        "js_errors": []
+      },
+      "gate": "RUNTIME"
+    },
+    {
+      "id": "PED-01-RECALL-NEXT-CHECKPOINT",
+      "passed": true,
+      "detail": "Recall Next opens explicit checkpoint",
+      "gate": "PEDAGOGY"
+    },
+    {
+      "id": "PED-02-QUIZ-NEXT-CHECKPOINT",
+      "passed": true,
+      "detail": "Review Next opens explicit checkpoint",
+      "gate": "PEDAGOGY"
+    },
+    {
+      "id": "PED-03-MENU-DOES-NOT-SILENTLY-BYPASS",
+      "passed": false,
+      "detail": "Menu jumped A5-01 without confirmation; skipped flags 10/10. Logs flags silently.",
+      "gate": "PEDAGOGY"
+    },
+    {
+      "id": "PED-04-MENU-SKIP-NOT-MASTERY",
+      "passed": true,
+      "detail": "Skip logs ['D0-01', 'D0-02', 'A1-04', 'A1-05', 'A2-06', 'A2-07', 'A3-03', 'A3-04', 'A4-03', 'A4-04']; not marked mastered",
+      "gate": "PEDAGOGY"
+    },
+    {
+      "id": "PED-05-DIAGNOSTIC-RECOVERY",
+      "passed": true,
+      "detail": "Unanswered D0 directs to recover scene when requested",
+      "gate": "PEDAGOGY"
+    },
+    {
+      "id": "PED-06-RECALL-REVEAL-GATE",
+      "passed": true,
+      "detail": "Must self-report before comparing; no auto mastery",
+      "gate": "PEDAGOGY"
+    },
+    {
+      "id": "PED-07-RECALL-STATE",
+      "passed": true,
+      "detail": "Marked SELF_REPORTED only, not MASTERED",
+      "gate": "PEDAGOGY"
+    },
+    {
+      "id": "PED-08-QUIZ-REPAIR",
+      "passed": true,
+      "detail": "Wrong choice prompts retry; correct afterward stored per stable question ID",
+      "gate": "PEDAGOGY"
+    },
+    {
+      "id": "PED-09-LAB-PREDICTION",
+      "passed": true,
+      "detail": "A2-04 requires prediction before run",
+      "gate": "PEDAGOGY"
+    },
+    {
+      "id": "ASSESS-01-EXIT-ISOLATION",
+      "passed": true,
+      "detail": "Tutor and menu disabled; blank submission not marked complete",
+      "gate": "ASSESSMENT"
+    },
+    {
+      "id": "PRIV-01-LOCALSTORAGE-NOTICE",
+      "passed": true,
+      "detail": "Generic privacy text may exist but there is no explicit shared-device save warning in learner UI; manual UX review required.",
+      "gate": "PRIVACY"
+    }
+  ],
+  "issues": [
+    {
+      "issue_id": "S13-01",
+      "severity": "P1",
+      "scene_id": "ALL_RECALL_REVIEW",
+      "gate": "PEDAGOGY",
+      "finding": "Menu jumped A5-01 without confirmation; skipped flags 10/10. Logs flags silently."
+    }
+  ],
+  "source_path": "/mnt/data/Cookies_Skill11_v1.2_Repair_2026-11-17/Cookies_Skill11_v1.2_30Man_Offline.html"
+}
