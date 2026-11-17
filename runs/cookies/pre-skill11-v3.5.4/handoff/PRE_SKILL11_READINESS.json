@@ -1,0 +1,39 @@
+{
+  "version": "3.5.4-preSkill11",
+  "scenes": 30,
+  "default_scenes": 28,
+  "conditional_recovery_scenes": 2,
+  "core_seconds": 3270,
+  "active_recall_scenes": 4,
+  "review_scenes": 4,
+  "question_count": 13,
+  "cue_count": 12,
+  "question_ids_present_in_browser": true,
+  "cue_ids_present_in_browser": true,
+  "desktop_rendered_scenes": 30,
+  "desktop_clipping": [],
+  "responsive_overflow": {
+    "1024x768": [],
+    "768x900": [],
+    "390x844": [],
+    "360x740": []
+  },
+  "responsive_clipping": {
+    "1024x768": [],
+    "768x900": [],
+    "390x844": [],
+    "360x740": []
+  },
+  "javascript_errors": [],
+  "strict_gate": "FAIL",
+  "remaining_blockers": [
+    {
+      "code": "TIME_APPROVAL_REQUIRED",
+      "severity": "blocker",
+      "message": "Core is 3270s vs approved baseline 2520s; missing explicit approved time-change record"
+    }
+  ],
+  "skill11_run": false,
+  "student_validation": "NOT_RUN",
+  "recommendation": "Ready for user visual/time signoff; then Skill11 can begin; not a production release."
+}
