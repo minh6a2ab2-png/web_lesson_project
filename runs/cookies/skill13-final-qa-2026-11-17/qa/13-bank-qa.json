@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "unique_question_ids": 13,
+  "unique_cue_ids": 12,
+  "question_modes": [
+    "single",
+    "match",
+    "tf",
+    "order",
+    "multi"
+  ],
+  "sections": [
+    {
+      "section": "A1-05",
+      "count": 3,
+      "modes": [
+        "single",
+        "match",
+        "tf"
+      ],
+      "ids": [
+        "A1-05-Q01",
+        "A1-05-Q02",
+        "A1-05-Q03"
+      ]
+    },
+    {
+      "section": "A2-07",
+      "count": 4,
+      "modes": [
+        "single",
+        "order",
+        "multi"
+      ],
+      "ids": [
+        "A2-07-Q01",
+        "A2-07-Q02",
+        "A2-07-Q03",
+        "A2-07-Q04"
+      ]
+    },
+    {
+      "section": "A3-04",
+      "count": 3,
+      "modes": [
+        "match",
+        "tf",
+        "single"
+      ],
+      "ids": [
+        "A3-04-Q01",
+        "A3-04-Q02",
+        "A3-04-Q03"
+      ]
+    },
+    {
+      "section": "A4-04",
+      "count": 3,
+      "modes": [
+        "match",
+        "tf",
+        "multi"
+      ],
+      "ids": [
+        "A4-04-Q01",
+        "A4-04-Q02",
+        "A4-04-Q03"
+      ]
+    }
+  ],
+  "errors": []
+}
