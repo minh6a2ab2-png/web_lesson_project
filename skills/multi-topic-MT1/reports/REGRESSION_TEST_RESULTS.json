@@ -1,0 +1,240 @@
+{
+  "cases": [
+    {
+      "case": "valid_test_fixture",
+      "expected": "PASS",
+      "observed": "PASS",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "case": "production_requires_user_approval",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "USER_TIME_APPROVAL_REQUIRED",
+        "USER_APPROVAL_EVIDENCE_REQUIRED"
+      ]
+    },
+    {
+      "case": "missing_quiz",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "MISSING_CORE_SCENE",
+        "PREREQ_ORDER",
+        "BRIDGE_ENDPOINT_MISSING"
+      ]
+    },
+    {
+      "case": "missing_recall",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "MISSING_CORE_SCENE"
+      ]
+    },
+    {
+      "case": "wrong_recall_quiz_order",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "RECALL_QUIZ_ORDER",
+        "RECALL_ROLE",
+        "REVIEW_ROLE",
+        "RECALL_REVIEW_NOT_ADJACENT",
+        "NOT_AT_END_OF_SECTION"
+      ]
+    },
+    {
+      "case": "no_topic_bridge",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "MISSING_TOPIC_BRIDGE"
+      ]
+    },
+    {
+      "case": "broken_prerequisite_order",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "PREREQ_ORDER"
+      ]
+    },
+    {
+      "case": "time_overshoot",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "SESSION_TIME_MISMATCH",
+        "TIME_APPROVAL_CONFLICT"
+      ]
+    },
+    {
+      "case": "monotonous_quiz",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "QUIZ_MONOTONOUS"
+      ]
+    },
+    {
+      "case": "quiz_answer_leak",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "STUDENT_BANK_LEAK"
+      ]
+    },
+    {
+      "case": "recall_answer_leak",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "RECALL_ANSWER_LEAK"
+      ]
+    },
+    {
+      "case": "toc_skips_without_confirmation",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "TOC_BYPASS"
+      ]
+    },
+    {
+      "case": "resume_skips_without_confirmation",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "RESUME_BYPASS"
+      ]
+    },
+    {
+      "case": "exit_key_in_client",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "EXIT_KEY_LEAK"
+      ]
+    },
+    {
+      "case": "missing_objective_evidence",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "OBJECTIVE_UNRECALLED"
+      ]
+    },
+    {
+      "case": "missing_integrated_transfer",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "CROSS_TOPIC_TRANSFER_MISSING_OBJECTIVES"
+      ]
+    },
+    {
+      "case": "question_in_wrong_section",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "QUIZ_WRONG_SECTION"
+      ]
+    },
+    {
+      "case": "scene_cross_section_link",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "CROSS_SECTION_MISLINK"
+      ]
+    },
+    {
+      "case": "unapproved_actual_time",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "TIME_APPROVAL_MISSING"
+      ]
+    },
+    {
+      "case": "missing_game",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "MISSING_GAME",
+        "GAME_NOT_VARIANT",
+        "GAME_REPLACES_SECTION_QUIZ"
+      ]
+    },
+    {
+      "case": "game_only_one_type",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "GAME_NOT_VARIANT"
+      ]
+    },
+    {
+      "case": "no_postclass_mindmap",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "POST_CLASS_RETRIEVAL_MISSING"
+      ]
+    },
+    {
+      "case": "prearranged_order_options",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "ORDER_ANSWER_PREARRANGED"
+      ]
+    },
+    {
+      "case": "exit_omits_html",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "EXIT_MISSING_ONE_TOPIC"
+      ]
+    },
+    {
+      "case": "dangling_topic_section",
+      "expected": "FAIL",
+      "observed": "FAIL",
+      "passed": true,
+      "issues": [
+        "DANGLING_SECTION_FROM_TOPIC"
+      ]
+    }
+  ],
+  "passed": 25,
+  "total": 25,
+  "all_pass": true
+}
