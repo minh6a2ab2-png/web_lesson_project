@@ -1,0 +1,244 @@
+{
+  "schema": "section-reinforcement-manifest/v1",
+  "lesson_id": "Cookies",
+  "status": "PRE_SKILL11_INPUT_PROPOSAL",
+  "knowledge_sections": [
+    {
+      "section_id": "ACT01",
+      "objective_ids": [
+        "OBJ-COOKIE",
+        "OBJ-FOUND"
+      ],
+      "recall_scene_id": "A1-04",
+      "review_scene_id": "A1-05",
+      "recall_cues": [
+        {
+          "icon": "🌐",
+          "tag": "Lần truy cập sau",
+          "prompt": "Website nhớ lựa chọn nào của người dùng?",
+          "model": "Website có thể nhớ rằng em đã chọn Tiếng Việt.",
+          "cue_id": "A1-04-C01"
+        },
+        {
+          "icon": "🧩",
+          "tag": "language=vi",
+          "prompt": "Nói ý nghĩa phần trước và sau dấu =.",
+          "model": "language là tên dữ liệu; vi là giá trị biểu thị Tiếng Việt.",
+          "cue_id": "A1-04-C02"
+        },
+        {
+          "icon": "🍪",
+          "tag": "Cookie",
+          "prompt": "Cookie là gì? Nói thêm một điều Cookie không phải.",
+          "model": "Cookie là một phần dữ liệu nhỏ; không phải HTML hay chương trình tự chạy.",
+          "cue_id": "A1-04-C03"
+        }
+      ],
+      "quiz_question_ids": [
+        "A1-05-Q01",
+        "A1-05-Q02",
+        "A1-05-Q03"
+      ],
+      "question_types": [
+        "match",
+        "single",
+        "tf"
+      ],
+      "estimated_seconds": 270,
+      "evidence_modes": [
+        "oral",
+        "notebook",
+        "web_attemps"
+      ],
+      "reveal_gates": {
+        "recall": "attempt_before_reveal",
+        "review": "answer_before_explanation"
+      },
+      "qa_state": "STRUCTURAL_VERIFIED_ONLY",
+      "source_refs": [
+        "Skill08 Cookies v1.0",
+        "Skill09–10 v3.5.3 proposal 2026-11-17"
+      ]
+    },
+    {
+      "section_id": "ACT02",
+      "objective_ids": [
+        "OBJ-FIRST",
+        "OBJ-RETURN"
+      ],
+      "recall_scene_id": "A2-06",
+      "review_scene_id": "A2-07",
+      "recall_cues": [
+        {
+          "icon": "💻",
+          "tag": "Lượt đầu: xin trang",
+          "prompt": "Vẽ chiều Request giữa Browser và Server.",
+          "model": "Browser → Server: HTTP Request.",
+          "cue_id": "A2-06-C01"
+        },
+        {
+          "icon": "📨",
+          "tag": "Máy chủ trả lời",
+          "prompt": "Set-Cookie xuất hiện ở chiều nào?",
+          "model": "Server → Browser: HTTP Response có thể chứa Set-Cookie.",
+          "cue_id": "A2-06-C02"
+        },
+        {
+          "icon": "🔁",
+          "tag": "Lượt sau",
+          "prompt": "Cookie đã lưu đi theo chiều nào và khi nào?",
+          "model": "Browser → Server: Cookie header trong Request phù hợp (đã lưu, còn hợp lệ, đúng phạm vi).",
+          "cue_id": "A2-06-C03"
+        }
+      ],
+      "quiz_question_ids": [
+        "A2-07-Q01",
+        "A2-07-Q02",
+        "A2-07-Q03",
+        "A2-07-Q04"
+      ],
+      "question_types": [
+        "multi",
+        "order",
+        "single"
+      ],
+      "estimated_seconds": 335,
+      "evidence_modes": [
+        "oral",
+        "notebook",
+        "web_attemps"
+      ],
+      "reveal_gates": {
+        "recall": "attempt_before_reveal",
+        "review": "answer_before_explanation"
+      },
+      "qa_state": "STRUCTURAL_VERIFIED_ONLY",
+      "source_refs": [
+        "Skill08 Cookies v1.0",
+        "Skill09–10 v3.5.3 proposal 2026-11-17"
+      ]
+    },
+    {
+      "section_id": "ACT03",
+      "objective_ids": [
+        "OBJ-TYPES"
+      ],
+      "recall_scene_id": "A3-03",
+      "review_scene_id": "A3-04",
+      "recall_cues": [
+        {
+          "icon": "⏳",
+          "tag": "Session Cookie",
+          "prompt": "Nói đặc điểm thời hạn của Session Cookie.",
+          "model": "Không đặt thời điểm hết hạn bằng Expires/Max-Age; thường tồn tại theo phiên.",
+          "cue_id": "A3-03-C01"
+        },
+        {
+          "icon": "📅",
+          "tag": "Persistent Cookie",
+          "prompt": "Nói khi nào gọi là Persistent Cookie.",
+          "model": "Được đặt thời hạn hết hiệu lực, có thể còn qua phiên nếu chưa hết hạn/bị xóa.",
+          "cue_id": "A3-03-C02"
+        },
+        {
+          "icon": "🗑️",
+          "tag": "Tình huống",
+          "prompt": "Có hạn 7 ngày thì có thể mất sau 1 ngày không?",
+          "model": "Có. Người dùng xóa Cookie, hoặc các điều kiện khác làm nó không còn trước hạn.",
+          "cue_id": "A3-03-C03"
+        }
+      ],
+      "quiz_question_ids": [
+        "A3-04-Q01",
+        "A3-04-Q02",
+        "A3-04-Q03"
+      ],
+      "question_types": [
+        "match",
+        "single",
+        "tf"
+      ],
+      "estimated_seconds": 260,
+      "evidence_modes": [
+        "oral",
+        "notebook",
+        "web_attemps"
+      ],
+      "reveal_gates": {
+        "recall": "attempt_before_reveal",
+        "review": "answer_before_explanation"
+      },
+      "qa_state": "STRUCTURAL_VERIFIED_ONLY",
+      "source_refs": [
+        "Skill08 Cookies v1.0",
+        "Skill09–10 v3.5.3 proposal 2026-11-17"
+      ]
+    },
+    {
+      "section_id": "ACT04",
+      "objective_ids": [
+        "OBJ-USES",
+        "OBJ-PRIVACY"
+      ],
+      "recall_scene_id": "A4-03",
+      "review_scene_id": "A4-04",
+      "recall_cues": [
+        {
+          "icon": "🛍️",
+          "tag": "Chọn một tình huống",
+          "prompt": "Giỏ hàng, ngôn ngữ hoặc phân tích: Cookie giúp gì?",
+          "model": "Ví dụ, Cookie có thể giúp nhớ giỏ hàng hoặc ngôn ngữ; phân tích là một công dụng khác.",
+          "cue_id": "A4-03-C01"
+        },
+        {
+          "icon": "🔁",
+          "tag": "Cơ chế",
+          "prompt": "Dùng lời em giải thích khi nào dữ liệu được gửi lại.",
+          "model": "Browser có thể gửi Cookie đã lưu qua Request phù hợp, nếu điều kiện cho phép.",
+          "cue_id": "A4-03-C02"
+        },
+        {
+          "icon": "🔏",
+          "tag": "Quyền riêng tư",
+          "prompt": "Nói một điều người dùng cần chú ý.",
+          "model": "Xem mục đích dùng Cookie và lựa chọn chấp nhận/từ chối; lưu lâu không tự đồng nghĩa theo dõi.",
+          "cue_id": "A4-03-C03"
+        }
+      ],
+      "quiz_question_ids": [
+        "A4-04-Q01",
+        "A4-04-Q02",
+        "A4-04-Q03"
+      ],
+      "question_types": [
+        "match",
+        "multi",
+        "tf"
+      ],
+      "estimated_seconds": 280,
+      "evidence_modes": [
+        "oral",
+        "notebook",
+        "web_attemps"
+      ],
+      "reveal_gates": {
+        "recall": "attempt_before_reveal",
+        "review": "answer_before_explanation"
+      },
+      "qa_state": "STRUCTURAL_VERIFIED_ONLY",
+      "source_refs": [
+        "Skill08 Cookies v1.0",
+        "Skill09–10 v3.5.3 proposal 2026-11-17"
+      ]
+    }
+  ],
+  "total_core_seconds_proposed": 3270,
+  "baseline_core_seconds_approved": 2520,
+  "time_change_approval": {
+    "status": "PENDING",
+    "proposal_seconds": 3270
+  },
+  "runtime_browser_qa": "NOT_RUN_IN_THIS_SKILL_UPGRADE",
+  "field_validated": false,
+  "source_25_unchanged": true
+}
