@@ -1,0 +1,417 @@
+{
+  "schema_version": "MT-CONTRACT-v1.0",
+  "status": "ILLUSTRATIVE_TEST_FIXTURE_NOT_TEACHER_APPROVED",
+  "session_id": "DEMO-WEB-120-3TOPICS",
+  "title": "Một hành trình mở trang web: DNS, HTTP/HTML và Cookie",
+  "audience": "Dạy kèm 1:1; nền chưa xác minh, chỉ là mô hình minh họa",
+  "duration_seconds": 7200,
+  "time_approval": {
+    "status": "DEMO_APPROVED_FOR_TEST_ONLY",
+    "approved_seconds": 7200,
+    "scope": "fixture only"
+  },
+  "topics": [
+    {
+      "topic_id": "TP-DNS",
+      "name": "DNS và tên miền",
+      "section_ids": [
+        "SEC-DNS"
+      ]
+    },
+    {
+      "topic_id": "TP-HTML",
+      "name": "HTTP và HTML",
+      "section_ids": [
+        "SEC-HTML"
+      ]
+    },
+    {
+      "topic_id": "TP-COOKIE",
+      "name": "Cookie và ghi nhớ",
+      "section_ids": [
+        "SEC-COOKIE"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "section_id": "SEC-DNS",
+      "topic_id": "TP-DNS",
+      "kind": "CORE_LEARNING",
+      "objective_ids": [
+        "OBJ-DNS-A",
+        "OBJ-DNS-B"
+      ],
+      "ku_ids": [
+        "KU-DOMAIN",
+        "KU-IP",
+        "KU-DNS"
+      ],
+      "prerequisites": [],
+      "teach_scene_ids": [
+        "D-TEACH",
+        "D-EXPLORE"
+      ],
+      "recall_scene_id": "D-RECALL",
+      "review_scene_id": "D-QUIZ",
+      "recall_cue_ids": [
+        "D-RECALL-C1",
+        "D-RECALL-C2",
+        "D-RECALL-C3"
+      ],
+      "review_question_ids": [
+        "D-QUIZ-Q1",
+        "D-QUIZ-Q2",
+        "D-QUIZ-Q3"
+      ],
+      "duration_seconds": 1500,
+      "delivery": "short_explanation+guided_exploration+recall+quiz"
+    },
+    {
+      "section_id": "SEC-HTML",
+      "topic_id": "TP-HTML",
+      "kind": "CORE_LEARNING",
+      "objective_ids": [
+        "OBJ-HTML-A",
+        "OBJ-HTML-B"
+      ],
+      "ku_ids": [
+        "KU-HTTP",
+        "KU-HTML"
+      ],
+      "prerequisites": [
+        "SEC-DNS"
+      ],
+      "teach_scene_ids": [
+        "H-TEACH",
+        "H-EXPLORE"
+      ],
+      "recall_scene_id": "H-RECALL",
+      "review_scene_id": "H-QUIZ",
+      "recall_cue_ids": [
+        "H-RECALL-C1",
+        "H-RECALL-C2",
+        "H-RECALL-C3"
+      ],
+      "review_question_ids": [
+        "H-QUIZ-Q1",
+        "H-QUIZ-Q2",
+        "H-QUIZ-Q3"
+      ],
+      "duration_seconds": 1800,
+      "delivery": "short_explanation+guided_exploration+recall+quiz"
+    },
+    {
+      "section_id": "SEC-COOKIE",
+      "topic_id": "TP-COOKIE",
+      "kind": "CORE_LEARNING",
+      "objective_ids": [
+        "OBJ-COOKIE-A",
+        "OBJ-COOKIE-B"
+      ],
+      "ku_ids": [
+        "KU-COOKIE-LIFECYCLE",
+        "KU-COOKIE-USES"
+      ],
+      "prerequisites": [
+        "SEC-HTML"
+      ],
+      "teach_scene_ids": [
+        "C-TEACH",
+        "C-EXPLORE"
+      ],
+      "recall_scene_id": "C-RECALL",
+      "review_scene_id": "C-QUIZ",
+      "recall_cue_ids": [
+        "C-RECALL-C1",
+        "C-RECALL-C2",
+        "C-RECALL-C3"
+      ],
+      "review_question_ids": [
+        "C-QUIZ-Q1",
+        "C-QUIZ-Q2",
+        "C-QUIZ-Q3"
+      ],
+      "duration_seconds": 1860,
+      "delivery": "short_explanation+guided_exploration+recall+quiz"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "OPEN",
+      "role": "GAME_OPEN",
+      "duration_seconds": 420,
+      "section_id": null,
+      "objective_ids": [],
+      "student_action": "Trò chơi khởi động ba câu về địa chỉ web, Browser, Server; học sinh trả lời rồi giải thích ngắn"
+    },
+    {
+      "scene_id": "D-TEACH",
+      "role": "TEACH",
+      "duration_seconds": 360,
+      "section_id": "SEC-DNS",
+      "objective_ids": [
+        "OBJ-DNS-A",
+        "OBJ-DNS-B"
+      ],
+      "student_action": "Hiểu tên miền so với địa chỉ IP qua ví dụ dễ nhớ"
+    },
+    {
+      "scene_id": "D-EXPLORE",
+      "role": "EXPLORE",
+      "duration_seconds": 600,
+      "section_id": "SEC-DNS",
+      "objective_ids": [
+        "OBJ-DNS-A",
+        "OBJ-DNS-B"
+      ],
+      "student_action": "Quan sát trình duyệt thật, phân biệt tên miền trên thanh địa chỉ với nội dung trang"
+    },
+    {
+      "scene_id": "D-RECALL",
+      "role": "ACTIVE_RECALL",
+      "duration_seconds": 240,
+      "section_id": "SEC-DNS",
+      "objective_ids": [
+        "OBJ-DNS-A",
+        "OBJ-DNS-B"
+      ],
+      "student_action": "Tự nói rồi ghi/vẽ tên miền, IP và vai trò DNS trước khi đối chiếu"
+    },
+    {
+      "scene_id": "D-QUIZ",
+      "role": "REVIEW_QUIZ",
+      "duration_seconds": 300,
+      "section_id": "SEC-DNS",
+      "objective_ids": [
+        "OBJ-DNS-A",
+        "OBJ-DNS-B"
+      ],
+      "student_action": "Ba câu ngắn gồm chọn, thứ tự, đúng/sai"
+    },
+    {
+      "scene_id": "BR-D-H",
+      "role": "BRIDGE",
+      "duration_seconds": 120,
+      "section_id": null,
+      "objective_ids": [],
+      "student_action": "DNS giúp biết đích; website trả lại tài nguyên như thế nào?"
+    },
+    {
+      "scene_id": "H-TEACH",
+      "role": "TEACH",
+      "duration_seconds": 480,
+      "section_id": "SEC-HTML",
+      "objective_ids": [
+        "OBJ-HTML-A",
+        "OBJ-HTML-B"
+      ],
+      "student_action": "Nghe giải thích ngắn Request/Response và cấu trúc HTML"
+    },
+    {
+      "scene_id": "H-EXPLORE",
+      "role": "EXPLORE",
+      "duration_seconds": 780,
+      "section_id": "SEC-HTML",
+      "objective_ids": [
+        "OBJ-HTML-A",
+        "OBJ-HTML-B"
+      ],
+      "student_action": "Tự xem kết quả HTML và cấu trúc tiêu đề/đoạn văn trên trang web"
+    },
+    {
+      "scene_id": "H-RECALL",
+      "role": "ACTIVE_RECALL",
+      "duration_seconds": 240,
+      "section_id": "SEC-HTML",
+      "objective_ids": [
+        "OBJ-HTML-A",
+        "OBJ-HTML-B"
+      ],
+      "student_action": "Nói/ghi hai chiều request/response và vai trò HTML"
+    },
+    {
+      "scene_id": "H-QUIZ",
+      "role": "REVIEW_QUIZ",
+      "duration_seconds": 300,
+      "section_id": "SEC-HTML",
+      "objective_ids": [
+        "OBJ-HTML-A",
+        "OBJ-HTML-B"
+      ],
+      "student_action": "Ba câu chọn/ghép/sắp xếp"
+    },
+    {
+      "scene_id": "BREAK",
+      "role": "BREAK",
+      "duration_seconds": 300,
+      "section_id": null,
+      "objective_ids": [],
+      "student_action": "Giải lao ngắn"
+    },
+    {
+      "scene_id": "BR-H-C",
+      "role": "BRIDGE",
+      "duration_seconds": 120,
+      "section_id": null,
+      "objective_ids": [],
+      "student_action": "Trang có nội dung rồi; lần sau website nhận biết lựa chọn cũ như thế nào?"
+    },
+    {
+      "scene_id": "C-TEACH",
+      "role": "TEACH",
+      "duration_seconds": 540,
+      "section_id": "SEC-COOKIE",
+      "objective_ids": [
+        "OBJ-COOKIE-A",
+        "OBJ-COOKIE-B"
+      ],
+      "student_action": "Cookie là dữ liệu, cách Set-Cookie trong Response và Cookie trong Request"
+    },
+    {
+      "scene_id": "C-EXPLORE",
+      "role": "EXPLORE",
+      "duration_seconds": 780,
+      "section_id": "SEC-COOKIE",
+      "objective_ids": [
+        "OBJ-COOKIE-A",
+        "OBJ-COOKIE-B"
+      ],
+      "student_action": "Dự đoán Accept/Block và chạy mô phỏng, có giải thích đúng giới hạn"
+    },
+    {
+      "scene_id": "C-RECALL",
+      "role": "ACTIVE_RECALL",
+      "duration_seconds": 240,
+      "section_id": "SEC-COOKIE",
+      "objective_ids": [
+        "OBJ-COOKIE-A",
+        "OBJ-COOKIE-B"
+      ],
+      "student_action": "Tự nhắc lại hai chiều và một ví dụ use case"
+    },
+    {
+      "scene_id": "C-QUIZ",
+      "role": "REVIEW_QUIZ",
+      "duration_seconds": 300,
+      "section_id": "SEC-COOKIE",
+      "objective_ids": [
+        "OBJ-COOKIE-A",
+        "OBJ-COOKIE-B"
+      ],
+      "student_action": "Ba câu đúng/sai, sắp xếp, chọn ví dụ"
+    },
+    {
+      "scene_id": "TRANSFER",
+      "role": "INTEGRATED_TRANSFER",
+      "duration_seconds": 600,
+      "section_id": null,
+      "objective_ids": [
+        "OBJ-DNS-B",
+        "OBJ-HTML-A",
+        "OBJ-COOKIE-A"
+      ],
+      "student_action": "Dạy lại cho một người bạn: từ tên miền qua DNS → HTTP/HTML → Cookie ở lần sau"
+    },
+    {
+      "scene_id": "EXIT",
+      "role": "ASSESS",
+      "duration_seconds": 360,
+      "section_id": null,
+      "objective_ids": [
+        "OBJ-DNS-A",
+        "OBJ-HTML-B",
+        "OBJ-COOKIE-B"
+      ],
+      "student_action": "Tình huống một website mới; 3 câu trả lời độc lập, giáo viên kiểm"
+    },
+    {
+      "scene_id": "CLOSE",
+      "role": "CLOSE",
+      "duration_seconds": 120,
+      "section_id": null,
+      "objective_ids": [],
+      "student_action": "Tóm tắt, nhắc tự vẽ mind map và flashcard trước buổi sau"
+    }
+  ],
+  "bridges": [
+    {
+      "scene_id": "BR-D-H",
+      "from_section_id": "SEC-DNS",
+      "to_section_id": "SEC-HTML",
+      "prior_knowledge": "Tên miền được DNS hỗ trợ phân giải thành thông tin địa chỉ",
+      "next_question": "Liên hệ được rồi, server trả gì cho browser?",
+      "prompt": "DNS giúp tìm nơi đến; tiếp theo trang được tải ra sao?"
+    },
+    {
+      "scene_id": "BR-H-C",
+      "from_section_id": "SEC-HTML",
+      "to_section_id": "SEC-COOKIE",
+      "prior_knowledge": "Browser xin và nhận trang HTML từ Server qua HTTP",
+      "next_question": "Website ghi nhớ lựa chọn vào lần tới theo cơ chế nào?",
+      "prompt": "Nếu trang đã hiển thị, lần tới nó nhớ được ngôn ngữ bằng cách nào?"
+    }
+  ],
+  "integrated_transfer": {
+    "scene_id": "TRANSFER",
+    "objective_ids": [
+      "OBJ-DNS-B",
+      "OBJ-HTML-A",
+      "OBJ-COOKIE-A"
+    ]
+  },
+  "exit": {
+    "scene_id": "EXIT",
+    "independent": true,
+    "auto_mastery": false,
+    "teacher_key_in_student_payload": false
+  },
+  "navigation": {
+    "default_path": [
+      "OPEN",
+      "D-TEACH",
+      "D-EXPLORE",
+      "D-RECALL",
+      "D-QUIZ",
+      "BR-D-H",
+      "H-TEACH",
+      "H-EXPLORE",
+      "H-RECALL",
+      "H-QUIZ",
+      "BREAK",
+      "BR-H-C",
+      "C-TEACH",
+      "C-EXPLORE",
+      "C-RECALL",
+      "C-QUIZ",
+      "TRANSFER",
+      "EXIT",
+      "CLOSE"
+    ],
+    "skip_policy": "CONFIRM_AND_RECORD_SKIPPED",
+    "toc_guard": "SAME_AS_NEXT",
+    "resume_guard": "SAME_AS_NEXT"
+  },
+  "learning_evidence": {
+    "oral_or_paper": "SELF_REPORTED_UNTIL_TEACHER_VERIFIED",
+    "visited_is_mastered": false
+  },
+  "student_payload_has_answers": false,
+  "game": {
+    "scene_id": "OPEN",
+    "position": "opening",
+    "question_types": [
+      "single",
+      "tf",
+      "match"
+    ],
+    "purpose": "Gợi nhớ nền URL/Browser/Server từ bài trước, không giảng thêm kiến thức mới",
+    "question_count": 3,
+    "not_section_quiz": true
+  },
+  "post_class": {
+    "mindmap": "Tự vẽ 3 nhánh DNS/HTML/Cookie từ trí nhớ; đối chiếu sau",
+    "flashcards": "Ôn định nghĩa domain, DNS, HTML, Cookie trước buổi sau",
+    "teach_back": "Giải thích hành trình website cho một người chưa học bằng sơ đồ của em"
+  }
+}
