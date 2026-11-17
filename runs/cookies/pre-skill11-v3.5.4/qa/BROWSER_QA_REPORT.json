@@ -1,0 +1,67 @@
+{
+  "rendered_scenes": 30,
+  "desktop_clipped": [],
+  "responsive_horizontal_overflow": {
+    "1024x768": [],
+    "768x900": [],
+    "390x844": [],
+    "360x740": []
+  },
+  "responsive_stage_clipping": {
+    "1024x768": [],
+    "768x900": [],
+    "390x844": [],
+    "360x740": []
+  },
+  "page_errors": [],
+  "runtime_banks": {
+    "scenes": 30,
+    "normal": 28,
+    "recall": {
+      "A1-04": [
+        "A1-04-C01",
+        "A1-04-C02",
+        "A1-04-C03"
+      ],
+      "A2-06": [
+        "A2-06-C01",
+        "A2-06-C02",
+        "A2-06-C03"
+      ],
+      "A3-03": [
+        "A3-03-C01",
+        "A3-03-C02",
+        "A3-03-C03"
+      ],
+      "A4-03": [
+        "A4-03-C01",
+        "A4-03-C02",
+        "A4-03-C03"
+      ]
+    },
+    "review": {
+      "A1-05": [
+        "A1-05-Q01",
+        "A1-05-Q02",
+        "A1-05-Q03"
+      ],
+      "A2-07": [
+        "A2-07-Q01",
+        "A2-07-Q02",
+        "A2-07-Q03",
+        "A2-07-Q04"
+      ],
+      "A3-04": [
+        "A3-04-Q01",
+        "A3-04-Q02",
+        "A3-04-Q03"
+      ],
+      "A4-04": [
+        "A4-04-Q01",
+        "A4-04-Q02",
+        "A4-04-Q03"
+      ]
+    }
+  },
+  "qa_method": "Chromium rendered via page.set_content from verified standalone HTML; file URL is admin-blocked."
+}
