@@ -1,0 +1,15 @@
+{
+  "version": "1.1",
+  "audit": "SIMULATED_AUDIT_REVISE_REQUIRED",
+  "input": "Cookies Skill11 v1.1",
+  "scenes_reviewed": 30,
+  "browser_scenarios": 7,
+  "issue_counts": {
+    "P0": 0,
+    "P1": 7,
+    "P2": 3
+  },
+  "student_field_test": "NOT_RUN",
+  "skill13": "BLOCKED",
+  "js_errors": []
+}
