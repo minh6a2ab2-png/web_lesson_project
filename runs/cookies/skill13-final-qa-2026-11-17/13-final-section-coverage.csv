@@ -1,0 +1,5 @@
+﻿section,knowledge_units,objective_ids,recall_scene,recall_cues,review_scene,review_questions,question_types,pair_order,content_coverage,evidence,field_validated
+ACT01,K1,OBJ-FOUND;OBJ-COOKIE,A1-04,3,A1-05,3,single; match; tf,PASS,PASS,Student self-report for recall + scored practice quiz (not mastery),NO
+ACT02,K2;K3,OBJ-FIRST;OBJ-RETURN,A2-06,3,A2-07,4,single; order; multi,PASS,PASS,Student self-report for recall + scored practice quiz (not mastery),NO
+ACT03,K4,OBJ-TYPES,A3-03,3,A3-04,3,match; tf; single,PASS,PASS,Student self-report for recall + scored practice quiz (not mastery),NO
+ACT04,K5;K6,OBJ-USES;OBJ-PRIVACY,A4-03,3,A4-04,3,match; tf; multi,PASS,PARTIAL_OBJ_PRIVACY,Student self-report for recall + scored practice quiz (not mastery),NO
