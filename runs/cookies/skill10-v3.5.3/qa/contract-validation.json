@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "30_unique_scene_ids": true,
+    "28_default_2_conditional": true,
+    "four_sections_with_pair": true,
+    "recall_immediately_precedes_review": true,
+    "13_questions": true,
+    "types_diverse": true,
+    "new_core_is_3270_seconds": true,
+    "time_sum": true,
+    "no_dual_view": true,
+    "exit_still_independent": true,
+    "source_25_ids_preserved": true,
+    "standalone_embedded": true,
+    "answers_order_not_leaked": true
+  },
+  "all_structural_pass": true,
+  "browser_visual_status": "NOT_RUN: chromium managed URL policy blocked local pages",
+  "test_evidence": [
+    "qa/static-runtime-test.json",
+    "node --check JS",
+    "test_quiz_logic.js"
+  ],
+  "user_review_status": "PENDING",
+  "skill11_status": "NOT_RUN"
+}
