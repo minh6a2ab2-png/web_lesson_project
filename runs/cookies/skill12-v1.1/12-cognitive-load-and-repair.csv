@@ -1,0 +1,8 @@
+﻿section,risk,learner_observation,proposed_scaffold,confidence
+D0,Foundations missing,Wrong and checked branches to remediation; unanswered skips remediation,Prompt check / voluntary recovery,Observed
+ACT01,Definition retention,3 cues + 3 questions but optional to skip; no spoken evidence,Self-report + 1 optional keyword; repair after errors,Observed
+ACT02,High concept density,HTTP direction + Set-Cookie and Cookie can be confused; A2-04 model lacks prediction,Predict arrow and then run two conditions,Observed
+ACT03,Session persistence caveats,Definitions accurate with caveat; six-cell timeline may be high load,"Keep pre-intro, one guided first row if learner struggles",Design inference
+ACT04,Privacy over-generalization,"Claim selection is practiced, teach-back not independently checked","Tutor oral checklist, targeted privacy counterexample",Observed
+ACT05,Assessment integrity,No auto-mastered; blank attempt not submitted complete,"Teacher scoring rubric, preserve independent no-tutor mode",Observed
+P07,After-class retrieval,Hint/mindmap can be revealed immediately,Mark attempt-before-reveal consistent with 4 recalls,Observed
