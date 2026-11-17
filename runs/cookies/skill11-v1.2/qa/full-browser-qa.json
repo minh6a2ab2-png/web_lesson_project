@@ -1,0 +1,29 @@
+{
+  "version": "1.2",
+  "scene_count": 30,
+  "screens": {
+    "1366x768": {
+      "scenes_available": 30,
+      "problems": []
+    },
+    "1024x768": {
+      "scenes_available": 30,
+      "problems": []
+    },
+    "768x900": {
+      "scenes_available": 30,
+      "problems": []
+    },
+    "390x844": {
+      "scenes_available": 30,
+      "problems": []
+    },
+    "360x740": {
+      "scenes_available": 30,
+      "problems": []
+    }
+  },
+  "script_errors": [],
+  "method": "Chromium via page.set_content + injected source (file URL blocked by host)",
+  "pass": true
+}
