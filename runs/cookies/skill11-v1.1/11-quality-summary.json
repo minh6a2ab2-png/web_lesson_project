@@ -1,0 +1,20 @@
+{
+  "status": "SKILL11_INITIAL_IMPLEMENTATION_QA_PASS",
+  "scenes": 30,
+  "normal_scenes": 28,
+  "conditional_recovery": 2,
+  "core_duration_seconds": 3270,
+  "approved": true,
+  "recall_scenes": 4,
+  "review_scenes": 4,
+  "question_count": 13,
+  "cue_count": 12,
+  "strict_gate": "STRUCTURAL_PASS",
+  "browser_test": "30 scenes rendered, no page errors or horizontal overflow at 1024,768,390,360",
+  "e2e": "13 cases passed (recall, quiz, persist/resume, exit, teacher separation)",
+  "student_validation": "NOT_RUN",
+  "windows_open_test": "NOT_RUN",
+  "offline_file_open_on_user_device": "NOT_RUN",
+  "english_translation": "NOT_READY",
+  "release": "DEVELOPMENT_BUILD"
+}
