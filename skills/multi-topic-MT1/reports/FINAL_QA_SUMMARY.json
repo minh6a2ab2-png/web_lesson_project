@@ -1,0 +1,37 @@
+{
+  "version": "MT1-2026-11-17",
+  "skills_count": 13,
+  "role_mapping": "Cookies 13 skills",
+  "fixture": {
+    "topics": 3,
+    "sections": 3,
+    "scenes": 19,
+    "recall": 3,
+    "quiz": 3,
+    "review_questions": 9,
+    "cues": 9,
+    "bridges": 2,
+    "duration_seconds": 7200,
+    "time_user_approved": false
+  },
+  "static_validator": {
+    "status": "PASS",
+    "production": false,
+    "section_count": 3,
+    "topic_count": 3,
+    "scene_count": 19,
+    "duration_seconds": 7200,
+    "questions": 9,
+    "recall_cues": 9,
+    "errors": []
+  },
+  "negative_regression": {
+    "passed": 25,
+    "total": 25,
+    "all_pass": true
+  },
+  "browser_test": "NOT_RUN",
+  "field_test": "NOT_RUN",
+  "release_status": "DEFINITION_DELIVERABLE_ONLY",
+  "user_task": "STEP_2_OF_3_ONLY; STEP_3_BACKUP_NOT_STARTED"
+}
