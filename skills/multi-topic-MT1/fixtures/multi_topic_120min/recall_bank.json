@@ -1,0 +1,119 @@
+[
+  {
+    "cue_id": "D-RECALL-C1",
+    "section_id": "SEC-DNS",
+    "objective_ids": [
+      "OBJ-DNS-A",
+      "OBJ-DNS-B"
+    ],
+    "visual_or_keyword": "Hình thanh địa chỉ có tên miền",
+    "prompt": "Em đọc tên website bằng gì?",
+    "required_attempt": "oral_or_paper_before_reveal",
+    "reveal_after_attempt": true,
+    "evidence_state": "SELF_REPORTED_UNTIL_VERIFIED"
+  },
+  {
+    "cue_id": "D-RECALL-C2",
+    "section_id": "SEC-DNS",
+    "objective_ids": [
+      "OBJ-DNS-A",
+      "OBJ-DNS-B"
+    ],
+    "visual_or_keyword": "Từ khóa IP",
+    "prompt": "IP được dùng để làm gì?",
+    "required_attempt": "oral_or_paper_before_reveal",
+    "reveal_after_attempt": true,
+    "evidence_state": "SELF_REPORTED_UNTIL_VERIFIED"
+  },
+  {
+    "cue_id": "D-RECALL-C3",
+    "section_id": "SEC-DNS",
+    "objective_ids": [
+      "OBJ-DNS-A",
+      "OBJ-DNS-B"
+    ],
+    "visual_or_keyword": "Biểu tượng sổ địa chỉ DNS",
+    "prompt": "DNS hỗ trợ điều gì?",
+    "required_attempt": "oral_or_paper_before_reveal",
+    "reveal_after_attempt": true,
+    "evidence_state": "SELF_REPORTED_UNTIL_VERIFIED"
+  },
+  {
+    "cue_id": "H-RECALL-C1",
+    "section_id": "SEC-HTML",
+    "objective_ids": [
+      "OBJ-HTML-A",
+      "OBJ-HTML-B"
+    ],
+    "visual_or_keyword": "Browser → Server",
+    "prompt": "Chiều xin tài nguyên là gì?",
+    "required_attempt": "oral_or_paper_before_reveal",
+    "reveal_after_attempt": true,
+    "evidence_state": "SELF_REPORTED_UNTIL_VERIFIED"
+  },
+  {
+    "cue_id": "H-RECALL-C2",
+    "section_id": "SEC-HTML",
+    "objective_ids": [
+      "OBJ-HTML-A",
+      "OBJ-HTML-B"
+    ],
+    "visual_or_keyword": "Server → Browser",
+    "prompt": "Chiều trả tài nguyên là gì?",
+    "required_attempt": "oral_or_paper_before_reveal",
+    "reveal_after_attempt": true,
+    "evidence_state": "SELF_REPORTED_UNTIL_VERIFIED"
+  },
+  {
+    "cue_id": "H-RECALL-C3",
+    "section_id": "SEC-HTML",
+    "objective_ids": [
+      "OBJ-HTML-A",
+      "OBJ-HTML-B"
+    ],
+    "visual_or_keyword": "Cặp <h1> và <p>",
+    "prompt": "HTML mô tả thành phần gì?",
+    "required_attempt": "oral_or_paper_before_reveal",
+    "reveal_after_attempt": true,
+    "evidence_state": "SELF_REPORTED_UNTIL_VERIFIED"
+  },
+  {
+    "cue_id": "C-RECALL-C1",
+    "section_id": "SEC-COOKIE",
+    "objective_ids": [
+      "OBJ-COOKIE-A",
+      "OBJ-COOKIE-B"
+    ],
+    "visual_or_keyword": "Set-Cookie",
+    "prompt": "Server gửi đề nghị lưu ở chiều nào?",
+    "required_attempt": "oral_or_paper_before_reveal",
+    "reveal_after_attempt": true,
+    "evidence_state": "SELF_REPORTED_UNTIL_VERIFIED"
+  },
+  {
+    "cue_id": "C-RECALL-C2",
+    "section_id": "SEC-COOKIE",
+    "objective_ids": [
+      "OBJ-COOKIE-A",
+      "OBJ-COOKIE-B"
+    ],
+    "visual_or_keyword": "Cookie",
+    "prompt": "Browser gửi lại khi nào?",
+    "required_attempt": "oral_or_paper_before_reveal",
+    "reveal_after_attempt": true,
+    "evidence_state": "SELF_REPORTED_UNTIL_VERIFIED"
+  },
+  {
+    "cue_id": "C-RECALL-C3",
+    "section_id": "SEC-COOKIE",
+    "objective_ids": [
+      "OBJ-COOKIE-A",
+      "OBJ-COOKIE-B"
+    ],
+    "visual_or_keyword": "Chọn tiếng Việt",
+    "prompt": "Cookie có thể giúp lưu lựa chọn nào?",
+    "required_attempt": "oral_or_paper_before_reveal",
+    "reveal_after_attempt": true,
+    "evidence_state": "SELF_REPORTED_UNTIL_VERIFIED"
+  }
+]
