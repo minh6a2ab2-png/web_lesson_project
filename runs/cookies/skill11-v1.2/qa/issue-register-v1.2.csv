@@ -1,0 +1,11 @@
+﻿issue_id,priority,status,remediation,evidence
+S12-P1-01,P1,FIXED_SIMULATED,Checkpoint trước khi rời Recall/Quiz; hoãn được ghi SKIPPED; 8/8 màn có xác nhận,full-route-gate.json
+S12-P1-02,P1,FIXED_SIMULATED,D0 chưa trả lời xuất hiện gợi ý kiểm tra hoặc ôn nền 45 giây,full-route-gate.json
+S12-P1-03,P1,FIXED_SIMULATED,A2-04 bắt dự đoán trước chạy; sơ đồ phản ánh có gửi/không gửi,12-reaudit-scenarios.json
+S12-P1-04,P1,MITIGATED_NEEDS_HUMAN,"Tự báo cáo SELF_REPORTED, không MASTERED; checklist riêng để giáo viên kiểm tra",TEACHER_VERIFICATION_CHECKLIST.md
+S12-P1-05,P1,FIXED_SIMULATED,Không lộ đáp án đúng khi thử sai các màn phân loại; 13 hint theo câu hỏi,12-reaudit-scenarios.json
+S12-P1-06,P1,FIXED_SIMULATED,Mindmap chỉ mở mẫu sau khi đánh dấu tự làm; flashcard chỉ lật sau khi tự thử,12-reaudit-scenarios.json
+S12-P1-07,P1,FIXED_CONTRACT,"Cùng hợp đồng có APPROVED/3270s và Skill11 v1.2, không còn trạng thái đề xuất Skill11 NOT_RUN",contract/09-10-approved-contract.json
+S12-P2-01,P2,FIXED_SIMULATED,"13 câu có hint riêng theo nội dung, gợi ý không đưa đáp án trực tiếp",review-bank.js
+S12-P2-02,P2,MITIGATED_NEEDS_HUMAN,Đã có phiếu GV đánh giá sản phẩm nói/giấy; chưa có giao diện đồng bộ đánh giá GV,TEACHER_VERIFICATION_CHECKLIST.md
+S12-P2-03,P2,OPEN_FIELD_TEST,"Chưa kiểm thử trực tiếp với học sinh, Windows và bản tiếng Anh",README.md
