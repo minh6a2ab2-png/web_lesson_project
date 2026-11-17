@@ -1,0 +1,72 @@
+{
+  "version": "Skill11 v1.2",
+  "origin": "Skill12 v1.1 audit, 10 issues",
+  "simulation": "REPAIR_QA_PASS_WITH_FIELD_LIMITS",
+  "validated_scenarios": {
+    "A_no_attempt_fast_forward": "Now prompts & explicit skip logging",
+    "B_missing_foundations": "Offers recovery option when unanswered; wrong answer routes recovery",
+    "C_forgets_and_skips": "Recall and Quiz cannot be bypassed silently",
+    "D_wrong_then_repair": "Question-specific feedback, retry and persistence",
+    "E_exit_incomplete": "Unchanged, not auto-scored",
+    "F_exit_isolation": "Unchanged, tutor and menu disabled during EXIT",
+    "G_content_issues": "A2-04 prediction, mindmap and flashcards gated"
+  },
+  "checks": {
+    "A_diagnostic_checkpoint": true,
+    "B_diag_skip_logged": true,
+    "B_diag_token_logged": true,
+    "C_recall_attempt_and_checkpoint": true,
+    "C_review_skip_acknowledged": true,
+    "D_quiz_hint_and_retry": true,
+    "G_lab_prediction_both_cases": true,
+    "G_mindmap_gated": true,
+    "G_flashcard_gated": true,
+    "E_F_exit_integrity": true,
+    "resume": true,
+    "responsive_overflow": true
+  },
+  "full_route": {
+    "unattempted_diag_offers_recovery": true,
+    "eight_pairs_no_silent_skip": true,
+    "all_eight_logged": true,
+    "no_auto_mastery": true
+  },
+  "responsive": {
+    "1366x768": {
+      "scenes_available": 30,
+      "problems": []
+    },
+    "1024x768": {
+      "scenes_available": 30,
+      "problems": []
+    },
+    "768x900": {
+      "scenes_available": 30,
+      "problems": []
+    },
+    "390x844": {
+      "scenes_available": 30,
+      "problems": []
+    },
+    "360x740": {
+      "scenes_available": 30,
+      "problems": []
+    }
+  },
+  "javascript_errors": [],
+  "issue_disposition": {
+    "S12-P1-01": "FIXED_SIMULATED",
+    "S12-P1-02": "FIXED_SIMULATED",
+    "S12-P1-03": "FIXED_SIMULATED",
+    "S12-P1-04": "MITIGATED_NEEDS_HUMAN",
+    "S12-P1-05": "FIXED_SIMULATED",
+    "S12-P1-06": "FIXED_SIMULATED",
+    "S12-P1-07": "FIXED_CONTRACT",
+    "S12-P2-01": "FIXED_SIMULATED",
+    "S12-P2-02": "MITIGATED_NEEDS_HUMAN",
+    "S12-P2-03": "OPEN_FIELD_TEST"
+  },
+  "field_student_test": "NOT_PERFORMED",
+  "skill13": "NOT_RUN",
+  "release": "NOT_FINAL"
+}
