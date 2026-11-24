@@ -1,0 +1,16 @@
+﻿change_id,requirement,skills_affected,artifacts_or_evidence,check_token,source
+M01,One topic / provenance / mechanisms,"01,02,03,04,05","topic register, method rubric",ONE_TOPIC,v1.5 + MT2
+M02,"13 original Scene Kinds incl INTRODUCTION; v2.2 adds PROBLEM_CONTEXT as 14th","02,03,04,06,08,09,10,11,12,13","scene contract, intros, tests",INTRODUCTION,FocusLab v1
+M03,OBSERVE focal question central,"03,04,06,09,10,11,12,13","opening cue, previews",OBSERVE,FocusLab v1
+M04,DIAGNOSE correct recap modal & wrong Recovery,"01,03,04,05,06,07,09,10,11,12,13","prior-knowledge content, modal contracts",DIAGNOSE,FocusLab v1
+M05,Tooltip auto-hide hover/focus/touch,"03,05,09,10,11,12,13",glossary & a11y tests,tooltip,FocusLab v1
+M06,Every mechanism model interactive,"01,03,04,05,06,07,08,09,10,11,12,13","model registry, state machine, QA",model_id,FocusLab v1/v1.3
+M07,"Two-phase 2–3 s, ALL at once, no dwell","02,04,06,08,09,10,11,12,13",reveal contract/timer tests,full_reveal_group,FocusLab v3
+M08,Instant reveal & reduce-motion separately,"04,06,07,08,09,10,11,12,13",global toggle/fallback tests,instant_reveal,FocusLab v3
+M09,"Full viewport, no scroll/no clip/readable","02,05,08,09,10,11,12,13",layout budget & screenshot/DOM QA,viewport_fallback,Viewport-fit + v1.5
+M10,Previous/Next fixed bottom-left/right,"09,10,11,12,13",routing/footer contract,FIXED_NAV,Viewport-fit + v1.5
+M11,No part/subslide due overflow,"02,09,10,11,12,13",scene boundary rules,scene_id,v1.5
+M12,No duplicate model CTA,"07,09,10,11,12,13",CTA matrix and test,model_action,v1.5
+M13,"Recall→Review section, 5512, field-vs-static","01,02,03,04,06,07,08,09,10,11,12,13",coverage & gates,completion_gate,MT2 baseline
+M15,Bối cảnh có tiêu đề; thực trạng/nhu cầu; vấn đề; hình minh họa và cầu nối (PROBLEM_CONTEXT) thay câu hỏi trơ trọi,"01,02,03,04,05,06,07,08,09,10,11,12,13",context candidate/scene spec/context illustration/QA across 13 skills,PROBLEM_CONTEXT,User approval 2026-11-23 after Skill08
+M16,"Tách hai scene theo nhiệm vụ và evidence khác nhau; giữ cùng activity_id, không dùng subslide giải quyết tràn viewport","02,03,04,06,08,09,10,11,12,13",decision rubric/dual scene handoff/checks,TWO_SCENES,User-approved context→observation structure

@@ -1,0 +1,679 @@
+--- v2.1/skills/skill01/SKILL.md
++++ v2.2/skills/skill01/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: content-research-analysis
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 01 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 01 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 01 — Content Research & Analysis (ONE_TOPIC v2)
++# SKILL 01 — Content Research & Analysis (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+ Nghiên cứu đúng **một topic**, truy nguyên nguồn, đơn vị kiến thức, tiên quyết và những cơ chế cần mô hình. Không định số scene, hiệu ứng hay chọn phương pháp ở đây.
+@@ -18,6 +18,12 @@
+ Tài liệu tối thiểu/SGK do người dùng đưa; tên nội dung con; mục tiêu lớp học, hồ sơ học sinh, phiên bản nguồn; yêu cầu dùng trình duyệt thực nếu có.
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
++### Chuẩn hóa nguồn bối cảnh và vấn đề (PROBLEM_CONTEXT)
++- Với mỗi `topic_id`, tạo ít nhất **một ứng viên bối cảnh thực** có `context_source`, tác nhân, địa điểm/tình huống, hành động quen thuộc, thực trạng quan sát được, **knowledge_gap** và `problem_question` chưa được giải đáp. Phân biệt sự thật có nguồn với ví dụ giả định; tuyệt đối không bịa số liệu/thực trạng.
++- Bối cảnh có thể là **nhu cầu, hiện tượng, sự khác biệt hoặc nghịch lý**, không ép mọi nội dung phải có mâu thuẫn. Ghi `student_relevance` và `illustration_candidate` (ảnh, ảnh chụp, SVG hoặc mô hình) với nguồn/bản quyền.
++- Chuyển cho Skill02 **hai khả năng**: một OBSERVE tích hợp bối cảnh, hoặc `PROBLEM_CONTEXT` riêng rồi mới OBSERVE/hoạt động tiếp. Skill01 chỉ nêu ứng viên, **không** quyết định số scene.
++- Đầu ra bổ sung `01-context-problem-candidates.md`: nguồn, tính xác thực, câu dẫn, trạng thái trước/sau, điều chưa biết và giới hạn chưa được hé lộ (spoiler boundary).
++
+ 1. Khóa `topic_id` duy nhất, tách `CORE/EXTENSION/PREREQUISITE`. Đọc SGK/đầu vào, nguồn chuẩn kỹ thuật và ví dụ thực tế, ghi ngày, mức chắc chắn VERIFIED/INFERRED/UNVERIFIED. Không ngụy tạo nguồn.
+ 2. Với từng `ku_id`, lập định nghĩa/kết luận, ví dụ, phản ví dụ, điều kiện đúng, sai lầm thường gặp và bằng chứng cần quan sát.
+ 3. Lập **mechanism_candidate_register** cho nội dung có trình tự, trạng thái, trao đổi, điều kiện, tương tác người dùng: actors, events, input/output, trạng thái trước/sau, biến đổi cần nhìn thấy. Đánh dấu `MODEL_REQUIRED` hoặc `STATIC_ILLUSTRATION_SUITABLE` kèm lý do; chưa thiết kế UI.
+--- v2.1/skills/skill02/SKILL.md
++++ v2.2/skills/skill02/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: lesson-architecture-assessment
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 02 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 02 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 02 — Lesson Architecture & Assessment (ONE_TOPIC v2)
++# SKILL 02 — Lesson Architecture & Assessment (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+ Xác định mạch nhận thức và bằng chứng đạt cho **một topic** gồm các CORE section thật sự cần thiết, không biến mỗi câu SGK thành section/màn.
+@@ -18,6 +18,12 @@
+ Sổ nguồn và cơ chế Skill01; hồ sơ người học; mục tiêu; thời lượng dự kiến (nếu có).
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
++### Kiến trúc đặt vấn đề có điều kiện
++- Bổ sung `context_problem_blueprint` cho hoạt động mở đầu gồm: **tiêu đề → bối cảnh → thực trạng/nhu cầu → điểm chưa giải thích → câu hỏi đặt vấn đề → hành động học tiếp theo**. Cần có phương án minh họa, không dùng câu hỏi trống thiếu bối cảnh.
++- So sánh `ONE_SCENE` (OBSERVE đủ chỗ chứa bối cảnh và yêu cầu quan sát) với `TWO_SCENES` (`PROBLEM_CONTEXT` làm nhiệm vụ hiểu tình huống, OBSERVE/EXPLORE/DIAGNOSE làm nhiệm vụ mới). Hai scene chỉ được chọn nếu **có hai mục tiêu/nhiệm vụ và bằng chứng nhận thức phân biệt**; không chia vì tràn chữ.
++- Hai scene có thể thuộc **cùng một `activity_id`** và không làm phát sinh CORE/Recall/Review hoặc cộng thời lượng trùng. Không bắt buộc dùng 2 màn ở mọi phần học.
++- Đầu ra bổ sung `02-context-split-decision.md` ghi lựa chọn, lý do, `evidence_context`, `evidence_next_task`, chỗ cần quan sát so sánh và điều không được tiết lộ sớm.
++
+ 1. Chốt các `objective_id`, kết quả cần biết/làm/giải thích; nhóm KU thành `section_id` có ý nghĩa nhận thức, không đặt số section chỉ vì mẫu Cookies có 30 màn.
+ 2. Thiết kế trình tự OBSERVE/DIAGNOSE nếu có thiếu nền; nhánh RECOVERY có thể chọn; vị trí **INTRODUCTION** chỉ khi một công cụ/giải pháp cần được gọi tên trước TEACH.
+ 3. Đặt blueprint Recall → Review cuối **mỗi CORE section**, gồm minh chứng nói/ghi/vẽ trước feedback; kèm một đánh giá vận dụng độc lập, không gộp mọi câu hỏi thành quiz.
+--- v2.1/skills/skill03/SKILL.md
++++ v2.2/skills/skill03/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: knowledge-content-author
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 03 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 03 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 03 — Knowledge Content Author (ONE_TOPIC v2)
++# SKILL 03 — Knowledge Content Author (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+ Viết **đầy đủ kiến thức bắt buộc học sinh phải biết** trước khi lựa chọn phương pháp và scene layout; chuẩn hóa ngữ nghĩa cho từng loại màn.
+@@ -18,6 +18,12 @@
+ Source register + mechanism candidates Skill01, mục tiêu/section/evidence Skill02; tài liệu sách và giới hạn chương trình.
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
++### Nội dung riêng cho màn PROBLEM_CONTEXT
++- Soạn dữ liệu **VI/EN**: `title`, `setting/actors`, `context_story`, `observed_reality`, `unexplained_gap`, `problem_question`, `illustration_brief`, `bridge_to_next_task`, `spoiler_boundary`, `source_status`. Nêu tình huống cụ thể, tránh lời dẫn chung chung hoặc chỉ một câu hỏi.
++- Câu hỏi đặt vấn đề phải xuất phát tự nhiên từ bối cảnh và chưa chứa sẵn lời giải. Không nói trước DNS/cơ chế nếu hoạt động tiếp theo cần HS tự dự đoán; không dùng thông tin giả định như dữ kiện đã quan sát thật.
++- Tách rõ `PROBLEM_CONTEXT` (hiểu vì sao cần tìm hiểu) khỏi `OBSERVE` (quan sát/thao tác thu thập bằng chứng) và `INTRODUCTION` (gọi tên phương án/khái niệm). Nếu gộp một màn, nội dung OBSERVE vẫn cần bối cảnh và câu hỏi rõ.
++- Đầu ra bổ sung `03-problem-context-content.md`, có phiên bản viết ngắn vừa viewport và kiểm tra thuật ngữ cùng `must_show` không giấu trong tooltip.
++
+ 1. Viết bản kiến thức đủ dạy cho từng `ku_id`: định nghĩa, phát biểu chính xác, ví dụ/phản ví dụ, thuật ngữ, điều kiện ngoại lệ, misconceptions, cách kiểm chứng.
+ 2. Với cơ chế, mô tả **actors → events → states → inputs → outputs → errors**. Tách diễn giải đúng kỹ thuật khỏi câu chuyện minh họa, ghi đúng nơi một mô hình có thể đơn giản hóa.
+ 3. Chuẩn bị `diagnose-prior-knowledge`: kiến thức cũ phải nhớ, lời giải thích **ngắn, rõ**, một minh họa có thể tương tác và một cầu nối sang kiến thức mới khi học sinh trả lời đúng; sai chỉ ra lỗ hổng để Recovery.
+--- v2.1/skills/skill04/SKILL.md
++++ v2.2/skills/skill04/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: learner-profile-fit-activity-design
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 04 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 04 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 04 — Learner Profile Fit & Activity Design (ONE_TOPIC v2)
++# SKILL 04 — Learner Profile Fit & Activity Design (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+ Chọn phương pháp theo learner profile và bản chất kiến thức, thiết kế hành vi học sinh với các mô hình tương tác có ý nghĩa; không chỉ chọn animation trang trí.
+@@ -18,6 +18,12 @@
+ Hồ sơ người học có nguồn/mức tin cậy, nội dung và objective Skills01–03, giới hạn thời gian, công cụ sẵn.
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
++### Thiết kế hoạt động đặt vấn đề theo nhận thức học sinh
++- Cân nhắc ít nhất **hai cách khởi động**: OBSERVE có bối cảnh tích hợp và `PROBLEM_CONTEXT → OBSERVE` (hoặc một nhiệm vụ khám phá/diagnose khác); chấm theo độ quen thuộc, nhận thức nền, tải thông tin, thời gian và giá trị nhiệm vụ độc lập.
++- Màn bối cảnh yêu cầu HS **đọc/nhận diện tình huống, chỉ ra nhu cầu hoặc điều chưa thể giải thích**. Màn tiếp yêu cầu HS **quan sát, thao tác, dự đoán, thu bằng chứng**: hai sản phẩm không được giống nhau chỉ đổi câu chữ.
++- Không để giáo viên giải cơ chế ngay tại bối cảnh; không ép học sinh giả vờ thiếu hiểu biết. Trường hợp tình huống hiển nhiên thì gộp vào OBSERVE.
++- Đầu ra bổ sung `04-context-learning-task-rubric.md`: phương án chọn/loại, sản phẩm từng scene, câu hỏi nối và hỗ trợ cho học sinh chưa nhận ra vấn đề.
++
+ 1. Đánh giá người học về kiến thức nền, tốc độ xử lý thông tin, duy trì chú ý, thói quen học; không dùng nhãn “chậm” như phẩm chất cố định.
+ 2. Với mỗi section, so sánh ít nhất hai phương án phương pháp theo rubric gốc (nhịp, mức nhận thức, độ khó, phong cách, khả năng có học liệu). Định nghĩa đơn giản: TEACH ngắn; cơ chế: dự đoán→mô hình tương tác→quan sát→giải thích.
+ 3. Thiết kế **OBSERVE** nơi cần đặt câu hỏi trung tâm, **DIAGNOSE** với hai nhánh đúng→modal ôn kiến thức + minh họa / sai→RECOVERY, và **INTRODUCTION** nơi có công cụ giải quyết mới.
+--- v2.1/skills/skill05/SKILL.md
++++ v2.2/skills/skill05/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: learning-resource-curator
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 05 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 05 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 05 — Learning Resource Curator (ONE_TOPIC v2)
++# SKILL 05 — Learning Resource Curator (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+ Tuyển chọn/thẩm định học liệu cần có cho một nội dung, gắn nhu cầu mô hình tương tác và tính chính xác nguồn; chưa được tự nhận đã sản xuất tài nguyên.
+@@ -18,6 +18,12 @@
+ Knowledge + misconception Skills01–03, activity map Skill04, mục tiêu, learner profile, điều kiện offline, ngôn ngữ VI/EN.
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
++### Học liệu kể chuyện bối cảnh
++- Mỗi `PROBLEM_CONTEXT` cần **hình ảnh/sơ đồ/tình huống trực quan thực sự minh họa bối cảnh** (không phải hình trang trí), đủ lớn để học sinh nhận ra vấn đề; ghi `context_asset_id`, nguồn, giấy phép, trạng thái đã tạo hay mới SPEC_ONLY.
++- Phân biệt **ảnh mở đầu không hé lời giải** với **mô hình giải cơ chế ở OBSERVE/EXPLORE/TEACH**. Không chuyển luồng đáp án/đường DNS thành hình minh họa đầu bài nếu nhiệm vụ là đoán cơ chế.
++- Có alt/caption song ngữ, không bịa số liệu/hiện trạng. Nếu asset thiếu, báo chặn hoặc phương án thay thế đã xác minh, **không** dùng URL nguồn làm bằng chứng có tệp.
++- Đầu ra bổ sung `05-context-visual-resource-brief.csv`: source/license, vùng bố cục dự kiến, vai trò trong câu chuyện, trạng thái kiểm thử.
++
+ 1. Tạo `asset_registry` có `asset_id`, mục tiêu, owner section, source/license, media type, status và đường dẫn/nguồn; phân biệt **ảnh minh họa tĩnh** với **mô hình diễn giải cơ chế**.
+ 2. Với cơ chế, chọn **mô hình tương tác** (Browser→Server, request/response, state machine, luồng xử lý...); ghi lý do dùng mô hình, các biến đầu vào và 2 trường hợp thử; cấm chỉ dùng SVG tĩnh để thay mô phỏng.
+ 3. Thẩm định nguồn thực tế (SGK/chuẩn/đời thực), thời điểm tham khảo và tính đúng kỹ thuật; không gắn nhãn “đã kiểm chứng bằng browser” cho mô hình giả lập.
+--- v2.1/skills/skill06/SKILL.md
++++ v2.2/skills/skill06/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: teaching-scenario-writer
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 06 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 06 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 06 — Teaching Scenario Writer (ONE_TOPIC v2)
++# SKILL 06 — Teaching Scenario Writer (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+ Chuyển nội dung và hoạt động thành kịch bản dạy 1:1/tự học có nhịp hai pha rõ ràng, không để GV nói hết hoặc để học sinh bị động xem animation.
+@@ -18,6 +18,12 @@
+ Objective/sections Skill02, nội dung Skill03, hoạt động Skill04, resources Skill05, hồ sơ người học và time ledger.
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
++### Kịch bản lời dẫn hai màn đặt vấn đề
++- Khi chọn `TWO_SCENES`, viết **hai opening cue khác nhau**: cảnh A `PROBLEM_CONTEXT` = tiêu đề/lời dẫn + sau 2–3s hiển thị đồng thời bối cảnh, minh họa, thực trạng và câu hỏi; cảnh B `OBSERVE`/hoạt động phù hợp = nhiệm vụ quan sát hoặc hành động tạo **bằng chứng mới**.
++- Đối với ACT mở đầu: bốn bước 5512 vẫn nằm trong **một `activity_id`**; nêu rõ chỗ HS phát hiện vấn đề trước khi Next và chỗ HS quan sát/xác lập giả thuyết sau Next; GV **không cung cấp đáp án trước** khi quan sát.
++- `Next` là điều hướng tới một **scene độc lập**, không phải Next nội bộ Part 2 của một slide tràn. Học sinh có quyền quay lại mà không mất bối cảnh hoặc dữ liệu tự làm. Chuyển cảnh **bằng thao tác**, không tự sau 2.5s.
++- Đầu ra bổ sung `06-context-to-observation-script.md`: kịch bản VI/EN, câu dẫn, đáp án dự kiến được giữ phía giáo viên, evidence riêng và tín hiệu chuyển tiếp.
++
+ 1. Mỗi hoạt động viết đủ 4 bước 5512: chuyển giao → HS tự làm → báo cáo/thảo luận → GV chuẩn hóa ngắn; kịch bản GV/HS tách rõ và có đáp án mong đợi riêng.
+ 2. Cho **mỗi màn dự kiến** soạn đúng một `opening_cue` (tiêu đề/câu hỏi/lời dẫn), đủ ngắn để học sinh định hướng; sau 2.5s **full reveal ALL**, không tự xuất hiện kiến thức theo từng thẻ.
+ 3. OBSERVE: câu hỏi tình huống ở trọng tâm; mô tả hiện tượng và thao tác quan sát. DIAGNOSE đúng: mở recap modal + minh họa, sai: chuyển Recovery và thử lại. INTRODUCTION: giới thiệu ngắn tên giải pháp/công cụ trước khi TEACH.
+--- v2.1/skills/skill07/SKILL.md
++++ v2.2/skills/skill07/SKILL.md
+@@ -1,14 +1,14 @@
+ ---
+ name: activity-resource-designer
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.1
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 07 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 07 + FocusLab v1/v3 + ONE_VIEWPORT v1.5 + Model Design & Interaction Standard v1.0
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ model_policy: ../../policy/SKILL07_MODEL_DESIGN_STANDARD.md
+ ---
+ 
+-# SKILL 07 — Activity Resource Designer / Interactive Model Producer (ONE_TOPIC v2.1)
++# SKILL 07 — Activity Resource Designer / Interactive Model Producer (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+ 
+@@ -27,6 +27,12 @@
+ - **ONE_TOPIC master rules**, công cụ tạo file HTML/SVG/JS và test thực tế (nếu sẵn); chỉ đánh dấu đã kiểm thử kịch bản nào có log/evidence truy vết.
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
++### Gói học liệu PROBLEM_CONTEXT (vẫn áp dụng chuẩn mô hình v2.1)
++- Theo `05-context-visual-resource-brief.csv` và kịch bản Skill06, sản xuất **tài nguyên bối cảnh thật**: hình/SVG/ảnh tình huống có nguồn, alt/caption VI/EN, ghi `asset_id`, hash, trạng thái và preview ở kích thước vùng scene. Đối với tương tác quan sát, tách rõ hành vi học tập khỏi trang trí.
++- Không hiển thị trước trạng thái cơ chế hoặc lời giải chưa được khám phá; mô hình cơ chế (nếu dùng) vẫn phải có input→state→output, kiểm soát step/reset và bản tắt animation như chuẩn v2.1. **Ảnh bối cảnh không mặc định phải là mô hình tương tác**.
++- Tài nguyên bối cảnh khi chưa có tệp chỉ `SPEC_ONLY`, không ghi READY_ASSET; kiểm thử có/không hình, tiếng Việt/Anh, offline và desktop viewport trước bàn giao.
++- Đầu ra bổ sung `07-context-assets-manifest.json` với liên kết asset→activity→planned scene, tình trạng và bằng chứng kiểm thử; không tạo scene hoàn chỉnh tại bước này.
++
+ 
+ ### Bước 07.1 — Phân loại & chốt phạm vi tài nguyên
+ 
+--- v2.1/skills/skill08/SKILL.md
++++ v2.2/skills/skill08/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: cv5512-lesson-plan-writer
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 08 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 08 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 08 — CV5512 Lesson Plan Writer (ONE_TOPIC v2)
++# SKILL 08 — CV5512 Lesson Plan Writer (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+ Chuẩn hóa kế hoạch dạy học **một nội dung** theo Công văn 5512, nêu cụ thể phương tiện tương tác và bằng chứng đạt chứ không chỉ đặt tên mô hình.
+@@ -18,6 +18,12 @@
+ Kịch bản Skill06, assets/test evidence Skill07, mục tiêu/hoạt động/đánh giá, learner profile.
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
++### Chuyển bối cảnh vào kế hoạch bài dạy và handoff
++- Hoạt động đặt vấn đề của giáo án ghi rõ **tiêu đề, bối cảnh thực tế, thực trạng/nhu cầu, câu hỏi vấn đề, minh họa, sản phẩm của HS và nhiệm vụ quan sát tiếp theo**; không chỉ ghi một câu hỏi mở đầu.
++- Nếu chọn hai scene, **không tăng số hoạt động 5512**: ví dụ `ACT-DNS-01` vẫn một hoạt động nhưng có `PROBLEM_CONTEXT → OBSERVE`. Ghi hai minh chứng riêng trong hoạt động và điều kiện Next, thời gian cho toàn hoạt động không bị nhân đôi.
++- Handoff tới Skill09 phải có `context_scene_option`, `split_reason`, `context_asset_id`, `context_evidence`, `followup_evidence`, `spoiler_boundary`, `linked_activity_id`; chưa quyết định số scene nếu chưa được duyệt.
++- Đầu ra bổ sung `08-problem-context-handoff.json` với quyết định ưu tiên, tình trạng tài nguyên minh họa và yêu cầu thiết kế hai scene nếu có giá trị sư phạm.
++
+ 1. Viết mục tiêu kiến thức/năng lực/phẩm chất và phương tiện học liệu cho ONE_TOPIC; không bịa số phút cố định cho nội dung mới.
+ 2. Tiến trình mở đầu→hình thành kiến thức→luyện tập→vận dụng, có Recall/Review của section CORE và EXIT; từng hoạt động có 4 bước giao nhiệm vụ–thực hiện–báo cáo–kết luận.
+ 3. Mô tả điểm đặt mô hình: tên `model_id`, thao tác HS, câu dự đoán, dấu hiệu hiểu, thời điểm GV chuẩn hóa, fallback nếu mất mạng hoặc disable motion.
+--- v2.1/skills/skill09/SKILL.md
++++ v2.2/skills/skill09/SKILL.md
+@@ -1,16 +1,16 @@
+ ---
+ name: interactive-website-architect
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 09 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 09 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 09 — Interactive Website Architect (ONE_TOPIC v2)
++# SKILL 09 — Interactive Website Architect (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+-Thiết kế kiến trúc **scene độc lập theo mục tiêu học**, đủ 13 loại nhận thức, hợp đồng trạng thái, model/CTA/navigation. Không làm thiết kế màu hoặc code ở bước này.
++Thiết kế kiến trúc **scene độc lập theo mục tiêu học**, đủ 14 loại nhận thức, hợp đồng trạng thái, model/CTA/navigation. Không làm thiết kế màu hoặc code ở bước này.
+ 
+ > **Bắt buộc:** Trước khi chạy đọc `../../policy/ONE_TOPIC_MASTER_RULES.md` và `../../policy/SCENE_KIND_REFERENCE.md`. Khi xung đột với MT2 về multi-topic, part/subpage hoặc nhịp adaptive v2, áp dụng policy ONE_TOPIC. Bản nguồn đầy đủ được lưu trong `../../legacy/skill09_MT2_ORIGINAL.md` để đối chiếu.
+ 
+@@ -18,10 +18,17 @@
+ Lesson plan và handoff Skill08, model asset manifest Skill07, script/cue Skill06, goals/evidence Skills01–04.
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
+-1. Tạo `09-one-topic-scene-contract.json`: một `topic_id`, scene IDs duy nhất, một `scene.kind` trong **13 loại**; scene.kind khác layout_mode. INTRODUCTION có điều kiện; không mặc định 30/31 màn.
++### Quyết định tạo màn PROBLEM_CONTEXT và liên kết cảnh
++- **Scene taxonomy hiện có 14 loại**: thêm `PROBLEM_CONTEXT` trước OBSERVE; **không** hiểu là 14 Skills hay buộc 14 màn trong một bài. Mỗi scene vẫn có một `scene_id` ổn định.
++- Trước phân cảnh, tạo bảng chọn `ONE_SCENE` vs `TWO_SCENES` dựa trên nhiệm vụ nhận thức độc lập: A hiểu bối cảnh, nêu nhu cầu/vấn đề; B quan sát/thao tác, thu bằng chứng hoặc giả thuyết. Cấm tách vì chỉ để giảm chữ hoặc đặt `part_id`.
++- Với `PROBLEM_CONTEXT`, điền `context_problem` theo schema (VI/EN, bối cảnh, hiện trạng, gap, vấn đề, hình minh họa, giới hạn không hé đáp án), `problem_split` có reason, `objective_id`, `activity_id`, evidence, Next tới scene B. OBSERVE kế tiếp phải có `observed_event`, `learner_action`, `independent_evidence`, không sao chép lại A.
++- `Next` thật (fixed footer) do HS/GV chủ động bấm; không tự chuyển khi hết pha 2.5s. Một hoạt động có thể trải qua 2 scene nhưng mỗi scene có **mục tiêu/sản phẩm riêng**; lưu guard/progress theo scene_id.
++- Đầu ra bổ sung `09-problem-context-split-audit.csv` và 2 scene contracts mẫu, kiểm độc lập viewport & không spoil. Cấm tạo INTRODUCTION ngay sau A nếu tên giải pháp còn đang cần HS dự đoán trước.
++
++1. Tạo `09-one-topic-scene-contract.json`: một `topic_id`, scene IDs duy nhất, một `scene.kind` trong **14 loại**; scene.kind khác layout_mode. INTRODUCTION có điều kiện; không mặc định 30/31 màn.
+ 2. Với **mỗi scene** khai báo `objective_id`, `student_task`, `opening_cue`, `attention_plan`, `content_blocks`, `layout_mode`, `interaction_contract`, `evidence`, `completion_gate`, `next_scene_id`, `state_dependency`, `viewport_fallback` theo template JSON.
+ 3. Cấu hình `reveal` = `{opening_pause_s:2.5, full_reveal_group:'ALL', staggered:false, instant_reveal:true, auto_advance:false}`; không chờ theo số chữ, không thêm lớp reveal khác khi không có tương tác người học.
+-4. Xây trình tự OBSERVE → DIAGNOSE/(RECOVERY) → INTRODUCTION khi có công cụ → TEACH/EXPLORE/COMPARE/PRACTISE → RECALL→REVIEW theo CORE → vận dụng/EXIT; khác biệt theo ý nghĩa chứ không phải chuỗi máy móc.
++4. Xây trình tự PROBLEM_CONTEXT (khi được duyệt) → OBSERVE → DIAGNOSE/(RECOVERY) → INTRODUCTION khi có công cụ → TEACH/EXPLORE/COMPARE/PRACTISE → RECALL→REVIEW theo CORE → vận dụng/EXIT; khác biệt theo ý nghĩa chứ không phải chuỗi máy móc.
+ 5. Với các cảnh cơ chế, `model_id`, state transitions, mô hình inline và **một CTA riêng có nhãn rõ**; không lập song song nút mở mô hình trùng tác dụng. TEACH và EXPLORE không được dùng mô hình giả tĩnh.
+ 6. Thiết kế shell một viewport với Previous fixed trái và Next fixed phải, TOC/resume/keyboard/deeplink cùng **navigation guard**; không có `part_id`, subslide hay `Phần 1/2` vì tràn layout. Nếu quá tải, thay đổi tổ chức/chia thành scene **mới có mục tiêu/sản phẩm riêng**.
+ 7. DIAGNOSE đúng yêu cầu modal kiến thức nền + minh họa, sai Recovery. Tooltips hover tự ẩn, focus/tap tương đương; Recall/Review/Assess không lộ key.
+@@ -33,7 +40,7 @@
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL09`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 09)
+-Có đầy đủ 13 loại trong enum (không nhất thiết sử dụng đủ 13 trong một bài), no-part/no-duplicate CTA, model contract bắt buộc, guard đúng, một viewport, fixed nav, per-scene full reveal spec và evidence.
++Có đầy đủ 14 loại trong enum (không nhất thiết sử dụng đủ 13 trong một bài), no-part/no-duplicate CTA, model contract bắt buộc, guard đúng, một viewport, fixed nav, per-scene full reveal spec và evidence.
+ 
+ ## Bàn giao và xử lý sai lệch
+ Skill10 nhận contract và duyệt từng scene trước khi vẽ; Skill11 nhận state/guard từ Skill09; nếu màn không vừa, trả Skill02/04/09 để thiết kế lại, không chữa bằng font siêu nhỏ.
+--- v2.1/skills/skill10/SKILL.md
++++ v2.2/skills/skill10/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: learning-experience-visual-designer
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 10 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 10 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 10 — Learning Experience Visual Designer (ONE_TOPIC v2)
++# SKILL 10 — Learning Experience Visual Designer (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+ Thiết kế màn học như **slide thuyết trình chuyên nghiệp một viewport**: nhìn được ngay mục tiêu, văn bản đủ lớn, chú ý thị giác có chủ đích, model đủ diện tích, fixed navigation.
+@@ -18,6 +18,13 @@
+ Scene contract Skill09, thiết kế hoạt động Skill04/06, assets Skill07; thiết bị và thiết kế thực tế.
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
++### Bố cục PROBLEM_CONTEXT như slide kể chuyện có vấn đề
++- **Một viewport, không cuộn desktop**: vùng đầu = tiêu đề + câu dẫn; vùng chính = bối cảnh/thực trạng đặt cạnh **hình minh họa đủ lớn**; vùng câu hỏi đặt vấn đề là điểm chú ý rõ. Không để câu hỏi chìm dưới đoạn chữ.
++- **Pha 1:** tiêu đề và lời dẫn ngắn hiện ngay. **Sau 2–3s pha 2:** toàn bộ bối cảnh, hình minh họa và câu hỏi hiển thị **cùng lúc**, không lần lượt và không tự Next; riêng phần trước khi phát đáp án vẫn khóa. Có nút `Tắt animation · Hiện tất cả`.
++- Khoảng trắng và hệ thống chữ cho phép đọc nhanh: bối cảnh ngắn, từ ngữ cụ thể, nổi bật một câu hỏi, ít chrome. Ưu tiên crop/cô đọng hợp lý; không nhỏ font, không giấu thông tin cốt lõi trong popup hoặc cắt bằng `overflow:hidden`.
++- Dựng preview cả hai scene A/B ở 1280×720 và 1366×768 (cộng các viewport chuẩn); `Previous` fixed trái dưới, `Next` fixed phải dưới, không đổi vị trí giữa các scene và không che minh họa.
++- Đầu ra bổ sung `10-problem-context-layout-review.md`: ngân sách chiều cao, trọng tâm, kiểm chứng VI/EN, hình trước/sau reveal và khả năng đọc hiểu.
++
+ 1. Chọn đúng layout theo `scene.kind` và nội dung (OBSERVE spotlight hỏi, DIAGNOSE chọn đáp án, TEACH content+model, COMPARE đồng thời...). Chỉ **một focal point chính** và tín hiệu thị giác có ý nghĩa; tránh màu mè, nhấp nháy, animation lặp.
+ 2. Vẽ **hai trạng thái cùng bố cục**: pha 1 chỉ `opening_cue`; pha 2 đồng thời tất cả khối còn lại sau 2–3s. Giữ placeholder/kích thước để không tạo layout shift; có bản `instant_reveal` không phụ thuộc animation.
+ 3. Tính ngân sách chiều cao theo visual viewport: header + opening cue + main + **fixed footer** + safe areas. Bảo đảm `NO_SCROLL ∧ NO_CLIP ∧ READABLE_TEXT ∧ FIXED_NAV` ở 1280×720, 1366×768, 1600×900, 1920×1080; thử thêm 900×600, 390×844, 360×640, 640×360.
+--- v2.1/skills/skill11/SKILL.md
++++ v2.2/skills/skill11/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: html-lesson-developer
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 11 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 11 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 11 — HTML Lesson Developer (ONE_TOPIC v2)
++# SKILL 11 — HTML Lesson Developer (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+ Hiện thực HTML/CSS/JS thuần và kiểm thử giao diện/điều hướng, hoạt ảnh và mô hình tương tác theo hợp đồng đã được duyệt. Không tự thay mục tiêu/scene mà không có change request.
+@@ -18,6 +18,13 @@
+ 09 Scene Contract, 10 HiFi layout, 07 model files, 03 nội dung, 06 script và QA constraints; approval các bước trước.
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
++### Hiện thực chuỗi bối cảnh → quan sát
++- Thêm renderer `PROBLEM_CONTEXT`: pha 1 title/short lead, pha 2 hiển thị đồng thời context, current reality/need, illustration, question; không đưa đáp án kỹ thuật vào dữ liệu ban đầu của học sinh.
++- Khi `Next` fixed được kích hoạt, chuyển từ A → B theo `scene_id`, hủy timer A, khởi tạo timer B mới và giữ tiến độ. B là OBSERVE/EXPLORE/DIAGNOSE có nhiệm vụ **khác**; không giả lập sub-slide/Part 1/2 chỉ bằng CSS.
++- Đảm bảo offline/bilingual, ảnh nguồn hiển thị đủ và alt; `instant_reveal` bỏ chờ ở **scene hiện tại**, không tự Next hoặc mở đáp án; reduced-motion giữ ngữ nghĩa.
++- E2E thêm ca: tải A → pha 2 đủ context; Next sang B → quan sát được hành động mới; Previous về A, đổi VI/EN, bấm nhanh khi timer chưa hết, không nhảy sai scene, không che nút điều hướng.
++- Đầu ra bổ sung `11-context-navigation-e2e.json`; lỗi thiếu bối cảnh/hình hoặc lộ lời giải phải report về Skill03/05/09/10.
++
+ 1. Tạo một website HTML/CSS/JS thuần (file offline hoặc bộ file), nạp mọi scene theo stable ID, hỗ trợ VI/EN khi dịch đầy đủ, không hardcode số màn Cookies.
+ 2. Shell dùng `height:100dvh` + các vùng flex/grid minmax, đặt footer fixed theo viewport với **Previous bottom-left / Next bottom-right** và safe-area. Dành chỗ cho footer khi tính main. Kiểm bằng DOM đo thực, không tự giả định CSS `overflow:hidden` là PASS.
+ 3. Với mỗi lần mount scene: hiển thị opening cue, lập một timer 2.5s (cấu hình 2–3), sau đó **hiện đồng thời toàn bộ nội dung khác**. Timer phải hủy khi route đổi (Next/Prev/TOC/deeplink/resume); language switch không xóa progress. `instant_reveal` hủy timer và hiện toàn bộ ngay; `reduce_motion` bỏ chuyển động nhưng có thể giữ nhịp hai pha.
+--- v2.1/skills/skill12/SKILL.md
++++ v2.2/skills/skill12/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: learner-perspective-simulation-journey-audit
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 12 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 12 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 12 — Learner Perspective Simulation & Journey Audit (ONE_TOPIC v2)
++# SKILL 12 — Learner Perspective Simulation & Journey Audit (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+ Diễn tập hành trình **một nội dung** từ mắt người học, kiểm tra attention, cơ chế, nhịp hai pha, recovery và mức độ hiểu dựa trên bằng chứng. Mô phỏng không thay thế học sinh thật.
+@@ -18,6 +18,13 @@
+ Website thực hiện ở Skill11, scene/interaction specs, learner profile, QA report và activity map.
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
++### Thử nghiệm PROBLEM_CONTEXT và hành trình đặt vấn đề hai màn
++- Persona mới học bài: đọc A và **nói được hoàn cảnh, thực trạng và điều chưa hiểu** mà không cần GV giải đáp; chuyển B và **có hành động quan sát/dự đoán rõ**, không thấy một màn câu hỏi lặp lại.
++- Kiểm `ONE_SCENE` vs `TWO_SCENES`: nếu A và B có cùng evidence hoặc chỉ là chia màn vì tràn chữ, báo `REDUNDANT_SPLIT` và chuyển Skill02/09 sửa.
++- Kiểm UI hai pha ở A/B, Next/Previous fixed và guard, VI/EN, tắt animation, trạng thái quay lại, hình/alt/caption, đúng 1280×720/1366×768 không scroll/clipping, và reduced motion.
++- Chỉ chấm 'có khả năng hiểu tình huống' bằng walkthrough; khi chưa có học sinh thật phải ghi `FIELD_NOT_VALIDATED`, không giả đánh giá được học sinh hiểu.
++- Đầu ra bổ sung `12-context-problem-journey-audit.csv` và evidence ở cả A/B.
++
+ 1. Chạy ít nhất các persona: chưa biết nền, chọn sai DIAGNOSE, chọn đúng và đọc modal, học sinh làm nhanh muốn instant, học sinh cần giảm chuyển động, học sinh trở lại/resume.
+ 2. Theo từng scene, hỏi: mắt nhìn đâu trước? opening cue có đọc được 2–3s? Sau reveal tất cả nội dung có dễ định vị? Có bị nhồi chữ, cắt mất kiến thức hoặc nút Next che? Screenshot/DOM/bằng chứng.
+ 3. Thử phím Next/Prev/TOC/resume nhanh trước lúc timer hết để phát hiện xuất hiện nhầm nội dung scene cũ. Thử “Tắt animation · Hiện tất cả” và reduced-motion độc lập.
+--- v2.1/skills/skill13/SKILL.md
++++ v2.2/skills/skill13/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: independent-lesson-quality-reviewer
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
+ role: Skill 13 / 13 — ONE_TOPIC
+-status: DEFINITION_UPDATED_PENDING_USER_REVIEW
++status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 13 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 13 — Independent Lesson Quality Reviewer (ONE_TOPIC v2)
++# SKILL 13 — Independent Lesson Quality Reviewer (ONE_TOPIC v2.2)
+ 
+ ## Mục tiêu và ranh giới
+ Kiểm định độc lập bộ bài **một nội dung** với bằng chứng nguồn, trình duyệt, learner journey và rubric thị giác; không tự gán RELEASE_PASS cho một bộ định nghĩa Skills.
+@@ -18,8 +18,15 @@
+ Tất cả outputs Skills01–12, mã website, assets, run logs, nguồn tài liệu, rubric, approval records; bộ lỗi Cookies v1.2.
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
++### Nghiệm thu riêng phần đặt vấn đề
++- Kiểm `PROBLEM_CONTEXT` có đủ **tiêu đề, bối cảnh, thực trạng/nhu cầu, vấn đề/câu hỏi và minh họa** thật có nguồn + bản VI/EN; không khởi đầu bằng một câu hỏi trơ trọi khi đã quyết định dùng PROBLEM_CONTEXT.
++- Đối chiếu `TWO_SCENES`: mục đích, `evidence`, learner action của A/B khác nhau; Next/Previous qua `scene_id`, không phải subslide chia chữ; không lộ tên giải pháp khi mục tiêu OBSERVE/DIAGNOSE còn cần khám phá.
++- Khi nguồn bối cảnh không rõ/giả số liệu, hình minh họa chỉ mới SPEC_ONLY, ảnh bị cắt, hoặc B lặp lại y nguyên A, đánh `NEEDS_REVIEW/BLOCKED` theo mức độ, không tự RELEASE_PASS.
++- Checklist độc lập: kiểm nhịp hai pha, instant/reduced, fixed nav, viewport, focus, a11y, VI/EN, fallback offline và sự nối mạch problem→inquiry→TEACH/INTRODUCTION; ghi issue owner đúng Skill.
++- Đầu ra bổ sung `13-problem-context-compliance.csv`; rà mọi màn đặt vấn đề đã quyết định `TWO_SCENES` trước khi nghiệm thu.
++
+ 1. Kiểm nguồn và ma trận mục tiêu→nội dung→hoạt động→scene→Recall/Review→EXIT. Không để CORE bị bỏ qua vì scene layout không chứa nổi; teacher key phải ở ngoài website học sinh.
+-2. Kiểm 13 kind enum cùng việc **chọn kind đúng bản chất**; INTRODUCTION không trùng TEACH; OBSERVE câu hỏi trung tâm; DIAGNOSE đúng có modal kiến thức nền + minh họa, sai Recovery; modal/tooltip accessibility.
++2. Kiểm 14 kind enum cùng việc **chọn kind đúng bản chất**; INTRODUCTION không trùng TEACH; OBSERVE câu hỏi trung tâm; DIAGNOSE đúng có modal kiến thức nền + minh họa, sai Recovery; modal/tooltip accessibility.
+ 3. Kiểm visual attention: một focal target, animation có mục đích, không chớp/lặp, không bắt học sinh chờ; **two-phase 2–3s → full reveal cùng lúc** ở mọi màn, instant và reduced modes phân biệt; không tự động chuyển cảnh.
+ 4. Kiểm viewport/fixed nav thực tế trên matrix, no-scroll/no-clipping/readability, modal, labels, CTA. Cấm `scene_id:part_id`, `Phần 1/2` chỉ vì nội dung tràn, cấm duplicate model CTA, tiny font, bắt buộc nút Next/Previous fixed.
+ 5. Kiểm mọi `MODEL_REQUIRED`: `model_id`, input, output, before/after, replay/reset, case thường/ngoại lệ, evidence, reduced motion behavior. Học liệu tĩnh không được mạo nhận simulation.
+--- v2.1/policy/ONE_TOPIC_MASTER_RULES.md
++++ v2.2/policy/ONE_TOPIC_MASTER_RULES.md
+@@ -1,4 +1,4 @@
+-# Quy tắc hợp nhất — ONE_TOPIC FocusLab v2 (23/11/2026)
++# Quy tắc hợp nhất — ONE_TOPIC FocusLab v2.2 (23/11/2026)
+ 
+ **Hiệu lực:** bắt buộc cho cả 13 `skills/skillXX/SKILL.md`. Được thiết kế trên nền định nghĩa MT2-FROZEN để sản xuất **một nội dung kiến thức** tại một thời điểm. Đây là *bản định nghĩa*, không xác nhận đã chạy bài thật hay website đã qua nghiệm thu. Bản Cookies v1.2 `RELEASE_BLOCKED` vẫn là mốc lỗi cần kiểm soát.
+ 
+@@ -16,8 +16,11 @@
+ - Số màn sinh ra từ **mục tiêu, nhiệm vụ, khả năng đọc và bằng chứng**; không đặt một chỉ tiêu số màn cố định hoặc phân nhỏ kiểu `Part 1/2` khi chỉ vì layout tràn.
+ 
+ ## 2. Scene Kind / Layout là hai hệ khác nhau
+-13 `scene.kind` chính thức: `OBSERVE`, `DIAGNOSE`, `RECOVERY`, `INTRODUCTION`, `TEACH`, `EXPLORE`, `COMPARE`, `PRACTISE`, `RECALL`, `REVIEW`, `RECALL_TEACH_BACK`, `ASSESS_INTRO`, `ASSESS`.
++14 `scene.kind` chính thức: `PROBLEM_CONTEXT`, `OBSERVE`, `DIAGNOSE`, `RECOVERY`, `INTRODUCTION`, `TEACH`, `EXPLORE`, `COMPARE`, `PRACTISE`, `RECALL`, `REVIEW`, `RECALL_TEACH_BACK`, `ASSESS_INTRO`, `ASSESS`.
+ - `scene.kind` mô tả **hoạt động nhận thức**; `scene.layout_mode` (SLIDE/STORY/LAB/MAP/FOCUS/ASSESSMENT hay biến thể hợp lý) mô tả cách bố trí, không đánh đồng hai khái niệm.
++- `PROBLEM_CONTEXT` (tùy chọn) đặt **tình huống có nghĩa** trước khi làm hoạt động quan sát: **tiêu đề, bối cảnh cụ thể, thực trạng/nhu cầu, khoảng trống chưa giải thích, hình minh họa có mục đích và câu hỏi/vấn đề**. Nguồn phải có căn cứ; ví dụ giả định phải được ghi rõ. Không lộ câu trả lời cần khám phá ở scene sau.
++- Màn đặt vấn đề phải có **cầu nối từ bối cảnh sang hoạt động mới**, thay vì chỉ một câu hỏi. Chỉ tách `PROBLEM_CONTEXT → OBSERVE/EXPLORE/DIAGNOSE` nếu hai scene có **student_task/evidence nhận thức khác nhau**. Trường hợp đơn giản gộp bối cảnh vào OBSERVE. Cấm dùng hai scene để giấu tràn chữ hoặc tạo hai câu hỏi trùng lặp; hai scene có thể chung activity_id của giáo án.
++- Với màn `PROBLEM_CONTEXT`, áp dụng quy tắc hai pha nhất quán: pha 1 **tiêu đề/lời dẫn** hiện ngay; sau 2–3s toàn bộ **bối cảnh + minh họa + vấn đề/câu hỏi** xuất hiện đồng thời. Không tự Next; Previous/Next cố định; instant reveal được phép bỏ chờ.
+ - `INTRODUCTION` được dùng có chọn lọc trước TEACH khi giới thiệu **tên công cụ/giải pháp/khái niệm mới**; gồm tên, lợi ích, ví dụ và minh họa ngắn, không thay phần TEACH cốt lõi. Không ép INTRODUCTION cho mỗi TEACH.
+ - `OBSERVE`: câu hỏi tình huống hoặc lời dẫn là điểm nhìn **rõ ràng nhất**, ở trung tâm vùng trình chiếu hoặc thành spotlight; dữ kiện vẫn phải quan sát được khi mở đủ nội dung.
+ - `DIAGNOSE`: đúng → hiện modal ngắn kiến thức cũ với minh họa/mô hình liên hệ bài mới; sai → phản hồi và đi `RECOVERY` có thể thử lại. Không kéo dài chẩn đoán thành một bài dạy mới, không tự gọi 'đã nắm vững' chỉ từ một câu.
+--- v2.1/policy/SCENE_KIND_REFERENCE.md
++++ v2.2/policy/SCENE_KIND_REFERENCE.md
+@@ -1,7 +1,8 @@
+-# 13 Scene Kinds — ý định nhận thức và thiết kế
++# 14 Scene Kinds — ý định nhận thức và thiết kế
+ 
+ | `kind` | Học sinh thực hiện | Focus target | Mô hình/hiệu ứng | Cổng quan trọng |
+ |---|---|---|---|---|
++| `PROBLEM_CONTEXT` | Hiểu bối cảnh, chỉ ra thực trạng/nhu cầu và câu hỏi cần giải | Bối cảnh + điểm chưa giải thích + câu hỏi nổi bật | Tình huống, ảnh/SVG minh họa có nguồn; hai pha title/lead→2.5s→ALL | Tách scene chỉ khi nhiệm vụ/evidence khác OBSERVE; không spoil giải pháp, không chỉ một câu hỏi |
+ | `OBSERVE` | Quan sát hiện tượng, phát hiện vấn đề | Câu hỏi tình huống ở trung tâm | Spotlight nhẹ, quan sát hai trạng thái | Phải xem được bằng chứng, không phải xem một animation có sẵn rồi bấm Next |
+ | `DIAGNOSE` | Bộc lộ kiến thức nền | Câu hỏi và lựa chọn | Feedback; đúng→modal kiến thức cũ minh họa, sai→RECOVERY | Modal không là bài kiểm tra, không lộ đáp án cho assessment |
+ | `RECOVERY` | Bù lỗ hổng cụ thể | Điểm hiểu sai | Minh họa/điều khiển một bước rồi thử lại | Không mở tuyến học dài không cần thiết |
+@@ -17,3 +18,10 @@
+ | `ASSESS` | Thực hiện đánh giá độc lập | Bài làm | Không cue gợi kết quả trước nộp | Key không ở student bundle; cấm tự MASTERED vì Next |
+ 
+ **Scene mode** (SLIDE/STORY/LAB/MAP/FOCUS/ASSESSMENT) là lựa chọn **bố cục**, không phải `kind`. Scene có thể đặt `kind=TEACH`, `layout_mode=LAB` nếu cần mô hình giải thích cơ chế. Khi lựa chọn hình thức, ưu tiên học sinh có thể tìm được điểm nhìn chính, hiểu nhiệm vụ và có điều khiển rõ ràng.
++
++## Decision Gate: one or two scenes
++
++- **ONE_SCENE:** Tình huống đơn giản; OBSERVE có thể mô tả bối cảnh/thực trạng/vấn đề + quan sát trong một viewport rõ nét.
++- **TWO_SCENES:** `PROBLEM_CONTEXT` cần nhiệm vụ 'hiểu tình huống và nhận ra vấn đề'; scene B có hành động *khác* (quan sát bằng chứng, thao tác, giả thuyết, DIAGNOSE). Cùng `activity_id` nếu thuộc một hoạt động giáo án, nhưng `scene_id`, evidence và learning task khác nhau.
++- **BLOCK:** Chia màn chỉ để tràn bố cục, cùng câu hỏi/ảnh/lời dẫn lặp lại, dẫn tên giải pháp trước khi HS được khám phá, không có asset minh họa, người đọc không biết làm gì sau khi bấm Next.
++- **Không bắt buộc** mọi topic đều dùng PROBLEM_CONTEXT; INTRODUCTION vẫn là chức năng *gọi tên giải pháp*, không trùng PROBLEM_CONTEXT.
+--- v2.1/templates/scene_contract.schema.json
++++ v2.2/templates/scene_contract.schema.json
+@@ -1,6 +1,6 @@
+ {
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+-  "title": "ONE_TOPIC v2 Scene Contract",
++  "title": "ONE_TOPIC v2.2 Scene Contract (14 kinds incl PROBLEM_CONTEXT)",
+   "type": "object",
+   "additionalProperties": true,
+   "required": [
+@@ -39,6 +39,7 @@
+     },
+     "kind": {
+       "enum": [
++        "PROBLEM_CONTEXT",
+         "OBSERVE",
+         "DIAGNOSE",
+         "RECOVERY",
+@@ -166,6 +167,171 @@
+           "const": true
+         }
+       }
++    },
++    "activity_id": {
++      "type": "string",
++      "minLength": 1,
++      "description": "An activity may contain two semantically distinct scenes."
++    },
++    "context_problem": {
++      "type": "object",
++      "additionalProperties": false,
++      "required": [
++        "title_vi",
++        "title_en",
++        "setting_vi",
++        "setting_en",
++        "observed_reality_vi",
++        "observed_reality_en",
++        "knowledge_gap_vi",
++        "knowledge_gap_en",
++        "problem_question_vi",
++        "problem_question_en",
++        "next_learning_action_vi",
++        "next_learning_action_en",
++        "source_status",
++        "spoiler_boundary",
++        "illustration_asset_ids"
++      ],
++      "properties": {
++        "title_vi": {
++          "type": "string",
++          "minLength": 1
++        },
++        "title_en": {
++          "type": "string",
++          "minLength": 1
++        },
++        "setting_vi": {
++          "type": "string",
++          "minLength": 1
++        },
++        "setting_en": {
++          "type": "string",
++          "minLength": 1
++        },
++        "observed_reality_vi": {
++          "type": "string",
++          "minLength": 1
++        },
++        "observed_reality_en": {
++          "type": "string",
++          "minLength": 1
++        },
++        "knowledge_gap_vi": {
++          "type": "string",
++          "minLength": 1
++        },
++        "knowledge_gap_en": {
++          "type": "string",
++          "minLength": 1
++        },
++        "problem_question_vi": {
++          "type": "string",
++          "minLength": 1
++        },
++        "problem_question_en": {
++          "type": "string",
++          "minLength": 1
++        },
++        "next_learning_action_vi": {
++          "type": "string",
++          "minLength": 1
++        },
++        "next_learning_action_en": {
++          "type": "string",
++          "minLength": 1
++        },
++        "source_status": {
++          "type": "string",
++          "minLength": 1
++        },
++        "spoiler_boundary": {
++          "type": "string",
++          "minLength": 1
++        },
++        "illustration_asset_ids": {
++          "type": "array",
++          "minItems": 1,
++          "items": {
++            "type": "string",
++            "minLength": 1
++          }
++        }
++      }
++    },
++    "problem_split": {
++      "type": "object",
++      "additionalProperties": true,
++      "required": [
++        "mode",
++        "reason"
++      ],
++      "properties": {
++        "mode": {
++          "enum": [
++            "ONE_SCENE",
++            "TWO_SCENES"
++          ]
++        },
++        "reason": {
++          "type": "string",
++          "minLength": 1
++        },
++        "shared_activity_id": {
++          "type": "string"
++        },
++        "next_scene_id": {
++          "type": [
++            "string",
++            "null"
++          ]
++        },
++        "context_evidence_id": {
++          "type": "string"
++        },
++        "next_scene_evidence_id": {
++          "type": "string"
++        }
++      }
+     }
+-  }
++  },
++  "allOf": [
++    {
++      "if": {
++        "properties": {
++          "kind": {
++            "const": "PROBLEM_CONTEXT"
++          }
++        },
++        "required": [
++          "kind"
++        ]
++      },
++      "then": {
++        "required": [
++          "activity_id",
++          "context_problem",
++          "problem_split"
++        ],
++        "properties": {
++          "problem_split": {
++            "properties": {
++              "mode": {
++                "const": "TWO_SCENES"
++              }
++            },
++            "required": [
++              "mode",
++              "reason",
++              "shared_activity_id",
++              "next_scene_id",
++              "context_evidence_id",
++              "next_scene_evidence_id"
++            ]
++          }
++        }
++      }
++    }
++  ]
+ }

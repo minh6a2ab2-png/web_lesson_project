@@ -1,0 +1,92 @@
+{
+  "PROBLEM_CONTEXT": {
+    "accent": "#a64e14",
+    "background": "#fff8ef",
+    "icon_key": "lightbulb",
+    "composition": "context + illustration + question"
+  },
+  "LEAD_IN": {
+    "accent": "#5146a5",
+    "background": "#f3f3ff",
+    "icon_key": "route",
+    "composition": "narrative and image"
+  },
+  "OBSERVE": {
+    "accent": "#087d78",
+    "background": "#f0fbf8",
+    "icon_key": "eye",
+    "composition": "evidence / before-after"
+  },
+  "DIAGNOSE": {
+    "accent": "#7442a5",
+    "background": "#f8f4fd",
+    "icon_key": "brain",
+    "composition": "question + choices"
+  },
+  "RECOVERY": {
+    "accent": "#b85519",
+    "background": "#fff7ee",
+    "icon_key": "refresh",
+    "composition": "support then retry"
+  },
+  "INTRODUCTION": {
+    "accent": "#235da9",
+    "background": "#f0f6ff",
+    "icon_key": "sparkles",
+    "composition": "concept + illustration"
+  },
+  "TEACH": {
+    "accent": "#185b96",
+    "background": "#ffffff",
+    "icon_key": "book",
+    "composition": "textbook core + illustration"
+  },
+  "EXPLORE": {
+    "accent": "#125373",
+    "background": "#e8f3f9",
+    "icon_key": "network",
+    "composition": "large model + controls"
+  },
+  "COMPARE": {
+    "accent": "#087099",
+    "background": "#f1faff",
+    "icon_key": "columns",
+    "composition": "parallel comparison"
+  },
+  "PRACTISE": {
+    "accent": "#18734d",
+    "background": "#f1faf4",
+    "icon_key": "puzzle",
+    "composition": "manipulable cards"
+  },
+  "RECALL": {
+    "accent": "#69529b",
+    "background": "#eee9f9",
+    "icon_key": "memory",
+    "composition": "focused keyword + cue"
+  },
+  "REVIEW": {
+    "accent": "#96620d",
+    "background": "#fffbef",
+    "icon_key": "gamepad",
+    "composition": "visual question + feedback + progress"
+  },
+  "RECALL_TEACH_BACK": {
+    "accent": "#116b61",
+    "background": "#edf9f5",
+    "icon_key": "presentation",
+    "composition": "diagram + oral prompts"
+  },
+  "ASSESS_INTRO": {
+    "accent": "#285b49",
+    "background": "#eaf6ee",
+    "icon_key": "flag",
+    "composition": "challenge brief + illustration"
+  },
+  "ASSESS": {
+    "accent": "#475569",
+    "background": "#f2f5f8",
+    "icon_key": "clipboard",
+    "composition": "independent task"
+  }
+}

@@ -1,0 +1,10 @@
+﻿criterion_id,criterion,weight_percent,evidence_required,score_0_to_10,evidence_ref,reviewer_note
+A01,Chất lượng và đa dạng hình ảnh,20,"Ảnh phù hợp nội dung, độ rõ, crop, quyền dùng, provenance, không tính SVG→PNG thành nguồn khác",,,
+A02,Sự đa dạng layout,15,"Khác nhau về composition, task-fit, không chỉ đổi màu/đảo cột",,,
+A03,Cân bằng không gian,15,"Không thừa chrome/card, focal point rõ, workspace đủ lớn, không cắt",,,
+A04,Phân cấp thị giác,10,"Thứ tự đọc, emphasis, phân biệt task và feedback",,,
+A05,Typography,10,"VI/EN rõ, line length, hierarchy, monospaced code khi cần",,,
+A06,Màu sắc và background,10,"Theme nhất quán, nhịp background, contrast và không color-only",,,
+A07,Đồ họa tương tác,10,"Model, game, mindmap, state rõ; đẹp không làm mất cơ chế",,,
+A08,Bản sắc chủ đề,5,"Art direction đặc trưng, không template đại trà",,,
+A09,Nhất quán và độ hoàn thiện,5,"Spacing, icons, transitions, states, production fidelity",,,

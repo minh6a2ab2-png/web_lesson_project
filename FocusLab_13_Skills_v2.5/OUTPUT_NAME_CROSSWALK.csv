@@ -1,0 +1,5 @@
+﻿skill,MT2 output,ONE_TOPIC v2 output,note
+09,09-multitopic-scene-contract.json,09-one-topic-scene-contract.json,Must not emit multi-topic active scenes
+10,10-design-system-multitopic.md,10-design-system-one-topic.md,visual shell for ONE_TOPIC
+12,12-full-session-learner-journey.md,12-one-topic-learner-journey.md,single-topic learner audit
+13,13-multitopic-objective-coverage.csv,13-one-topic-objective-coverage.csv,one-topic objective evidence

@@ -1,0 +1,66 @@
+{
+  "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+  "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+  "scene_id": "DNS-LEAD-RECALL-01",
+  "kind": "LEAD_IN",
+  "objective_id": "OBJ-01",
+  "student_task": "Chuẩn bị tự gợi nhớ",
+  "opening_cue": "Em còn nhớ gì?",
+  "attention_plan": {
+    "primary_focus_target": "opening-question",
+    "cue_type": "SPOTLIGHT",
+    "motion_purpose": "nhấn mạnh câu hỏi tình huống"
+  },
+  "layout_mode": "STORY",
+  "content_blocks": [
+    {
+      "block_id": "lead",
+      "type": "lead"
+    }
+  ],
+  "model_id": null,
+  "model_action": null,
+  "completion_gate": "NON_BLOCKING",
+  "next_scene_id": "DNS-RECALL-01",
+  "state_dependency": [],
+  "viewport_fallback": "hai trạng thái xếp dọc nếu vẫn nhìn đủ; thiết kế scene khác nếu không",
+  "evidence": "Quan sát GV nếu có; không chấm",
+  "navigation": {
+    "previous_fixed_bottom_left": true,
+    "next_fixed_bottom_right": true,
+    "mode": "FREE",
+    "require_skip_reason": false,
+    "style": "FLOATING_FIXED",
+    "footer": false,
+    "count_location": "HEADER_OR_COMPACT"
+  },
+  "display": {
+    "mode": "DIRECT",
+    "delay_ms": 0,
+    "auto_advance": false,
+    "title_highlight": {
+      "duration_ms": 3000,
+      "cycles": 2,
+      "restart_on_rerender": false,
+      "reduced_motion": "OFF"
+    }
+  },
+  "ui": {
+    "pedagogical_labels": false,
+    "reflection_forms": false,
+    "glossary_mode": "INLINE_KEYWORD",
+    "core_visible": true
+  },
+  "question_intents": [
+    "GUIDING"
+  ],
+  "model_view_id": null,
+  "visual_identity": "LEAD_IN",
+  "lead_in": {
+    "target_scene_id": "DNS-RECALL-01",
+    "copy_vi": "Em vừa tìm hiểu DNS. Hãy thử nhớ lại các từ khóa.",
+    "copy_en": "You have explored DNS. Try recalling the keywords.",
+    "illustration_asset_id": "A-LEAD-RECALL",
+    "no_answer_spoiler": true
+  }
+}

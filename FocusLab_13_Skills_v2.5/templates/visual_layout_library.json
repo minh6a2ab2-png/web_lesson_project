@@ -1,0 +1,76 @@
+{
+  "version": "2.5",
+  "layout_registry": [
+    {
+      "id": "HERO",
+      "description": "Ảnh/hero lớn + title và câu hỏi"
+    },
+    {
+      "id": "ASYMMETRIC_SPLIT",
+      "description": "Hai vùng bất đối xứng có tỉ trọng rõ"
+    },
+    {
+      "id": "FULL_BLEED",
+      "description": "Hình nền lớn có safe text overlay"
+    },
+    {
+      "id": "BENTO_GRID",
+      "description": "Grid khác kích thước theo ưu tiên"
+    },
+    {
+      "id": "TIMELINE",
+      "description": "Chuỗi sự kiện có trật tự"
+    },
+    {
+      "id": "COMPARISON",
+      "description": "Đối chiếu cùng điều kiện"
+    },
+    {
+      "id": "ANNOTATED_VISUAL",
+      "description": "Hình lớn chú thích tại điểm"
+    },
+    {
+      "id": "EDITORIAL",
+      "description": "Typography phân cấp + hình/định nghĩa"
+    },
+    {
+      "id": "CENTRAL_DIAGRAM",
+      "description": "Sơ đồ chính ở trung tâm"
+    },
+    {
+      "id": "SPOTLIGHT",
+      "description": "Một đối tượng/cue trọng tâm"
+    },
+    {
+      "id": "INTERACTIVE_LAB",
+      "description": "Model và điều khiển theo state"
+    },
+    {
+      "id": "GAME_BOARD",
+      "description": "Mặt bàn game, luật và tiến độ"
+    },
+    {
+      "id": "VISUAL_WORKSPACE",
+      "description": "Không gian Mindmap toàn viewport"
+    }
+  ],
+  "art_directions": [
+    "STORYTELLING",
+    "CINEMATIC",
+    "EDITORIAL",
+    "VISUAL_COMPARISON",
+    "TECHNOLOGY_LAB",
+    "MEMORY_FOCUS",
+    "CHALLENGE_BOARD",
+    "VISUAL_WORKSPACE"
+  ],
+  "background_families": [
+    "CLEAN_WHITE",
+    "SOFT_TINT",
+    "DEEP_TECH",
+    "MEMORY_FOCUS",
+    "WARM_CHALLENGE",
+    "THEMATIC"
+  ],
+  "note": "Reference library, not scene kinds or quotas; layout chosen for learning task."
+}

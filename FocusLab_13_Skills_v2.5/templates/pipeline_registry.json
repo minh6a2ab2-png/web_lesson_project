@@ -1,0 +1,847 @@
+{
+  "version": "2.5",
+  "skills": {
+    "SKILL01": {
+      "name": "content-research-analysis",
+      "definition": "skills/skill01/SKILL.md",
+      "consumers": [
+        "SKILL02",
+        "SKILL03",
+        "SKILL04",
+        "SKILL05",
+        "SKILL07",
+        "SKILL13"
+      ],
+      "outputs": [
+        {
+          "path": "01-context-problem-candidates.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "01-core-and-support-register.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "01-core-extension-audit.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "01-guided-visual-opportunities.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "01-knowledge-accuracy-boundaries.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "01-ku-prerequisite-graph.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "01-mechanism-candidates.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "01-topic-source-register.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "01-visual-research-opportunities.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    },
+    "SKILL02": {
+      "name": "lesson-architecture-assessment",
+      "definition": "skills/skill02/SKILL.md",
+      "consumers": [
+        "SKILL03",
+        "SKILL04",
+        "SKILL06",
+        "SKILL08",
+        "SKILL13",
+        "SKILL05",
+        "SKILL09"
+      ],
+      "outputs": [
+        {
+          "path": "02-activity-entry-map.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "02-assessment-evidence-blueprint.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "02-context-split-decision.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "02-direct-learning-blueprint.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "02-one-topic-learning-flow.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "02-section-and-prerequisite-map.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "02-session-architecture.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "02-time-ledger.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "02-visual-rhythm-and-workspace-brief.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    },
+    "SKILL03": {
+      "name": "knowledge-content-author",
+      "definition": "skills/skill03/SKILL.md",
+      "consumers": [
+        "SKILL04",
+        "SKILL05",
+        "SKILL06",
+        "SKILL07",
+        "SKILL11",
+        "SKILL13",
+        "SKILL09"
+      ],
+      "outputs": [
+        {
+          "path": "03-core-content-and-inline-keywords.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "03-full-knowledge-by-section.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "03-intro-diagnose-content.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "03-knowledge-links.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "03-lead-recall-review-content.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "03-misconception-register.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "03-model-content-contracts.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "03-objective-to-knowledge-coverage.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "03-problem-context-content.md",
+          "requirement": "CONDITIONAL",
+          "condition": "Khi chọn bối cảnh riêng; nếu không ghi NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "03-mindmap-content-contract.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    },
+    "SKILL04": {
+      "name": "learner-profile-fit-activity-design",
+      "definition": "skills/skill04/SKILL.md",
+      "consumers": [
+        "SKILL05",
+        "SKILL06",
+        "SKILL07",
+        "SKILL08",
+        "SKILL09",
+        "SKILL13"
+      ],
+      "outputs": [
+        {
+          "path": "04-activity-and-assistance-plan.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "04-attention-strategy.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "04-context-learning-task-rubric.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "04-guided-review-method-map.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "04-learner-load-map.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "04-method-rubric-by-section.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "04-model-interaction-activity-map.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "04-question-intent-and-interaction-map.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "04-recall-review-method-design.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "04-game-and-mindmap-method.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    },
+    "SKILL05": {
+      "name": "learning-resource-curator",
+      "definition": "skills/skill05/SKILL.md",
+      "consumers": [
+        "SKILL06",
+        "SKILL07",
+        "SKILL13",
+        "SKILL09",
+        "SKILL10"
+      ],
+      "outputs": [
+        {
+          "path": "05-context-visual-resource-brief.csv",
+          "requirement": "CONDITIONAL",
+          "condition": "Khi chọn bối cảnh riêng; nếu không ghi NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "05-diagnose-intro-assets.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "05-direct-learning-resource-map.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "05-guided-visual-resource-catalog.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "05-license-and-accuracy-register.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "05-model-resource-requirements.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "05-real-browser-and-fallback.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "05-reusable-asset-map.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "05-source-resource-catalog.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "05-art-direction-and-source-plan.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    },
+    "SKILL06": {
+      "name": "teaching-scenario-writer",
+      "definition": "skills/skill06/SKILL.md",
+      "consumers": [
+        "SKILL07",
+        "SKILL08",
+        "SKILL09",
+        "SKILL11",
+        "SKILL13",
+        "SKILL10"
+      ],
+      "outputs": [
+        {
+          "path": "06-activity-5512-implementation.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "06-bridge-prompts-and-questions.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "06-context-to-observation-script.md",
+          "requirement": "CONDITIONAL",
+          "condition": "Khi chọn bối cảnh riêng; nếu không ghi NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "06-guided-visual-facilitation.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "06-keyword-recall-and-question-script.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "06-model-facilitation-script.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "06-recall-quiz-feedback-script.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "06-scene-opening-cues.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "06-session-teaching-script.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "06-visual-facilitation-script.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    },
+    "SKILL07": {
+      "name": "activity-resource-designer",
+      "definition": "skills/skill07/SKILL.md",
+      "consumers": [
+        "SKILL08",
+        "SKILL09",
+        "SKILL10",
+        "SKILL11",
+        "SKILL13",
+        "SKILL12"
+      ],
+      "outputs": [
+        {
+          "path": "07-asset-manifest.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "07-context-assets-manifest.json",
+          "requirement": "CONDITIONAL",
+          "condition": "Khi chọn bối cảnh riêng; nếu không ghi NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "07-guided-visual-asset-manifest.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "07-interactive-models/",
+          "requirement": "CONDITIONAL",
+          "condition": "Theo tài nguyên/model/key cần; nếu không dùng khai báo applicability NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "07-media-viewport-spec.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "07-model-qa-checklist.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "07-model-test-cases.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "07-model-view-contracts.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "07-student-media/",
+          "requirement": "CONDITIONAL",
+          "condition": "Theo tài nguyên/model/key cần; nếu không dùng khai báo applicability NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "07-teacher-key/",
+          "requirement": "CONDITIONAL",
+          "condition": "Theo tài nguyên/model/key cần; nếu không dùng khai báo applicability NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "07-test-evidence.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "07-resource-usage.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "07-visual-assets-and-mindmap-manifest.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    },
+    "SKILL08": {
+      "name": "cv5512-lesson-plan-writer",
+      "definition": "skills/skill08/SKILL.md",
+      "consumers": [
+        "SKILL09",
+        "SKILL13",
+        "SKILL10",
+        "SKILL11"
+      ],
+      "outputs": [
+        {
+          "path": "08-direct-learning-handoff.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "08-guided-activity-placement.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "08-model-and-scene-placement.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "08-one-session-cv5512-lesson-plan.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "08-preflight-checklist.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "08-problem-context-handoff.json",
+          "requirement": "CONDITIONAL",
+          "condition": "Khi chọn bối cảnh riêng; nếu không ghi NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "08-session-time-and-activity-table.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "08-skill09-handoff.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "08-visual-workspace-handoff.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    },
+    "SKILL09": {
+      "name": "interactive-website-architect",
+      "definition": "skills/skill09/SKILL.md",
+      "consumers": [
+        "SKILL10",
+        "SKILL11",
+        "SKILL12",
+        "SKILL13"
+      ],
+      "outputs": [
+        {
+          "path": "09-direct-learning-duplicate-audit.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "09-guided-visual-scene-contract.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "09-id-crosswalk.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "09-learner-evidence-state-model.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "09-navigation-graph.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "09-one-topic-scene-contract.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "09-problem-context-split-audit.csv",
+          "requirement": "CONDITIONAL",
+          "condition": "Khi chọn bối cảnh riêng; nếu không ghi NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "09-qa-traceability.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "09-scene-kind-and-cta-matrix.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "09-visual-rhythm-audit.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    },
+    "SKILL10": {
+      "name": "learning-experience-visual-designer",
+      "definition": "skills/skill10/SKILL.md",
+      "consumers": [
+        "SKILL11",
+        "SKILL12",
+        "SKILL13"
+      ],
+      "outputs": [
+        {
+          "path": "10-attention-and-motion-plan.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "10-design-system-one-topic.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "10-direct-learning-ui-states.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "10-hifi-previews/",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "10-problem-context-layout-review.md",
+          "requirement": "CONDITIONAL",
+          "condition": "Khi chọn bối cảnh riêng; nếu không ghi NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "10-scene-layout-and-states.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "10-scene-visual-identity-and-floating-nav.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "10-viewport-budget.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "10-visual-a11y-qa.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "10-aesthetic-review.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    },
+    "SKILL11": {
+      "name": "html-lesson-developer",
+      "definition": "skills/skill11/SKILL.md",
+      "consumers": [
+        "SKILL12",
+        "SKILL13"
+      ],
+      "outputs": [
+        {
+          "path": "11-browser-e2e-report.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "11-build-manifest.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "11-context-navigation-e2e.json",
+          "requirement": "CONDITIONAL",
+          "condition": "Khi chọn bối cảnh riêng; nếu không ghi NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "11-direct-learning-e2e.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "11-display-and-viewport-e2e.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "11-guided-visual-floating-e2e.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "11-model-runtime-tests.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "11-production-site/",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "11-state-and-migration-tests.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "11-visual-fidelity-and-mindmap-e2e.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    },
+    "SKILL12": {
+      "name": "learner-perspective-simulation-journey-audit",
+      "definition": "skills/skill12/SKILL.md",
+      "consumers": [
+        "SKILL13"
+      ],
+      "outputs": [
+        {
+          "path": "12-attention-and-model-observation.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "12-branch-evidence.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "12-context-problem-journey-audit.csv",
+          "requirement": "CONDITIONAL",
+          "condition": "Khi chọn bối cảnh riêng; nếu không ghi NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "12-direct-learning-usability-audit.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "12-guided-visual-journey-audit.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "12-one-topic-learner-journey.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "12-repair-routing.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "12-transition-and-retention-audit.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "12-visual-journey-and-mindmap-audit.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    },
+    "SKILL13": {
+      "name": "independent-lesson-quality-reviewer",
+      "definition": "skills/skill13/SKILL.md",
+      "consumers": [],
+      "outputs": [
+        {
+          "path": "13-direct-learning-release-checklist.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "13-final-release-decision.md",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "13-guided-visual-compliance.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "13-independent-browser-results.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "13-one-topic-objective-coverage.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "13-problem-context-compliance.csv",
+          "requirement": "CONDITIONAL",
+          "condition": "Khi chọn bối cảnh riêng; nếu không ghi NOT_APPLICABLE kèm lý do."
+        },
+        {
+          "path": "13-release-gates.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "13-visual-interaction-audit.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        },
+        {
+          "path": "13-independent-aesthetic-and-workspace-review.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "common_outputs": [
+        "output_manifest.json"
+      ]
+    }
+  },
+  "historical_aliases_not_to_create": [
+    "09-multitopic-scene-contract.json"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "skills_original_identical": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true,
+    "7": false,
+    "8": true,
+    "9": true,
+    "10": true,
+    "11": true,
+    "12": true,
+    "13": true
+  },
+  "other_12_unchanged": true,
+  "runs": [
+    {
+      "script": "test_definitions.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"suite\": \"ONE_TOPIC definition static inspection\",\n  \"files\": 13,\n  \"policy_rules\": 13,\n  \"errors\": [],\n  \"status\": \"PASS\",\n  \"meaning\": \"Only definitions, schema and source-preservation checks; NOT browser or learner pilot validation\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "test_skill07_model_v21.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"suite\": \"Skill07 v2.1 model definition and contract QA\",\n  \"status\": \"PASS\",\n  \"results\": [\n    {\n      \"test\": \"full_skill07_v2.1\",\n      \"pass\": true\n    },\n    {\n      \"test\": \"original_skill07_preserved\",\n      \"pass\": true\n    },\n    {\n      \"test\": \"model_policy_link\",\n      \"pass\": true\n    },\n    {\n      \"test\": \"2_layers_independent\",\n      \"pass\": true\n    },\n    {\n      \"test\": \"state_machine_contract\",\n      \"pass\": true\n    },\n    {\n      \"test\": \"visual_flow_contract\",\n      \"pass\": true\n    },\n    {\n      \"test\": \"viewport_model_ui\",\n      \"pass\": true\n    },\n    {\n      \"test\": \"a11y_and_offline\",\n      \"pass\": true\n    },\n    {\n      \"test\": \"deliverables\",\n      \"pass\": true\n    },\n    {\n      \"test\": \"standard_complete\",\n      \"pass\": true\n    },\n    {\n      \"test\": \"30_qa_items\",\n      \"pass\": true\n    },\n    {\n      \"test\": \"schema_and_example_valid\",\n      \"pass\": true\n    },\n    {\n      \"test\": \"schema_rejects_missing_id\",\n      \"pass\": true\n    }\n  ],\n  \"scope\": \"Definition/static only; model runtime and learner pilot not rerun\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "script": "check_scene_contract.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"file\": \"/mnt/data/ONE_TOPIC_13_SKILLS_FOCUSLAB_V2_1_2026-11-23/fixtures/valid_scene.json\",\n  \"status\": \"PASS\",\n  \"errors\": []\n}\n",
+      "stderr": ""
+    }
+  ]
+}

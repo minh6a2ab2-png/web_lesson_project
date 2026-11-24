@@ -1,0 +1,431 @@
+{
+  "version": "ONE_TOPIC_FOCUSLAB_V2.2_CONTEXT_2026-11-23",
+  "source_version": "ONE_TOPIC_FOCUSLAB_V2.1",
+  "scope": "13 Skills + policy/schema + DNS 01-08 handoff amendments",
+  "source_baseline_mt2_sha256": "497a1d37a9d26c8edf145f72c55b225add17feba09ea678e661bc25dffd1d494",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 2325,
+      "sha256": "c7baf286e2fcf7622e0e6015d34b526c88d31b0131e25d381c40c7f812be060c"
+    },
+    {
+      "path": "CHANGE_MATRIX.csv",
+      "bytes": 2287,
+      "sha256": "73d48cc51216f188e2b5c3bdf7abc4959c2dd2a798bdb12e5ae98830ae2e9cc0"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/01-context-problem-candidates.md",
+      "bytes": 878,
+      "sha256": "6cf0a0b00e50bafeb95859b8070db555ae23ceb0478e9942a52786e7fcd8b676"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/02-context-split-decision.md",
+      "bytes": 775,
+      "sha256": "f59f1af401d689f840bd63aa025f2e62ef6d164271ce809b16fb7178a8ec464c"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/03-problem-context-content.md",
+      "bytes": 1327,
+      "sha256": "25f5d7a5b98036b335c42508a1ccc929139cf1eda5cecb70afcc84ecf87c38d9"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/04-context-learning-task-rubric.md",
+      "bytes": 840,
+      "sha256": "a3ebcbace5a51f2d87d1b62985a5bd68d3c41856ee9574e993f8a13a67d4f637"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/05-context-visual-resource-brief.csv",
+      "bytes": 654,
+      "sha256": "e7f790eff72b0768bc6a8ed98e41075206945f1afcbb6c18c76427bbb483547a"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/06-context-to-observation-script.md",
+      "bytes": 1430,
+      "sha256": "3d69f56d47350b289cdee7740380d5b1d101b74653cad612b02a3623c2345f6e"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/06-scene-opening-cues.v2_2.json",
+      "bytes": 19390,
+      "sha256": "8c58b95aafd0a5f8de6070eccc328cfb1268836b703fb60d323430b581c379e1"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/07-context-assets-manifest.json",
+      "bytes": 705,
+      "sha256": "47de56cdb93fad321d857b824fc0408279dc4f3b51a096b2e5fd3ef99d7e7f14"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/08-model-and-scene-placement.v2_2.csv",
+      "bytes": 7093,
+      "sha256": "f1f7ed5c6c3d9e4e57e7a755bebe0d411ba05829f5583536be33482c1b282078"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/08-one-session-cv5512-lesson-plan.v2_2.md",
+      "bytes": 39129,
+      "sha256": "447fad7af4871c383af980167a09effd14a4459457173a79f1c343925736f4b3"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/08-session-time-and-activity-table.v2_2.csv",
+      "bytes": 3503,
+      "sha256": "8581557000213d072c3bdf35c881ddaaf012e33064f3fd665d57f0181976b0a2"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/08-skill09-handoff.v2_2.json",
+      "bytes": 20029,
+      "sha256": "1feb357885daf787bab973fc14b0ec3c778a1615bead23ddc9d4d914904440d3"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/CHANGE_NOTES.md",
+      "bytes": 1156,
+      "sha256": "7c7489befb5c6a1866eb9114d1d7e2445ba9fa3adaf2dd1a085593c2e9b972f2"
+    },
+    {
+      "path": "DNS_SKILL01_08_CONTEXT_HANDOFF/DNS_OPENING_APPROVED_DIRECTION.md",
+      "bytes": 3485,
+      "sha256": "08476336dcdac929914c3c1070bb56f9a47c74889063ac812c64df6741ec0d27"
+    },
+    {
+      "path": "MIGRATION_GUIDE.md",
+      "bytes": 3540,
+      "sha256": "e572147b8c22721973864bbd8de9947f54331c34148e4d9ddb29fe331aea672c"
+    },
+    {
+      "path": "OUTPUT_NAME_CROSSWALK.csv",
+      "bytes": 453,
+      "sha256": "b43323a596676223c765a66dda0bd4c08e3ba121984bda6f4cc8039e3f28d77d"
+    },
+    {
+      "path": "QA_REPORT.md",
+      "bytes": 2080,
+      "sha256": "6832ad38f6eacce23ce3c9b2b72275c2e4f0c7750f9055e675e2ca237dcfa1b0"
+    },
+    {
+      "path": "QA_REPORT_V2_2.md",
+      "bytes": 1570,
+      "sha256": "bdaebc2794c5acc8d08d4012c17fd583476b9ebd15f9b56fe359dcb92a9e1363"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2487,
+      "sha256": "753e60814d8d996d277c4c4700f6c1d4f88f30274843175f8ebed29c5eb0cb5e"
+    },
+    {
+      "path": "SKILL07_UPGRADE_NOTES.md",
+      "bytes": 3081,
+      "sha256": "d79b011af687fee741e3e90137abdceb70a304d4089f87a86f6b29256af7aa64"
+    },
+    {
+      "path": "SOURCE_LEDGER.md",
+      "bytes": 2083,
+      "sha256": "d7d828d25d61ddbec7afcbe12e8ffffb7c63dc4eddb5ba85345f4ba19e87cf31"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 3042,
+      "sha256": "8f2bb01078d82b9d42d8b991d29cee7780f2743a3297db521be3b154438cc4a9"
+    },
+    {
+      "path": "V2_1_TO_V2_2_ALL_13_DIFF.patch",
+      "bytes": 52848,
+      "sha256": "f2c12bbbc98aaa2cd558e2d12b4a9aed70a99b53aa74001e8b0542ac4276d55a"
+    },
+    {
+      "path": "fixtures/dns_context_scene.valid.json",
+      "bytes": 3564,
+      "sha256": "02c463f648e17f7808350955097c152f2b35a6089d311886da429c3398b0e597"
+    },
+    {
+      "path": "fixtures/dns_observe_scene.valid.json",
+      "bytes": 1700,
+      "sha256": "84bd7dfa1b38de53850a6bdcb283fa4f5e0f89eaa8c629099f6b22bc8446e2a1"
+    },
+    {
+      "path": "fixtures/dns_two_scene_pair.valid.json",
+      "bytes": 6128,
+      "sha256": "fd98ca18f96e31f8a702da9dc49f0bebbb00a9a0f99af233f1b88d2ef72570db"
+    },
+    {
+      "path": "fixtures/invalid_problem_context_FOR_TEST_ONLY.json",
+      "bytes": 3534,
+      "sha256": "4a64735db220e245b661702c1307d01a63ae2f95894f727569b6fd4d49d621a5"
+    },
+    {
+      "path": "fixtures/invalid_scene_FOR_TEST_ONLY.json",
+      "bytes": 1374,
+      "sha256": "958de419d34f65cce3d1cb69d8838528fb6f5be3563e1db11585ab1be005f628"
+    },
+    {
+      "path": "fixtures/valid_scene.json",
+      "bytes": 1368,
+      "sha256": "0afa363fd795600e8fb30e72bb071899b28ee1503b5826795729d7464c0356b6"
+    },
+    {
+      "path": "legacy/13Skills_MT2_FROZEN_ORIGINAL.zip",
+      "bytes": 143358,
+      "sha256": "497a1d37a9d26c8edf145f72c55b225add17feba09ea678e661bc25dffd1d494"
+    },
+    {
+      "path": "legacy/model_contract_cookie_v2_before_upgrade.json",
+      "bytes": 1752,
+      "sha256": "1a07f0262656d4d5743c94c50cc065e6b083d1356730e13621c6a6e3b23d9e55"
+    },
+    {
+      "path": "legacy/skill01_MT2_ORIGINAL.md",
+      "bytes": 5982,
+      "sha256": "3b1f5fdad8489dba5f40f69a9bb3f6837735675017a64d0ab03b45e93ab64ce9"
+    },
+    {
+      "path": "legacy/skill02_MT2_ORIGINAL.md",
+      "bytes": 5946,
+      "sha256": "00d28c08219dafab2e8a2c08ae64f29ef7e5207a9cef5412c0329d0e541a5623"
+    },
+    {
+      "path": "legacy/skill03_MT2_ORIGINAL.md",
+      "bytes": 5793,
+      "sha256": "8d5f776e24d69461982d2d40bbf227a02239dcca1c8be800924c9822a185c54e"
+    },
+    {
+      "path": "legacy/skill04_MT2_ORIGINAL.md",
+      "bytes": 6941,
+      "sha256": "6ef896d9e58a53299d4662c224e7043c0e1b1c3964fb43a4ad210000376b2c47"
+    },
+    {
+      "path": "legacy/skill05_MT2_ORIGINAL.md",
+      "bytes": 5713,
+      "sha256": "5169f1deeca70398523ffe2d3ea48722a55af7bac2d36d7a500c625cc6ecbc6f"
+    },
+    {
+      "path": "legacy/skill06_MT2_ORIGINAL.md",
+      "bytes": 6388,
+      "sha256": "e7861c0e656d641a82ae8baeda631a5ac67bff032666d5975508e8802e33e3d0"
+    },
+    {
+      "path": "legacy/skill07_MT2_ORIGINAL.md",
+      "bytes": 5952,
+      "sha256": "a52566158915774d8e5eaac7924af19a2a15f37ff3a6fd151e3bde48eb14b8cf"
+    },
+    {
+      "path": "legacy/skill08_MT2_ORIGINAL.md",
+      "bytes": 6254,
+      "sha256": "bfd3692460e78097157d2ea88ac29bd54826ab0c9070a9107d60ba907f7ef022"
+    },
+    {
+      "path": "legacy/skill09_MT2_ORIGINAL.md",
+      "bytes": 6412,
+      "sha256": "4d3e586901c46073bfff5c41ea0429f5bf1f5a972b9ccd44ca0c1a734bcb7620"
+    },
+    {
+      "path": "legacy/skill10_MT2_ORIGINAL.md",
+      "bytes": 6241,
+      "sha256": "5021afe2c4891c66ff898d98b7f7444a10e170375b5a35aefd265078e6940f18"
+    },
+    {
+      "path": "legacy/skill11_MT2_ORIGINAL.md",
+      "bytes": 6181,
+      "sha256": "488d8bd220ff0f7e1ca2414d17799e08e298c743e2f9b026ec2d58c3f32bc169"
+    },
+    {
+      "path": "legacy/skill12_MT2_ORIGINAL.md",
+      "bytes": 6190,
+      "sha256": "ad6b9012f050e454719a1299f043a512365434dd49ddc975444a5e96e4897a15"
+    },
+    {
+      "path": "legacy/skill13_MT2_ORIGINAL.md",
+      "bytes": 6070,
+      "sha256": "82a909ce93f22c383c6838e974b2a0a0b2032f926e312926d25ac6d07f00b81a"
+    },
+    {
+      "path": "policy/ONE_TOPIC_MASTER_RULES.md",
+      "bytes": 14231,
+      "sha256": "7324ed7294631c5c7c3ebade3e5654607efcefe2968250dc714cb2153d3a8e24"
+    },
+    {
+      "path": "policy/PROBLEM_CONTEXT_DESIGN_STANDARD.md",
+      "bytes": 5342,
+      "sha256": "5df2b6e54cbcdd6dcd9b41acf7eb4c42c2104bb455ce00fd762be8f18fb18ad0"
+    },
+    {
+      "path": "policy/QA_VIEWPORT_AND_TIMING.md",
+      "bytes": 3130,
+      "sha256": "63a3df85a4ba81cf3f3baebd7dfff4d1b09b6867d2d32e0a8a69cd92e164288f"
+    },
+    {
+      "path": "policy/SCENE_KIND_REFERENCE.md",
+      "bytes": 4380,
+      "sha256": "3a06599a2de2b54996c27a8c6bd82916b5a794fd22026200e1427e5f11e04f73"
+    },
+    {
+      "path": "policy/SKILL07_MODEL_DESIGN_STANDARD.md",
+      "bytes": 19619,
+      "sha256": "ce9b13743221f04d6cebaf9fde10ecb6e19c83a165bcea0ea31dbcf5b230555d"
+    },
+    {
+      "path": "references/proposal_FocusLab_v1.md",
+      "bytes": 9399,
+      "sha256": "17fbf9077d00439cd0ed14ee56628b083da9cf9a8f5718d17b8188c725b43aaf"
+    },
+    {
+      "path": "references/proposal_two_phase_v3.md",
+      "bytes": 4701,
+      "sha256": "bcf52be1f5c714ae6b8e3c7b11d4cb35b3d57c89235c499d0ef242693397fe08"
+    },
+    {
+      "path": "references/proposal_viewport_fit_skill10.md",
+      "bytes": 15014,
+      "sha256": "1eb51f22b65b3fa0848cd7783d05f614a530c7ae8fe77bdf7e00033672b6a8a8"
+    },
+    {
+      "path": "references/reference_motion_models_v1.3.md",
+      "bytes": 12734,
+      "sha256": "f6abfe414229386513c3599077818a4bf0c0586098a4ddda911476d00ef31224"
+    },
+    {
+      "path": "references/reference_scene_independence_v1.5.md",
+      "bytes": 6668,
+      "sha256": "3df33b9130cd0d3e757e474b9616cff5a6b16101999235a45c5e43c8bb999f16"
+    },
+    {
+      "path": "references/superseded_one_viewport_v1.4.md",
+      "bytes": 6804,
+      "sha256": "1e0001bebfd089da79082e59661f4c130d79fdfc0d65fd8c38abf883308d86bb"
+    },
+    {
+      "path": "skills/skill01/SKILL.md",
+      "bytes": 5618,
+      "sha256": "69bebbed7e7f8ca43d5bec6c086efffa48c13c475881d4e0f2bffaa7e0b57d03"
+    },
+    {
+      "path": "skills/skill02/SKILL.md",
+      "bytes": 5451,
+      "sha256": "13aaf2df979fa9fef7635b0928688bb31065c5560e926f950a778871245e21e7"
+    },
+    {
+      "path": "skills/skill03/SKILL.md",
+      "bytes": 5533,
+      "sha256": "ad8d95c1461bbd17181743c9c7fccaf2c3af593f08a7c0f33a6904c8d3308ee7"
+    },
+    {
+      "path": "skills/skill04/SKILL.md",
+      "bytes": 5690,
+      "sha256": "ce80702eefbac59037cd411cf7d9d9d0adeb4f673ed23e5a4de6569fff6abfaf"
+    },
+    {
+      "path": "skills/skill05/SKILL.md",
+      "bytes": 5325,
+      "sha256": "60876533d69040069824275272734e08e872ad990f941e2cacfa3e95ff74062d"
+    },
+    {
+      "path": "skills/skill06/SKILL.md",
+      "bytes": 5665,
+      "sha256": "e08382f43fc6cbada0c04d62aa14b752293a9bce0f3868fe22f00aebfb5ba6f2"
+    },
+    {
+      "path": "skills/skill07/SKILL.md",
+      "bytes": 19867,
+      "sha256": "8130df0720ead55ea0816a077bbabd159350af9468dba88e307805ad5ddb4149"
+    },
+    {
+      "path": "skills/skill08/SKILL.md",
+      "bytes": 5369,
+      "sha256": "1f0bbe8ebe2dad888b4d44208a4ce380d839eb99b9f5902514bcf12383a40ae6"
+    },
+    {
+      "path": "skills/skill09/SKILL.md",
+      "bytes": 6706,
+      "sha256": "57ae25f80e3d0b7248d401b387b3cce7e8e5c483e8329990b7b621fc4a29e9c9"
+    },
+    {
+      "path": "skills/skill10/SKILL.md",
+      "bytes": 6774,
+      "sha256": "44df88ffe0bf8240f03cf47be5d6c58b9c4d85a8b17e9d49f25bed9f33c1905d"
+    },
+    {
+      "path": "skills/skill11/SKILL.md",
+      "bytes": 6563,
+      "sha256": "da096ccd8a01de9e2582a43bef807c23719d1d1940a603f41f1bc779bf6ef8ff"
+    },
+    {
+      "path": "skills/skill12/SKILL.md",
+      "bytes": 5909,
+      "sha256": "c59c355e2ead7bb0794d11005580936a184fb999c2ce6704ee7b228c5e68d658"
+    },
+    {
+      "path": "skills/skill13/SKILL.md",
+      "bytes": 6650,
+      "sha256": "620479321821d5510708fda0c29171ea5f8e8a8aea4c63e1edae6648d9317f79"
+    },
+    {
+      "path": "templates/model_contract.dns.example.json",
+      "bytes": 5616,
+      "sha256": "3b545ed7c4ee76b57a8e9c5e157b78367ded70bcb624d43a414ec77f17305bc1"
+    },
+    {
+      "path": "templates/model_contract.example.json",
+      "bytes": 1752,
+      "sha256": "1a07f0262656d4d5743c94c50cc065e6b083d1356730e13621c6a6e3b23d9e55"
+    },
+    {
+      "path": "templates/model_contract.schema.json",
+      "bytes": 7383,
+      "sha256": "2ea40892f75ef9368cc848bdf928d29550b66d227c333b266b8d399e670ba016"
+    },
+    {
+      "path": "templates/scene_contract.schema.json",
+      "bytes": 6983,
+      "sha256": "2e9524b8589e11befb4a96764d80fc509c71d9a94fc0a1b96afe69c91cc25d60"
+    },
+    {
+      "path": "templates/skill07_model_qa_checklist.csv",
+      "bytes": 3326,
+      "sha256": "cb26595b63c37af3621d9bde3766877d3f0e7c7f69e9cff9785094f9761ced7d"
+    },
+    {
+      "path": "tests/DEFINITION_QA_RESULT.json",
+      "bytes": 241,
+      "sha256": "6c99bf9f22b3c8e4f1acc528e0b5920df5d1506b9a53a6414ec71b527cb0634b"
+    },
+    {
+      "path": "tests/PROBLEM_CONTEXT_V2_2_QA_RESULT.json",
+      "bytes": 1872,
+      "sha256": "529035d4c7f1d021215d0476ed48e27b5655b3e7c106f9bbb894ee47d727bee4"
+    },
+    {
+      "path": "tests/SCENE_VALIDATION_RESULT.json",
+      "bytes": 1401,
+      "sha256": "4d03cc5559402b036fa9d3302e15bfba2c66cc5fadbe6b65bbc48a5ee7527fbc"
+    },
+    {
+      "path": "tests/SKILL07_V2_1_QA_RESULT.json",
+      "bytes": 1103,
+      "sha256": "6dc039f7a7171e83b622f4377bcbea7db6b228fffa282a023b4093fe28fbf1c9"
+    },
+    {
+      "path": "tests/UPGRADE_REGRESSION_RESULT.json",
+      "bytes": 2277,
+      "sha256": "3dd9701d362056dc3eac281ac48aa8c8f7c62473aa1869faf313ecadf0ea02f7"
+    },
+    {
+      "path": "tests/check_scene_contract.py",
+      "bytes": 3309,
+      "sha256": "1330fb319270a07e41060374d3b0b8799ab82e35b37b530aa7f82cdd03b4e56c"
+    },
+    {
+      "path": "tests/test_definitions.py",
+      "bytes": 3492,
+      "sha256": "d38efd6218daaf51f53ea5fe86c1b7674dce54ff4aa7d4f1bbe1f77be7f79c5d"
+    },
+    {
+      "path": "tests/test_problem_context_v22.py",
+      "bytes": 4462,
+      "sha256": "5ea16c9f99c287c6667caf1b120174656f1b047cdae68048ab12d36114a1d183"
+    },
+    {
+      "path": "tests/test_skill07_model_v21.py",
+      "bytes": 2674,
+      "sha256": "10d437c0e7894ef2199ce7fab7c448b4abb8fd48bca02ab96bbee78a1d93d097"
+    }
+  ],
+  "qa_status": "PASS",
+  "asset_context_status": "SPEC_ONLY",
+  "browser_runtime_test": "NOT_RUN"
+}

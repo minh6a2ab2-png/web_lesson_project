@@ -1,0 +1,100 @@
+{
+  "lesson_id": "LESSON-OT-WEB-ACCESS-001",
+  "topic_id": "OT-WEB-ACCESS-001",
+  "scene_id": "WEB-01-OBSERVE",
+  "kind": "OBSERVE",
+  "visual_identity": "OBSERVE",
+  "objective_id": "OBJ-WEB-01",
+  "student_task": "Quan sát hai cửa sổ và tìm điểm giống, khác; chưa cần trả lời khái niệm.",
+  "opening_cue": "Trong một tình huống giả định, hai bạn cùng có kết nối Internet. Một bạn đọc bài báo trong trình duyệt, bạn còn lại gửi thư bằng ứng dụng email riêng. Hãy quan sát hai cửa sổ: công việc nào giống và khác nhau? Cả hai có nhất thiết đang sử dụng World Wide Web không?",
+  "attention_plan": {
+    "primary_focus_target": "DUAL_WINDOW_STORY",
+    "cue_type": "TITLE_HIGHLIGHT_AND_STATIC_HIERARCHY",
+    "motion_purpose": "Title attention only; model motion under local learner control"
+  },
+  "layout_mode": "STORY",
+  "content_blocks": [
+    {
+      "type": "TEXT",
+      "role": "PROMPT",
+      "copy": {
+        "vi": "Trong một tình huống giả định, hai bạn cùng có kết nối Internet. Một bạn đọc bài báo trong trình duyệt, bạn còn lại gửi thư bằng ứng dụng email riêng. Hãy quan sát hai cửa sổ: công việc nào giống và khác nhau? Cả hai có nhất thiết đang sử dụng World Wide Web không?",
+        "en": "In a hypothetical situation, two students both have an Internet connection. One reads an article in a browser; the other sends a message in a separate mail app. Compare the two windows: what is similar and what is different? Must both be using the World Wide Web?"
+      },
+      "visibility": "IMMEDIATE"
+    },
+    {
+      "type": "ASSET",
+      "asset_id": "A-WEB-ENTRY-01",
+      "path": "07-student-media/A-WEB-ENTRY-01.html",
+      "sha256": "93d3169d00d43bad95b5be282c33877c7d6b927ac6ea0f5c923d98101ebe9976",
+      "status": "PROTOTYPE",
+      "visibility": "IMMEDIATE",
+      "render_region": "VISUAL_ONLY",
+      "alt": {
+        "vi": "Hai cửa sổ ứng dụng cạnh nhau, mỗi cửa sổ có cùng biểu tượng kết nối.",
+        "en": "Two application windows with the same connection symbol."
+      },
+      "caption": {
+        "vi": "Tình huống minh họa.",
+        "en": "Illustrative situation."
+      },
+      "actual_media_type": "HTML with original PNG illustration (rendered vector, not photo)",
+      "source_ref": "S01;S02",
+      "license": "Original educational asset; sources cited as references (no external image copied)",
+      "fallback": "Original local asset with equivalent task/data and VI/EN text; no remote dependency.",
+      "integration_mode": "EXTRACT_VISUAL_AND_DATA",
+      "extract_selector": "main > .surface > svg, main > .surface > img, main > .surface > pre, main > .surface > .tile, main > .surface > .grid",
+      "integration_policy": "Do not duplicate core text from p or standalone bar. Review labels in data grids for duplication and spoiler before integration.",
+      "visual_spoiler_validation": "PENDING_SKILL10_11_13"
+    }
+  ],
+  "model_id": null,
+  "model_action": null,
+  "model_view_id": null,
+  "completion_gate": "NON_BLOCKING",
+  "next_scene_id": "WEB-02-LEAD",
+  "state_dependency": [],
+  "viewport_fallback": "Desktop: prioritize task + evidence; remove duplicate asset chrome and reduce nonessential spacing before restructuring; mobile/200% zoom controlled vertical scroll, no clipping; keep fixed corner nav clear.",
+  "evidence": "Nhận xét miệng hoặc chỉ hình, không chấm.",
+  "display": {
+    "mode": "DIRECT",
+    "delay_ms": 0,
+    "auto_advance": false,
+    "title_highlight": {
+      "duration_ms": 3000,
+      "cycles": 1,
+      "restart_on_rerender": false,
+      "reduced_motion": "OFF"
+    }
+  },
+  "ui": {
+    "pedagogical_labels": false,
+    "reflection_forms": false,
+    "glossary_mode": "INLINE_KEYWORD",
+    "core_visible": true
+  },
+  "navigation": {
+    "previous_fixed_bottom_left": true,
+    "next_fixed_bottom_right": true,
+    "mode": "FREE",
+    "require_skip_reason": false,
+    "style": "FLOATING_FIXED",
+    "footer": false,
+    "count_location": "HEADER_OR_COMPACT"
+  },
+  "question_intents": [
+    "PROBLEM"
+  ],
+  "visual_excellence": {
+    "layout_id": "ASYMMETRIC_SPLIT",
+    "art_direction": "STORYTELLING",
+    "background_id": "SOFT_TINT",
+    "focal_point": "Two app windows",
+    "composition_reason": "Compare two scenarios without revealing the distinction",
+    "asset_refs": [
+      "ASSET-EXAMPLE"
+    ],
+    "workspace_mode": "NONE"
+  }
+}

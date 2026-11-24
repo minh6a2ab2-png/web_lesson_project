@@ -1,0 +1,27 @@
+{
+  "status": "SPEC_ONLY",
+  "theme_id": "THEME-DEMO",
+  "moodboards": [
+    {
+      "direction": "EDITORIAL",
+      "references": [],
+      "reason": "Definition-focused",
+      "rights_status": "NOT_RESEARCHED"
+    },
+    {
+      "direction": "TECHNOLOGY_LAB",
+      "references": [],
+      "reason": "Mechanism-focused",
+      "rights_status": "NOT_RESEARCHED"
+    }
+  ],
+  "chosen_direction": null,
+  "typography": {
+    "heading": "Be Vietnam Pro or verified fallback",
+    "body": "Inter or verified fallback",
+    "code": "JetBrains Mono or verified fallback"
+  },
+  "asset_briefs": [],
+  "diversity_gaps": [],
+  "note": "Template, not completed research."
+}

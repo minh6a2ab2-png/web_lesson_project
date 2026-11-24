@@ -1,0 +1,76 @@
+{
+  "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+  "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+  "scene_id": "DNS-CONTEXT-01",
+  "kind": "PROBLEM_CONTEXT",
+  "objective_id": "OBJ-DNS-01",
+  "student_task": "Nhận diện bối cảnh và nêu vấn đề cần giải thích trước khi tìm hiểu cơ chế.",
+  "opening_cue": "Làm sao máy tính tìm đúng website?",
+  "reveal": {
+    "opening_pause_s": 2.5,
+    "full_reveal_group": "ALL",
+    "instant_reveal": true,
+    "auto_advance": false,
+    "staggered": false
+  },
+  "attention_plan": {
+    "primary_focus_target": "problem-question",
+    "cue_type": "SPOTLIGHT",
+    "motion_purpose": "hướng sự chú ý đến vấn đề, không tiết lộ lời giải"
+  },
+  "layout_mode": "STORY",
+  "content_blocks": [
+    {
+      "block_id": "context-story",
+      "type": "context"
+    },
+    {
+      "block_id": "unknown-address-illustration",
+      "type": "illustration"
+    },
+    {
+      "block_id": "problem",
+      "type": "question"
+    }
+  ],
+  "model_id": null,
+  "model_action": null,
+  "completion_gate": "Học sinh nói được tình huống, nhu cầu và một điều cần giải thích.",
+  "next_scene_id": "DNS-OBSERVE-01",
+  "state_dependency": [],
+  "viewport_fallback": "cô đọng bối cảnh, giữ hình và câu hỏi đủ lớn trong 1 viewport; mobile/zoom dùng reflow có thể cuộn",
+  "evidence": "EVD-CONTEXT-01: học sinh phát biểu được vì sao cần tìm địa chỉ",
+  "navigation": {
+    "previous_fixed_bottom_left": true,
+    "next_fixed_bottom_right": true,
+    "guard_unified": true
+  },
+  "activity_id": "ACT-DNS-01",
+  "problem_split": {
+    "mode": "TWO_SCENES",
+    "reason": "Bối cảnh cần được nhận diện trước khi học sinh quan sát/dự đoán; hai nhiệm vụ và bằng chứng khác nhau.",
+    "shared_activity_id": "ACT-DNS-01",
+    "next_scene_id": "DNS-OBSERVE-01",
+    "context_evidence_id": "EVD-CONTEXT-01",
+    "next_scene_evidence_id": "EVD-OPEN"
+  },
+  "context_problem": {
+    "title_vi": "Làm sao máy tính tìm đúng website?",
+    "title_en": "How does a computer find the right website?",
+    "setting_vi": "Em mở trình duyệt và nhập www.hoddereducation.co.uk.",
+    "setting_en": "You open a browser and type www.hoddereducation.co.uk.",
+    "observed_reality_vi": "Em không nhập địa chỉ IP nhưng trình duyệt có thể tải trang khi truy cập thành công.",
+    "observed_reality_en": "You do not type an IP address, yet the browser can load the page when the connection succeeds.",
+    "knowledge_gap_vi": "Máy cần xác định địa chỉ máy chủ đích nhưng em chưa nhìn thấy bước tìm địa chỉ.",
+    "knowledge_gap_en": "The computer needs the destination server address, but the lookup step is not yet visible.",
+    "problem_question_vi": "Máy xác định địa chỉ IP tương ứng với tên website bằng cách nào?",
+    "problem_question_en": "How does the computer find the IP address for the website hostname?",
+    "illustration_asset_ids": [
+      "A-CONTEXT-DNS-01"
+    ],
+    "next_learning_action_vi": "Sang màn quan sát để tìm điểm còn thiếu và nêu giả thuyết.",
+    "next_learning_action_en": "Go to the observation scene to identify the missing step and make a prediction.",
+    "source_status": "SGK p.183 simplified scenario; new illustration not yet produced (SPEC_ONLY)",
+    "spoiler_boundary": "Không hiện tên DNS hoặc chiều truy vấn trước hoạt động INTRODUCTION/EXPLORE."
+  }
+}
