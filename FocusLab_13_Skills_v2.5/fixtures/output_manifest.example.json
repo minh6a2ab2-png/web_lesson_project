@@ -1,7 +1,7 @@
 {
   "run_id": "EXAMPLE-NOT-A-REAL-RUN",
   "skill_id": "SKILL01",
-  "version": "2.4.1",
+  "version": "2.5",
   "topic_id": "EXAMPLE-TOPIC",
   "input_refs": [
     {

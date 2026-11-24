@@ -18,6 +18,11 @@
       "sha256": "e3467ea94c879f7184d433ea7b64334fd4d55329fedd4887f3b223738329d100"
     },
     {
+      "path": "baseline_v2_4_1/fixtures/output_manifest.example.json",
+      "sha256": "17ad21b4dd369ae4660d092f1437d65767c6638ef91db348ffb15eca199d703c",
+      "source_blob_sha": "768ec7da80e2119c9ebd8838d2716c83c730727a"
+    },
+    {
       "path": "baseline_v2_4_1/MANIFEST_SHA256.json",
       "sha256": "c446bbaf59b0f438292ed740679452782ea51a28f6e1dfcbb440939e21574e51",
       "source_blob_sha": "511b144ca1a25ecb601775eb35f9ef7a72697423"
@@ -103,6 +108,11 @@
       "source_blob_sha": "d1934eb2ea9184d66cf4b85aef1434b57dd762bc"
     },
     {
+      "path": "baseline_v2_4_1/templates/output_manifest.schema.json",
+      "sha256": "d58b7a6f0a0df8fd77930c909c5eab25b651fb2d48914e49f8411cfe74e1f2bb",
+      "source_blob_sha": "4597da2b91df7ef1e2b17fd7f4052d29d2cc4b03"
+    },
+    {
       "path": "baseline_v2_4_1/templates/pipeline_registry.json",
       "sha256": "62c24aa1fe70cf1de7c34715d7a1a42b6fc583fc0b35d8dac65eec5463b44445",
       "source_blob_sha": "d2fd7c37541f6df139a37cd64ac304437240d5d4"
@@ -111,6 +121,16 @@
       "path": "baseline_v2_4_1/templates/scene_contract.schema.json",
       "sha256": "1f4af92c5fa4869083e2ac186750f50799ce072f6c56e378fd9e0c5e7bc936fa",
       "source_blob_sha": "5997f8fd644feca31664591dcc065cbe21a5b8f1"
+    },
+    {
+      "path": "baseline_v2_4_1/tests/check_handoff.py",
+      "sha256": "0f9e6dd3bd4371857a38b945453d03d7326ce01000e3fb2ba6d344867adfb9d0",
+      "source_blob_sha": "df343cf6bcb69e93c104d2dc1748f0f045b1eba6"
+    },
+    {
+      "path": "baseline_v2_4_1/tests/check_scene_contract.py",
+      "sha256": "f8cbb985400a798ca70c3d077dc6090618368496f0263ef61eea70f05489e820",
+      "source_blob_sha": "dc48c734fc7611c006eadf6a9d45a03d48618d07"
     },
     {
       "path": "baseline_v2_4_1/VERSION.json",
@@ -192,8 +212,7 @@
     },
     {
       "path": "fixtures/output_manifest.example.json",
-      "sha256": "17ad21b4dd369ae4660d092f1437d65767c6638ef91db348ffb15eca199d703c",
-      "source_blob_sha": "768ec7da80e2119c9ebd8838d2716c83c730727a"
+      "sha256": "82136c702e0dde1e029dba3970372affa55b082e07c86727a37baaf93aadce48"
     },
     {
       "path": "fixtures/v25_mindmap_config.valid.json",
@@ -614,6 +633,10 @@
       "sha256": "3e1f260a9d1bf7a9f6401dfd0470f10f82fcec3f632ccc812def6fcde22e9ecf"
     },
     {
+      "path": "QA_COMPATIBILITY_V2_5.md",
+      "sha256": "2b28da483ebdc8f3d640139f3e3768b4e7a87aa99d8389b64e8348429028e6be"
+    },
+    {
       "path": "QA_CONSOLIDATION_V2_5.md",
       "sha256": "df37a41f49a1277c7655d2e23531e956308b8cacf2a9530f4f55e43aebab9a02"
     },
@@ -633,7 +656,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "6d41185e07aeceaa34f1d55172bee9bece7952a98712ad726c980c605e0ad6fe"
+      "sha256": "533de4d8ec832971329916145ccbced0cd15cb06feef9fd57ebbd110d7aad70b"
     },
     {
       "path": "references/R5_SPEC.md",
@@ -711,7 +734,7 @@
     },
     {
       "path": "START_HERE.md",
-      "sha256": "4abbb80ca2bf72bff5b53d591ba6e433d3889603e0e55995354c8b1cc5108a2c"
+      "sha256": "c2dcb0dbcd103181e6efaeab551438f15e08c1be3b202e83d8320c18e29335cb"
     },
     {
       "path": "templates/aesthetic_rubric_v2_5.csv",
@@ -762,8 +785,7 @@
     },
     {
       "path": "templates/output_manifest.schema.json",
-      "sha256": "d58b7a6f0a0df8fd77930c909c5eab25b651fb2d48914e49f8411cfe74e1f2bb",
-      "source_blob_sha": "4597da2b91df7ef1e2b17fd7f4052d29d2cc4b03"
+      "sha256": "29bfaa618e5f22bb992bc48131eaed57eaf1db4037518eaff8ba1331195bdc28"
     },
     {
       "path": "templates/pipeline_registry_extension.json",
@@ -813,8 +835,7 @@
     },
     {
       "path": "tests/check_handoff.py",
-      "sha256": "0f9e6dd3bd4371857a38b945453d03d7326ce01000e3fb2ba6d344867adfb9d0",
-      "source_blob_sha": "df343cf6bcb69e93c104d2dc1748f0f045b1eba6"
+      "sha256": "9b7b2f0fb8428825ea60435c878aa9c9308a243b6df8c4dd18d39c21bf1fb3b3"
     },
     {
       "path": "tests/check_lesson_contract.py",
@@ -823,8 +844,7 @@
     },
     {
       "path": "tests/check_scene_contract.py",
-      "sha256": "f8cbb985400a798ca70c3d077dc6090618368496f0263ef61eea70f05489e820",
-      "source_blob_sha": "dc48c734fc7611c006eadf6a9d45a03d48618d07"
+      "sha256": "266b65d90b10898c5d7c3445f30c2d368136eca1f659857bfe634898ffd46510"
     },
     {
       "path": "tests/CONSISTENCY_QA_RESULT.json",
@@ -840,6 +860,10 @@
       "path": "tests/DEFINITION_QA_RESULT.json",
       "sha256": "69e9ae82384fd43a463953f2f5e9f33cc9e97648014779d9e01c6e7cf72d8224",
       "source_blob_sha": "3ba18a8cf43b3fe185980e3f088fb17df70679de"
+    },
+    {
+      "path": "tests/test_active_v25.py",
+      "sha256": "4d03edf524df4d98dce3f74b5607746ffa01bd88072b71ecf47f55481b0a2191"
     },
     {
       "path": "tests/test_consistency.py",

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "FocusLab 2.4.1 output manifest",
+  "title": "FocusLab 2.5 output manifest",
   "type": "object",
   "required": [
     "run_id",
@@ -27,7 +27,7 @@
       "pattern": "^SKILL(0[1-9]|1[0-3])$"
     },
     "version": {
-      "const": "2.4.1"
+      "const": "2.5"
     },
     "topic_id": {
       "type": "string",

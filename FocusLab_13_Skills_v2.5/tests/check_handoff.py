@@ -7,7 +7,7 @@ def check_manifest(d,root=None,registry=None):
  e=[]
  for k in ['run_id','skill_id','version','topic_id','input_refs','output_files','evidence','open_issues','gate_status','next_skill','approval_status','test_status','field_status']:
   if k not in d:e.append('missing '+k)
- if d.get('version')!='2.4.1':e.append('wrong definition version')
+ if d.get('version')!='2.5':e.append('wrong definition version')
  if not re.fullmatch(r'SKILL(0[1-9]|1[0-3])',str(d.get('skill_id',''))):e.append('invalid skill_id')
  if d.get('gate_status') not in ['DRAFT','PROTOTYPE','NEEDS_REVIEW','TESTED_AUTOMATED','VERIFIED_IN_PRACTICE','BLOCKED']:e.append('invalid gate_status')
  if d.get('approval_status') not in ['NOT_REQUESTED','PENDING','USER_APPROVED','REJECTED']:e.append('invalid approval_status')
