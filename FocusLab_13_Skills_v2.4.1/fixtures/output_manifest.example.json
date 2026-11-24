@@ -1,0 +1,28 @@
+{
+  "run_id": "EXAMPLE-NOT-A-REAL-RUN",
+  "skill_id": "SKILL01",
+  "version": "2.4.1",
+  "topic_id": "EXAMPLE-TOPIC",
+  "input_refs": [
+    {
+      "path": "provided-source.example",
+      "version": "example",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "output_files": [
+    {
+      "path": "example.md",
+      "status": "SPEC_ONLY",
+      "sha256": null,
+      "reason": "Schema fixture only, not a created lesson output."
+    }
+  ],
+  "evidence": [],
+  "open_issues": [],
+  "gate_status": "DRAFT",
+  "next_skill": "SKILL02",
+  "approval_status": "NOT_REQUESTED",
+  "test_status": "NOT_RUN",
+  "field_status": "NOT_RUN"
+}

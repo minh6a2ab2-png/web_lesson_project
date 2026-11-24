@@ -1,0 +1,3 @@
+# Preserve the byte hashes of supplied archives and generated evidence.
+* -text
+*.zip binary

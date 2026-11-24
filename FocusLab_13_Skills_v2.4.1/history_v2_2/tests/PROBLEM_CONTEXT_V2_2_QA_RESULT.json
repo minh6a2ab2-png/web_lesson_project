@@ -1,0 +1,98 @@
+{
+  "suite": "PROBLEM_CONTEXT v2.2 definition + DNS handoff consistency",
+  "checks": 22,
+  "passed": 22,
+  "failed": [],
+  "status": "PASS",
+  "scope": "Schema/structural/source trace only; no browser lesson or student field testing",
+  "details": [
+    {
+      "test": "13_skill_definitions",
+      "passed": true
+    },
+    {
+      "test": "14_scene_kinds",
+      "passed": true
+    },
+    {
+      "test": "all_13_mention_context",
+      "passed": true
+    },
+    {
+      "test": "standard_policy",
+      "passed": true
+    },
+    {
+      "test": "one_or_two_option",
+      "passed": true
+    },
+    {
+      "test": "scene_schema_and_dns_pair_valid",
+      "passed": true
+    },
+    {
+      "test": "distinct_kinds_and_tasks",
+      "passed": true
+    },
+    {
+      "test": "distinct_evidence",
+      "passed": true
+    },
+    {
+      "test": "linked_next_scene",
+      "passed": true
+    },
+    {
+      "test": "same_activity",
+      "passed": true
+    },
+    {
+      "test": "two_phase_no_auto_nav",
+      "passed": true
+    },
+    {
+      "test": "context_bilingual",
+      "passed": true
+    },
+    {
+      "test": "image_required",
+      "passed": true
+    },
+    {
+      "test": "no_dns_answer_spoiler",
+      "passed": true
+    },
+    {
+      "test": "invalid_missing_illustration_rejected",
+      "passed": true
+    },
+    {
+      "test": "handoff_11_activities",
+      "passed": true
+    },
+    {
+      "test": "only_one_opening_activity",
+      "passed": true
+    },
+    {
+      "test": "handoff_two_scene_link",
+      "passed": true
+    },
+    {
+      "test": "handoff_same_objective",
+      "passed": true
+    },
+    {
+      "test": "new_asset_spec_only",
+      "passed": true
+    },
+    {
+      "test": "two_opening_cues_same_activity",
+      "passed": true
+    },
+    {
+      "test": "skills07_model_standard_unchanged",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "model_id": "A-MODEL-DNS-01",
+  "model_type": "HYBRID",
+  "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+  "objective_ids": [
+    "O-DNS-01"
+  ],
+  "ku_ids": [
+    "KU-03",
+    "KU-04",
+    "KU-05"
+  ],
+  "activity_ids": [
+    "ACT-DNS-04",
+    "ACT-DNS-05"
+  ],
+  "learning_question": {
+    "vi": "Tại sao DNS server (1) đôi khi cần hỏi DNS server (2)?",
+    "en": "Why does DNS server (1) sometimes query DNS server (2)?"
+  },
+  "actors": [
+    {
+      "id": "computer",
+      "label_vi": "Máy người dùng",
+      "label_en": "User computer"
+    },
+    {
+      "id": "dns1",
+      "label_vi": "DNS server (1)",
+      "label_en": "DNS server (1)"
+    },
+    {
+      "id": "dns2",
+      "label_vi": "DNS server (2)",
+      "label_en": "DNS server (2)"
+    }
+  ],
+  "inputs": {
+    "hostname": "school.example",
+    "cache_mode": [
+      "HIT",
+      "MISS",
+      "EXPIRED"
+    ],
+    "address": "203.0.113.10"
+  },
+  "states": [
+    "READY",
+    "ASK_DNS1",
+    "ASK_DNS2",
+    "IP_RETURNED_TO_DNS1",
+    "IP_RETURNED_TO_COMPUTER"
+  ],
+  "initial_state": "READY",
+  "events": [
+    "SEND_QUERY",
+    "FORWARD_TO_DNS2",
+    "DNS2_ANSWER",
+    "DNS1_ANSWER",
+    "RESET"
+  ],
+  "transitions": [
+    {
+      "from": "READY",
+      "event": "SEND_QUERY",
+      "to": "ASK_DNS1",
+      "observable": {
+        "vi": "Máy tính hỏi DNS1 để tìm IP",
+        "en": "Computer asks DNS1 for IP"
+      },
+      "payload": "Query: school.example",
+      "source_actor": "computer",
+      "target_actor": "dns1"
+    },
+    {
+      "from": "ASK_DNS1",
+      "event": "FORWARD_TO_DNS2",
+      "guard": "cache_mode != HIT",
+      "to": "ASK_DNS2",
+      "observable": {
+        "vi": "DNS1 chưa có địa chỉ hợp lệ nên hỏi DNS2",
+        "en": "DNS1 asks DNS2 because no usable entry"
+      },
+      "payload": "Query: school.example",
+      "source_actor": "dns1",
+      "target_actor": "dns2"
+    },
+    {
+      "from": "ASK_DNS2",
+      "event": "DNS2_ANSWER",
+      "to": "IP_RETURNED_TO_DNS1",
+      "observable": {
+        "vi": "DNS2 trả IP cho DNS1",
+        "en": "DNS2 sends IP to DNS1"
+      },
+      "payload": "Answer: 203.0.113.10",
+      "source_actor": "dns2",
+      "target_actor": "dns1"
+    },
+    {
+      "from": "IP_RETURNED_TO_DNS1",
+      "event": "DNS1_ANSWER",
+      "to": "IP_RETURNED_TO_COMPUTER",
+      "observable": {
+        "vi": "DNS1 trả IP cho máy",
+        "en": "DNS1 returns IP to computer"
+      },
+      "payload": "Answer: 203.0.113.10",
+      "source_actor": "dns1",
+      "target_actor": "computer"
+    },
+    {
+      "from": "ASK_DNS1",
+      "event": "DNS1_ANSWER",
+      "guard": "cache_mode == HIT",
+      "to": "IP_RETURNED_TO_COMPUTER",
+      "observable": {
+        "vi": "DNS1 trả IP từ cache, bỏ qua DNS2",
+        "en": "DNS1 answers from cache, skips DNS2"
+      },
+      "payload": "Answer: 203.0.113.10",
+      "source_actor": "dns1",
+      "target_actor": "computer"
+    }
+  ],
+  "invariants": [
+    "DNS response contains IP address, not HTML",
+    "HIT must never trigger a DNS2 query",
+    "EXPIRED must not serve its stale cached result",
+    "No real Internet request occurs"
+  ],
+  "visual_channels": [
+    "ACTOR_HIGHLIGHT",
+    "FLOW_TOKEN",
+    "ROUTE_HIGHLIGHT",
+    "PAYLOAD_LABEL",
+    "STATE_BADGE",
+    "STEP_LOG"
+  ],
+  "controls": [
+    "SET_INPUT",
+    "NEXT_STEP",
+    "PREVIOUS_STEP",
+    "RESET",
+    "SKIP_MOTION",
+    "CHANGE_LANGUAGE"
+  ],
+  "predict_prompt": {
+    "vi": "Khi DNS1 có cache còn hạn, đường nào sẽ bị bỏ qua?",
+    "en": "Which route is skipped when DNS1 has a valid cache entry?"
+  },
+  "explain_prompt": {
+    "vi": "Vì sao hai chế độ HIT và MISS có đường đi khác nhau?",
+    "en": "Why do HIT and MISS take different routes?"
+  },
+  "test_cases": [
+    {
+      "id": "DNS-01",
+      "action_sequence": [
+        "SET_INPUT:MISS",
+        "SEND_QUERY",
+        "FORWARD_TO_DNS2",
+        "DNS2_ANSWER",
+        "DNS1_ANSWER"
+      ],
+      "expected_state": "IP_RETURNED_TO_COMPUTER",
+      "expected_observation": "DNS2 queried, IP returned; no HTML",
+      "motion_off_expected_same_state": true
+    },
+    {
+      "id": "DNS-02",
+      "action_sequence": [
+        "SET_INPUT:HIT",
+        "SEND_QUERY",
+        "DNS1_ANSWER"
+      ],
+      "expected_state": "IP_RETURNED_TO_COMPUTER",
+      "expected_observation": "DNS2 not queried",
+      "motion_off_expected_same_state": true
+    },
+    {
+      "id": "DNS-03",
+      "action_sequence": [
+        "SET_INPUT:EXPIRED",
+        "SEND_QUERY",
+        "FORWARD_TO_DNS2"
+      ],
+      "expected_state": "ASK_DNS2",
+      "expected_observation": "Expired cache is not used to answer",
+      "motion_off_expected_same_state": true
+    },
+    {
+      "id": "DNS-04",
+      "action_sequence": [
+        "SET_INPUT:MISS",
+        "SEND_QUERY",
+        "RESET"
+      ],
+      "expected_state": "READY",
+      "expected_observation": "Old token/timer/log cleared",
+      "motion_off_expected_same_state": true
+    }
+  ],
+  "offline": {
+    "standalone": true,
+    "external_dependencies": []
+  },
+  "locales": [
+    "vi",
+    "en"
+  ],
+  "reduced_motion_behavior": "All state transitions and labels update instantly with no animation wait.",
+  "limitations": [
+    "DNS1->DNS2 is simplified according to textbook figure; real DNS resolution may involve resolver, cache and multiple authorities",
+    "Example domain/IP are illustrative, no actual DNS lookup"
+  ],
+  "runtime_status": "SPEC_ONLY",
+  "references": [
+    "Skill 03 MC-01/02",
+    "Skill 05 production brief",
+    "Textbook figure 5.3 (user reference)"
+  ]
+}
