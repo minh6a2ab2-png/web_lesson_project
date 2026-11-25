@@ -50,3 +50,13 @@ GSAP run 45589153888, artifact 15010351809: 13/13 actual runtime checks, verifie
 | MM04 | P1 | Phase 5 | Reusable media cache and scene-level invalidation | Verify separate workflow runs and selective rebuild |
 | MM05 | P1 | Phase 5 | Independent learning and motion/audio quality | Evaluate whether video adds value over stills; actual learner evidence if available |
 R01: two educational MP4s, 5 scenes each, 720p, H264/AAC, eSpeak VI/EN, timed captions, 42/42 local technical checks. No Remotion, Lemo, or KittenTTS execution. No private checkpoint published. No claims of independent voice or pedagogical acceptance.
+
+## Phase 4 — Game R01
+| ID | Priority | Target | Open problem | Acceptance evidence |
+|---|---|---|---|---|
+| G01 | P1 | Phase 5 | External sprite/tileset engine and asset rights | Meowa only if authorized; verify license, asset provenance, consistency; native art fallback |
+| G02 | P0 | Before release | Exact game file and localhost, integrated navigation lifecycle | Privacy-safe actual package browser tests, pause/leave/reset and offline regression |
+| G03 | P1 | Phase 5 | Generalize renderer to more topics and mechanics | Second non-URL activity, data-only configuration, reusable tests |
+| G04 | P0 | Before lesson release | Independent accessibility and instructional value | Keyboard/screen reader review, reduced motion, compare original task and navigation overhead; no fabricated learner results |
+| G05 | P1 | Phase 5 | Performance/visual polish and mobile playability | Measure frame behavior, readability, controls and low-end device performance |
+R01: exact R04 ACT-WEB-08 data, 250/250 checkpoint hashes, four tickets and first-attempt/repair evidence preserved; 24/24 Node + 63/63 direct Chromium checks. Actual file blocked; localhost NOT_RUN. Original native procedural art. No Meowa/Phaser runtime. All 27 prior issues retained; no release gate silently closed.
