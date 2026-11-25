@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "FocusLab v2.6 RC1 output manifest",
+  "title": "FocusLab v2.7 RC1 output manifest",
   "type": "object",
   "required": [
     "run_id",

@@ -45,6 +45,19 @@ def check_manifest(d,root=None,registry=None):
    decision=decisions.get(path,{})
    if not matches and not (x['requirement']=='CONDITIONAL' and decision.get('status')=='NOT_APPLICABLE' and decision.get('reason')):e.append('undeclared output '+path)
    if x['requirement']=='REQUIRED' and any(statuses[p]=='NOT_APPLICABLE' for p in matches):e.append('required output cannot be N/A '+path)
+ # Ready/prototype pedagogical contract must match this run, not merely have a file hash.
+ if root is not None and re.fullmatch(r'SKILL(0[1-9]|1[0-3])',str(d.get('skill_id',''))):
+  name=d['skill_id'][-2:]+'-pedagogical-contract.json'
+  if statuses.get(name) in ['READY_REFERENCE','READY_ASSET','PROTOTYPE']:
+   try:
+    import jsonschema
+    base=Path(root).resolve(); target=(base/name).resolve()
+    if not target.is_relative_to(base):raise ValueError('path escapes root')
+    c=json.loads(target.read_text(encoding='utf-8'))
+    sch=json.loads((Path(__file__).resolve().parents[1]/'templates/pedagogical_contract.schema.json').read_text())
+    jsonschema.Draft202012Validator(sch).validate(c)
+    if c['skill_id']!=d['skill_id'] or c['topic_id']!=d.get('topic_id'):raise ValueError('pedagogical contract identity mismatch')
+   except Exception as exc:e.append('invalid pedagogical contract: '+str(exc).splitlines()[0])
  return e
 
 if __name__=='__main__':

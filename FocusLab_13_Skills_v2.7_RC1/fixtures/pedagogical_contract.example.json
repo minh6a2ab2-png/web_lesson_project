@@ -1,0 +1,27 @@
+{
+  "version": "2.7-rc1",
+  "skill_id": "SKILL01",
+  "topic_id": "SYNTHETIC-FIXTURE",
+  "scope": "DESIGN_ONLY",
+  "status": "CANDIDATE",
+  "ku_ids": [
+    "KU-EXAMPLE"
+  ],
+  "source_refs": [
+    {
+      "ref": "fixture",
+      "version": "1",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }
+  ],
+  "decisions": [
+    {
+      "requirement": "source",
+      "decision": "synthetic example only",
+      "evidence_refs": []
+    }
+  ],
+  "limitations": [
+    "Synthetic structure fixture; not a lesson or approval."
+  ]
+}
