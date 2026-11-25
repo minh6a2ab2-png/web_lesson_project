@@ -29,3 +29,13 @@ Rules: work in bounded independent branches; re-run only impacted tasks. Prefer 
 | V05 | P2 | Phase 5 | Upstream DESIGN.md format compatibility | Validate upstream parser or retain explicitly local schema |
 
 R02 local sample: 312/312 checks in direct Chromium rendering (2 variants, 3 viewports, 5 representative scenes), 30 screenshots. Not a full lesson; file navigation blocked; localhost and independent review NOT_RUN. No issue closed by these tests. Package SHA-256: 0d839dcb5a5472b7262a95f7335dee60b23b3d31f60519597582d8752f42ff28. No private package committed.
+## Phase 2 additions — Motion R01
+| ID | Priority | Target | Open problem | Acceptance evidence |
+|---|---|---|---|---|
+| M01 | P1 | Phase 2/5 | Actual GSAP adapter execution, pinned local dependency and license | Synthetic CI checks with real GSAP, verified offline packaging, native fallback |
+| M02 | P1 | Phase 2/5 | Multi-track timeline and scene lifecycle | Pause/replay/interrupt/leave scene, no stale callbacks or state drift |
+| M03 | P1 | Phase 3/4 | Other eight motion style specifications | Implement only when needed, compare usefulness against native lab |
+| M04 | P0 | Before production release | Full model motion regression and exact offline QA | Actual file/localhost, keyboard, reduced motion, responsive, all MC02/04/05, game and Mindmap |
+| M05 | P1 | Phase 5 | Independent motion/readability and performance audit | Measured frame behavior and cognitive task review; no fabricated learner evidence |
+
+Motion R01: 630/630 local direct-render deterministic checks. Original MC04 R04 control and native WAAPI prototype; no exact file navigation, full deck, or field claim. Preserve A01-A12 and V01-V05. No issues silently closed. npm DNS blocked; optional GSAP adapter not exercised locally.
