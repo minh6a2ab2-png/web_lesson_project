@@ -1,0 +1,72 @@
+{
+  "model_id": "MODEL-COOKIE-VISIT",
+  "objective_id": "OBJ-COOKIE-REQUEST",
+  "knowledge_claim": "Browser lưu và có thể gửi cookie phù hợp cùng các request tiếp theo",
+  "actors": [
+    "Browser",
+    "Server"
+  ],
+  "inputs": {
+    "language": [
+      "vi",
+      "en"
+    ],
+    "cookie_enabled": [
+      true,
+      false
+    ]
+  },
+  "initial_state": {
+    "cookie": null,
+    "server_response": null
+  },
+  "events": [
+    "select_language",
+    "send_request",
+    "receive_response",
+    "store_cookie",
+    "revisit",
+    "clear_cookie"
+  ],
+  "transitions": [
+    {
+      "event": "store_cookie",
+      "condition": "cookie_enabled",
+      "state_change": "cookie: null → lang=vi",
+      "observation": "Browser có Cookie lưu trữ"
+    },
+    {
+      "event": "revisit",
+      "condition": "cookie exists and eligible",
+      "state_change": "request includes Cookie",
+      "observation": "Server có thể nhận giá trị đã lưu"
+    }
+  ],
+  "controls": [
+    "send_request",
+    "step",
+    "reset",
+    "replay"
+  ],
+  "predict_question": "Lần sau Browser gửi gì?",
+  "evidence": "HS chỉ được giai đoạn Server gửi Set-Cookie và Browser gửi Cookie phù hợp",
+  "test_cases": [
+    {
+      "inputs": {
+        "language": "vi",
+        "cookie_enabled": true
+      },
+      "expected": "Cookie saved and later eligible request carries Cookie"
+    },
+    {
+      "inputs": {
+        "language": "vi",
+        "cookie_enabled": false
+      },
+      "expected": "No new cookie stored"
+    }
+  ],
+  "reduced_motion_behavior": "đổi trạng thái tức thời, giữ nhãn và log",
+  "offline_fallback": "mô phỏng cục bộ, không tự nhận là browser thật",
+  "status": "PROTOTYPE"
+}

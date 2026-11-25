@@ -1,0 +1,229 @@
+{
+  "version": "2.5",
+  "extends": "2.4.1",
+  "skills": {
+    "SKILL01": {
+      "definition": "skills/skill01/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "01-visual-research-opportunities.csv",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [
+        "SKILL05",
+        "SKILL07",
+        "SKILL13"
+      ],
+      "ve_refs": "VE01,VE02"
+    },
+    "SKILL02": {
+      "definition": "skills/skill02/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "02-visual-rhythm-and-workspace-brief.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [
+        "SKILL04",
+        "SKILL05",
+        "SKILL06",
+        "SKILL08",
+        "SKILL09",
+        "SKILL13"
+      ],
+      "ve_refs": "VE03,VE04,VE07,VE09"
+    },
+    "SKILL03": {
+      "definition": "skills/skill03/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "03-mindmap-content-contract.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [
+        "SKILL04",
+        "SKILL05",
+        "SKILL06",
+        "SKILL07",
+        "SKILL09",
+        "SKILL13"
+      ],
+      "ve_refs": "VE02,VE07,VE08,VE09"
+    },
+    "SKILL04": {
+      "definition": "skills/skill04/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "04-game-and-mindmap-method.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [
+        "SKILL05",
+        "SKILL06",
+        "SKILL07",
+        "SKILL08",
+        "SKILL09",
+        "SKILL13"
+      ],
+      "ve_refs": "VE04,VE08,VE09"
+    },
+    "SKILL05": {
+      "definition": "skills/skill05/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "05-art-direction-and-source-plan.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [
+        "SKILL06",
+        "SKILL07",
+        "SKILL09",
+        "SKILL10",
+        "SKILL13"
+      ],
+      "ve_refs": "VE01,VE02,VE05,VE07"
+    },
+    "SKILL06": {
+      "definition": "skills/skill06/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "06-visual-facilitation-script.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [
+        "SKILL07",
+        "SKILL08",
+        "SKILL09",
+        "SKILL10",
+        "SKILL11",
+        "SKILL13"
+      ],
+      "ve_refs": "VE07,VE08,VE09"
+    },
+    "SKILL07": {
+      "definition": "skills/skill07/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "07-visual-assets-and-mindmap-manifest.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [
+        "SKILL08",
+        "SKILL09",
+        "SKILL10",
+        "SKILL11",
+        "SKILL12",
+        "SKILL13"
+      ],
+      "ve_refs": "VE02,VE06,VE08,VE09"
+    },
+    "SKILL08": {
+      "definition": "skills/skill08/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "08-visual-workspace-handoff.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [
+        "SKILL09",
+        "SKILL10",
+        "SKILL11",
+        "SKILL13"
+      ],
+      "ve_refs": "VE07,VE08,VE09"
+    },
+    "SKILL09": {
+      "definition": "skills/skill09/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "09-visual-rhythm-audit.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [
+        "SKILL10",
+        "SKILL11",
+        "SKILL12",
+        "SKILL13"
+      ],
+      "ve_refs": "VE03,VE04,VE07,VE08,VE09"
+    },
+    "SKILL10": {
+      "definition": "skills/skill10/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "10-aesthetic-review.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [
+        "SKILL11",
+        "SKILL12",
+        "SKILL13"
+      ],
+      "ve_refs": "VE01–VE10"
+    },
+    "SKILL11": {
+      "definition": "skills/skill11/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "11-visual-fidelity-and-mindmap-e2e.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [
+        "SKILL12",
+        "SKILL13"
+      ],
+      "ve_refs": "VE02,VE06,VE08,VE09,VE10"
+    },
+    "SKILL12": {
+      "definition": "skills/skill12/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "12-visual-journey-and-mindmap-audit.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [
+        "SKILL13"
+      ],
+      "ve_refs": "VE03,VE07,VE08,VE09,VE10"
+    },
+    "SKILL13": {
+      "definition": "skills/skill13/SKILL.md",
+      "additional_outputs": [
+        {
+          "path": "13-independent-aesthetic-and-workspace-review.json",
+          "requirement": "REQUIRED",
+          "condition": null
+        }
+      ],
+      "additional_consumers": [],
+      "ve_refs": "VE01–VE10"
+    }
+  },
+  "historical_aliases_not_to_create": [
+    "09-multitopic-scene-contract.json"
+  ]
+}

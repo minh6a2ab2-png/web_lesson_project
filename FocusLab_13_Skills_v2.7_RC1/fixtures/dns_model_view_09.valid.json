@@ -1,0 +1,64 @@
+{
+  "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+  "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+  "scene_id": "DNS-09",
+  "kind": "EXPLORE",
+  "objective_id": "OBJ-DNS-09-EXAMPLE",
+  "student_task": "Quan sát bốn bước MISS trong ví dụ SGK",
+  "opening_cue": "Quá trình tra cứu DNS",
+  "attention_plan": {
+    "primary_focus_target": "opening-question",
+    "cue_type": "SPOTLIGHT",
+    "motion_purpose": "nhấn mạnh câu hỏi tình huống"
+  },
+  "layout_mode": "LAB",
+  "content_blocks": [
+    {
+      "block_id": "DNS-MISS-ONLY",
+      "type": "model"
+    },
+    {
+      "block_id": "DNS-MISS-ONLY-core",
+      "type": "core",
+      "role": "core"
+    }
+  ],
+  "model_id": "MC-DNS-SHARED",
+  "model_action": "Quan sát bốn bước MISS trong ví dụ SGK",
+  "completion_gate": "NON_BLOCKING",
+  "next_scene_id": "DNS-10",
+  "state_dependency": [],
+  "viewport_fallback": "hai trạng thái xếp dọc nếu vẫn nhìn đủ; thiết kế scene khác nếu không",
+  "evidence": "Quan sát tùy chọn; không khóa Next",
+  "navigation": {
+    "previous_fixed_bottom_left": true,
+    "next_fixed_bottom_right": true,
+    "mode": "FREE",
+    "require_skip_reason": false,
+    "style": "FLOATING_FIXED",
+    "footer": false,
+    "count_location": "HEADER_OR_COMPACT"
+  },
+  "display": {
+    "mode": "DIRECT",
+    "delay_ms": 0,
+    "auto_advance": false,
+    "title_highlight": {
+      "duration_ms": 3000,
+      "cycles": 2,
+      "restart_on_rerender": false,
+      "reduced_motion": "OFF"
+    }
+  },
+  "ui": {
+    "pedagogical_labels": false,
+    "reflection_forms": false,
+    "glossary_mode": "INLINE_KEYWORD",
+    "core_visible": true
+  },
+  "question_intents": [
+    "GUIDING"
+  ],
+  "model_view_id": "DNS-MISS-ONLY",
+  "visual_identity": "EXPLORE"
+}

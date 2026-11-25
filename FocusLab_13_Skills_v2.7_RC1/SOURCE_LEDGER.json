@@ -1,0 +1,56 @@
+{
+  "base": {
+    "commit": "0d1e19ddc263c83a85dd14391b8d226c675fadff",
+    "url": "https://github.com/minh6a2ab2-png/web_lesson_project/blob/0d1e19ddc263c83a85dd14391b8d226c675fadff/FocusLab_13_Skills_v2.4.1/",
+    "status": "READ_VIA_GITHUB_CONNECTOR_TEXT; FULL_ARCHIVE_NOT_AVAILABLE_IN_CONTAINER"
+  },
+  "references": [
+    {
+      "path": "references/R5_SPEC.md",
+      "sha256": "e24c897bf02bd93cc9aee4843bd583feaab90cb5d2806cd6de1c12e6cb4a2ff7",
+      "status": "PROTOTYPE_REFERENCE"
+    },
+    {
+      "path": "references/eight-screen-contact-sheet.jpg",
+      "sha256": "a9ef299c3c40f5e1f3480b9a22fd449d63883b5d667ba82b53494dfbd5dc3c74",
+      "status": "PROTOTYPE_REFERENCE"
+    },
+    {
+      "path": "references/embedded-preview.png",
+      "sha256": "9e05fe47e08c556e0ae9d7e8d09cd9740974b7ee12f932e2fcc3ade7f894df05",
+      "status": "PROTOTYPE_REFERENCE"
+    },
+    {
+      "path": "references/free-drawing-r2.zip",
+      "sha256": "e21ec070dea5cdf09b67d22f288ced8be4b67cc17c995ab6dfd74df37f411a28",
+      "status": "PROTOTYPE_REFERENCE"
+    },
+    {
+      "path": "references/mindmap-completed.png",
+      "sha256": "923ee993ba0679bc4469ebff4ca20a45dc8a16dd565636e088daba91b4120b83",
+      "status": "PROTOTYPE_REFERENCE"
+    },
+    {
+      "path": "references/mindmap-r5.zip",
+      "sha256": "15e5fc66d2f88c82c4f245d06ecaab680b321f880488d9c473730d3141a25709",
+      "status": "PROTOTYPE_REFERENCE"
+    },
+    {
+      "path": "references/mindmap-start.png",
+      "sha256": "2a21580056a6dd47a7ee82ea7c00a427efe5448058d9bf20fff73d511b35c028",
+      "status": "PROTOTYPE_REFERENCE"
+    },
+    {
+      "path": "references/visual-upgrade-eight.zip",
+      "sha256": "7df71b0212dbbf85beb939fecd77e67f94b51b9c2dd7cb824bab577d2dfea9d2",
+      "status": "PROTOTYPE_REFERENCE"
+    }
+  ],
+  "checkpoint_input": {
+    "lesson": "Internet and Web Access",
+    "version": "2.4.1",
+    "skills": "01–10",
+    "skill10_manifest_sha256": "74e33f957a72f4434469fc6abad4b273a8ad58d4d4bbeff25f446d4e48733200",
+    "scene_contract_sha256": "d90958aa86904c93ddf98889f1d2dfc5d0f9cf2375ce711242b0defb860e6732"
+  }
+}

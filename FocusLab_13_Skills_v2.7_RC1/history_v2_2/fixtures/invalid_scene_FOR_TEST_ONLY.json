@@ -1,0 +1,44 @@
+{
+  "lesson_id": "COOKIE-LESSON-01",
+  "topic_id": "TOPIC-COOKIE",
+  "scene_id": "COOKIE-OBSERVE-01:part_2",
+  "kind": "OBSERVE",
+  "objective_id": "OBJ-01",
+  "student_task": "Quan sát hai lần truy cập và nêu điều khó hiểu",
+  "opening_cue": "Vì sao website vẫn nhớ tiếng Việt?",
+  "reveal": {
+    "opening_pause_s": 16,
+    "full_reveal_group": "ALL",
+    "instant_reveal": false,
+    "auto_advance": false,
+    "staggered": true
+  },
+  "attention_plan": {
+    "primary_focus_target": "opening-question",
+    "cue_type": "SPOTLIGHT",
+    "motion_purpose": "nhấn mạnh câu hỏi tình huống"
+  },
+  "layout_mode": "STORY",
+  "content_blocks": [
+    {
+      "block_id": "browser-first",
+      "type": "comparison"
+    },
+    {
+      "block_id": "browser-second",
+      "type": "comparison"
+    }
+  ],
+  "model_id": "MODEL-COOKIE-VISIT",
+  "model_action": "Chọn ngôn ngữ và truy cập lại",
+  "completion_gate": "HS nói ra hiện tượng quan sát được",
+  "next_scene_id": "COOKIE-DIAGNOSE-01",
+  "state_dependency": [],
+  "viewport_fallback": "hai trạng thái xếp dọc nếu vẫn nhìn đủ; thiết kế scene khác nếu không",
+  "evidence": "HS chỉ ra ngôn ngữ đã được ghi nhớ",
+  "navigation": {
+    "previous_fixed_bottom_left": true,
+    "next_fixed_bottom_right": false,
+    "guard_unified": true
+  }
+}

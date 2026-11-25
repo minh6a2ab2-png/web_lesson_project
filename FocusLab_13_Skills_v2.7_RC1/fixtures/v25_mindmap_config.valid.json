@@ -1,0 +1,96 @@
+{
+  "version": "2.5",
+  "map_id": "MAP-DEMO",
+  "topic_id": "TOPIC-DEMO",
+  "mode": "STATIC_KNOWLEDGE_SPACE",
+  "bounds": {
+    "width": 1200,
+    "height": 800,
+    "safe_margin": 24
+  },
+  "nodes": [
+    {
+      "id": "r",
+      "tier": 1,
+      "label": {
+        "vi": "Đề mục",
+        "en": "Topic"
+      },
+      "ku_ids": [
+        "KU-DEMO"
+      ],
+      "objective_ids": [
+        "OBJ-DEMO"
+      ],
+      "visual_type": "ROOT",
+      "alt": {
+        "vi": "Đề mục",
+        "en": "Topic"
+      },
+      "width": 200,
+      "height": 90,
+      "anchor": {
+        "x": 400,
+        "y": 200
+      }
+    },
+    {
+      "id": "b",
+      "tier": 2,
+      "label": {
+        "vi": "Nhánh",
+        "en": "Branch"
+      },
+      "ku_ids": [
+        "KU-DEMO"
+      ],
+      "objective_ids": [
+        "OBJ-DEMO"
+      ],
+      "visual_type": "OVAL",
+      "alt": {
+        "vi": "Nhánh",
+        "en": "Branch"
+      },
+      "width": 140,
+      "height": 64,
+      "parent_id": "r"
+    },
+    {
+      "id": "c",
+      "tier": 3,
+      "label": {
+        "vi": "Hình minh họa",
+        "en": "Illustration"
+      },
+      "ku_ids": [
+        "KU-DEMO"
+      ],
+      "objective_ids": [
+        "OBJ-DEMO"
+      ],
+      "visual_type": "IMAGE",
+      "alt": {
+        "vi": "Hình minh họa",
+        "en": "Illustration"
+      },
+      "width": 140,
+      "height": 100,
+      "parent_id": "b",
+      "asset_id": "ASSET-EXAMPLE"
+    }
+  ],
+  "placement": "STATIC_RANDOM_NONOVERLAP",
+  "idle_motion": false,
+  "color_by_tier": {
+    "1": "BLUE",
+    "2": "YELLOW",
+    "3": "PURPLE"
+  },
+  "nav": "FREE_FLOATING_FIXED",
+  "export": [
+    "PNG",
+    "JSON"
+  ],
+  "seed": 42
+}

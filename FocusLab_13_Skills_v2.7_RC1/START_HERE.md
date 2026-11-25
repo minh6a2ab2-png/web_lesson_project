@@ -1,0 +1,2 @@
+# FocusLab v2.7 RC1 — public definition projection
+Read policy/EXECUTION_V2_7_RC1.md and inherited policies; use 13 skills, active registry 156 outputs, tests/check_handoff_v27.py, tools/plan_v27.py. Private pedagogical packs, source fixtures, registry data, engine implementations and evidence are held in private backup, not this public tree. Missing private dependency blocks execution. The inherited manifest is historical and does not certify this projection. No Skill08, release, live data or autonomous execution. Independent review and field gates remain blocked.

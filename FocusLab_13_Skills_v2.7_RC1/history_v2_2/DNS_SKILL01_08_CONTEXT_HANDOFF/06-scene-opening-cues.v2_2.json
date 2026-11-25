@@ -1,0 +1,586 @@
+{
+  "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+  "schema": "CUE_SLOT_PROVISIONAL_v2.2_CONTEXT",
+  "important": "A cue slot is not a committed slide. Skill09 maps/merges/splits into meaningful independent scenes, ensuring every actual scene has an opening cue.",
+  "two_phase": {
+    "opening_pause_default_s": 2.5,
+    "range_s": [
+      2,
+      3
+    ],
+    "full_reveal_group": "ALL",
+    "stagger": false,
+    "requires_student_wait": false,
+    "no_auto_navigation": true
+  },
+  "cue_slots": [
+    {
+      "cue_slot_id": "ACT-DNS-01-CONTEXT",
+      "activity_id": "ACT-DNS-01",
+      "proposed_kind": "PROBLEM_CONTEXT",
+      "opening_cue": {
+        "vi": "Làm sao máy tính tìm đúng website?",
+        "en": "How does a computer find the right website?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-CONTEXT-DNS-01"
+      ],
+      "locked_at_phase2": [
+        "future_model_state",
+        "teacher_only_key"
+      ],
+      "context_problem_ref": "03-problem-context-content.md",
+      "student_task": "Nhận diện bối cảnh và vấn đề",
+      "evidence_id": "EVD-CONTEXT-01",
+      "next_cue_slot_id": "ACT-DNS-01-OBSERVE",
+      "context_asset_status": "SPEC_ONLY"
+    },
+    {
+      "cue_slot_id": "ACT-DNS-01-OBSERVE",
+      "activity_id": "ACT-DNS-01",
+      "proposed_kind": "OBSERVE",
+      "opening_cue": {
+        "vi": "Quan sát dữ kiện nào và em dự đoán bước trung gian ra sao?",
+        "en": "What evidence do you see, and what might the missing step be?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-OBS-01"
+      ],
+      "locked_at_phase2": [
+        "future_model_state",
+        "teacher_only_key"
+      ],
+      "student_task": "Quan sát và nêu giả thuyết",
+      "evidence_id": "EVD-OPEN",
+      "previous_cue_slot_id": "ACT-DNS-01-CONTEXT"
+    },
+    {
+      "cue_slot_id": "CUE-PR-01",
+      "activity_id": "ACT-DNS-02",
+      "proposed_kind": "DIAGNOSE",
+      "opening_cue": {
+        "vi": "Ứng dụng nào mở trang web trên máy tính?",
+        "en": "Which application opens a web page on a computer?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-PR-01",
+        "A-PR-02",
+        "A-PR-03",
+        "A-PR-04"
+      ],
+      "locked_at_phase2": [
+        "unsubmitted_answer",
+        "post_submission_feedback",
+        "teacher_only_key",
+        "future_model_state"
+      ]
+    },
+    {
+      "cue_slot_id": "CUE-PR-02",
+      "activity_id": "ACT-DNS-02",
+      "proposed_kind": "DIAGNOSE",
+      "opening_cue": {
+        "vi": "Trong URL, phần nào là hostname?",
+        "en": "Which part of the URL is the hostname?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-PR-01",
+        "A-PR-02",
+        "A-PR-03",
+        "A-PR-04"
+      ],
+      "locked_at_phase2": [
+        "unsubmitted_answer",
+        "post_submission_feedback",
+        "teacher_only_key",
+        "future_model_state"
+      ]
+    },
+    {
+      "cue_slot_id": "CUE-PR-03",
+      "activity_id": "ACT-DNS-02",
+      "proposed_kind": "DIAGNOSE",
+      "opening_cue": {
+        "vi": "Ai gửi Request trước?",
+        "en": "Who sends the request first?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-PR-01",
+        "A-PR-02",
+        "A-PR-03",
+        "A-PR-04"
+      ],
+      "locked_at_phase2": [
+        "unsubmitted_answer",
+        "post_submission_feedback",
+        "teacher_only_key",
+        "future_model_state"
+      ]
+    },
+    {
+      "cue_slot_id": "CUE-PR-04",
+      "activity_id": "ACT-DNS-02",
+      "proposed_kind": "DIAGNOSE",
+      "opening_cue": {
+        "vi": "Đâu là HTML và đâu là địa chỉ IP?",
+        "en": "Which one is HTML and which one is an IP address?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-PR-01",
+        "A-PR-02",
+        "A-PR-03",
+        "A-PR-04"
+      ],
+      "locked_at_phase2": [
+        "unsubmitted_answer",
+        "post_submission_feedback",
+        "teacher_only_key",
+        "future_model_state"
+      ]
+    },
+    {
+      "cue_slot_id": "CUE-DNS-INTRO",
+      "activity_id": "ACT-DNS-03",
+      "proposed_kind": "INTRODUCTION",
+      "opening_cue": {
+        "vi": "DNS giúp chúng ta làm gì?",
+        "en": "What can DNS help us do?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-INTRO-01",
+        "A-CORE-TEXT-01",
+        "A-URL-01"
+      ],
+      "locked_at_phase2": [
+        "future_model_state",
+        "teacher_only_key"
+      ]
+    },
+    {
+      "cue_slot_id": "CUE-DNS-TEACH",
+      "activity_id": "ACT-DNS-03",
+      "proposed_kind": "TEACH",
+      "opening_cue": {
+        "vi": "Tên máy chủ và địa chỉ IP có vai trò khác nhau thế nào?",
+        "en": "How do a hostname and an IP address differ?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-INTRO-01",
+        "A-CORE-TEXT-01",
+        "A-URL-01"
+      ],
+      "locked_at_phase2": [
+        "future_model_state",
+        "teacher_only_key"
+      ]
+    },
+    {
+      "cue_slot_id": "ACT-DNS-04-OPEN",
+      "activity_id": "ACT-DNS-04",
+      "proposed_kind": "EXPLORE",
+      "opening_cue": {
+        "vi": "Nếu DNS server (1) chưa biết địa chỉ IP, truy vấn sẽ đi đâu?",
+        "en": "If DNS server (1) has no answer, where will the query go?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-MODEL-DNS-01",
+        "A-CORE-TEXT-01"
+      ],
+      "locked_at_phase2": [
+        "future_model_state",
+        "teacher_only_key"
+      ]
+    },
+    {
+      "cue_slot_id": "ACT-DNS-05-OPEN",
+      "activity_id": "ACT-DNS-05",
+      "proposed_kind": "COMPARE / EXPLORE",
+      "opening_cue": {
+        "vi": "Nếu DNS server (1) đã có IP còn hợp lệ, có cần hỏi server (2) không?",
+        "en": "If DNS server (1) has a valid cached IP, must it ask server (2)?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-MODEL-DNS-01"
+      ],
+      "locked_at_phase2": [
+        "future_model_state",
+        "teacher_only_key"
+      ]
+    },
+    {
+      "cue_slot_id": "ACT-DNS-06-RECALL",
+      "activity_id": "ACT-DNS-06",
+      "proposed_kind": "RECALL",
+      "opening_cue": {
+        "vi": "Không nhìn sơ đồ: DNS giúp làm gì và IP đã đi qua những đâu?",
+        "en": "Without the diagram: what does DNS do, and where does the IP answer travel?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-RECALL-01",
+        "A-GAME-01"
+      ],
+      "locked_at_phase2": [
+        "unsubmitted_answer",
+        "post_submission_feedback",
+        "teacher_only_key",
+        "future_model_state"
+      ]
+    },
+    {
+      "cue_slot_id": "ACT-DNS-06-REVIEW",
+      "activity_id": "ACT-DNS-06",
+      "proposed_kind": "REVIEW",
+      "opening_cue": {
+        "vi": "Hãy kiểm tra lại kiến thức vừa tự nhớ.",
+        "en": "Check the ideas you just recalled."
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-RECALL-01",
+        "A-GAME-01"
+      ],
+      "locked_at_phase2": [
+        "unsubmitted_answer",
+        "post_submission_feedback",
+        "teacher_only_key",
+        "future_model_state"
+      ]
+    },
+    {
+      "cue_slot_id": "ACT-DNS-07-OPEN",
+      "activity_id": "ACT-DNS-07",
+      "proposed_kind": "FOCUS / TEACH ngắn",
+      "opening_cue": {
+        "vi": "Đã có địa chỉ IP. Trang web đã hiện chưa?",
+        "en": "We have the IP address. Has the webpage already appeared?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-BRIDGE-01"
+      ],
+      "locked_at_phase2": [
+        "future_model_state",
+        "teacher_only_key"
+      ]
+    },
+    {
+      "cue_slot_id": "ACT-DNS-08-OPEN",
+      "activity_id": "ACT-DNS-08",
+      "proposed_kind": "TEACH / EXPLORE",
+      "opening_cue": {
+        "vi": "Sau khi có IP, Browser còn phải làm gì để trang xuất hiện?",
+        "en": "After finding the IP, what must the browser do to display the page?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-MODEL-WEB-01",
+        "A-CORE-TEXT-02"
+      ],
+      "locked_at_phase2": [
+        "future_model_state",
+        "teacher_only_key"
+      ]
+    },
+    {
+      "cue_slot_id": "ACT-DNS-09-RECALL",
+      "activity_id": "ACT-DNS-09",
+      "proposed_kind": "RECALL",
+      "opening_cue": {
+        "vi": "Không nhìn mô hình: ai yêu cầu trang và ai trả HTML?",
+        "en": "Without the model: who requests the page, and who returns HTML?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-RECALL-02",
+        "A-REVIEW-02"
+      ],
+      "locked_at_phase2": [
+        "unsubmitted_answer",
+        "post_submission_feedback",
+        "teacher_only_key",
+        "future_model_state"
+      ]
+    },
+    {
+      "cue_slot_id": "ACT-DNS-09-REVIEW",
+      "activity_id": "ACT-DNS-09",
+      "proposed_kind": "REVIEW",
+      "opening_cue": {
+        "vi": "Hãy kiểm tra lại kiến thức vừa tự nhớ.",
+        "en": "Check the ideas you just recalled."
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-RECALL-02",
+        "A-REVIEW-02"
+      ],
+      "locked_at_phase2": [
+        "unsubmitted_answer",
+        "post_submission_feedback",
+        "teacher_only_key",
+        "future_model_state"
+      ]
+    },
+    {
+      "cue_slot_id": "CUE-EXIT-INTRO",
+      "activity_id": "ACT-DNS-10",
+      "proposed_kind": "ASSESS_INTRO",
+      "opening_cue": {
+        "vi": "Hãy tự giải thích quy trình năm bước trước khi xem nhiệm vụ.",
+        "en": "Prepare to explain the five-step process independently."
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-EXIT-01"
+      ],
+      "locked_at_phase2": [
+        "future_model_state",
+        "teacher_only_key"
+      ]
+    },
+    {
+      "cue_slot_id": "CUE-EXIT",
+      "activity_id": "ACT-DNS-10",
+      "proposed_kind": "ASSESS / RECALL_TEACH_BACK",
+      "opening_cue": {
+        "vi": "Một bạn nhập `https://school.example/news`. Em giải thích quá trình năm bước cho bạn ấy thế nào?",
+        "en": "A friend enters `https://school.example/news`. How would you explain the five-step process?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-EXIT-01"
+      ],
+      "locked_at_phase2": [
+        "unsubmitted_answer",
+        "post_submission_feedback",
+        "teacher_only_key",
+        "future_model_state"
+      ]
+    },
+    {
+      "cue_slot_id": "ACT-DNS-11-OPEN",
+      "activity_id": "ACT-DNS-11",
+      "proposed_kind": "FOCUS / FLASHCARD",
+      "opening_cue": {
+        "vi": "Bốn từ khóa nào em có thể giải thích mà không nhìn đáp án?",
+        "en": "Which four key terms can you explain without looking at the answers?"
+      },
+      "phase1": "display opening only (unless it would imply answer leakage)",
+      "opening_pause_s_default": 2.5,
+      "pause_range_s": [
+        2,
+        3
+      ],
+      "phase2": "reveal ALL permitted content simultaneously, no staggering",
+      "instant_reveal": "skip timer, present allowed content immediately; preserve guards",
+      "auto_advance": false,
+      "learner_dwell_time_limit": null,
+      "final_scene_id": "UNASSIGNED_SKILL09",
+      "asset_ids": [
+        "A-FC-01"
+      ],
+      "locked_at_phase2": [
+        "future_model_state",
+        "teacher_only_key"
+      ]
+    }
+  ],
+  "context_split": {
+    "activity_id": "ACT-DNS-01",
+    "two_scenes_one_activity": true,
+    "split_conditional": true,
+    "original_cue_slot_count": 18,
+    "new_cue_slot_count": 19
+  }
+}

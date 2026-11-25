@@ -1,0 +1,2 @@
+# Rubric VE10
+Chấm 0–10 mỗi tiêu chí, có screenshot/scene/state/locale/viewport và nhận xét. 0 = không có hoặc không dùng được; 1–3 = lỗi lớn; 4–6 = còn hạn chế rõ; 7 = đạt mức tối thiểu chuyên nghiệp; 8 = tốt; 9 = rất tốt; 10 = xuất sắc, có chứng cứ nhất quán. Không chấm nếu thiếu bằng chứng: NOT_RUN. Tổng = Σ(score/10 × weight). Gate ≥85/100 và mọi score ≥7; cùng toàn bộ mandatory QA, approval và review độc lập tại Skill13. Không tính điểm trung bình scene để che lỗi nghiêm trọng. Review từng màn, cặp/cụm liên tiếp, toàn contact sheet; ghi scene yếu nhất, lý do và owner.

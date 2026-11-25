@@ -1,0 +1,12 @@
+{
+  "version": "2.7-rc1",
+  "base": "2.6-rc1",
+  "name": "Pedagogical Excellence",
+  "definition_status": "NEEDS_REVIEW",
+  "approval_status": "PENDING",
+  "field_status": "NOT_RUN",
+  "release": false,
+  "real_learner_records": false,
+  "skill08_execution": false,
+  "public_projection": true
+}

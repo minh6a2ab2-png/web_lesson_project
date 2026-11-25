@@ -1,0 +1,623 @@
+{
+  "schema_version": "skill08-to-skill09-one-topic-v2.1",
+  "skill_id": "SKILL08",
+  "version": "ONE_TOPIC FocusLab v2.2 CONTEXT_HANDOFF",
+  "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+  "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+  "scope": "ONE_TOPIC",
+  "state": "PROPOSED_FOR_USER_REVIEW",
+  "source_basis": [
+    "SGK p183 Figure5.3",
+    "SKILL01",
+    "SKILL02",
+    "SKILL03",
+    "SKILL04",
+    "SKILL05",
+    "SKILL06",
+    "SKILL07_v2_1_RERUN"
+  ],
+  "sections": [
+    {
+      "section_id": "SEC-DNS-01",
+      "ku_ids": [
+        "KU-01",
+        "KU-02",
+        "KU-03",
+        "KU-04",
+        "KU-05"
+      ],
+      "objective_ids": [
+        "OBJ-DNS-01",
+        "OBJ-DNS-02",
+        "OBJ-DNS-03"
+      ],
+      "recall_activity_id": "ACT-DNS-06",
+      "review_activity_id": "ACT-DNS-06",
+      "required_order": [
+        "RECALL",
+        "REVIEW"
+      ],
+      "guard": "SUBMITTED_RECALL_BEFORE_REVIEW"
+    },
+    {
+      "section_id": "SEC-DNS-02",
+      "ku_ids": [
+        "KU-06",
+        "KU-07"
+      ],
+      "objective_ids": [
+        "OBJ-WEB-04"
+      ],
+      "recall_activity_id": "ACT-DNS-09",
+      "review_activity_id": "ACT-DNS-09",
+      "required_order": [
+        "RECALL",
+        "REVIEW"
+      ],
+      "guard": "SUBMITTED_RECALL_BEFORE_REVIEW"
+    }
+  ],
+  "objectives": {
+    "OBJ-DNS-01": [
+      "KU-01",
+      "KU-02"
+    ],
+    "OBJ-DNS-02": [
+      "KU-03",
+      "KU-04",
+      "KU-05"
+    ],
+    "OBJ-DNS-03": [
+      "KU-03",
+      "KU-04",
+      "KU-05"
+    ],
+    "OBJ-WEB-04": [
+      "KU-06",
+      "KU-07"
+    ],
+    "OBJ-FLOW-05": [
+      "KU-01",
+      "KU-02",
+      "KU-03",
+      "KU-04",
+      "KU-05",
+      "KU-06",
+      "KU-07"
+    ]
+  },
+  "timing": {
+    "main_min_minutes": 49,
+    "main_max_minutes": 81,
+    "recovery_optional_min_minutes": 3,
+    "recovery_optional_max_minutes": 8,
+    "user_approved_duration": false,
+    "scene_opening_pause_s": 2.5,
+    "max_reading_time_s": null,
+    "scene_autoadvance": false
+  },
+  "scene_constraints": {
+    "scene_allocation": "DEFER_TO_SKILL09",
+    "scene_ids_assigned": false,
+    "independent_learning_goal_per_scene": true,
+    "no_scroll_desktop_viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        1366,
+        768
+      ],
+      [
+        1600,
+        900
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "zoom_200_fallback_scroll_allowed": true,
+    "fixed_previous_bottom_left": true,
+    "fixed_next_bottom_right": true,
+    "opening_cue_immediate": true,
+    "full_reveal_group": "ALL_ALLOWED_AT_ONCE",
+    "instant_reveal_skips_wait_not_answers": true,
+    "reveal_delay_s": [
+      2,
+      2.5,
+      3
+    ],
+    "feedback_guard": true,
+    "bilingual": "VI/EN",
+    "model_step_nav_separate_from_scene_nav": true
+  },
+  "model_placement": [
+    {
+      "model_id": "MC-01/MC-02",
+      "activities": [
+        "ACT-DNS-04",
+        "ACT-DNS-05"
+      ],
+      "file": "07-interactive-models/dns_lookup_cache_v2_1.html",
+      "status": "PROTOTYPE",
+      "key_behaviors": [
+        "MISS",
+        "HIT",
+        "EXPIRED",
+        "STEP",
+        "PREVIOUS",
+        "RESET",
+        "NO_MOTION"
+      ],
+      "critical_accuracy": [
+        "DNS1 cache only in textbook simulation",
+        "answer is IP not HTML",
+        "HIT does not query DNS2"
+      ]
+    },
+    {
+      "model_id": "MC-03",
+      "activities": [
+        "ACT-DNS-08"
+      ],
+      "file": "07-interactive-models/web_retrieval_v2_1.html",
+      "status": "PROTOTYPE",
+      "key_behaviors": [
+        "NO_REQUEST_WITHOUT_IP",
+        "SEND_REQUEST",
+        "RECEIVE_HTML",
+        "RENDER",
+        "STEP",
+        "RESET",
+        "NO_MOTION"
+      ],
+      "critical_accuracy": [
+        "IP lookup separate from web retrieval"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "A-OBS-01",
+      "model_id": null,
+      "path": "07-student-media/asset_gallery.html",
+      "sha256": "548032a50da08396d09862f3deb370128e35b4337ae03856394aa7b8fa4e6d5f",
+      "status": "PROTOTYPE",
+      "test_status": "LEGACY_GALLERY_PROTOTYPE_NOT_RETESTED_IN_INTEGRATED_IFRAME"
+    },
+    {
+      "asset_id": "A-PR-01",
+      "model_id": null,
+      "path": "07-student-media/asset_gallery.html",
+      "sha256": "548032a50da08396d09862f3deb370128e35b4337ae03856394aa7b8fa4e6d5f",
+      "status": "PROTOTYPE",
+      "test_status": "LEGACY_GALLERY_PROTOTYPE_NOT_RETESTED_IN_INTEGRATED_IFRAME"
+    },
+    {
+      "asset_id": "A-PR-02",
+      "model_id": null,
+      "path": "07-student-media/asset_gallery.html",
+      "sha256": "548032a50da08396d09862f3deb370128e35b4337ae03856394aa7b8fa4e6d5f",
+      "status": "PROTOTYPE",
+      "test_status": "LEGACY_GALLERY_PROTOTYPE_NOT_RETESTED_IN_INTEGRATED_IFRAME"
+    },
+    {
+      "asset_id": "A-PR-03",
+      "model_id": null,
+      "path": "07-student-media/asset_gallery.html",
+      "sha256": "548032a50da08396d09862f3deb370128e35b4337ae03856394aa7b8fa4e6d5f",
+      "status": "PROTOTYPE",
+      "test_status": "LEGACY_GALLERY_PROTOTYPE_NOT_RETESTED_IN_INTEGRATED_IFRAME"
+    },
+    {
+      "asset_id": "A-PR-04",
+      "model_id": null,
+      "path": "07-student-media/asset_gallery.html",
+      "sha256": "548032a50da08396d09862f3deb370128e35b4337ae03856394aa7b8fa4e6d5f",
+      "status": "PROTOTYPE",
+      "test_status": "LEGACY_GALLERY_PROTOTYPE_NOT_RETESTED_IN_INTEGRATED_IFRAME"
+    },
+    {
+      "asset_id": "A-URL-01",
+      "model_id": null,
+      "path": "07-student-media/url_anatomy.svg",
+      "sha256": "d21658d531efe1084fc4a92e053f4ff665e956083442bda574a9e1e89ceeea4f",
+      "status": "READY_ASSET",
+      "test_status": "STATIC_FILE_PASS"
+    },
+    {
+      "asset_id": "A-INTRO-01",
+      "model_id": null,
+      "path": "07-student-media/asset_gallery.html",
+      "sha256": "548032a50da08396d09862f3deb370128e35b4337ae03856394aa7b8fa4e6d5f",
+      "status": "PROTOTYPE",
+      "test_status": "LEGACY_GALLERY_PROTOTYPE_NOT_RETESTED_IN_INTEGRATED_IFRAME"
+    },
+    {
+      "asset_id": "A-CORE-TEXT-01",
+      "model_id": null,
+      "path": "07-data/core_knowledge_vi_en.json",
+      "sha256": "71351a8eb9192216fbb50ffcb9726a59ae071132be42e3fbe95b42543bcb74c7",
+      "status": "READY_ASSET",
+      "test_status": "STATIC_FILE_PASS"
+    },
+    {
+      "asset_id": "A-MODEL-DNS-01",
+      "model_id": "MC-01;MC-02",
+      "path": "07-interactive-models/dns_lookup_cache_v2_1.html",
+      "sha256": "9fd138c3fa5a2f070e18d1c97532bb88b93d85b110a19e7d27e7ad1801d72645",
+      "status": "PROTOTYPE",
+      "test_status": "CHROMIUM_STATE_MOTION_KEYFRAMES_PASS; FILE_URL_NOT_TESTED"
+    },
+    {
+      "asset_id": "A-RECALL-01",
+      "model_id": null,
+      "path": "07-student-media/asset_gallery.html",
+      "sha256": "548032a50da08396d09862f3deb370128e35b4337ae03856394aa7b8fa4e6d5f",
+      "status": "PROTOTYPE",
+      "test_status": "LEGACY_GALLERY_PROTOTYPE_NOT_RETESTED_IN_INTEGRATED_IFRAME"
+    },
+    {
+      "asset_id": "A-GAME-01",
+      "model_id": null,
+      "path": "07-student-media/asset_gallery.html",
+      "sha256": "548032a50da08396d09862f3deb370128e35b4337ae03856394aa7b8fa4e6d5f",
+      "status": "PROTOTYPE",
+      "test_status": "LEGACY_GALLERY_PROTOTYPE_NOT_RETESTED_IN_INTEGRATED_IFRAME"
+    },
+    {
+      "asset_id": "A-BRIDGE-01",
+      "model_id": null,
+      "path": "07-student-media/bridge_ip_not_html.svg",
+      "sha256": "b82a2aba38442dae17fce84734089ab738f9d255d382f5f337dd0c2be79c0d72",
+      "status": "READY_ASSET",
+      "test_status": "STATIC_FILE_PASS"
+    },
+    {
+      "asset_id": "A-CORE-TEXT-02",
+      "model_id": null,
+      "path": "07-data/core_knowledge_vi_en.json",
+      "sha256": "71351a8eb9192216fbb50ffcb9726a59ae071132be42e3fbe95b42543bcb74c7",
+      "status": "READY_ASSET",
+      "test_status": "STATIC_FILE_PASS"
+    },
+    {
+      "asset_id": "A-MODEL-WEB-01",
+      "model_id": "MC-03",
+      "path": "07-interactive-models/web_retrieval_v2_1.html",
+      "sha256": "4ae8c815dd3aa3deb04e9242aee4c0f831cca484d748ebe7cdd0eee8867930fd",
+      "status": "PROTOTYPE",
+      "test_status": "CHROMIUM_STATE_MOTION_KEYFRAMES_PASS; FILE_URL_NOT_TESTED"
+    },
+    {
+      "asset_id": "A-RECALL-02",
+      "model_id": null,
+      "path": "07-student-media/asset_gallery.html",
+      "sha256": "548032a50da08396d09862f3deb370128e35b4337ae03856394aa7b8fa4e6d5f",
+      "status": "PROTOTYPE",
+      "test_status": "LEGACY_GALLERY_PROTOTYPE_NOT_RETESTED_IN_INTEGRATED_IFRAME"
+    },
+    {
+      "asset_id": "A-REVIEW-02",
+      "model_id": null,
+      "path": "07-student-media/asset_gallery.html",
+      "sha256": "548032a50da08396d09862f3deb370128e35b4337ae03856394aa7b8fa4e6d5f",
+      "status": "PROTOTYPE",
+      "test_status": "LEGACY_GALLERY_PROTOTYPE_NOT_RETESTED_IN_INTEGRATED_IFRAME"
+    },
+    {
+      "asset_id": "A-EXIT-01",
+      "model_id": null,
+      "path": "07-student-media/asset_gallery.html",
+      "sha256": "548032a50da08396d09862f3deb370128e35b4337ae03856394aa7b8fa4e6d5f",
+      "status": "PROTOTYPE",
+      "test_status": "LEGACY_GALLERY_PROTOTYPE_NOT_RETESTED_IN_INTEGRATED_IFRAME"
+    },
+    {
+      "asset_id": "A-FC-01",
+      "model_id": null,
+      "path": "07-data/flashcards_vi_en.json",
+      "sha256": "26dbe54e2ad2fac0dc6e6ef9a609c19b0593325a6048d8a6769b081b315e5768",
+      "status": "READY_ASSET",
+      "test_status": "STATIC_FILE_PASS"
+    },
+    {
+      "asset_id": "A-GLOSS-01",
+      "model_id": null,
+      "path": "07-student-media/asset_gallery.html",
+      "sha256": "548032a50da08396d09862f3deb370128e35b4337ae03856394aa7b8fa4e6d5f",
+      "status": "PROTOTYPE",
+      "test_status": "LEGACY_GALLERY_PROTOTYPE_NOT_RETESTED_IN_INTEGRATED_IFRAME"
+    },
+    {
+      "asset_id": "A-TEACHER-KEY",
+      "model_id": null,
+      "path": "07-teacher-key/07-teacher-instructions.md",
+      "sha256": "0b9c124b8f724d67d825feb5f92ff8be559cf1da8248f7583a4beb55982489e8",
+      "status": "READY_ASSET",
+      "test_status": "STATIC_FILE_PASS"
+    }
+  ],
+  "activities": [
+    {
+      "activity_id": "ACT-DNS-01",
+      "title": "Đặt vấn đề: gõ tên web nhưng không gõ IP",
+      "phase": "OPEN",
+      "section_id": "PRE-CORE",
+      "kind_intent": "PROBLEM_CONTEXT|OBSERVE",
+      "objective_ids": [
+        "OBJ-DNS-01"
+      ],
+      "min_minutes": 3,
+      "max_minutes": 5,
+      "evidence_ids": "EVD-OPEN",
+      "opening_vi": "Vì sao chỉ cần gõ tên website, trình duyệt có thể tìm và hiển thị đúng trang?",
+      "opening_en": "How can a browser find and display the right web page when we type its name?",
+      "asset_ids": [
+        "A-OBS-01"
+      ],
+      "deliverable": "Một giả thuyết độc lập về việc tìm máy chủ trước khi mở trang",
+      "context_scene_option": "TWO_SCENES",
+      "context_asset_id": "A-CONTEXT-DNS-01",
+      "illustration_status": "SPEC_ONLY",
+      "student_task_context": "Nhận diện bối cảnh và vấn đề cần giải thích",
+      "student_task_observe": "Quan sát thanh địa chỉ và trạng thái trang, xác lập giả thuyết",
+      "distinct_evidence_ids": [
+        "EVD-CONTEXT-01",
+        "EVD-OPEN"
+      ],
+      "provisional_scene_ids": [
+        "DNS-CONTEXT-01",
+        "DNS-OBSERVE-01"
+      ]
+    },
+    {
+      "activity_id": "ACT-DNS-02",
+      "title": "DIAGNOSE: bốn kiến thức nền và RECOVERY có điều kiện",
+      "phase": "OPEN",
+      "section_id": "PRE-CORE",
+      "kind_intent": "DIAGNOSE|RECOVERY",
+      "objective_ids": [
+        "OBJ-DNS-01",
+        "OBJ-WEB-04"
+      ],
+      "min_minutes": 4,
+      "max_minutes": 7,
+      "evidence_ids": "EVD-PR-01..04",
+      "opening_vi": "Trước khi khám phá DNS, em đã nhớ gì về trình duyệt, URL, Request/Response và HTML?",
+      "opening_en": "Before exploring DNS, what do you remember about the browser, URL, requests and HTML?",
+      "asset_ids": [
+        "A-PR-01",
+        "A-PR-02",
+        "A-PR-03",
+        "A-PR-04"
+      ],
+      "deliverable": "Đáp án và lời giải thích ngắn bốn tiên quyết; ghi nhánh hỗ trợ"
+    },
+    {
+      "activity_id": "ACT-DNS-03",
+      "title": "INTRODUCTION DNS và phân biệt hostname/IP",
+      "phase": "KNOWLEDGE",
+      "section_id": "SEC-DNS-01",
+      "kind_intent": "INTRODUCTION|TEACH",
+      "objective_ids": [
+        "OBJ-DNS-01"
+      ],
+      "min_minutes": 4,
+      "max_minutes": 6,
+      "evidence_ids": "EVD-01;EVD-02",
+      "opening_vi": "Công cụ giúp tìm địa chỉ từ tên website có tên là gì?",
+      "opening_en": "What system can find an address from a website hostname?",
+      "asset_ids": [
+        "A-INTRO-01",
+        "A-CORE-TEXT-01",
+        "A-URL-01"
+      ],
+      "deliverable": "Xác định hostname và /news, nói vai trò DNS"
+    },
+    {
+      "activity_id": "ACT-DNS-04",
+      "title": "EXPLORE: tìm IP bằng DNS theo sơ đồ 1→4",
+      "phase": "KNOWLEDGE",
+      "section_id": "SEC-DNS-01",
+      "kind_intent": "EXPLORE",
+      "objective_ids": [
+        "OBJ-DNS-02"
+      ],
+      "min_minutes": 7,
+      "max_minutes": 10,
+      "evidence_ids": "EVD-03;EVD-04",
+      "opening_vi": "Nếu DNS server (1) chưa biết địa chỉ IP, truy vấn sẽ đi đâu?",
+      "opening_en": "If DNS server (1) has no answer, where will the query go?",
+      "asset_ids": [
+        "A-MODEL-DNS-01",
+        "A-CORE-TEXT-01"
+      ],
+      "deliverable": "Dự đoán và tự dựng lại bốn mũi tên với dữ liệu truyền"
+    },
+    {
+      "activity_id": "ACT-DNS-05",
+      "title": "COMPARE: cache HIT, MISS và EXPIRED",
+      "phase": "KNOWLEDGE",
+      "section_id": "SEC-DNS-01",
+      "kind_intent": "COMPARE|EXPLORE",
+      "objective_ids": [
+        "OBJ-DNS-03"
+      ],
+      "min_minutes": 3,
+      "max_minutes": 6,
+      "evidence_ids": "EVD-05",
+      "opening_vi": "Nếu DNS server (1) đã có IP còn hợp lệ, có cần hỏi server (2) không?",
+      "opening_en": "If DNS server (1) has a valid cached IP, must it ask server (2)?",
+      "asset_ids": [
+        "A-MODEL-DNS-01"
+      ],
+      "deliverable": "Bảng quan sát HIT/MISS/EXPIRED và lời giải thích nguyên nhân"
+    },
+    {
+      "activity_id": "ACT-DNS-06",
+      "title": "CORE 01: Active Recall → Review mini-game",
+      "phase": "PRACTISE",
+      "section_id": "SEC-DNS-01",
+      "kind_intent": "RECALL|REVIEW",
+      "objective_ids": [
+        "OBJ-DNS-01",
+        "OBJ-DNS-02",
+        "OBJ-DNS-03"
+      ],
+      "min_minutes": 5,
+      "max_minutes": 8,
+      "evidence_ids": "EVD-C1-R;EVD-C1-Q",
+      "opening_vi": "Không nhìn sơ đồ: DNS giúp làm gì và IP đã đi qua những đâu?",
+      "opening_en": "Without the diagram: what does DNS do, and where does the IP answer travel?",
+      "asset_ids": [
+        "A-RECALL-01",
+        "A-GAME-01"
+      ],
+      "deliverable": "Sơ đồ Recall chưa có đáp án + kết quả game và sửa lỗi sau nộp"
+    },
+    {
+      "activity_id": "ACT-DNS-07",
+      "title": "Cầu nối: đã có IP ≠ đã có HTML",
+      "phase": "BRIDGE",
+      "section_id": "BETWEEN_CORE",
+      "kind_intent": "TEACH|FOCUS",
+      "objective_ids": [
+        "OBJ-WEB-04"
+      ],
+      "min_minutes": 1,
+      "max_minutes": 2,
+      "evidence_ids": "EVD-BRIDGE",
+      "opening_vi": "Đã có địa chỉ IP. Trang web đã hiện chưa?",
+      "opening_en": "We have the IP address. Has the webpage already appeared?",
+      "asset_ids": [
+        "A-BRIDGE-01"
+      ],
+      "deliverable": "Lời giải thích IP chưa phải HTML"
+    },
+    {
+      "activity_id": "ACT-DNS-08",
+      "title": "TEACH ngắn + EXPLORE: Browser yêu cầu và hiển thị trang",
+      "phase": "KNOWLEDGE",
+      "section_id": "SEC-DNS-02",
+      "kind_intent": "TEACH|EXPLORE",
+      "objective_ids": [
+        "OBJ-WEB-04"
+      ],
+      "min_minutes": 8,
+      "max_minutes": 13,
+      "evidence_ids": "EVD-06;EVD-07",
+      "opening_vi": "Sau khi có IP, Browser còn phải làm gì để trang xuất hiện?",
+      "opening_en": "After finding the IP, what must the browser do to display the page?",
+      "asset_ids": [
+        "A-MODEL-WEB-01",
+        "A-CORE-TEXT-02"
+      ],
+      "deliverable": "Dự đoán, thao tác Request→Response HTML→Render và diễn giải"
+    },
+    {
+      "activity_id": "ACT-DNS-09",
+      "title": "CORE 02: Active Recall → Review sửa sai",
+      "phase": "PRACTISE",
+      "section_id": "SEC-DNS-02",
+      "kind_intent": "RECALL|REVIEW",
+      "objective_ids": [
+        "OBJ-WEB-04"
+      ],
+      "min_minutes": 4,
+      "max_minutes": 7,
+      "evidence_ids": "EVD-C2-R;EVD-C2-Q",
+      "opening_vi": "Không nhìn mô hình: ai yêu cầu trang và ai trả HTML?",
+      "opening_en": "Without the model: who requests the page, and who returns HTML?",
+      "asset_ids": [
+        "A-RECALL-02",
+        "A-REVIEW-02"
+      ],
+      "deliverable": "Recall độc lập + hai dạng Review và lời sửa lỗi"
+    },
+    {
+      "activity_id": "ACT-DNS-10",
+      "title": "EXIT: mindmap năm bước và Learning by Teaching",
+      "phase": "APPLICATION",
+      "section_id": "CROSS_SECTION",
+      "kind_intent": "ASSESS|RECALL_TEACH_BACK",
+      "objective_ids": [
+        "OBJ-FLOW-05"
+      ],
+      "min_minutes": 7,
+      "max_minutes": 12,
+      "evidence_ids": "EVD-08;EVD-09",
+      "opening_vi": "Một bạn nhập `https://school.example/news`. Em giải thích quá trình năm bước cho bạn ấy thế nào?",
+      "opening_en": "A friend enters `https://school.example/news`. How would you explain the five-step process?",
+      "asset_ids": [
+        "A-EXIT-01"
+      ],
+      "deliverable": "Sơ đồ riêng năm bước và học sinh tự giảng giải"
+    },
+    {
+      "activity_id": "ACT-DNS-11",
+      "title": "Flashcard cuối buổi và tự đánh giá",
+      "phase": "WRAP_UP",
+      "section_id": "CROSS_SECTION",
+      "kind_intent": "FLASHCARD|FOCUS",
+      "objective_ids": [
+        "OBJ-DNS-01",
+        "OBJ-WEB-04"
+      ],
+      "min_minutes": 3,
+      "max_minutes": 5,
+      "evidence_ids": "SELF_CHECK",
+      "opening_vi": "Bốn từ khóa nào em có thể giải thích mà không nhìn đáp án?",
+      "opening_en": "Which four key terms can you explain without looking at the answers?",
+      "asset_ids": [
+        "A-FC-01"
+      ],
+      "deliverable": "4 flashcard tự phân loại và 1 điều còn vướng"
+    }
+  ],
+  "student_assessment": {
+    "exit_activity": "ACT-DNS-10",
+    "evidence_ids": [
+      "EVD-08",
+      "EVD-09"
+    ],
+    "teacher_verifies": true,
+    "key_only_teacher": true,
+    "no_auto_mastered_from_navigation": true,
+    "core_gates": [
+      "ACT-DNS-06",
+      "ACT-DNS-09"
+    ]
+  },
+  "resources_relpath_origin": "SKILL07_DNS_RERUN_V2_1_2026-11-23/",
+  "open_issues": [
+    "Skill07 models PROTOTYPE, QA 18/30 audited",
+    "Open file:// in user Chrome/Edge not verified",
+    "Zoom 200%, screen-reader and full keyboard paths not verified",
+    "Skill09 integrated scene viewports/navigation not tested",
+    "Student learning effectiveness not field validated"
+  ],
+  "next_skill": "SKILL09",
+  "gate_status": "NEEDS_REVIEW",
+  "context_problem_addendum": {
+    "linked_activity_id": "ACT-DNS-01",
+    "preferred_mode": "TWO_SCENES",
+    "conditional": true,
+    "split_reason": "Context A identifies need, observation B derives evidence/hypothesis; two different cognitive products",
+    "scene_sequence_provisional": [
+      "DNS-CONTEXT-01",
+      "DNS-OBSERVE-01"
+    ],
+    "context_asset_id": "A-CONTEXT-DNS-01",
+    "context_asset_status": "SPEC_ONLY",
+    "context_evidence": "EVD-CONTEXT-01",
+    "observation_evidence": "EVD-OPEN",
+    "spoiler_boundary": "No DNS name/lookup path/IP answers before DIAGNOSE and INTRODUCTION",
+    "not_new_activity": true,
+    "activity_count_unchanged": 11,
+    "next_transition": "DNS-OBSERVE-01 to DNS-DIAGNOSE-01",
+    "reference_scene_pair": "../fixtures/dns_two_scene_pair.valid.json"
+  }
+}

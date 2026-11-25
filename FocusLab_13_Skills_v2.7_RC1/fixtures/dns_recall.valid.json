@@ -1,0 +1,89 @@
+{
+  "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+  "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+  "scene_id": "DNS-RECALL-01",
+  "kind": "RECALL",
+  "objective_id": "OBJ-01",
+  "student_task": "Gợi nhớ bằng từ khóa và câu hỏi",
+  "opening_cue": "DNS",
+  "attention_plan": {
+    "primary_focus_target": "opening-question",
+    "cue_type": "SPOTLIGHT",
+    "motion_purpose": "nhấn mạnh câu hỏi tình huống"
+  },
+  "layout_mode": "STORY",
+  "content_blocks": [
+    {
+      "block_id": "keywords",
+      "type": "recall"
+    }
+  ],
+  "model_id": null,
+  "model_action": null,
+  "completion_gate": "NON_BLOCKING",
+  "next_scene_id": null,
+  "state_dependency": [],
+  "viewport_fallback": "hai trạng thái xếp dọc nếu vẫn nhìn đủ; thiết kế scene khác nếu không",
+  "evidence": "Quan sát GV nếu có; không chấm",
+  "navigation": {
+    "previous_fixed_bottom_left": true,
+    "next_fixed_bottom_right": true,
+    "mode": "FREE",
+    "require_skip_reason": false,
+    "style": "FLOATING_FIXED",
+    "footer": false,
+    "count_location": "HEADER_OR_COMPACT"
+  },
+  "display": {
+    "mode": "DIRECT",
+    "delay_ms": 0,
+    "auto_advance": false,
+    "title_highlight": {
+      "duration_ms": 3000,
+      "cycles": 2,
+      "restart_on_rerender": false,
+      "reduced_motion": "OFF"
+    }
+  },
+  "ui": {
+    "pedagogical_labels": false,
+    "reflection_forms": false,
+    "glossary_mode": "INLINE_KEYWORD",
+    "core_visible": true
+  },
+  "question_intents": [
+    "GUIDING"
+  ],
+  "model_view_id": null,
+  "recall": {
+    "keywords": [
+      {
+        "vi": "Tên máy chủ",
+        "en": "Hostname",
+        "cue_asset_id": "A-RECALL-1",
+        "cue_alt_vi": "Hình đối tượng Tên máy chủ",
+        "cue_alt_en": "Illustration of Hostname",
+        "cue_no_answer": true
+      },
+      {
+        "vi": "DNS",
+        "en": "DNS",
+        "cue_asset_id": "A-RECALL-2",
+        "cue_alt_vi": "Hình đối tượng DNS",
+        "cue_alt_en": "Illustration of DNS",
+        "cue_no_answer": true
+      }
+    ],
+    "questions": [
+      {
+        "vi": "DNS có vai trò gì?",
+        "en": "What is the role of DNS?"
+      }
+    ],
+    "advance": "MANUAL",
+    "sequence": "KEYWORDS_THEN_QUESTIONS",
+    "answer_required": false,
+    "show_answers": false
+  },
+  "visual_identity": "RECALL"
+}
