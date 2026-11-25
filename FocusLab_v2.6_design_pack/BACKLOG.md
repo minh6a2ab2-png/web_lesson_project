@@ -18,3 +18,14 @@ Evidence: R02 workflow 45584872361, artifact 15007203877; Drive backup folder 15
 | A12 | P1 | Phase 5 | Storage fallback robustness | Direct connector upload failed; verified Library bridge works; test idempotent retries |
 
 Rules: work in bounded independent branches; re-run only impacted tasks. Prefer native tools and R02 engine; no recurring user terminal steps. If manual fallback required, batch requests once. Artifact availability, SHA checks and self-assessment do not prove pedagogical or aesthetic acceptance. No merge until release gates are reviewed.
+
+## Phase 1 additions — R02
+| ID | Priority | Target | Open problem | Acceptance evidence |
+|---|---|---|---|---|
+| V01 | P0 | Before production release | Full canonical slide deck and full-scene coverage | Verify every scene, all states, 5512, Recall/Review, assessment boundaries |
+| V02 | P1 | Phase 5 | Full accessibility and language audit | Keyboard focus/order, 200% zoom, assistive tech, bilingual review |
+| V03 | P1 | Phase 5 | Independent design and learning-effect assessment | Matched-content comparison by independent reviewer; real learner evidence when available |
+| V04 | P1 | Before production release | Exact standalone file/localhost QA and safe CI intake | Verify actual package on approved runner without private data disclosure |
+| V05 | P2 | Phase 5 | Upstream DESIGN.md format compatibility | Validate upstream parser or retain explicitly local schema |
+
+R02 local sample: 312/312 checks in direct Chromium rendering (2 variants, 3 viewports, 5 representative scenes), 30 screenshots. Not a full lesson; file navigation blocked; localhost and independent review NOT_RUN. No issue closed by these tests. Package SHA-256: 0d839dcb5a5472b7262a95f7335dee60b23b3d31f60519597582d8752f42ff28. No private package committed.
