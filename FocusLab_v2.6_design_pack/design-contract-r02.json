@@ -1,0 +1,101 @@
+{
+  "version": "2.6-design-pilot-r02",
+  "status": "PROTOTYPE",
+  "scope": "Additive design policy; not official skill revision",
+  "hooks": {
+    "SKILL05": [
+      "DESIGN.md",
+      "design-contract.json",
+      "asset-rights-register"
+    ],
+    "SKILL07": [
+      "visual-resource-identity",
+      "preserve-interaction-contract"
+    ],
+    "SKILL09": [
+      "scene-kind-and-objective",
+      "intent-to-composition",
+      "density-budget"
+    ],
+    "SKILL10": [
+      "matched-content-A-B",
+      "screenshot-review"
+    ],
+    "SKILL11": [
+      "local-tokens",
+      "vanilla-js"
+    ],
+    "SKILL12": [
+      "actual-file-and-localhost-QA",
+      "state-and-language-regression"
+    ],
+    "SKILL13": [
+      "independent-critique",
+      "field-evidence-separation"
+    ]
+  },
+  "intents": {
+    "STORYTELLING": {
+      "composition": "evidence stage + single oral question",
+      "guard": "No answer before prediction"
+    },
+    "VISUAL_COMPARISON": {
+      "composition": "simultaneous evidence panels; size by aspect ratio",
+      "guard": "Keep labels and source rights; do not force false contrast"
+    },
+    "MEMORY_FOCUS": {
+      "composition": "center cue and uncluttered text",
+      "guard": "Hide cue at open questions; no answer preview"
+    },
+    "CHALLENGE_BOARD": {
+      "composition": "task ticket, destinations, progress and feedback",
+      "guard": "No countdown requirement; preserve attempts and repair states"
+    },
+    "TECHNOLOGY_LAB": {
+      "composition": "input, state, mechanism, output; one main diagram",
+      "guard": "Prediction before action; accurate states and exceptions"
+    }
+  },
+  "runtime": {
+    "offline": true,
+    "framework": "none",
+    "languages": [
+      "vi",
+      "en"
+    ],
+    "desktop_target": [
+      1280,
+      720
+    ],
+    "small_screen_fallback": "scroll rather than clip",
+    "free_navigation": true,
+    "avoid_overlap": "reserve nav area",
+    "motion": "reduced motion; no blocking animation"
+  },
+  "validation": {
+    "deterministic": [
+      "one active scene",
+      "no horizontal overflow",
+      "language and image alt",
+      "source rights and references",
+      "unchanged interaction logic or approved diff",
+      "no unsolicited external requests",
+      "state preservation",
+      "viewport and nav overlap"
+    ],
+    "judgment": [
+      "hierarchy",
+      "image usefulness",
+      "rhythm",
+      "readability",
+      "style fit"
+    ],
+    "explicit_limits": [
+      "Do not claim upstream software executed",
+      "Do not claim full learner or accessibility validation from screenshots",
+      "Do not send private checkpoint or teacher answers to public CI"
+    ],
+    "rerun": "only impacted scene and dependent regressions",
+    "fallback": "one batched human request only when required"
+  }
+}
