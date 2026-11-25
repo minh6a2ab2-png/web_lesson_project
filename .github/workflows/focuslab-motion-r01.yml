@@ -1,0 +1,38 @@
+name: FocusLab Motion R01 GSAP compatibility
+on:
+  pull_request:
+    branches: [focuslab-13-skills-v2.5]
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'FocusLab_v2.6_motion_pack/**'
+      - '.github/workflows/focuslab-motion-r01.yml'
+permissions:
+  contents: read
+concurrency:
+  group: focuslab-motion-r01
+  cancel-in-progress: true
+jobs:
+  gsap-smoke:
+    if: github.head_ref == 'focuslab-v2.6-automation-pilot' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Install pinned runtime for synthetic test only
+        run: |
+          npm install --prefix FocusLab_v2.6_motion_pack --ignore-scripts --no-audit --no-fund --save-exact gsap@3.13.0
+          python3 -m venv .motion-venv
+          .motion-venv/bin/pip install --disable-pip-version-check playwright==1.55.0
+          .motion-venv/bin/python -m playwright install --with-deps chromium
+      - name: Test actual GSAP and native fallback
+        run: .motion-venv/bin/python FocusLab_v2.6_motion_pack/gsap_smoke.py
+      - name: Publish synthetic evidence only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: focuslab-motion-r01-gsap-evidence
+          path: FocusLab_v2.6_motion_pack/evidence/
+          retention-days: 7
+          if-no-files-found: warn
