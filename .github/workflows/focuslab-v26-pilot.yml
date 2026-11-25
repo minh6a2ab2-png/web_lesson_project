@@ -1,4 +1,4 @@
-name: FocusLab v2.6 infrastructure pilot
+name: FocusLab v2.6 infrastructure R02
 on:
   pull_request:
     branches: [focuslab-13-skills-v2.5]
@@ -31,12 +31,12 @@ jobs:
             sudo apt-get install -y ffmpeg
           fi
       - name: Execute bounded pilot
-        run: .pilot-venv/bin/python FocusLab_v2.6_pilot/pilot.py
+        run: .pilot-venv/bin/python FocusLab_v2.6_pilot/r02.py
       - name: Publish public-data evidence only
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: focuslab-v26-pilot-evidence
-          path: FocusLab_v2.6_pilot/evidence/
+          name: focuslab-v26-r02-evidence
+          path: FocusLab_v2.6_pilot/r02-evidence/
           if-no-files-found: warn
           retention-days: 7
