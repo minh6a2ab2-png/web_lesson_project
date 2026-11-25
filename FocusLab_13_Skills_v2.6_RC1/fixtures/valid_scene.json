@@ -1,0 +1,63 @@
+{
+  "lesson_id": "COOKIE-LESSON-01",
+  "topic_id": "TOPIC-COOKIE",
+  "scene_id": "COOKIE-OBSERVE-01",
+  "kind": "OBSERVE",
+  "objective_id": "OBJ-01",
+  "student_task": "Quan sát hai lần truy cập và nêu điều khó hiểu",
+  "opening_cue": "Vì sao website vẫn nhớ tiếng Việt?",
+  "attention_plan": {
+    "primary_focus_target": "opening-question",
+    "cue_type": "SPOTLIGHT",
+    "motion_purpose": "nhấn mạnh câu hỏi tình huống"
+  },
+  "layout_mode": "STORY",
+  "content_blocks": [
+    {
+      "block_id": "browser-first",
+      "type": "comparison"
+    },
+    {
+      "block_id": "browser-second",
+      "type": "comparison"
+    }
+  ],
+  "model_id": "MODEL-COOKIE-VISIT",
+  "model_action": "Chọn ngôn ngữ và truy cập lại",
+  "completion_gate": "NON_BLOCKING",
+  "next_scene_id": null,
+  "state_dependency": [],
+  "viewport_fallback": "hai trạng thái xếp dọc nếu vẫn nhìn đủ; thiết kế scene khác nếu không",
+  "evidence": "HS chỉ ra ngôn ngữ đã được ghi nhớ",
+  "navigation": {
+    "previous_fixed_bottom_left": true,
+    "next_fixed_bottom_right": true,
+    "mode": "FREE",
+    "require_skip_reason": false,
+    "style": "FLOATING_FIXED",
+    "footer": false,
+    "count_location": "HEADER_OR_COMPACT"
+  },
+  "display": {
+    "mode": "DIRECT",
+    "delay_ms": 0,
+    "auto_advance": false,
+    "title_highlight": {
+      "duration_ms": 3000,
+      "cycles": 2,
+      "restart_on_rerender": false,
+      "reduced_motion": "OFF"
+    }
+  },
+  "ui": {
+    "pedagogical_labels": false,
+    "reflection_forms": false,
+    "glossary_mode": "INLINE_KEYWORD",
+    "core_visible": true
+  },
+  "question_intents": [
+    "GUIDING"
+  ],
+  "model_view_id": "MODEL-COOKIE-VISIT-VIEW",
+  "visual_identity": "OBSERVE"
+}

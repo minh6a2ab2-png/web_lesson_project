@@ -1,0 +1,17 @@
+{
+  "version": "2.5",
+  "name": "Visual Excellence",
+  "date": "2026-11-24",
+  "base_version": "2.4.1",
+  "base_commit": "0d1e19ddc263c83a85dd14391b8d226c675fadff",
+  "package_type": "CONSOLIDATED_DEFINITIONS_GIT",
+  "gate_status": "NEEDS_REVIEW",
+  "definition_scope": "13 inherited skills + additions + shared standards + templates",
+  "merged_base_status": "ALL_24_LOCKED_SHA256_VERIFIED_OTHER_ORIGINAL_BLOBS_PRESERVED",
+  "base_locked_verified_direct": 24,
+  "base_manifest_file_count": 131,
+  "reference_assets": "SEPARATE_DRIVE_ARCHIVE",
+  "reference_archive": "https://drive.google.com/file/d/1dJedOdaeeOQn4-tGufHQ4or7huNESW64/view",
+  "field_status": "NOT_RUN",
+  "production_lesson_rerun": "NOT_RUN"
+}

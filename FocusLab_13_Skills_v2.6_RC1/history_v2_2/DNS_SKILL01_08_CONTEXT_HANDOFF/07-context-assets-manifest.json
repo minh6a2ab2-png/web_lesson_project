@@ -1,0 +1,24 @@
+{
+  "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+  "assets": [
+    {
+      "asset_id": "A-CONTEXT-DNS-01",
+      "activity_id": "ACT-DNS-01",
+      "scene_id_provisional": "DNS-CONTEXT-01",
+      "type": "CONTEXT_ILLUSTRATION",
+      "status": "SPEC_ONLY",
+      "file_path": null,
+      "sha256": null,
+      "required_localizations": [
+        "vi",
+        "en"
+      ],
+      "illustration_brief": "Browser hostname and unknown destination; no DNS solution shown",
+      "open_issues": [
+        "Create original illustration and verify desktop viewport/offline/alt text"
+      ]
+    }
+  ],
+  "previous_skill07_model_assets": "UNCHANGED_PROTOTYPE",
+  "readiness_gate": "NOT_READY_FOR_INTEGRATED_RELEASE"
+}

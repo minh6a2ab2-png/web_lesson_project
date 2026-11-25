@@ -1,0 +1,2 @@
+# FocusLab v2.6 RC1
+Read START_HERE.md. A consolidated candidate, not a released lesson. Baseline v2.5 is preserved in sibling directory. The complete rules, schemas, source references, prototype engines, backlog and tests are versioned here. Binary references and private lesson prototypes remain in their original private packages. See policy/EXECUTION_V2_6_RC1.md for migration and approval requirements.

@@ -1,0 +1,668 @@
+{
+  "status": "PASS",
+  "passed": 165,
+  "total": 165,
+  "scope": "definition consistency and semantic contracts; no third-party full JSON Schema/browser/field testing",
+  "results": [
+    {
+      "test": "exactly 13 skill definitions",
+      "passed": true
+    },
+    {
+      "test": "SKILL01 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL01 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL01 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL01 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL01 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL01 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL01 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "SKILL02 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL02 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL02 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL02 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL02 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL02 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL02 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "SKILL03 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL03 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL03 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL03 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL03 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL03 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL03 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "SKILL04 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL04 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL04 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL04 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL04 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL04 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL04 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "SKILL05 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL05 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL05 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL05 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL05 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL05 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL05 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "SKILL06 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL06 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL06 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL06 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL06 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL06 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL06 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "SKILL07 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL07 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL07 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL07 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL07 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL07 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL07 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "SKILL08 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL08 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL08 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL08 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL08 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL08 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL08 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "SKILL09 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL09 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL09 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL09 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL09 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL09 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL09 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "SKILL10 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL10 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL10 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL10 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL10 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL10 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL10 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "SKILL11 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL11 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL11 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL11 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL11 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL11 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL11 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "SKILL12 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL12 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL12 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL12 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL12 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL12 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL12 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "SKILL13 portable metadata",
+      "passed": true
+    },
+    {
+      "test": "SKILL13 procedure and dependencies",
+      "passed": true
+    },
+    {
+      "test": "SKILL13 bounded document",
+      "passed": true
+    },
+    {
+      "test": "SKILL13 registry maps exact definition",
+      "passed": true
+    },
+    {
+      "test": "SKILL13 outputs unique/nonempty",
+      "passed": true
+    },
+    {
+      "test": "SKILL13 referenced policy files exist",
+      "passed": true
+    },
+    {
+      "test": "SKILL13 consumers later stages",
+      "passed": true
+    },
+    {
+      "test": "unique skill names",
+      "passed": true
+    },
+    {
+      "test": "legacy multitopic alias excluded",
+      "passed": true
+    },
+    {
+      "test": "lineage anchored to supplied skills",
+      "passed": true
+    },
+    {
+      "test": "no claim of rerun or installation",
+      "passed": true
+    },
+    {
+      "test": "scene schema and visual registry retain 15 kinds",
+      "passed": true
+    },
+    {
+      "test": "review schema requires bounded retry fields",
+      "passed": true
+    },
+    {
+      "test": "model QA retains 30 criteria",
+      "passed": true
+    },
+    {
+      "test": "dns_context_scene.valid.json semantic validity",
+      "passed": true
+    },
+    {
+      "test": "dns_lead.valid.json semantic validity",
+      "passed": true
+    },
+    {
+      "test": "dns_model_view_09.valid.json semantic validity",
+      "passed": true
+    },
+    {
+      "test": "dns_model_view_10.valid.json semantic validity",
+      "passed": true
+    },
+    {
+      "test": "dns_observe_scene.valid.json semantic validity",
+      "passed": true
+    },
+    {
+      "test": "dns_recall.valid.json semantic validity",
+      "passed": true
+    },
+    {
+      "test": "dns_review.valid.json semantic validity",
+      "passed": true
+    },
+    {
+      "test": "dns_two_scene_pair.valid.json semantic validity",
+      "passed": true
+    },
+    {
+      "test": "lesson_handoff.valid.json semantic validity",
+      "passed": true
+    },
+    {
+      "test": "valid_scene.json semantic validity",
+      "passed": true
+    },
+    {
+      "test": "complete lesson semantic handoff valid",
+      "passed": true
+    },
+    {
+      "test": "reject duplicate scene ID",
+      "passed": true
+    },
+    {
+      "test": "reject cross-topic scene",
+      "passed": true
+    },
+    {
+      "test": "reject dangling next scene",
+      "passed": true
+    },
+    {
+      "test": "reject dangling state dependency",
+      "passed": true
+    },
+    {
+      "test": "reject self next edge",
+      "passed": true
+    },
+    {
+      "test": "reject lead target mismatch",
+      "passed": true
+    },
+    {
+      "test": "reject no activity entry",
+      "passed": true
+    },
+    {
+      "test": "reject duplicate activity entry",
+      "passed": true
+    },
+    {
+      "test": "reject missing reuse reason",
+      "passed": true
+    },
+    {
+      "test": "reject wrong entry cluster",
+      "passed": true
+    },
+    {
+      "test": "reject CORE missing recall",
+      "passed": true
+    },
+    {
+      "test": "reject CORE missing review",
+      "passed": true
+    },
+    {
+      "test": "reject single review format",
+      "passed": true
+    },
+    {
+      "test": "reject invalid review order",
+      "passed": true
+    },
+    {
+      "test": "reject spoil between recall and review",
+      "passed": true
+    },
+    {
+      "test": "reject retry missing question",
+      "passed": true
+    },
+    {
+      "test": "reject retry same question",
+      "passed": true
+    },
+    {
+      "test": "reject retry wrong equivalence group",
+      "passed": true
+    },
+    {
+      "test": "reject retry wrong KU",
+      "passed": true
+    },
+    {
+      "test": "reject retry map missing original",
+      "passed": true
+    },
+    {
+      "test": "reject unbounded retry",
+      "passed": true
+    },
+    {
+      "test": "reject premature summary",
+      "passed": true
+    },
+    {
+      "test": "reject locked review nav",
+      "passed": true
+    },
+    {
+      "test": "reject footer",
+      "passed": true
+    },
+    {
+      "test": "reject navigation guard",
+      "passed": true
+    },
+    {
+      "test": "reject hidden core",
+      "passed": true
+    },
+    {
+      "test": "reject reveal delay",
+      "passed": true
+    },
+    {
+      "test": "reject title rerender restart",
+      "passed": true
+    },
+    {
+      "test": "reject recall answer leakage",
+      "passed": true
+    },
+    {
+      "test": "reject recall cue missing",
+      "passed": true
+    },
+    {
+      "test": "reject recall alt missing",
+      "passed": true
+    },
+    {
+      "test": "reject recall mandatory response",
+      "passed": true
+    },
+    {
+      "test": "reject duplicate context task",
+      "passed": true
+    },
+    {
+      "test": "reject missing model view",
+      "passed": true
+    },
+    {
+      "test": "reject wrong visual identity",
+      "passed": true
+    },
+    {
+      "test": "manifest example structural semantics",
+      "passed": true
+    },
+    {
+      "test": "reject manifest mixed gate/asset status",
+      "passed": true
+    },
+    {
+      "test": "reject manifest fake field verification",
+      "passed": true
+    },
+    {
+      "test": "reject manifest fake automated pass",
+      "passed": true
+    },
+    {
+      "test": "reject manifest missing output hash",
+      "passed": true
+    },
+    {
+      "test": "reject manifest parent traversal",
+      "passed": true
+    },
+    {
+      "test": "reject manifest Windows absolute path",
+      "passed": true
+    },
+    {
+      "test": "reject manifest POSIX absolute path",
+      "passed": true
+    },
+    {
+      "test": "reject manifest backslash traversal",
+      "passed": true
+    },
+    {
+      "test": "reject manifest directory as output file",
+      "passed": true
+    },
+    {
+      "test": "reject manifest self hash",
+      "passed": true
+    },
+    {
+      "test": "reject manifest missing input provenance",
+      "passed": true
+    },
+    {
+      "test": "reject manifest N/A without explanation",
+      "passed": true
+    },
+    {
+      "test": "manifest verifies actual file bytes",
+      "passed": true
+    },
+    {
+      "test": "reject stale output hash",
+      "passed": true
+    },
+    {
+      "test": "reject missing claimed READY_ASSET file",
+      "passed": true
+    },
+    {
+      "test": "registry detects missing required outputs",
+      "passed": true
+    },
+    {
+      "test": "no-model handoff with real reports and conditional N/A",
+      "passed": true
+    },
+    {
+      "test": "reject N/A conditional folder without reason",
+      "passed": true
+    },
+    {
+      "test": "reject N/A for required report",
+      "passed": true
+    }
+  ]
+}

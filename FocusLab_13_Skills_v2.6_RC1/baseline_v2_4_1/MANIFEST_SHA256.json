@@ -1,0 +1,530 @@
+{
+  "version": "2.4.1",
+  "scope": "all packaged bytes except this root manifest, .git and Python bytecode",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "b86d745877e86ef85ffee4e4761c423cd31a0be720840021072fc75de41bb4ef"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "path": "CHANGE_MATRIX.csv",
+      "sha256": "14ddeb2f38a18e0e67cf4678a37e0bff5b02517e1e41985cc1aa60b6a7e2d077"
+    },
+    {
+      "path": "CHANGE_MATRIX_V2_4_1.csv",
+      "sha256": "2a93943979ad199c47c11c891d5f3df65862fa655d6271584e8840c96be0f64d"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "9dc3e15aa2735fb41c7ddbf16243cb15c3cc99384fa26e4aa40015a1baf1cc39"
+    },
+    {
+      "path": "DNS_MIGRATION_PLAN.md",
+      "sha256": "fdeaca9d77e9715f8ec8ae46ad26f51254cc1cff8264d7bd7f36e614447f37bd"
+    },
+    {
+      "path": "fixtures/dns_context_scene.valid.json",
+      "sha256": "7658317d1e4fc509aca99e469bbc8010fe3d54a66bb1c213345b2dfd254d71b6"
+    },
+    {
+      "path": "fixtures/dns_lead.valid.json",
+      "sha256": "9cee202aec38df080faaae80ff1acd318b5e8830681d10b82ab1fc9706f397ce"
+    },
+    {
+      "path": "fixtures/dns_model_view_09.valid.json",
+      "sha256": "896232bee714eb72474390dfb7e9ed3b2ebcb1a5dd8dd85faa776fd835a5710e"
+    },
+    {
+      "path": "fixtures/dns_model_view_10.valid.json",
+      "sha256": "9858c855b305ad672fc9a2f7bc9a855f2e8576cb95f38af75a61cbdbb8b09aa0"
+    },
+    {
+      "path": "fixtures/dns_observe_scene.valid.json",
+      "sha256": "d47a23d131bc1d498caa80cc94702cc5df7c2872583f5d0bf775334aa256f359"
+    },
+    {
+      "path": "fixtures/dns_recall.valid.json",
+      "sha256": "fd8c2409af1810d3e27182a291dd719c7829765b5483557af464c4cc240945c2"
+    },
+    {
+      "path": "fixtures/dns_review.valid.json",
+      "sha256": "13c09d7c6ada2a6e7c7fa590fe49ce666cb336623a1a4ec3443f7e1deb60029a"
+    },
+    {
+      "path": "fixtures/dns_two_scene_pair.valid.json",
+      "sha256": "4ac4490b18d938f0aa0d79635a0e915b2f099e7c3880260c6ca1fb6bcbbced95"
+    },
+    {
+      "path": "fixtures/lesson_handoff.valid.json",
+      "sha256": "ed89ffb4e8f5c2dd00c4e4b627b1d0389be8727ac2882268f9b9b39f1cefecc7"
+    },
+    {
+      "path": "fixtures/output_manifest.example.json",
+      "sha256": "17ad21b4dd369ae4660d092f1437d65767c6638ef91db348ffb15eca199d703c"
+    },
+    {
+      "path": "fixtures/valid_scene.json",
+      "sha256": "094e4ce4c2622e48ac7c99259949d9563eba5ec3a1f83852746cfaecad8d1b4b"
+    },
+    {
+      "path": "history_v2_2/CHANGE_MATRIX.csv",
+      "sha256": "73d48cc51216f188e2b5c3bdf7abc4959c2dd2a798bdb12e5ae98830ae2e9cc0"
+    },
+    {
+      "path": "history_v2_2/CHANGELOG.md",
+      "sha256": "c7baf286e2fcf7622e0e6015d34b526c88d31b0131e25d381c40c7f812be060c"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/01-context-problem-candidates.md",
+      "sha256": "6cf0a0b00e50bafeb95859b8070db555ae23ceb0478e9942a52786e7fcd8b676"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/02-context-split-decision.md",
+      "sha256": "f59f1af401d689f840bd63aa025f2e62ef6d164271ce809b16fb7178a8ec464c"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/03-problem-context-content.md",
+      "sha256": "25f5d7a5b98036b335c42508a1ccc929139cf1eda5cecb70afcc84ecf87c38d9"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/04-context-learning-task-rubric.md",
+      "sha256": "a3ebcbace5a51f2d87d1b62985a5bd68d3c41856ee9574e993f8a13a67d4f637"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/05-context-visual-resource-brief.csv",
+      "sha256": "e7f790eff72b0768bc6a8ed98e41075206945f1afcbb6c18c76427bbb483547a"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/06-context-to-observation-script.md",
+      "sha256": "3d69f56d47350b289cdee7740380d5b1d101b74653cad612b02a3623c2345f6e"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/06-scene-opening-cues.v2_2.json",
+      "sha256": "8c58b95aafd0a5f8de6070eccc328cfb1268836b703fb60d323430b581c379e1"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/07-context-assets-manifest.json",
+      "sha256": "47de56cdb93fad321d857b824fc0408279dc4f3b51a096b2e5fd3ef99d7e7f14"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/08-model-and-scene-placement.v2_2.csv",
+      "sha256": "f1f7ed5c6c3d9e4e57e7a755bebe0d411ba05829f5583536be33482c1b282078"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/08-one-session-cv5512-lesson-plan.v2_2.md",
+      "sha256": "447fad7af4871c383af980167a09effd14a4459457173a79f1c343925736f4b3"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/08-session-time-and-activity-table.v2_2.csv",
+      "sha256": "8581557000213d072c3bdf35c881ddaaf012e33064f3fd665d57f0181976b0a2"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/08-skill09-handoff.v2_2.json",
+      "sha256": "1feb357885daf787bab973fc14b0ec3c778a1615bead23ddc9d4d914904440d3"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/CHANGE_NOTES.md",
+      "sha256": "7c7489befb5c6a1866eb9114d1d7e2445ba9fa3adaf2dd1a085593c2e9b972f2"
+    },
+    {
+      "path": "history_v2_2/DNS_SKILL01_08_CONTEXT_HANDOFF/DNS_OPENING_APPROVED_DIRECTION.md",
+      "sha256": "08476336dcdac929914c3c1070bb56f9a47c74889063ac812c64df6741ec0d27"
+    },
+    {
+      "path": "history_v2_2/fixtures/dns_context_scene.valid.json",
+      "sha256": "02c463f648e17f7808350955097c152f2b35a6089d311886da429c3398b0e597"
+    },
+    {
+      "path": "history_v2_2/fixtures/dns_observe_scene.valid.json",
+      "sha256": "84bd7dfa1b38de53850a6bdcb283fa4f5e0f89eaa8c629099f6b22bc8446e2a1"
+    },
+    {
+      "path": "history_v2_2/fixtures/dns_two_scene_pair.valid.json",
+      "sha256": "fd98ca18f96e31f8a702da9dc49f0bebbb00a9a0f99af233f1b88d2ef72570db"
+    },
+    {
+      "path": "history_v2_2/fixtures/invalid_problem_context_FOR_TEST_ONLY.json",
+      "sha256": "4a64735db220e245b661702c1307d01a63ae2f95894f727569b6fd4d49d621a5"
+    },
+    {
+      "path": "history_v2_2/fixtures/invalid_scene_FOR_TEST_ONLY.json",
+      "sha256": "958de419d34f65cce3d1cb69d8838528fb6f5be3563e1db11585ab1be005f628"
+    },
+    {
+      "path": "history_v2_2/fixtures/valid_scene.json",
+      "sha256": "0afa363fd795600e8fb30e72bb071899b28ee1503b5826795729d7464c0356b6"
+    },
+    {
+      "path": "history_v2_2/MANIFEST_SHA256.json",
+      "sha256": "4f23f2f9156011ba8ee7fdc57b5227be7d7496fcc1ea29b1fac505e7e4912a5f"
+    },
+    {
+      "path": "history_v2_2/MIGRATION_GUIDE.md",
+      "sha256": "e572147b8c22721973864bbd8de9947f54331c34148e4d9ddb29fe331aea672c"
+    },
+    {
+      "path": "history_v2_2/model_contract_legacy_example.json",
+      "sha256": "1a07f0262656d4d5743c94c50cc065e6b083d1356730e13621c6a6e3b23d9e55"
+    },
+    {
+      "path": "history_v2_2/QA_REPORT.md",
+      "sha256": "6832ad38f6eacce23ce3c9b2b72275c2e4f0c7750f9055e675e2ca237dcfa1b0"
+    },
+    {
+      "path": "history_v2_2/QA_REPORT_V2_2.md",
+      "sha256": "bdaebc2794c5acc8d08d4012c17fd583476b9ebd15f9b56fe359dcb92a9e1363"
+    },
+    {
+      "path": "history_v2_2/README.md",
+      "sha256": "753e60814d8d996d277c4c4700f6c1d4f88f30274843175f8ebed29c5eb0cb5e"
+    },
+    {
+      "path": "history_v2_2/references/proposal_FocusLab_v1.md",
+      "sha256": "17fbf9077d00439cd0ed14ee56628b083da9cf9a8f5718d17b8188c725b43aaf"
+    },
+    {
+      "path": "history_v2_2/references/proposal_two_phase_v3.md",
+      "sha256": "bcf52be1f5c714ae6b8e3c7b11d4cb35b3d57c89235c499d0ef242693397fe08"
+    },
+    {
+      "path": "history_v2_2/references/proposal_viewport_fit_skill10.md",
+      "sha256": "1eb51f22b65b3fa0848cd7783d05f614a530c7ae8fe77bdf7e00033672b6a8a8"
+    },
+    {
+      "path": "history_v2_2/references/reference_motion_models_v1.3.md",
+      "sha256": "f6abfe414229386513c3599077818a4bf0c0586098a4ddda911476d00ef31224"
+    },
+    {
+      "path": "history_v2_2/references/reference_scene_independence_v1.5.md",
+      "sha256": "3df33b9130cd0d3e757e474b9616cff5a6b16101999235a45c5e43c8bb999f16"
+    },
+    {
+      "path": "history_v2_2/references/superseded_one_viewport_v1.4.md",
+      "sha256": "1e0001bebfd089da79082e59661f4c130d79fdfc0d65fd8c38abf883308d86bb"
+    },
+    {
+      "path": "history_v2_2/SKILL07_UPGRADE_NOTES.md",
+      "sha256": "d79b011af687fee741e3e90137abdceb70a304d4089f87a86f6b29256af7aa64"
+    },
+    {
+      "path": "history_v2_2/SOURCE_LEDGER.md",
+      "sha256": "d7d828d25d61ddbec7afcbe12e8ffffb7c63dc4eddb5ba85345f4ba19e87cf31"
+    },
+    {
+      "path": "history_v2_2/START_HERE.md",
+      "sha256": "8f2bb01078d82b9d42d8b991d29cee7780f2743a3297db521be3b154438cc4a9"
+    },
+    {
+      "path": "history_v2_2/tests/check_scene_contract.py",
+      "sha256": "1330fb319270a07e41060374d3b0b8799ab82e35b37b530aa7f82cdd03b4e56c"
+    },
+    {
+      "path": "history_v2_2/tests/DEFINITION_QA_RESULT.json",
+      "sha256": "6c99bf9f22b3c8e4f1acc528e0b5920df5d1506b9a53a6414ec71b527cb0634b"
+    },
+    {
+      "path": "history_v2_2/tests/PROBLEM_CONTEXT_V2_2_QA_RESULT.json",
+      "sha256": "529035d4c7f1d021215d0476ed48e27b5655b3e7c106f9bbb894ee47d727bee4"
+    },
+    {
+      "path": "history_v2_2/tests/SCENE_VALIDATION_RESULT.json",
+      "sha256": "4d03cc5559402b036fa9d3302e15bfba2c66cc5fadbe6b65bbc48a5ee7527fbc"
+    },
+    {
+      "path": "history_v2_2/tests/SKILL07_V2_1_QA_RESULT.json",
+      "sha256": "6dc039f7a7171e83b622f4377bcbea7db6b228fffa282a023b4093fe28fbf1c9"
+    },
+    {
+      "path": "history_v2_2/tests/test_definitions.py",
+      "sha256": "d38efd6218daaf51f53ea5fe86c1b7674dce54ff4aa7d4f1bbe1f77be7f79c5d"
+    },
+    {
+      "path": "history_v2_2/tests/test_problem_context_v22.py",
+      "sha256": "5ea16c9f99c287c6667caf1b120174656f1b047cdae68048ab12d36114a1d183"
+    },
+    {
+      "path": "history_v2_2/tests/test_skill07_model_v21.py",
+      "sha256": "10d437c0e7894ef2199ce7fab7c448b4abb8fd48bca02ab96bbee78a1d93d097"
+    },
+    {
+      "path": "history_v2_2/tests/UPGRADE_REGRESSION_RESULT.json",
+      "sha256": "3dd9701d362056dc3eac281ac48aa8c8f7c62473aa1869faf313ecadf0ea02f7"
+    },
+    {
+      "path": "history_v2_2/V2_1_TO_V2_2_ALL_13_DIFF.patch",
+      "sha256": "f2c12bbbc98aaa2cd558e2d12b4a9aed70a99b53aa74001e8b0542ac4276d55a"
+    },
+    {
+      "path": "history_v2_3/CHANGE_MATRIX.csv",
+      "sha256": "ade5a0fb1218cf601b1185993fd3adba2b801a9bcdd13d4381cf6559d04d6db8"
+    },
+    {
+      "path": "history_v2_3/CHANGELOG.md",
+      "sha256": "15b6dd18764040c171f65f1a8c7cb6008f9f029b9e901b5c67ac6b1cd979322b"
+    },
+    {
+      "path": "history_v2_3/DNS_MIGRATION_PLAN.md",
+      "sha256": "40c2a558a1e964e01e3a6addfb7a0a01dd82d08a374d52436442bf16d62d6741"
+    },
+    {
+      "path": "history_v2_3/MIGRATION_GUIDE.md",
+      "sha256": "9e90f6eff65d50502674e77a1c6cef1864f283ede33ec38ba914b26b811976f1"
+    },
+    {
+      "path": "history_v2_3/QA_REPORT_V2_3.md",
+      "sha256": "8021c245ec7a18a0f907e746b834728bc0fbfda6b8d6da2ffc93a425dff32a06"
+    },
+    {
+      "path": "history_v2_3/V2_2_TO_V2_3_DIFF.patch",
+      "sha256": "2b6e064e76b122ba970cee6e0a31a0ff0388bf10bb96dd645c6d40bc172b419e"
+    },
+    {
+      "path": "legacy/13Skills_MT2_FROZEN_ORIGINAL.zip",
+      "sha256": "497a1d37a9d26c8edf145f72c55b225add17feba09ea678e661bc25dffd1d494"
+    },
+    {
+      "path": "legacy/model_contract_cookie_v2_before_upgrade.json",
+      "sha256": "1a07f0262656d4d5743c94c50cc065e6b083d1356730e13621c6a6e3b23d9e55"
+    },
+    {
+      "path": "legacy/skill01_MT2_ORIGINAL.md",
+      "sha256": "3b1f5fdad8489dba5f40f69a9bb3f6837735675017a64d0ab03b45e93ab64ce9"
+    },
+    {
+      "path": "legacy/skill02_MT2_ORIGINAL.md",
+      "sha256": "00d28c08219dafab2e8a2c08ae64f29ef7e5207a9cef5412c0329d0e541a5623"
+    },
+    {
+      "path": "legacy/skill03_MT2_ORIGINAL.md",
+      "sha256": "8d5f776e24d69461982d2d40bbf227a02239dcca1c8be800924c9822a185c54e"
+    },
+    {
+      "path": "legacy/skill04_MT2_ORIGINAL.md",
+      "sha256": "6ef896d9e58a53299d4662c224e7043c0e1b1c3964fb43a4ad210000376b2c47"
+    },
+    {
+      "path": "legacy/skill05_MT2_ORIGINAL.md",
+      "sha256": "5169f1deeca70398523ffe2d3ea48722a55af7bac2d36d7a500c625cc6ecbc6f"
+    },
+    {
+      "path": "legacy/skill06_MT2_ORIGINAL.md",
+      "sha256": "e7861c0e656d641a82ae8baeda631a5ac67bff032666d5975508e8802e33e3d0"
+    },
+    {
+      "path": "legacy/skill07_MT2_ORIGINAL.md",
+      "sha256": "a52566158915774d8e5eaac7924af19a2a15f37ff3a6fd151e3bde48eb14b8cf"
+    },
+    {
+      "path": "legacy/skill08_MT2_ORIGINAL.md",
+      "sha256": "bfd3692460e78097157d2ea88ac29bd54826ab0c9070a9107d60ba907f7ef022"
+    },
+    {
+      "path": "legacy/skill09_MT2_ORIGINAL.md",
+      "sha256": "4d3e586901c46073bfff5c41ea0429f5bf1f5a972b9ccd44ca0c1a734bcb7620"
+    },
+    {
+      "path": "legacy/skill10_MT2_ORIGINAL.md",
+      "sha256": "5021afe2c4891c66ff898d98b7f7444a10e170375b5a35aefd265078e6940f18"
+    },
+    {
+      "path": "legacy/skill11_MT2_ORIGINAL.md",
+      "sha256": "488d8bd220ff0f7e1ca2414d17799e08e298c743e2f9b026ec2d58c3f32bc169"
+    },
+    {
+      "path": "legacy/skill12_MT2_ORIGINAL.md",
+      "sha256": "ad6b9012f050e454719a1299f043a512365434dd49ddc975444a5e96e4897a15"
+    },
+    {
+      "path": "legacy/skill13_MT2_ORIGINAL.md",
+      "sha256": "82a909ce93f22c383c6838e974b2a0a0b2032f926e312926d25ac6d07f00b81a"
+    },
+    {
+      "path": "MIGRATION_GUIDE.md",
+      "sha256": "be78cf40e2f759da17d8a3bfdcac34beb9950860a159238fdb0a765e7bb6efb8"
+    },
+    {
+      "path": "OUTPUT_NAME_CROSSWALK.csv",
+      "sha256": "7d360a86b03ddeecb8130674abd7e40b9357e19261ae51f697fd5206fe2e0ada"
+    },
+    {
+      "path": "policy/DIRECT_LEARNING_STANDARD_V2_3.md",
+      "sha256": "a513f9c2293f3d7542aa4904be28541f04cfe82e26f5aac5518710a310256cd6"
+    },
+    {
+      "path": "policy/EXECUTION_AND_HANDOFF.md",
+      "sha256": "96d049450a6ba259a968da777696adf7be0884da36ef5e849de2763afcc67604"
+    },
+    {
+      "path": "policy/GUIDED_VISUAL_STANDARD_V2_4.md",
+      "sha256": "56d5ef33142370a6f7db3bfe78c88c2f00110f40078c8ac0492510944072cd9e"
+    },
+    {
+      "path": "policy/ONE_TOPIC_MASTER_RULES.md",
+      "sha256": "f3bffdc4181ec5eccbb02eaf13fbdb389171085bc72a502f75a13faaa7c8b799"
+    },
+    {
+      "path": "policy/PROBLEM_CONTEXT_DESIGN_STANDARD.md",
+      "sha256": "dd5c788c3fbd239afb2a78d2db7b3008bc6acac3ca7afd4bd8210a00e5dbac34"
+    },
+    {
+      "path": "policy/QA_VIEWPORT_AND_TIMING.md",
+      "sha256": "b4eac7c6d5c22235fd57cc68172300d14593f9f185e0b3a305df885b59e41aa8"
+    },
+    {
+      "path": "policy/SCENE_KIND_REFERENCE.md",
+      "sha256": "5f03428a99f04f2f294e077ae19689c266e1fb13e90384f0ee40f365aa564f01"
+    },
+    {
+      "path": "policy/SKILL07_MODEL_DESIGN_STANDARD.md",
+      "sha256": "183106961e1a2b48443d05f7cb72a93561ca76c28f000f9e7ece74726b43d679"
+    },
+    {
+      "path": "QA_REPORT_V2_4.md",
+      "sha256": "e3b7524ecc8aee58832338b3725c2a9e1ae08c0796962711a8a173f35e95123e"
+    },
+    {
+      "path": "QA_REPORT_V2_4_1.md",
+      "sha256": "a6b5e70f8301ce487b47e8f3e1b6773f13313b9939f1424db1ef08770375fe27"
+    },
+    {
+      "path": "README.md",
+      "sha256": "762fda50b6775f144f9255a1eb555031e6e18865aed1684694226e2be7ced743"
+    },
+    {
+      "path": "requirements-validation.txt",
+      "sha256": "3ec1d3e3d30e096352c9a60906065ac9d5ff3b0159cd9d14cedfb78f06dc3c39"
+    },
+    {
+      "path": "skills/skill01/SKILL.md",
+      "sha256": "1e17a08d8828aa09b7a382f81a29be29fa467a4bbb93e34fc991609cb0fdc093"
+    },
+    {
+      "path": "skills/skill02/SKILL.md",
+      "sha256": "c259b1889015fd34d94043789db26ffc656222c08a5b61ca2806b52ad894e67c"
+    },
+    {
+      "path": "skills/skill03/SKILL.md",
+      "sha256": "2692ea497ab9ad932aeb4f3f44b0e1ea66c2337e898c4542c85bc7d612a7f281"
+    },
+    {
+      "path": "skills/skill04/SKILL.md",
+      "sha256": "5a92c18e28ceb17102554621e28f176e4702d05814fdb830427196c7911d2245"
+    },
+    {
+      "path": "skills/skill05/SKILL.md",
+      "sha256": "6e7c9b430ab07388c623e677effb3c520320467d43767135867e8baf0584502f"
+    },
+    {
+      "path": "skills/skill06/SKILL.md",
+      "sha256": "bb2cc92bf1a9a4a8fa0add185e66133173bff58e9448cf23237b9ce11805b2e1"
+    },
+    {
+      "path": "skills/skill07/SKILL.md",
+      "sha256": "5db9fee873c0ec48fd78f187aecdb9695779bd78a5fb122e872c3e78535ed71c"
+    },
+    {
+      "path": "skills/skill08/SKILL.md",
+      "sha256": "887f3d41f200b3f22ac43c0fcd889c039bf2f0cb062ad5f8d3a01823fa95f102"
+    },
+    {
+      "path": "skills/skill09/SKILL.md",
+      "sha256": "cfa667b22dd49a30405ed11a0fa49e6608708e8c955100e175438e1da35f3698"
+    },
+    {
+      "path": "skills/skill10/SKILL.md",
+      "sha256": "d691aed30ad09995cf9616787e67425ae25b8b931abff6f5f64a20028a030434"
+    },
+    {
+      "path": "skills/skill11/SKILL.md",
+      "sha256": "e5646404ed89ebcfea27df44847898adf4d7466e71c280e6a4060cdf1b13bba9"
+    },
+    {
+      "path": "skills/skill12/SKILL.md",
+      "sha256": "d7697e2f1533cb6f2c598d344b7285a638a579a4a3f8b2283602b4b42616d82b"
+    },
+    {
+      "path": "skills/skill13/SKILL.md",
+      "sha256": "54238d75ce9d399ae61299a509f1fd88d42c7f8666d2893dd0612f346c7866d4"
+    },
+    {
+      "path": "SOURCE_LEDGER.md",
+      "sha256": "6eeb660e97cca44b0cfa2ace3c98a4620b2d203afa2f59e2e5a2f2c389e8f462"
+    },
+    {
+      "path": "START_HERE.md",
+      "sha256": "762fda50b6775f144f9255a1eb555031e6e18865aed1684694226e2be7ced743"
+    },
+    {
+      "path": "templates/model_contract.dns.example.json",
+      "sha256": "3b545ed7c4ee76b57a8e9c5e157b78367ded70bcb624d43a414ec77f17305bc1"
+    },
+    {
+      "path": "templates/model_contract.example.json",
+      "sha256": "3b545ed7c4ee76b57a8e9c5e157b78367ded70bcb624d43a414ec77f17305bc1"
+    },
+    {
+      "path": "templates/model_contract.schema.json",
+      "sha256": "2ea40892f75ef9368cc848bdf928d29550b66d227c333b266b8d399e670ba016"
+    },
+    {
+      "path": "templates/output_manifest.schema.json",
+      "sha256": "d58b7a6f0a0df8fd77930c909c5eab25b651fb2d48914e49f8411cfe74e1f2bb"
+    },
+    {
+      "path": "templates/pipeline_registry.json",
+      "sha256": "62c24aa1fe70cf1de7c34715d7a1a42b6fc583fc0b35d8dac65eec5463b44445"
+    },
+    {
+      "path": "templates/scene_contract.schema.json",
+      "sha256": "1f4af92c5fa4869083e2ac186750f50799ce072f6c56e378fd9e0c5e7bc936fa"
+    },
+    {
+      "path": "templates/scene_visual_identity.json",
+      "sha256": "ef89637cbce8cc53456a8dd7b4a4adced4e5801de9204b0e275781636c59b6a5"
+    },
+    {
+      "path": "templates/skill07_model_qa_checklist.csv",
+      "sha256": "62dd3470f64dc4f4d16e717a48226a296fb0a4a3222e3c037f482ee51f6119e0"
+    },
+    {
+      "path": "tests/check_handoff.py",
+      "sha256": "0f9e6dd3bd4371857a38b945453d03d7326ce01000e3fb2ba6d344867adfb9d0"
+    },
+    {
+      "path": "tests/check_lesson_contract.py",
+      "sha256": "a60880e2d0d04b37ca29d81ec8263b1bf7f08b8e55fbcb93f2e1bb309d6ef454"
+    },
+    {
+      "path": "tests/check_scene_contract.py",
+      "sha256": "f8cbb985400a798ca70c3d077dc6090618368496f0263ef61eea70f05489e820"
+    },
+    {
+      "path": "tests/CONSISTENCY_QA_RESULT.json",
+      "sha256": "fb61c181987a5eb41b2520ae7d4f258e4605dc76c3f0f3cd4b952218c33d319a"
+    },
+    {
+      "path": "tests/DEFINITION_QA_RESULT.json",
+      "sha256": "69e9ae82384fd43a463953f2f5e9f33cc9e97648014779d9e01c6e7cf72d8224"
+    },
+    {
+      "path": "tests/DEFINITION_QA_RESULT_V2_4_ARCHIVED.json",
+      "sha256": "9bddf40a91e63f52cbd818bb98317bfc2606f74ca72df91d84d8d8ad3a8b3e2f"
+    },
+    {
+      "path": "tests/test_consistency.py",
+      "sha256": "e29da9c06dd905fbe71aa354bcd1e919404ca255dbe04f3b3cbfd71b898b9e66"
+    },
+    {
+      "path": "tests/test_definitions.py",
+      "sha256": "a66ee0fe553cf0e19848adf520a0c19a36eaa0d7f116ef6adb97b5c0de015a5f"
+    },
+    {
+      "path": "VERSION.json",
+      "sha256": "515b95f1b1a79049f7e82b9e954266ae14d6d88e173abb5e79eb802731b30e0c"
+    }
+  ]
+}

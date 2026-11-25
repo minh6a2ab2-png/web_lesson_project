@@ -1,0 +1,14 @@
+{
+  "version": "2.6-rc1",
+  "name": "Modular Tool-Augmented Workflow",
+  "date": "2026-11-25",
+  "base_version": "2.5",
+  "base_commit": "1984f3e892de5ce50c60ee3b3a2255ae52b447c9",
+  "package_type": "CONSOLIDATED_RC1_DEFINITIONS",
+  "gate_status": "NEEDS_REVIEW",
+  "approval_status": "PENDING",
+  "test_status": "NOT_RUN",
+  "field_status": "NOT_RUN",
+  "production_lesson_rerun": "NOT_RUN",
+  "release": false
+}

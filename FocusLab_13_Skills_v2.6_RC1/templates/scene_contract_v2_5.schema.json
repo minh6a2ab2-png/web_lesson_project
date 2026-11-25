@@ -1,0 +1,854 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FocusLab v2.5 scene contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "lesson_id",
+    "topic_id",
+    "scene_id",
+    "kind",
+    "objective_id",
+    "student_task",
+    "opening_cue",
+    "attention_plan",
+    "layout_mode",
+    "content_blocks",
+    "model_id",
+    "model_action",
+    "completion_gate",
+    "next_scene_id",
+    "state_dependency",
+    "viewport_fallback",
+    "evidence",
+    "display",
+    "ui",
+    "navigation",
+    "question_intents",
+    "model_view_id",
+    "visual_identity",
+    "visual_excellence"
+  ],
+  "properties": {
+    "lesson_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "topic_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scene_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[^:]+$"
+    },
+    "kind": {
+      "enum": [
+        "PROBLEM_CONTEXT",
+        "LEAD_IN",
+        "OBSERVE",
+        "DIAGNOSE",
+        "RECOVERY",
+        "INTRODUCTION",
+        "TEACH",
+        "EXPLORE",
+        "COMPARE",
+        "PRACTISE",
+        "RECALL",
+        "REVIEW",
+        "RECALL_TEACH_BACK",
+        "ASSESS_INTRO",
+        "ASSESS"
+      ]
+    },
+    "objective_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "student_task": {
+      "type": "string",
+      "minLength": 1
+    },
+    "opening_cue": {
+      "type": "string",
+      "minLength": 1
+    },
+    "attention_plan": {
+      "type": "object",
+      "required": [
+        "primary_focus_target",
+        "cue_type",
+        "motion_purpose"
+      ],
+      "properties": {
+        "primary_focus_target": {
+          "type": "string"
+        },
+        "cue_type": {
+          "type": "string"
+        },
+        "motion_purpose": {
+          "type": "string"
+        }
+      }
+    },
+    "layout_mode": {
+      "type": "string"
+    },
+    "content_blocks": {
+      "type": "array",
+      "minItems": 1
+    },
+    "model_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "model_action": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "completion_gate": {
+      "const": "NON_BLOCKING"
+    },
+    "next_scene_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "state_dependency": {
+      "type": "array"
+    },
+    "viewport_fallback": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "navigation": {
+      "type": "object",
+      "required": [
+        "previous_fixed_bottom_left",
+        "next_fixed_bottom_right",
+        "mode",
+        "require_skip_reason",
+        "style",
+        "footer",
+        "count_location"
+      ],
+      "properties": {
+        "previous_fixed_bottom_left": {
+          "const": true
+        },
+        "next_fixed_bottom_right": {
+          "const": true
+        },
+        "mode": {
+          "const": "FREE"
+        },
+        "require_skip_reason": {
+          "const": false
+        },
+        "style": {
+          "const": "FLOATING_FIXED"
+        },
+        "footer": {
+          "const": false
+        },
+        "count_location": {
+          "const": "HEADER_OR_COMPACT"
+        }
+      },
+      "additionalProperties": false
+    },
+    "activity_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "An activity may contain two semantically distinct scenes."
+    },
+    "context_problem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title_vi",
+        "title_en",
+        "setting_vi",
+        "setting_en",
+        "observed_reality_vi",
+        "observed_reality_en",
+        "knowledge_gap_vi",
+        "knowledge_gap_en",
+        "problem_question_vi",
+        "problem_question_en",
+        "next_learning_action_vi",
+        "next_learning_action_en",
+        "source_status",
+        "spoiler_boundary",
+        "illustration_asset_ids"
+      ],
+      "properties": {
+        "title_vi": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title_en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "setting_vi": {
+          "type": "string",
+          "minLength": 1
+        },
+        "setting_en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_reality_vi": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_reality_en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "knowledge_gap_vi": {
+          "type": "string",
+          "minLength": 1
+        },
+        "knowledge_gap_en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "problem_question_vi": {
+          "type": "string",
+          "minLength": 1
+        },
+        "problem_question_en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "next_learning_action_vi": {
+          "type": "string",
+          "minLength": 1
+        },
+        "next_learning_action_en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "spoiler_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "illustration_asset_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "problem_split": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "mode",
+        "reason"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "ONE_SCENE",
+            "TWO_SCENES"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shared_activity_id": {
+          "type": "string"
+        },
+        "next_scene_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_evidence_id": {
+          "type": "string"
+        },
+        "next_scene_evidence_id": {
+          "type": "string"
+        }
+      }
+    },
+    "display": {
+      "type": "object",
+      "required": [
+        "mode",
+        "delay_ms",
+        "auto_advance",
+        "title_highlight"
+      ],
+      "properties": {
+        "mode": {
+          "const": "DIRECT"
+        },
+        "delay_ms": {
+          "const": 0
+        },
+        "auto_advance": {
+          "const": false
+        },
+        "title_highlight": {
+          "type": "object",
+          "required": [
+            "duration_ms",
+            "cycles",
+            "restart_on_rerender",
+            "reduced_motion"
+          ],
+          "properties": {
+            "duration_ms": {
+              "const": 3000
+            },
+            "cycles": {
+              "enum": [
+                1,
+                2
+              ]
+            },
+            "restart_on_rerender": {
+              "const": false
+            },
+            "reduced_motion": {
+              "enum": [
+                "OFF",
+                "STATIC"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "ui": {
+      "type": "object",
+      "required": [
+        "pedagogical_labels",
+        "reflection_forms",
+        "glossary_mode",
+        "core_visible"
+      ],
+      "properties": {
+        "pedagogical_labels": {
+          "const": false
+        },
+        "reflection_forms": {
+          "const": false
+        },
+        "glossary_mode": {
+          "const": "INLINE_KEYWORD"
+        },
+        "core_visible": {
+          "const": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "question_intents": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "PROBLEM",
+          "GUIDING",
+          "CONFIRMATION"
+        ]
+      }
+    },
+    "model_view_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recall": {
+      "type": "object",
+      "required": [
+        "keywords",
+        "questions",
+        "advance",
+        "sequence",
+        "answer_required",
+        "show_answers"
+      ],
+      "properties": {
+        "keywords": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "vi",
+              "en",
+              "cue_asset_id",
+              "cue_alt_vi",
+              "cue_alt_en",
+              "cue_no_answer"
+            ],
+            "properties": {
+              "vi": {
+                "type": "string",
+                "minLength": 1
+              },
+              "en": {
+                "type": "string",
+                "minLength": 1
+              },
+              "cue_asset_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "cue_alt_vi": {
+                "type": "string",
+                "minLength": 1
+              },
+              "cue_alt_en": {
+                "type": "string",
+                "minLength": 1
+              },
+              "cue_no_answer": {
+                "const": true
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "questions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "vi",
+              "en"
+            ],
+            "properties": {
+              "vi": {
+                "type": "string",
+                "minLength": 1
+              },
+              "en": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "advance": {
+          "const": "MANUAL"
+        },
+        "sequence": {
+          "const": "KEYWORDS_THEN_QUESTIONS"
+        },
+        "answer_required": {
+          "const": false
+        },
+        "show_answers": {
+          "const": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "question_formats": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "SINGLE_SELECT",
+          "MULTI_SELECT",
+          "TRUE_FALSE",
+          "MATCHING",
+          "ORDERING",
+          "HOTSPOT",
+          "CLASSIFICATION",
+          "FILL_FROM_OPTIONS"
+        ]
+      }
+    },
+    "visual_identity": {
+      "enum": [
+        "PROBLEM_CONTEXT",
+        "LEAD_IN",
+        "OBSERVE",
+        "DIAGNOSE",
+        "RECOVERY",
+        "INTRODUCTION",
+        "TEACH",
+        "EXPLORE",
+        "COMPARE",
+        "PRACTISE",
+        "RECALL",
+        "REVIEW",
+        "RECALL_TEACH_BACK",
+        "ASSESS_INTRO",
+        "ASSESS"
+      ]
+    },
+    "lead_in": {
+      "type": "object",
+      "required": [
+        "target_scene_id",
+        "copy_vi",
+        "copy_en",
+        "illustration_asset_id",
+        "no_answer_spoiler"
+      ],
+      "properties": {
+        "target_scene_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "copy_vi": {
+          "type": "string",
+          "minLength": 1
+        },
+        "copy_en": {
+          "type": "string",
+          "minLength": 1
+        },
+        "illustration_asset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "no_answer_spoiler": {
+          "const": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "visual_cue_ids",
+        "feedback_after_check",
+        "adaptive_retry",
+        "summary_after_attempt",
+        "answer_required_for_navigation",
+        "initial_question_ids",
+        "retry_map",
+        "retry_limit_per_question",
+        "progress_policy",
+        "summary_policy"
+      ],
+      "properties": {
+        "visual_cue_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "feedback_after_check": {
+          "const": true
+        },
+        "adaptive_retry": {
+          "const": true
+        },
+        "summary_after_attempt": {
+          "const": true
+        },
+        "answer_required_for_navigation": {
+          "const": false
+        },
+        "initial_question_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "retry_map": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "retry_limit_per_question": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "progress_policy": {
+          "const": "ORIGINAL_AND_RETRY_SEPARATE"
+        },
+        "summary_policy": {
+          "const": "AFTER_ORIGINAL_ROUND_ATTEMPTED_OR_SKIPPED"
+        }
+      },
+      "additionalProperties": true
+    },
+    "visual_excellence": {
+      "type": "object",
+      "required": [
+        "layout_id",
+        "art_direction",
+        "background_id",
+        "focal_point",
+        "composition_reason",
+        "asset_refs",
+        "workspace_mode"
+      ],
+      "properties": {
+        "layout_id": {
+          "enum": [
+            "HERO",
+            "ASYMMETRIC_SPLIT",
+            "FULL_BLEED",
+            "BENTO_GRID",
+            "TIMELINE",
+            "COMPARISON",
+            "ANNOTATED_VISUAL",
+            "EDITORIAL",
+            "CENTRAL_DIAGRAM",
+            "SPOTLIGHT",
+            "INTERACTIVE_LAB",
+            "GAME_BOARD",
+            "VISUAL_WORKSPACE"
+          ]
+        },
+        "art_direction": {
+          "enum": [
+            "STORYTELLING",
+            "CINEMATIC",
+            "EDITORIAL",
+            "VISUAL_COMPARISON",
+            "TECHNOLOGY_LAB",
+            "MEMORY_FOCUS",
+            "CHALLENGE_BOARD",
+            "VISUAL_WORKSPACE"
+          ]
+        },
+        "background_id": {
+          "enum": [
+            "CLEAN_WHITE",
+            "SOFT_TINT",
+            "DEEP_TECH",
+            "MEMORY_FOCUS",
+            "WARM_CHALLENGE",
+            "THEMATIC"
+          ]
+        },
+        "focal_point": {
+          "type": "string",
+          "minLength": 1
+        },
+        "composition_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "asset_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "workspace_mode": {
+          "enum": [
+            "NONE",
+            "STATIC_KNOWLEDGE_SPACE",
+            "FREE_DRAWING"
+          ]
+        },
+        "map_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "workspace_mode": {
+                "enum": [
+                  "STATIC_KNOWLEDGE_SPACE",
+                  "FREE_DRAWING"
+                ]
+              }
+            },
+            "required": [
+              "workspace_mode"
+            ]
+          },
+          "then": {
+            "required": [
+              "map_ref"
+            ],
+            "properties": {
+              "layout_id": {
+                "const": "VISUAL_WORKSPACE"
+              },
+              "art_direction": {
+                "const": "VISUAL_WORKSPACE"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "PROBLEM_CONTEXT"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "required": [
+          "activity_id",
+          "context_problem",
+          "problem_split"
+        ],
+        "properties": {
+          "problem_split": {
+            "properties": {
+              "mode": {
+                "const": "TWO_SCENES"
+              }
+            },
+            "required": [
+              "mode",
+              "reason",
+              "shared_activity_id",
+              "next_scene_id",
+              "context_evidence_id",
+              "next_scene_evidence_id"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "RECALL"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "recall"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "model_id": {
+            "type": "string"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "model_view_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "question_intents": {
+            "contains": {
+              "const": "CONFIRMATION"
+            }
+          }
+        },
+        "required": [
+          "question_intents"
+        ]
+      },
+      "then": {
+        "required": [
+          "question_formats"
+        ],
+        "properties": {
+          "question_formats": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "LEAD_IN"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "required": [
+          "lead_in"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "REVIEW"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "then": {
+        "required": [
+          "review"
+        ]
+      }
+    }
+  ],
+  "not": {
+    "required": [
+      "reveal"
+    ]
+  }
+}

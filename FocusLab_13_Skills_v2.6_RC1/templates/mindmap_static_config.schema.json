@@ -1,0 +1,277 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Static Knowledge Space topic config",
+  "type": "object",
+  "required": [
+    "version",
+    "map_id",
+    "topic_id",
+    "mode",
+    "bounds",
+    "nodes",
+    "placement",
+    "idle_motion",
+    "color_by_tier",
+    "nav",
+    "export"
+  ],
+  "properties": {
+    "version": {
+      "const": "2.5"
+    },
+    "map_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "topic_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "const": "STATIC_KNOWLEDGE_SPACE"
+    },
+    "bounds": {
+      "type": "object",
+      "required": [
+        "width",
+        "height",
+        "safe_margin"
+      ],
+      "properties": {
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "height": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "safe_margin": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "tier",
+          "label",
+          "ku_ids",
+          "objective_ids",
+          "visual_type",
+          "alt",
+          "width",
+          "height"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tier": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "label": {
+            "type": "object",
+            "required": [
+              "vi",
+              "en"
+            ],
+            "properties": {
+              "vi": {
+                "type": "string",
+                "minLength": 1
+              },
+              "en": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          },
+          "ku_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "objective_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "visual_type": {
+            "enum": [
+              "ROOT",
+              "OVAL",
+              "TEXT",
+              "ICON",
+              "IMAGE",
+              "SCREENSHOT",
+              "CODE",
+              "URL",
+              "DIAGRAM"
+            ]
+          },
+          "alt": {
+            "type": "object",
+            "required": [
+              "vi",
+              "en"
+            ],
+            "properties": {
+              "vi": {
+                "type": "string",
+                "minLength": 1
+              },
+              "en": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          },
+          "asset_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "parent_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "anchor": {
+            "type": "object",
+            "required": [
+              "x",
+              "y"
+            ],
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "additionalProperties": false
+          },
+          "width": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "height": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "tier": {
+                  "const": 1
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "anchor"
+              ],
+              "properties": {
+                "visual_type": {
+                  "const": "ROOT"
+                }
+              },
+              "not": {
+                "required": [
+                  "parent_id"
+                ]
+              }
+            },
+            "else": {
+              "required": [
+                "parent_id"
+              ],
+              "not": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "anchor"
+                    ]
+                  },
+                  {
+                    "properties": {
+                      "visual_type": {
+                        "const": "ROOT"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "visual_type": {
+                  "enum": [
+                    "ICON",
+                    "IMAGE",
+                    "SCREENSHOT",
+                    "DIAGRAM"
+                  ]
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "asset_id"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "placement": {
+      "const": "STATIC_RANDOM_NONOVERLAP"
+    },
+    "idle_motion": {
+      "const": false
+    },
+    "color_by_tier": {
+      "const": {
+        "1": "BLUE",
+        "2": "YELLOW",
+        "3": "PURPLE"
+      }
+    },
+    "nav": {
+      "const": "FREE_FLOATING_FIXED"
+    },
+    "export": {
+      "const": [
+        "PNG",
+        "JSON"
+      ]
+    },
+    "seed": {
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,14 @@
+Skill,Thay_doi,Dieu_kien_kiem
+01,Nguồn/CORE/support và cue theo KU,Không coi URL chưa đọc là đã kiểm; báo tác động claim thay đổi
+02,"Cụm hoạt động, entry map, Recall–Review và 5 thành phần",planned_scene_key trước Skill09; không nhân hoạt động hoặc thời gian
+03,"Copy VI/EN, câu gốc/tương đương, alt và chống spoil","Cùng mục tiêu/KU/độ khó, dữ kiện khác có nghĩa"
+04,"Rubric theo người học, format và retry hữu hạn",Được bỏ qua; kết quả củng cố không xóa kết quả gốc
+05,Catalog asset role/nguồn/quyền/offline,READY_REFERENCE khác READY_ASSET
+06,Kịch bản entry/Recall/Review và hỗ trợ,Không GV nói trước; không form phản tư
+07,"Asset thật, engine/view, hướng dẫn VI/EN và no-model case","30 tiêu chí giữ lại; N/A có lý do, không file/model giả"
+08,"Giáo án 5512, mapping và handoff version/hash",Không nhận prototype đã QA; không cộng thời gian trùng
+09,"Canonical scene, ID map và kiểm liên scene",Không multitopic alias; runtime projection có hash/mapping
+10,"Nhận diện, preview trạng thái và floating nav","15 kind là hỗ trợ hệ thống, không ép vào bài thật"
+11,State Review và router FREE,Queue không trùng; original/retry/skipped riêng; không tự mastery
+12,Walkthrough và defect routing,Đủ viewport/state; simulation khác học sinh thật
+13,Kiểm độc lập và release theo scope,SELF_REVIEW có giới hạn; điểm không bù blocker

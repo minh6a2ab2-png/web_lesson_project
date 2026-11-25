@@ -1,0 +1,38 @@
+{
+  "scope": "synthetic example",
+  "gates": [
+    {
+      "id": "A_ACQUISITION",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "open_issues": [
+        "No actual resource tested"
+      ]
+    },
+    {
+      "id": "B_VISUAL",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "open_issues": [
+        "No actual resource tested"
+      ]
+    },
+    {
+      "id": "C_MODEL",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "open_issues": [
+        "No actual resource tested"
+      ]
+    },
+    {
+      "id": "D_TECHNICAL",
+      "status": "NOT_RUN",
+      "evidence_refs": [],
+      "open_issues": [
+        "No actual resource tested"
+      ]
+    }
+  ],
+  "gate_status": "NEEDS_REVIEW"
+}

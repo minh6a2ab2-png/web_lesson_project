@@ -1,0 +1,958 @@
+--- v2.2/skills/skill01/SKILL.md
++++ v2.3/skills/skill01/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: content-research-analysis
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 01 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 01 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 01 — Content Research & Analysis (ONE_TOPIC v2.2)
++# SKILL 01 — Content Research & Analysis (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+ Nghiên cứu đúng **một topic**, truy nguyên nguồn, đơn vị kiến thức, tiên quyết và những cơ chế cần mô hình. Không định số scene, hiệu ứng hay chọn phương pháp ở đây.
+@@ -31,13 +31,21 @@
+ 5. Nêu 1–2 tình huống đời thực đặt vấn đề phù hợp người học; gợi ý quan sát bằng công cụ thật ở đâu, và giới hạn của mô phỏng ở đâu.
+ 6. Đánh dấu đoạn có khả năng quá tải nếu trình bày đồng thời và nội dung cần so sánh cùng lúc; chuyển cảnh báo cho Skill02/03, chưa giải bằng cách chia slide tùy tiện.
+ 
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Lập danh sách nội dung bắt buộc (định nghĩa/kết luận/quan hệ) và phần bổ trợ, từ khóa có thể chú giải; phân biệt nguồn SGK và kiến thức mở rộng. Đặt câu hỏi từ bối cảnh tự nhiên, không coi nhãn giao diện là kiến thức.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
++
+ ## Đầu ra bắt buộc
++Bổ sung `01-core-and-support-register.csv`.
++
+ `01-topic-source-register.csv`, `01-ku-prerequisite-graph.json`, `01-knowledge-accuracy-boundaries.md`, `01-core-extension-audit.md`, **mới:** `01-mechanism-candidates.csv`.
+ 
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL01`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 01)
+ Mỗi CORE KU có nguồn/trạng thái; mọi claim cơ chế có đầu vào–đầu ra–giới hạn; prerequisite không bị gán nhầm thành mục tiêu mới; xác nhận một topic duy nhất; chưa chốt số màn/hiệu ứng.
++
++**Gate v2.3:** CORE đủ nguồn, phân tầng nội dung, không phụ thuộc tooltip.
+ 
+ ## Bàn giao và xử lý sai lệch
+ Chuyển bảng KU/nguồn/cơ chế cần minh họa tới Skill02–03; các `MODEL_REQUIRED` phải được Skill05/07 tiếp nhận; nội dung sai quay lại Skill01.
+--- v2.2/skills/skill02/SKILL.md
++++ v2.3/skills/skill02/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: lesson-architecture-assessment
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 02 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 02 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 02 — Lesson Architecture & Assessment (ONE_TOPIC v2.2)
++# SKILL 02 — Lesson Architecture & Assessment (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+ Xác định mạch nhận thức và bằng chứng đạt cho **một topic** gồm các CORE section thật sự cần thiết, không biến mỗi câu SGK thành section/màn.
+@@ -26,19 +26,27 @@
+ 
+ 1. Chốt các `objective_id`, kết quả cần biết/làm/giải thích; nhóm KU thành `section_id` có ý nghĩa nhận thức, không đặt số section chỉ vì mẫu Cookies có 30 màn.
+ 2. Thiết kế trình tự OBSERVE/DIAGNOSE nếu có thiếu nền; nhánh RECOVERY có thể chọn; vị trí **INTRODUCTION** chỉ khi một công cụ/giải pháp cần được gọi tên trước TEACH.
+-3. Đặt blueprint Recall → Review cuối **mỗi CORE section**, gồm minh chứng nói/ghi/vẽ trước feedback; kèm một đánh giá vận dụng độc lập, không gộp mọi câu hỏi thành quiz.
++3. Đặt blueprint Recall → Review cuối mỗi CORE: keyword lần lượt do bấm → câu hỏi gợi nhớ không nộp; Review trắc nghiệm đa dạng và vận dụng độc lập.
+ 4. Vẽ ma trận `objective → knowledge → student task → evidence → Recall/Review/Exit`. Nêu ngưỡng đạt, tình huống sai, lộ trình recovery.
+-5. Tạo ngân sách thời gian bài học, tách **2.5 giây opening reveal là thuộc giao diện** khỏi thời gian học sinh đọc/thao tác **không giới hạn**; không áp kế hoạch 3/6/10 giây hay công thức đọc mỗi đoạn của v2.
++5. Time ledger không có thời gian chờ UI; title highlight 3s song song việc đọc, thời gian đọc/thao tác tự do.
+ 6. Đánh dấu phần thông tin phải quan sát/so sánh đồng thời, nguy cơ không vừa viewport; khi vượt tải, đề xuất ranh giới scene **theo mục tiêu/sản phẩm**, không chia `Part 1/2`.
+ 7. Kiểm tra không có objective nào chỉ có trình chiếu mà không có bằng chứng nhận thức.
+ 
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Mỗi CORE chọn keyword sequence, câu hỏi gợi nhớ và review xác nhận đóng. Lập evidence quan sát ngoài web cho câu hỏi mở; không biến thành điều kiện điều hướng. Xác định các cặp scene/model cần phân biệt hoặc gộp.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
++
+ ## Đầu ra bắt buộc
++Bổ sung `02-direct-learning-blueprint.json`.
++
+ `02-session-architecture.json`, `02-section-and-prerequisite-map.csv`, `02-time-ledger.csv`, `02-assessment-evidence-blueprint.md`, **mới:** `02-one-topic-learning-flow.md`.
+ 
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL02`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 02)
+-Một topic, section CORE có mục tiêu rõ và Recall/Review đầy đủ; không lạm dụng INTRODUCTION; time ledger không dựa trên 30 màn, không nhầm nhịp 2.5 giây với thời gian học.
++Một topic, CORE rõ, đủ Recall→Review, không ép số màn hoặc cộng 3s highlight vào thời gian chờ.
++
++**Gate v2.3:** Có Recall→Review, không biểu mẫu bắt buộc, mục tiêu độc lập.
+ 
+ ## Bàn giao và xử lý sai lệch
+ Bàn giao section/goal/assessment/recovery và các điểm cần so sánh đồng thời cho Skill03–04; cấu trúc học phần phải được người dùng duyệt trước khi tạo hoạt động.
+--- v2.2/skills/skill03/SKILL.md
++++ v2.3/skills/skill03/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: knowledge-content-author
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 03 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 03 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 03 — Knowledge Content Author (ONE_TOPIC v2.2)
++# SKILL 03 — Knowledge Content Author (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+ Viết **đầy đủ kiến thức bắt buộc học sinh phải biết** trước khi lựa chọn phương pháp và scene layout; chuẩn hóa ngữ nghĩa cho từng loại màn.
+@@ -32,13 +32,21 @@
+ 6. Phân tầng `must_show` vs `optional_glossary` vs `teacher_only`; CORE không được giấu bắt buộc trong tooltip/modal, tooltips chỉ phục vụ từ khóa cần chú thích.
+ 7. Chuẩn bị bản VI/EN đầy đủ từ vựng, ví dụ, nhãn mô hình và lời phản hồi; đánh dấu nơi cần thẩm định thuật ngữ. Không tự ép mọi khối thành slide.
+ 
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Viết câu kiến thức hoàn chỉnh theo phong cách SGK, ưu tiên từ khóa in đậm, định nghĩa rõ; role nội bộ core/support/prompt/teacher_only. Không xuất label “Kiến thức cần nhớ”, “Bối cảnh”, “Câu hỏi gợi mở” hoặc bản EN. Tạo inline glossary VI/EN và map keyword, chặn tooltip spoil.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
++
+ ## Đầu ra bắt buộc
++Bổ sung `03-core-content-and-inline-keywords.json`.
++
+ `03-full-knowledge-by-section.md`, `03-knowledge-links.md`, `03-objective-to-knowledge-coverage.csv`, `03-misconception-register.md`, **mới:** `03-model-content-contracts.md`, `03-intro-diagnose-content.md`.
+ 
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL03`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 03)
+ 100% CORE có nội dung đủ giải thích; cơ chế có trạng thái đúng; introduction ngắn; diagnose đúng có kiến thức nền minh họa; modal không che giấu kiến thức CORE; đã đối chiếu VI/EN.
++
++**Gate v2.3:** Tất cả CORE hiện trực tiếp; không nhãn sư phạm, không giấu định nghĩa trong tooltip.
+ 
+ ## Bàn giao và xử lý sai lệch
+ Skill04 quyết định cách học từ nội dung đầy đủ, Skill05 tuyển tài nguyên, Skill07 dùng nội dung làm chuẩn mô hình; sai cơ chế trả về Skill03/01.
+--- v2.2/skills/skill04/SKILL.md
++++ v2.3/skills/skill04/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: learner-profile-fit-activity-design
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 04 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 04 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 04 — Learner Profile Fit & Activity Design (ONE_TOPIC v2.2)
++# SKILL 04 — Learner Profile Fit & Activity Design (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+ Chọn phương pháp theo learner profile và bản chất kiến thức, thiết kế hành vi học sinh với các mô hình tương tác có ý nghĩa; không chỉ chọn animation trang trí.
+@@ -28,17 +28,25 @@
+ 2. Với mỗi section, so sánh ít nhất hai phương án phương pháp theo rubric gốc (nhịp, mức nhận thức, độ khó, phong cách, khả năng có học liệu). Định nghĩa đơn giản: TEACH ngắn; cơ chế: dự đoán→mô hình tương tác→quan sát→giải thích.
+ 3. Thiết kế **OBSERVE** nơi cần đặt câu hỏi trung tâm, **DIAGNOSE** với hai nhánh đúng→modal ôn kiến thức + minh họa / sai→RECOVERY, và **INTRODUCTION** nơi có công cụ giải quyết mới.
+ 4. Với mỗi `MODEL_REQUIRED`, mô tả student action (thay input, gửi request, reset, thử ngoại lệ), learning evidence và câu hỏi dự đoán; interaction phải thay đổi trạng thái, không chỉ phát video.
+-5. Chọn `attention_target` của mỗi hoạt động và loại nhấn mạnh (spotlight / emphasis / motion path / phản hồi); tránh nhiều vùng nhấp nháy. Nhịp nội dung chỉ 2 pha: lời dẫn→2–3s→toàn bộ còn lại, **không** thêm delay tự động mỗi block.
++5. Chọn attention_target; toàn nội dung hiện ngay, tiêu đề highlight 3s, không delay hoặc nhiều vùng nhấp nháy.
+ 6. Thiết kế đủ 5 yếu tố Active Recall, game, mindmap, flashcard, teach-back **khi phục vụ mục tiêu**; gộp hoạt động gần giống để tránh lặp/tràn thời lượng.
+ 7. Lập phân nhánh sai/đúng, cue hỗ trợ, điều kiện kết thúc, không dùng modal để giấu bài học chính; xem xét khi quá tải viewport cần một scene khác có nhiệm vụ riêng.
+ 
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Phân loại PROBLEM/GUIDING/CONFIRMATION. Hai loại đầu chỉ câu hỏi, không nộp; loại xác nhận chọn single/multi/true-false/matching/order/hotspot/classification/fill-from-options. Recall từ khóa từng lượt rồi câu hỏi; game, mindmap thẻ, flashcard, teach-back miệng.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
++
+ ## Đầu ra bắt buộc
++Bổ sung `04-question-intent-and-interaction-map.csv`.
++
+ `04-method-rubric-by-section.csv`, `04-activity-and-assistance-plan.md`, `04-learner-load-map.md`, `04-recall-review-method-design.json`, **mới:** `04-model-interaction-activity-map.csv`, `04-attention-strategy.md`.
+ 
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL04`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 04)
+ Có lý do chọn phương pháp, mỗi mô hình cơ chế có hành động nhận thức; OBSERVE/DIAGNOSE/INTRODUCTION khác mục đích; không lạm dụng IBL; không phân rã thành màn chỉ vì layout.
++
++**Gate v2.3:** Đa dạng quiz; không reflection form, không ép hoàn thành mới Next.
+ 
+ ## Bàn giao và xử lý sai lệch
+ Chuyển hoạt động, tương tác và evidence cho Skill05–06, asset prototype Skill07; người dùng duyệt hoạt động trước khi xây dựng website.
+--- v2.2/skills/skill05/SKILL.md
++++ v2.3/skills/skill05/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: learning-resource-curator
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 05 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 05 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 05 — Learning Resource Curator (ONE_TOPIC v2.2)
++# SKILL 05 — Learning Resource Curator (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+ Tuyển chọn/thẩm định học liệu cần có cho một nội dung, gắn nhu cầu mô hình tương tác và tính chính xác nguồn; chưa được tự nhận đã sản xuất tài nguyên.
+@@ -32,13 +32,21 @@
+ 6. Dự kiến offline fallback, alt/caption/transcript VI/EN và thiết bị người học; tách key giáo viên/EXIT khỏi học liệu học sinh.
+ 7. Chấm readiness `READY_REFERENCE/READY_ASSET/PROTOTYPE/SPEC_ONLY/BLOCKED` trung thực; lập kế hoạch sản xuất Skill07 và các điều kiện test.
+ 
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Tuyển tài nguyên cho khối CORE, minh họa không nhãn thừa, thẻ keyword và quiz đóng; phân biệt tài liệu đáp án giáo viên với feedback luyện tập. Mỗi model view có asset/role riêng; không nhầm reuse engine với reuse scene.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
++
+ ## Đầu ra bắt buộc
++Bổ sung `05-direct-learning-resource-map.csv`.
++
+ `05-source-resource-catalog.csv`, `05-reusable-asset-map.json`, `05-real-browser-and-fallback.md`, `05-license-and-accuracy-register.md`, **mới:** `05-model-resource-requirements.json`, `05-diagnose-intro-assets.csv`.
+ 
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL05`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 05)
+ Mọi nội dung CORE có nguồn/tài nguyên hoặc phương án thay thế; mọi model_required có asset requirement với controls và test cases; không nhầm URL tham khảo hoặc storyboard với file đã tạo.
++
++**Gate v2.3:** Có nguồn, alt VI/EN, tài nguyên theo đúng mục tiêu riêng.
+ 
+ ## Bàn giao và xử lý sai lệch
+ Skill07 thực sự sản xuất assets và prototype theo hợp đồng; Skill06 mô tả tương tác; thiếu asset CORE không đánh dấu PASS.
+--- v2.2/skills/skill06/SKILL.md
++++ v2.3/skills/skill06/SKILL.md
+@@ -1,16 +1,16 @@
+ ---
+ name: teaching-scenario-writer
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 06 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 06 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 06 — Teaching Scenario Writer (ONE_TOPIC v2.2)
++# SKILL 06 — Teaching Scenario Writer (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+-Chuyển nội dung và hoạt động thành kịch bản dạy 1:1/tự học có nhịp hai pha rõ ràng, không để GV nói hết hoặc để học sinh bị động xem animation.
++Chuyển nội dung và hoạt động thành kịch bản dạy 1:1/tự học trực tiếp, không bắt nhập suy nghĩ, không để GV nói hết.
+ 
+ > **Bắt buộc:** Trước khi chạy đọc `../../policy/ONE_TOPIC_MASTER_RULES.md` và `../../policy/SCENE_KIND_REFERENCE.md`. Khi xung đột với MT2 về multi-topic, part/subpage hoặc nhịp adaptive v2, áp dụng policy ONE_TOPIC. Bản nguồn đầy đủ được lưu trong `../../legacy/skill06_MT2_ORIGINAL.md` để đối chiếu.
+ 
+@@ -19,26 +19,34 @@
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
+ ### Kịch bản lời dẫn hai màn đặt vấn đề
+-- Khi chọn `TWO_SCENES`, viết **hai opening cue khác nhau**: cảnh A `PROBLEM_CONTEXT` = tiêu đề/lời dẫn + sau 2–3s hiển thị đồng thời bối cảnh, minh họa, thực trạng và câu hỏi; cảnh B `OBSERVE`/hoạt động phù hợp = nhiệm vụ quan sát hoặc hành động tạo **bằng chứng mới**.
++- TWO_SCENES: A `PROBLEM_CONTEXT` có bối cảnh và câu hỏi hiện ngay; B có nhiệm vụ quan sát mới. Không nhãn sư phạm hoặc form phản tư.
+ - Đối với ACT mở đầu: bốn bước 5512 vẫn nằm trong **một `activity_id`**; nêu rõ chỗ HS phát hiện vấn đề trước khi Next và chỗ HS quan sát/xác lập giả thuyết sau Next; GV **không cung cấp đáp án trước** khi quan sát.
+-- `Next` là điều hướng tới một **scene độc lập**, không phải Next nội bộ Part 2 của một slide tràn. Học sinh có quyền quay lại mà không mất bối cảnh hoặc dữ liệu tự làm. Chuyển cảnh **bằng thao tác**, không tự sau 2.5s.
++- Next chuyển scene độc lập do HS/GV chủ động; không yêu cầu nộp, không tự chuyển.
+ - Đầu ra bổ sung `06-context-to-observation-script.md`: kịch bản VI/EN, câu dẫn, đáp án dự kiến được giữ phía giáo viên, evidence riêng và tín hiệu chuyển tiếp.
+ 
+ 1. Mỗi hoạt động viết đủ 4 bước 5512: chuyển giao → HS tự làm → báo cáo/thảo luận → GV chuẩn hóa ngắn; kịch bản GV/HS tách rõ và có đáp án mong đợi riêng.
+-2. Cho **mỗi màn dự kiến** soạn đúng một `opening_cue` (tiêu đề/câu hỏi/lời dẫn), đủ ngắn để học sinh định hướng; sau 2.5s **full reveal ALL**, không tự xuất hiện kiến thức theo từng thẻ.
++2. Mỗi scene có tiêu đề/lời dẫn rõ, toàn bộ nội dung hợp lệ hiện ngay; highlight title 3s.
+ 3. OBSERVE: câu hỏi tình huống ở trọng tâm; mô tả hiện tượng và thao tác quan sát. DIAGNOSE đúng: mở recap modal + minh họa, sai: chuyển Recovery và thử lại. INTRODUCTION: giới thiệu ngắn tên giải pháp/công cụ trước khi TEACH.
+ 4. Với nội dung cơ chế, ghi **lời dự đoán, thao tác mô hình, câu hỏi nhìn vào state, ví dụ ngoại lệ, sản phẩm giải thích**; tránh mô hình chỉ làm nền chuyển động.
+-5. Kịch bản giáo viên ghi chỗ cần dừng nói, không ép học sinh đọc theo đồng hồ; khoảng 2.5s là **hiệu ứng dẫn nhập**, không phải giới hạn thời gian tư duy. Tính thời gian thao tác thực riêng.
++5. Kịch bản dừng theo nhu cầu học sinh, không timer đọc; highlight 3s không khóa thao tác.
+ 6. Phân luồng Recall → Review cuối mỗi section CORE, phản hồi khi sai, teach-back/mindmap/flashcards/game hợp lý; EXIT độc lập và không đưa đáp án lên website học sinh.
+-7. Nêu tình huống khi học sinh bật “Tắt animation · Hiện tất cả”: nội dung đầy đủ vẫn dạy được, teacher cues không dựa vào việc animation chạy xong.
++7. Khi giảm/tắt chuyển động, nội dung vẫn hiển thị đầy đủ và model vẫn hoạt động; teacher cues không phụ thuộc animation.
++
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Viết lời dẫn thành câu văn tự nhiên, bỏ nhãn sư phạm trên UI. Soạn từng keyword Recall rồi tập câu hỏi không đáp án; gợi mở miệng tùy chọn, không ô ghi nhận. Viết phản hồi quiz theo đáp án và misconception.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
+ 
+ ## Đầu ra bắt buộc
++Bổ sung `06-keyword-recall-and-question-script.json`.
++
+ `06-session-teaching-script.md`, `06-bridge-prompts-and-questions.md`, `06-activity-5512-implementation.md`, `06-recall-quiz-feedback-script.json`, **mới:** `06-scene-opening-cues.json`, `06-model-facilitation-script.md`.
+ 
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL06`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 06)
+-Mỗi scene có opening và hành vi pha 2; kịch bản không tự chuyển màn, không kéo dài đọc bằng timer, kỹ thuật model có nhiệm vụ rõ; giáo viên không độc thoại; Recall/Review đúng nhịp.
++Mỗi scene có title/direct display, nhiệm vụ model rõ; Recall keyword→question, không form bắt buộc.
++
++**Gate v2.3:** Không nhập suy nghĩ; câu hỏi rõ, Recall đúng thứ tự, direct display.
+ 
+ ## Bàn giao và xử lý sai lệch
+ Skill07 sản xuất học liệu theo script; Skill08 chuyển hóa giáo án; Skill09 dùng `opening_cues` chuẩn để tạo `scene_contract`.
+--- v2.2/skills/skill07/SKILL.md
++++ v2.3/skills/skill07/SKILL.md
+@@ -1,6 +1,6 @@
+ ---
+ name: activity-resource-designer
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 07 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 07 + FocusLab v1/v3 + ONE_VIEWPORT v1.5 + Model Design & Interaction Standard v1.0
+@@ -8,7 +8,7 @@
+ model_policy: ../../policy/SKILL07_MODEL_DESIGN_STANDARD.md
+ ---
+ 
+-# SKILL 07 — Activity Resource Designer / Interactive Model Producer (ONE_TOPIC v2.2)
++# SKILL 07 — Activity Resource Designer / Interactive Model Producer (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+ 
+@@ -59,7 +59,7 @@
+ 
+ ### Bước 07.4 — Motion Contract & phân bổ thời gian
+ 
+-- **Hai lớp tách riêng:** (A) màn học: `opening_cue` hiện ngay; sau `opening_pause_s=2.5s` (tùy chọn 2–3s), hiển thị **đồng thời toàn bộ nội dung được phép**; (B) mô hình: **không tự chạy** trước thao tác, chỉ chuyển động khi học sinh chọn Step/Play/thay dữ liệu có chủ đích. `Hiện tất cả ngay` bỏ chờ lớp A **không kích hoạt B, không mở lời giải**.
++- **Hai lớp tách riêng:** màn học hiển thị ngay và title highlight 3s; model chỉ chạy khi được điều khiển; tắt motion không đổi state hay lộ đáp án.
+ - Độ trễ UI **gợi ý** 120–250ms; di chuyển token **gợi ý** 300–800ms/đoạn. Không dùng khoảng chờ biến thiên theo độ dài chữ, không dựng chuỗi reveal lần lượt. Các thời lượng là giá trị thử, **không khóa tương tác hoặc thời gian đọc**.
+ - Mỗi bước của mô hình **giữ state + nhãn cho đến bước tiếp theo**; step tiến do học sinh chủ động, Play cả chuỗi chỉ khi học sinh bật riêng. Chỉ một focal target mỗi bước; cấm chớp liên tục, rung chữ, zoom xoay vô cớ hoặc nhiều animation gây mất hướng.
+ - Có `prefers-reduced-motion` cùng công tắc Giảm/Tắt chuyển động: **cùng transition/state/output nhưng hiển thị lập tức**. Animation không che văn bản, không khiến nội dung nhảy layout hoặc token chồng lên nhãn. Hiệu ứng cần kéo dài/lặp không thiết yếu phải có Pause/Stop/Hide.
+@@ -88,13 +88,19 @@
+ - Student bundle **không** chứa teacher key hoặc đáp án ẩn; rà soát bundle ZIP sau đóng gói. Không nhầm `TESTED_AUTOMATED` với `VERIFIED_IN_PRACTICE`.
+ - Áp dụng checklist **30 tiêu chí** tại `../../templates/skill07_model_qa_checklist.csv`; lỗi P0 → `BLOCKED`/`NEEDS_REVIEW`, **không được nâng READY_ASSET**. Chấm rubric 100 = chính xác 30 + tương tác 30 + hình/hiệu ứng 20 + khả dụng/offline 20; ngưỡng đề xuất ≥85 **và không có P0 lỗi**. Điểm rubric là tiêu chuẩn nội bộ, không thay được kiểm thử người học.
+ 
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Mỗi model_id có model_view_id, điều kiện, controls, dữ liệu và bằng chứng riêng theo scene; DNS 09 MISS-only, 10 comparison HIT/MISS/EXPIRED. Kiểm view thực sự khác và có kết luận CORE chuẩn hóa ở màn học. Không buộc hoàn tất model trước Next.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
++
+ ## Đầu ra bắt buộc
++Bổ sung `07-model-view-contracts.json`.
++
+ 
+ - `07-asset-manifest.json`: mỗi `asset_id`/`model_id`, `path`, `mime`, SHA-256, source/license, VI/EN alt/caption/transcript, offline fallback, status, last_test, test_status, open_issues.
+ - `07-student-media/`: file học liệu chạy/đọc độc lập được phép phát cho học sinh, không có teacher key/đáp án bị khóa.
+ - `07-teacher-key/`: lời giải/tài liệu kiểm tra độc lập với gói học sinh.
+ - `07-interactive-models/`: source HTML/CSS/JS/SVG, `model_contract.json` cho **từng** model, mô tả limitation, runtime status rõ ràng.
+-- `07-model-test-cases.json` **và** `07-model-qa-checklist.csv`: test bình thường, sai/biên, motion on/off, hiện tất cả, keyboard, viewport, offline; mỗi tiêu chí `PASS/FAIL/NOT_RUN` + evidence path.
++- `07-model-test-cases.json` và `07-model-qa-checklist.csv`: test state, motion on/off, direct display, keyboard, viewport, offline; PASS/FAIL/NOT_RUN + evidence.
+ - `07-test-evidence.json`: case ID, dữ liệu test, expected/actual, result, browser/viewport/mode/time, screenshot/trace/video file, giới hạn kiểm tra.
+ - `07-media-viewport-spec.md`: vùng thiết kế, cỡ chữ, actor size, CTA, desktop no-scroll và mobile/zoom fallback.
+ - README VI/EN về cách mở, yêu cầu runtime, tài nguyên ngoại tuyến, license/nguồn và trạng thái từng asset.
+@@ -102,11 +108,13 @@
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 07)
+ 
+-**BLOCKED (P0):** (a) mô hình CORE chỉ là ảnh/hiệu ứng trang trí; (b) sai payload/direction/state/invariant; (c) không đổi state theo thao tác hoặc không thử lại; (d) motion off/instant reveal làm sai state, lộ đáp án, hoặc khóa thao tác; (e) không kiểm soát keyboard/focus hoặc mất nội dung CORE vì overflow; (f) student bundle chứa teacher key; (g) khẳng định browser/offline/motion PASS khi thiếu bằng chứng; (h) thiếu model bắt buộc mà không đánh dấu BLOCKED.
++**BLOCKED (P0):** mô hình CORE giả tương tác, sai payload/direction/state, không đổi state/không thử lại, motion off làm sai state hoặc lộ đáp án, mất nội dung CORE hoặc điều khiển không dùng được.
+ 
+ **READY_ASSET** chỉ khi file thật và tất cả tiêu chí P0 áp dụng đạt, có bằng chứng; P1 cần xử lý/ghi ngoại lệ; ngưỡng rubric tham chiếu ≥85. `PROTOTYPE` là mô hình đã chạy nhánh cơ bản nhưng chưa đủ kiểm chứng; `SPEC_ONLY` là mới mô tả; `BLOCKED` là lỗi ngăn tích hợp; `READY_REFERENCE` dành cho tài liệu tham khảo. `VERIFIED_IN_PRACTICE` chỉ sau kiểm tra với học sinh/thiết bị thật, không suy từ browser test.
+ 
+ Không đạt Gate 07 thì **không tự chuyển sang Skill08** như thể toàn bộ học liệu đã hoàn thành. Có thể bàn giao prototype để xem thử khi ghi rõ rủi ro và cổng chặn.
++
++**Gate v2.3:** View và state đúng, motion độc lập, không duplicate scene.
+ 
+ ## Bàn giao và xử lý sai lệch
+ 
+@@ -119,5 +127,5 @@
+ ## Quy tắc chung không được bỏ qua
+ 
+ - Một topic ở một lần chạy; mỗi CORE có cặp Recall → Review đúng thứ tự; đủ 5 yếu tố ghi nhớ khi thực sự phục vụ mục tiêu. Ảnh động phải có giá trị sư phạm, không kéo dài thời gian đọc hoặc buộc đợi.
+-- Scene 2 pha chỉ reveal những gì đã được phép; không mở teacher feedback/answers và không tự chạy model. Một viewport desktop không cuộn/không cắt chữ và Previous/Next fixed là trách nhiệm liên Skill09–13; Skill07 phải bàn giao mô hình đủ responsive để đáp ứng.
++- Direct display chỉ hiện nội dung hợp lệ; không mở teacher key hay tự chạy model. Một viewport desktop và fixed nav là trách nhiệm liên Skill09–13.
+ - Mọi tài nguyên nhận trạng thái thật; mỗi asset có checksum/nguồn/QA; báo cáo trung thực điều gì chưa được thử. Chỉ chuyển Skill tiếp theo sau người dùng duyệt kết quả.
+--- v2.2/skills/skill08/SKILL.md
++++ v2.3/skills/skill08/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: cv5512-lesson-plan-writer
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 08 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 08 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 08 — CV5512 Lesson Plan Writer (ONE_TOPIC v2.2)
++# SKILL 08 — CV5512 Lesson Plan Writer (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+ Chuẩn hóa kế hoạch dạy học **một nội dung** theo Công văn 5512, nêu cụ thể phương tiện tương tác và bằng chứng đạt chứ không chỉ đặt tên mô hình.
+@@ -20,7 +20,7 @@
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
+ ### Chuyển bối cảnh vào kế hoạch bài dạy và handoff
+ - Hoạt động đặt vấn đề của giáo án ghi rõ **tiêu đề, bối cảnh thực tế, thực trạng/nhu cầu, câu hỏi vấn đề, minh họa, sản phẩm của HS và nhiệm vụ quan sát tiếp theo**; không chỉ ghi một câu hỏi mở đầu.
+-- Nếu chọn hai scene, **không tăng số hoạt động 5512**: ví dụ `ACT-DNS-01` vẫn một hoạt động nhưng có `PROBLEM_CONTEXT → OBSERVE`. Ghi hai minh chứng riêng trong hoạt động và điều kiện Next, thời gian cho toàn hoạt động không bị nhân đôi.
++- Hai scene `PROBLEM_CONTEXT → OBSERVE` vẫn một hoạt động 5512; hai nhiệm vụ và bằng chứng quan sát riêng, Next không bị khóa.
+ - Handoff tới Skill09 phải có `context_scene_option`, `split_reason`, `context_asset_id`, `context_evidence`, `followup_evidence`, `spoiler_boundary`, `linked_activity_id`; chưa quyết định số scene nếu chưa được duyệt.
+ - Đầu ra bổ sung `08-problem-context-handoff.json` với quyết định ưu tiên, tình trạng tài nguyên minh họa và yêu cầu thiết kế hai scene nếu có giá trị sư phạm.
+ 
+@@ -28,17 +28,25 @@
+ 2. Tiến trình mở đầu→hình thành kiến thức→luyện tập→vận dụng, có Recall/Review của section CORE và EXIT; từng hoạt động có 4 bước giao nhiệm vụ–thực hiện–báo cáo–kết luận.
+ 3. Mô tả điểm đặt mô hình: tên `model_id`, thao tác HS, câu dự đoán, dấu hiệu hiểu, thời điểm GV chuẩn hóa, fallback nếu mất mạng hoặc disable motion.
+ 4. OBSERVE, DIAGNOSE/RECOVERY, INTRODUCTION nếu cần được nối ý nghĩa, không phát sinh hoạt động trùng lặp để chỉ tăng màn.
+-5. Với kịch bản web: `opening_cue` hiện đầu, sau 2–3s toàn nội dung cùng lúc, nút hiện ngay luôn có, HS được tự thao tác/đọc không giới hạn; một nội dung quá dài thì giáo án cho mục tiêu của scene mới.
++5. Web hiển thị trực tiếp, title highlight 3s; HS đọc/thao tác tự do. Nội dung dài phân cảnh theo mục tiêu riêng.
+ 6. Kiểm ledger thời gian và trạng thái `PROPOSED/USER_APPROVED`, kế hoạch dạy trực tiếp 1:1 và tự học, mô hình thay thế, phần teacher-only tách biệt.
+ 7. Ghi các lựa chọn đánh giá: trò chơi, mindmap, flashcard, learning by teaching và cách đo hiệu quả mà không lạm dụng số lượng hoạt động.
+ 
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Giữ 5512 trong giáo án giáo viên, không render tiêu đề bốn bước hay nhãn bối cảnh/kiến thức cần nhớ. Sản phẩm có thể là quan sát/giải thích miệng hoặc quiz đóng, không yêu cầu nộp trên website.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
++
+ ## Đầu ra bắt buộc
++Bổ sung `08-direct-learning-handoff.json`.
++
+ `08-one-session-cv5512-lesson-plan.md`, `08-session-time-and-activity-table.csv`, `08-skill09-handoff.json`, `08-preflight-checklist.md`, **mới:** `08-model-and-scene-placement.csv`.
+ 
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL08`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 08)
+-Có đủ 4 bước cho mọi hoạt động, mục tiêu/sản phẩm/kiểm tra, ưu tiên người học, mô hình gắn hoạt động chứ không trang trí; không bỏ Recall/Review; tài liệu không biến timer 2.5 giây thành giới hạn học.
++Có đủ 4 bước cho mọi hoạt động, mục tiêu/sản phẩm/kiểm tra, ưu tiên người học, mô hình gắn hoạt động chứ không trang trí; không bỏ Recall/Review; không có thời gian chờ giao diện.
++
++**Gate v2.3:** Giáo án đủ 4 bước, learner UI không có form và không khóa Next.
+ 
+ ## Bàn giao và xử lý sai lệch
+ Skill09 dùng handoff mapping activities/objectives/models/intro/diagnose; thiết kế màn không được làm mất các nhiệm vụ GV/HS đã được duyệt.
+--- v2.2/skills/skill09/SKILL.md
++++ v2.3/skills/skill09/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: interactive-website-architect
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 09 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 09 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 09 — Interactive Website Architect (ONE_TOPIC v2.2)
++# SKILL 09 — Interactive Website Architect (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+ Thiết kế kiến trúc **scene độc lập theo mục tiêu học**, đủ 14 loại nhận thức, hợp đồng trạng thái, model/CTA/navigation. Không làm thiết kế màu hoặc code ở bước này.
+@@ -22,30 +22,38 @@
+ - **Scene taxonomy hiện có 14 loại**: thêm `PROBLEM_CONTEXT` trước OBSERVE; **không** hiểu là 14 Skills hay buộc 14 màn trong một bài. Mỗi scene vẫn có một `scene_id` ổn định.
+ - Trước phân cảnh, tạo bảng chọn `ONE_SCENE` vs `TWO_SCENES` dựa trên nhiệm vụ nhận thức độc lập: A hiểu bối cảnh, nêu nhu cầu/vấn đề; B quan sát/thao tác, thu bằng chứng hoặc giả thuyết. Cấm tách vì chỉ để giảm chữ hoặc đặt `part_id`.
+ - Với `PROBLEM_CONTEXT`, điền `context_problem` theo schema (VI/EN, bối cảnh, hiện trạng, gap, vấn đề, hình minh họa, giới hạn không hé đáp án), `problem_split` có reason, `objective_id`, `activity_id`, evidence, Next tới scene B. OBSERVE kế tiếp phải có `observed_event`, `learner_action`, `independent_evidence`, không sao chép lại A.
+-- `Next` thật (fixed footer) do HS/GV chủ động bấm; không tự chuyển khi hết pha 2.5s. Một hoạt động có thể trải qua 2 scene nhưng mỗi scene có **mục tiêu/sản phẩm riêng**; lưu guard/progress theo scene_id.
++- Next do HS/GV chủ động, không khóa do chưa nộp; A/B khác nhiệm vụ và bằng chứng.
+ - Đầu ra bổ sung `09-problem-context-split-audit.csv` và 2 scene contracts mẫu, kiểm độc lập viewport & không spoil. Cấm tạo INTRODUCTION ngay sau A nếu tên giải pháp còn đang cần HS dự đoán trước.
+ 
+ 1. Tạo `09-one-topic-scene-contract.json`: một `topic_id`, scene IDs duy nhất, một `scene.kind` trong **14 loại**; scene.kind khác layout_mode. INTRODUCTION có điều kiện; không mặc định 30/31 màn.
+-2. Với **mỗi scene** khai báo `objective_id`, `student_task`, `opening_cue`, `attention_plan`, `content_blocks`, `layout_mode`, `interaction_contract`, `evidence`, `completion_gate`, `next_scene_id`, `state_dependency`, `viewport_fallback` theo template JSON.
+-3. Cấu hình `reveal` = `{opening_pause_s:2.5, full_reveal_group:'ALL', staggered:false, instant_reveal:true, auto_advance:false}`; không chờ theo số chữ, không thêm lớp reveal khác khi không có tương tác người học.
++2. Mỗi scene khai báo objective/task/opening_cue/attention_plan/display/content_blocks/layout/interaction/evidence/next/state_dependency/viewport_fallback; completion_gate=NON_BLOCKING.
++3. Cấu hình display.mode=DIRECT, delay_ms=0, title_highlight 3000ms (1–2 cycles), no auto advance/restart; không dùng reveal cũ.
+ 4. Xây trình tự PROBLEM_CONTEXT (khi được duyệt) → OBSERVE → DIAGNOSE/(RECOVERY) → INTRODUCTION khi có công cụ → TEACH/EXPLORE/COMPARE/PRACTISE → RECALL→REVIEW theo CORE → vận dụng/EXIT; khác biệt theo ý nghĩa chứ không phải chuỗi máy móc.
+ 5. Với các cảnh cơ chế, `model_id`, state transitions, mô hình inline và **một CTA riêng có nhãn rõ**; không lập song song nút mở mô hình trùng tác dụng. TEACH và EXPLORE không được dùng mô hình giả tĩnh.
+-6. Thiết kế shell một viewport với Previous fixed trái và Next fixed phải, TOC/resume/keyboard/deeplink cùng **navigation guard**; không có `part_id`, subslide hay `Phần 1/2` vì tràn layout. Nếu quá tải, thay đổi tổ chức/chia thành scene **mới có mục tiêu/sản phẩm riêng**.
++6. Shell một viewport, Previous/Next fixed, router thống nhất không khóa; không part_id hoặc subslide chữa tràn.
+ 7. DIAGNOSE đúng yêu cầu modal kiến thức nền + minh họa, sai Recovery. Tooltips hover tự ẩn, focus/tap tương đương; Recall/Review/Assess không lộ key.
+ 8. Truy vết `scene_id→objective→activity→asset/model→evidence→next`, chỉ đánh dấu mastery từ evidence thực.
+ 
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Dùng schema v2.3: display, ui, navigation.mode=FREE, completion_gate=NON_BLOCKING, question_intents, recall (manual keyword→questions), model_view_id. Audit mọi cặp scene dùng model chung, đặc biệt DNS 09/10; không render title khác với nội dung trùng.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
++
+ ## Đầu ra bắt buộc
++Bổ sung `09-direct-learning-duplicate-audit.csv`.
++
+ **Mới (canonical ONE_TOPIC):** `09-one-topic-scene-contract.json`, `09-navigation-graph.json`, `09-learner-evidence-state-model.md`, `09-qa-traceability.json`, `09-scene-kind-and-cta-matrix.csv`. Tên cũ MT2 `09-multitopic-scene-contract.json` là historical alias, **không** tạo output active.
+ 
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL09`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 09)
+-Có đầy đủ 14 loại trong enum (không nhất thiết sử dụng đủ 13 trong một bài), no-part/no-duplicate CTA, model contract bắt buộc, guard đúng, một viewport, fixed nav, per-scene full reveal spec và evidence.
++14 loại enum, no-part/no-duplicate CTA, model view riêng, direct display, fixed nav, điều hướng tự do, evidence không tự mastery.
++
++**Gate v2.3:** Schema và audit khác biệt đạt; nav tự do, no labels/no reflection form.
+ 
+ ## Bàn giao và xử lý sai lệch
+-Skill10 nhận contract và duyệt từng scene trước khi vẽ; Skill11 nhận state/guard từ Skill09; nếu màn không vừa, trả Skill02/04/09 để thiết kế lại, không chữa bằng font siêu nhỏ.
++Skill10 nhận contract và duyệt từng scene trước khi vẽ; Skill11 nhận state/router tự do từ Skill09; nếu màn không vừa, trả Skill02/04/09 để thiết kế lại, không chữa bằng font siêu nhỏ.
+ 
+-> **Ngoại lệ reveal:** “ALL” chỉ là tất cả khối học sinh có quyền nhìn thấy **trước khi trả lời**; không tự lộ key, feedback, modal DIAGNOSE chưa kích hoạt, lời giải RECALL, trạng thái tương lai của mô hình.
++> **Ngoại lệ Direct Display:** “ALL” chỉ là tất cả khối học sinh có quyền nhìn thấy **trước khi trả lời**; không tự lộ key, feedback, modal DIAGNOSE chưa kích hoạt, lời giải RECALL, trạng thái tương lai của mô hình.
+ 
+ ## Quy tắc chung không được bỏ qua
+ - ONE_TOPIC, `topic_id` duy nhất, không hardcode số màn/time của Cookies; giữ mục tiêu và thứ tự `Recall → Review` theo CORE section.
+--- v2.2/skills/skill10/SKILL.md
++++ v2.3/skills/skill10/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: learning-experience-visual-designer
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 10 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 10 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 10 — Learning Experience Visual Designer (ONE_TOPIC v2.2)
++# SKILL 10 — Learning Experience Visual Designer (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+ Thiết kế màn học như **slide thuyết trình chuyên nghiệp một viewport**: nhìn được ngay mục tiêu, văn bản đủ lớn, chú ý thị giác có chủ đích, model đủ diện tích, fixed navigation.
+@@ -20,27 +20,35 @@
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
+ ### Bố cục PROBLEM_CONTEXT như slide kể chuyện có vấn đề
+ - **Một viewport, không cuộn desktop**: vùng đầu = tiêu đề + câu dẫn; vùng chính = bối cảnh/thực trạng đặt cạnh **hình minh họa đủ lớn**; vùng câu hỏi đặt vấn đề là điểm chú ý rõ. Không để câu hỏi chìm dưới đoạn chữ.
+-- **Pha 1:** tiêu đề và lời dẫn ngắn hiện ngay. **Sau 2–3s pha 2:** toàn bộ bối cảnh, hình minh họa và câu hỏi hiển thị **cùng lúc**, không lần lượt và không tự Next; riêng phần trước khi phát đáp án vẫn khóa. Có nút `Tắt animation · Hiện tất cả`.
++- Hiện ngay bối cảnh, minh họa, câu hỏi; title highlight 3s, không nhãn phân loại hay nút hiện tất cả.
+ - Khoảng trắng và hệ thống chữ cho phép đọc nhanh: bối cảnh ngắn, từ ngữ cụ thể, nổi bật một câu hỏi, ít chrome. Ưu tiên crop/cô đọng hợp lý; không nhỏ font, không giấu thông tin cốt lõi trong popup hoặc cắt bằng `overflow:hidden`.
+ - Dựng preview cả hai scene A/B ở 1280×720 và 1366×768 (cộng các viewport chuẩn); `Previous` fixed trái dưới, `Next` fixed phải dưới, không đổi vị trí giữa các scene và không che minh họa.
+-- Đầu ra bổ sung `10-problem-context-layout-review.md`: ngân sách chiều cao, trọng tâm, kiểm chứng VI/EN, hình trước/sau reveal và khả năng đọc hiểu.
++- `10-problem-context-layout-review.md`: ngân sách chiều cao, VI/EN, ảnh t=0 và ≥3s, nội dung đọc rõ.
+ 
+ 1. Chọn đúng layout theo `scene.kind` và nội dung (OBSERVE spotlight hỏi, DIAGNOSE chọn đáp án, TEACH content+model, COMPARE đồng thời...). Chỉ **một focal point chính** và tín hiệu thị giác có ý nghĩa; tránh màu mè, nhấp nháy, animation lặp.
+-2. Vẽ **hai trạng thái cùng bố cục**: pha 1 chỉ `opening_cue`; pha 2 đồng thời tất cả khối còn lại sau 2–3s. Giữ placeholder/kích thước để không tạo layout shift; có bản `instant_reveal` không phụ thuộc animation.
++2. Vẽ trạng thái t=0 và ≥3s với cùng nội dung đầy đủ, chỉ màu title thay đổi; reduced motion và không layout shift.
+ 3. Tính ngân sách chiều cao theo visual viewport: header + opening cue + main + **fixed footer** + safe areas. Bảo đảm `NO_SCROLL ∧ NO_CLIP ∧ READABLE_TEXT ∧ FIXED_NAV` ở 1280×720, 1366×768, 1600×900, 1920×1080; thử thêm 900×600, 390×844, 360×640, 640×360.
+ 4. **Previous fixed phía dưới trái, Next fixed dưới phải**, chỉ số ở giữa; không để footer che nút mô hình, bàn phím, feedback, quiz, modal. Nút tiếp không thay đổi tọa độ khi tải nội dung/đổi scene.
+ 5. Sắp xếp theo quy trình: loại bỏ chrome thừa → bố cục 1/2 cột → cô đọng thông tin phụ → popup/tooltip **tùy chọn** → scene mới khi có nhiệm vụ học khác; **không** giấu nội dung chính, dùng `overflow:hidden` để cắt chữ, thu nhỏ font hàng loạt hay tách “Part 1/2”.
+ 6. Mô hình cơ chế: chiếm đủ vùng để quan sát nhãn/state và chạm điều khiển, có điều khiển tương tác rõ; một nút một hành động. Tooltip tự ẩn sau hover, modal kiến thức nền gọn, có focus rõ, không che nội dung bắt buộc.
+ 7. Chuẩn typography và khoảng cách: tiêu đề/câu hỏi nổi bật, phần thân dễ đọc trên máy chiếu, tương phản rõ; không dùng cỡ chữ tối thiểu cố định vô lý, kiểm trên máy đích. Kiểm tra bản dài hơn giữa VI/EN, zoom 200% và `prefers-reduced-motion`. Nếu zoom/text lớn không thể một viewport, cho phép fallback cuộn **không mất thông tin** và ghi ngoại lệ.
+-8. Dựng preview trạng thái đầu, sau reveal, khi đúng/sai, modal, mô hình đang hoạt động, instant, reduced; ghi vào QA danh mục từng scene cùng bounding/ảnh desktop và mobile.
++8. Preview t=0, title highlight kết thúc, đúng/sai, modal, model, reduced; ảnh/geometry từng scene desktop/mobile.
++
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Thiết kế Knowledge Block không nhãn, bold keyword bubble phía trên, title highlight 3s. Bối cảnh là đoạn văn/hình/câu hỏi tự nhiên không tag. Thiết kế quiz đa dạng, keyword recall và câu hỏi, hai layout riêng model MISS/COMPARE.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
+ 
+ ## Đầu ra bắt buộc
++Bổ sung `10-direct-learning-ui-states.json`.
++
+ **Mới (canonical ONE_TOPIC):** `10-design-system-one-topic.md`, `10-scene-layout-and-states.json`, `10-hifi-previews/`, `10-visual-a11y-qa.md`, `10-viewport-budget.csv`, `10-attention-and-motion-plan.csv`.
+ 
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL10`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 10)
+-Mọi scene có preview đủ trạng thái, chữ không bị cắt và mô hình không bị chật, Previous/Next fixed thật; đáp ứng viewport và two-phase design; không duplicate CTA, không chớp, no scroll/clipping ở desktop chuẩn.
++Mọi scene đủ trạng thái, NO_SCROLL/NO_CLIP/READABLE_TEXT/FIXED_NAV desktop, direct display, title highlight, inline tooltip, không nhãn dư/duplicate CTA.
++
++**Gate v2.3:** Ảnh t=0/≥3s, tooltip không tràn, no labels, layout khác nhau.
+ 
+ ## Bàn giao và xử lý sai lệch
+ Chuyển token, layout contract, fixed nav, focus/a11y, preview states cho Skill11. Lỗi cơ cấu scene gửi lại Skill09, lỗi học liệu gửi Skill07; không giải quyết bằng `overflow:hidden`.
+--- v2.2/skills/skill11/SKILL.md
++++ v2.3/skills/skill11/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: html-lesson-developer
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 11 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 11 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 11 — HTML Lesson Developer (ONE_TOPIC v2.2)
++# SKILL 11 — HTML Lesson Developer (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+ Hiện thực HTML/CSS/JS thuần và kiểm thử giao diện/điều hướng, hoạt ảnh và mô hình tương tác theo hợp đồng đã được duyệt. Không tự thay mục tiêu/scene mà không có change request.
+@@ -19,33 +19,41 @@
+ 
+ ## Các thao tác nghiệp vụ — phải thực hiện theo thứ tự hợp lý
+ ### Hiện thực chuỗi bối cảnh → quan sát
+-- Thêm renderer `PROBLEM_CONTEXT`: pha 1 title/short lead, pha 2 hiển thị đồng thời context, current reality/need, illustration, question; không đưa đáp án kỹ thuật vào dữ liệu ban đầu của học sinh.
+-- Khi `Next` fixed được kích hoạt, chuyển từ A → B theo `scene_id`, hủy timer A, khởi tạo timer B mới và giữ tiến độ. B là OBSERVE/EXPLORE/DIAGNOSE có nhiệm vụ **khác**; không giả lập sub-slide/Part 1/2 chỉ bằng CSS.
+-- Đảm bảo offline/bilingual, ảnh nguồn hiển thị đủ và alt; `instant_reveal` bỏ chờ ở **scene hiện tại**, không tự Next hoặc mở đáp án; reduced-motion giữ ngữ nghĩa.
+-- E2E thêm ca: tải A → pha 2 đủ context; Next sang B → quan sát được hành động mới; Previous về A, đổi VI/EN, bấm nhanh khi timer chưa hết, không nhảy sai scene, không che nút điều hướng.
++- Renderer PROBLEM_CONTEXT hiện ngay nội dung hợp lệ, chỉ title highlight 3s, không in nhãn trường dữ liệu.
++- Next chuyển A→B theo scene_id, hủy animation title A, giữ tiến độ; B là nhiệm vụ khác.
++- Offline/VI/EN/alt; reduced motion giữ ngữ nghĩa; không nút hiện tất cả.
++- E2E A t=0 đủ context, title bình thường sau 3s, Next B nhiệm vụ mới, Prev/VI/EN/rerender không reset hay che nav.
+ - Đầu ra bổ sung `11-context-navigation-e2e.json`; lỗi thiếu bối cảnh/hình hoặc lộ lời giải phải report về Skill03/05/09/10.
+ 
+ 1. Tạo một website HTML/CSS/JS thuần (file offline hoặc bộ file), nạp mọi scene theo stable ID, hỗ trợ VI/EN khi dịch đầy đủ, không hardcode số màn Cookies.
+ 2. Shell dùng `height:100dvh` + các vùng flex/grid minmax, đặt footer fixed theo viewport với **Previous bottom-left / Next bottom-right** và safe-area. Dành chỗ cho footer khi tính main. Kiểm bằng DOM đo thực, không tự giả định CSS `overflow:hidden` là PASS.
+-3. Với mỗi lần mount scene: hiển thị opening cue, lập một timer 2.5s (cấu hình 2–3), sau đó **hiện đồng thời toàn bộ nội dung khác**. Timer phải hủy khi route đổi (Next/Prev/TOC/deeplink/resume); language switch không xóa progress. `instant_reveal` hủy timer và hiện toàn bộ ngay; `reduce_motion` bỏ chuyển động nhưng có thể giữ nhịp hai pha.
+-4. Mô hình cơ chế phải có state machine và tương tác đầu vào→state/output quan sát được; play/pause/step/reset nếu phù hợp; không tự chạy mô hình khi reveal. Khi global animation off, cập nhật state ngay, không hỏng controls.
++3. Mount scene render ngay mọi khối hợp lệ; CSS title highlight 3000ms 1–2 chu kỳ, cleanup khi đổi scene, không restart khi đổi ngôn ngữ/rerender. Reduced motion và tắt motion giữ nguyên state.
++4. Mô hình cơ chế phải có state machine và tương tác đầu vào→state/output quan sát được; play/pause/step/reset nếu phù hợp; không tự chạy mô hình khi vào màn. Khi global animation off, cập nhật state ngay, không hỏng controls.
+ 5. DIAGNOSE đúng mở modal ôn kiến thức nền có minh họa mini-model; sai Recovery; modal có Esc, focus trap và restore. Tooltip hover leave tự ẩn, keyboard/touch xử lý được. Intro preview có tương tác khi là mô hình.
+-6. Dùng một CTA rõ chức năng cho mỗi hành động, cấm duplicate model action; model inline không có nút khác mở duplicate modal. Các câu RECALL/REVIEW/ASSESS guard không để lộ đáp án hoặc tính mastered khi chỉ bấm Next.
+-7. Next/Prev/TOC/keyboard/resume/deeplink dùng chung guard. Hỗ trợ localStorage từ chối, xóa tiến độ máy chung, dịch đầy đủ VI/EN, offline fallback, bàn phím, screen reader và zoom 200%.
+-8. Test trên viewport matrix và hai ngôn ngữ: phase/timer/cancel/instant/fixed-nav/no-scroll/no-clipping, input và modal, hai đầu vào mỗi mô hình, không khóa thao tác và không tự chuyển scene. Ghi ảnh/log/evidence, lỗi chưa test = `NOT_RUN`.
++6. Một CTA mỗi hành động; Recall keyword→questions không form/answer, Review/Assess dạng đóng; Next không sinh mastery hoặc lộ key.
++7. Next/Prev/TOC/keyboard/resume/deeplink dùng router tự do; localStorage denied, export/import JSON, reset máy chung, VI/EN/offline/keyboard/screen reader/zoom.
++8. E2E direct t=0, highlight 3s/reduced/cancel, fixed-nav, tooltip, no form, quiz, recall, model view/state, nav tự do, offline và viewport; log NOT_RUN nếu chưa test.
++
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Xóa timer reveal/Show all và panel glossary; inline bold keyword tooltip (focus/tap/Esc). Render CORE trực tiếp. Bỏ textarea/input phản tư, save reflection/oral checkbox/skip reason, guard nộp, tự đánh giá bắt buộc. Recall manual; quiz đóng feedback; mindmap thẻ; model view riêng. Migrate progress cũ: không tin mastery tự khai, giữ lựa chọn hợp lệ, không đòi nhập lý do.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
+ 
+ ## Đầu ra bắt buộc
+-`11-production-site/`, `11-state-and-migration-tests.json`, `11-browser-e2e-report.json`, `11-build-manifest.json`, **mới:** `11-reveal-and-viewport-e2e.json`, `11-model-runtime-tests.json`.
++Bổ sung `11-direct-learning-e2e.json`.
++
++`11-production-site/`, `11-state-and-migration-tests.json`, `11-browser-e2e-report.json`, `11-build-manifest.json`, **mới:** `11-display-and-viewport-e2e.json`, `11-model-runtime-tests.json`.
+ 
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL11`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 11)
+-JS/browser chạy thật (nếu công cụ sẵn có), không lỗi timer race, fixed-nav không che nội dung, tất cả model_required có input→state change, VI/EN/instant và reduced hoạt động; guard không bypass; không test thì không nhận PASS.
++JS/browser thật khi có thể; direct title highlight, fixed nav, model state, VI/EN, reduced, không khóa nav, không form, không nhãn dư; chưa test không PASS.
++
++**Gate v2.3:** Test t=0/3s, no label/form, quiz types, recall, view, free nav, storage, accessibility.
+ 
+ ## Bàn giao và xử lý sai lệch
+ Skill12 audit hành trình như học sinh; Skill13 QA độc lập. Nếu lỗi kiến thức/quy trình do upstream thì lập issue và route lại đúng Skill thay vì sửa lén trong code.
+ 
+-> **Ngoại lệ reveal:** “ALL” chỉ là tất cả khối học sinh có quyền nhìn thấy **trước khi trả lời**; không tự lộ key, feedback, modal DIAGNOSE chưa kích hoạt, lời giải RECALL, trạng thái tương lai của mô hình.
++> **Ngoại lệ Direct Display:** “ALL” chỉ là tất cả khối học sinh có quyền nhìn thấy **trước khi trả lời**; không tự lộ key, feedback, modal DIAGNOSE chưa kích hoạt, lời giải RECALL, trạng thái tương lai của mô hình.
+ 
+ ## Quy tắc chung không được bỏ qua
+ - ONE_TOPIC, `topic_id` duy nhất, không hardcode số màn/time của Cookies; giữ mục tiêu và thứ tự `Recall → Review` theo CORE section.
+--- v2.2/skills/skill12/SKILL.md
++++ v2.3/skills/skill12/SKILL.md
+@@ -1,16 +1,16 @@
+ ---
+ name: learner-perspective-simulation-journey-audit
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 12 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 12 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 12 — Learner Perspective Simulation & Journey Audit (ONE_TOPIC v2.2)
++# SKILL 12 — Learner Perspective Simulation & Journey Audit (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+-Diễn tập hành trình **một nội dung** từ mắt người học, kiểm tra attention, cơ chế, nhịp hai pha, recovery và mức độ hiểu dựa trên bằng chứng. Mô phỏng không thay thế học sinh thật.
++Diễn tập hành trình **một nội dung** từ mắt người học, kiểm tra attention, cơ chế, direct display và title highlight, recovery và mức độ hiểu dựa trên bằng chứng. Mô phỏng không thay thế học sinh thật.
+ 
+ > **Bắt buộc:** Trước khi chạy đọc `../../policy/ONE_TOPIC_MASTER_RULES.md` và `../../policy/SCENE_KIND_REFERENCE.md`. Khi xung đột với MT2 về multi-topic, part/subpage hoặc nhịp adaptive v2, áp dụng policy ONE_TOPIC. Bản nguồn đầy đủ được lưu trong `../../legacy/skill12_MT2_ORIGINAL.md` để đối chiếu.
+ 
+@@ -21,31 +21,39 @@
+ ### Thử nghiệm PROBLEM_CONTEXT và hành trình đặt vấn đề hai màn
+ - Persona mới học bài: đọc A và **nói được hoàn cảnh, thực trạng và điều chưa hiểu** mà không cần GV giải đáp; chuyển B và **có hành động quan sát/dự đoán rõ**, không thấy một màn câu hỏi lặp lại.
+ - Kiểm `ONE_SCENE` vs `TWO_SCENES`: nếu A và B có cùng evidence hoặc chỉ là chia màn vì tràn chữ, báo `REDUNDANT_SPLIT` và chuyển Skill02/09 sửa.
+-- Kiểm UI hai pha ở A/B, Next/Previous fixed và guard, VI/EN, tắt animation, trạng thái quay lại, hình/alt/caption, đúng 1280×720/1366×768 không scroll/clipping, và reduced motion.
++- Kiểm UI direct A/B, title 3s, Next tự do, VI/EN, reduced, hình thật, desktop no scroll/clipping.
+ - Chỉ chấm 'có khả năng hiểu tình huống' bằng walkthrough; khi chưa có học sinh thật phải ghi `FIELD_NOT_VALIDATED`, không giả đánh giá được học sinh hiểu.
+ - Đầu ra bổ sung `12-context-problem-journey-audit.csv` và evidence ở cả A/B.
+ 
+-1. Chạy ít nhất các persona: chưa biết nền, chọn sai DIAGNOSE, chọn đúng và đọc modal, học sinh làm nhanh muốn instant, học sinh cần giảm chuyển động, học sinh trở lại/resume.
+-2. Theo từng scene, hỏi: mắt nhìn đâu trước? opening cue có đọc được 2–3s? Sau reveal tất cả nội dung có dễ định vị? Có bị nhồi chữ, cắt mất kiến thức hoặc nút Next che? Screenshot/DOM/bằng chứng.
+-3. Thử phím Next/Prev/TOC/resume nhanh trước lúc timer hết để phát hiện xuất hiện nhầm nội dung scene cũ. Thử “Tắt animation · Hiện tất cả” và reduced-motion độc lập.
++1. Persona chưa biết nền, đúng/sai DIAGNOSE, học nhanh không chờ, reduced motion, quay lại/resume.
++2. Đo t=0 đầy đủ, ≥3s title bình thường, kiến thức CORE rõ, nhãn dư/form không còn; screenshot/DOM.
++3. Next/Prev/TOC/resume nhanh, đổi VI/EN/rerender không restart highlight, reduced motion không khóa nội dung.
+ 4. Thử mọi mô hình cơ chế bằng hai đầu vào để kiểm state change; học sinh có thể dự đoán, thao tác, giải thích? Có nút duplicate, ảnh tĩnh giả tương tác, tên nút “Thử” mơ hồ không?
+ 5. Chạy nhánh đúng→modal recap→intro→teach, nhánh sai→Recovery→retry; giữ dữ liệu khi qua lại, xét tooltip hover **tự tắt khi rời chuột**, focus/touch và modal closing.
+-6. Rà Recall→Review/EXIT độc lập, hint gated, không auto MASTERED, có sản phẩm nói/vẽ/ghi; 5 yếu tố hoạt động không làm học sinh quá tải.
++6. Recall keyword→questions không ô nhập/chấm; Review đa dạng, Next tự do, không auto MASTERED; mindmap thẻ và teach-back miệng.
+ 7. Lặp ở VI/EN và viewport 1280×720, 900×600, 390×844, 360×640, 640×360, zoom 200%; ghi clip/scroll/overlap/focus. Thử offline/storage denied khi có thể.
+ 8. Báo issue severity, chính scene/model/owner Skill, bước tái hiện, ảnh/log và khuyến nghị sửa; khi không có HS thật, đánh `SIMULATED / FIELD_NOT_VALIDATED`.
+ 
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Kiểm từng màn không nhãn nội bộ, không form, Next khi chưa làm, hover/focus/tap, CORE đủ; thử keyword từng bước không timer/answer rồi Review, hai view model khác biệt. Đánh giá tải thao tác, không tự coi SEEN là hiểu.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
++
+ ## Đầu ra bắt buộc
++Bổ sung `12-direct-learning-usability-audit.csv`.
++
+ **Mới (canonical ONE_TOPIC):** `12-one-topic-learner-journey.md`, `12-transition-and-retention-audit.csv`, `12-branch-evidence.json`, `12-repair-routing.md`, `12-attention-and-model-observation.csv`.
+ 
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL12`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 12)
+-Tối thiểu một tuyến học hoàn chỉnh và các tuyến sai/instant/reduced, có test model/timer/viewport; không tuyên bố đạt chất lượng dạy học chỉ vì script không lỗi; issue blocker phải được route.
++Tuyến chính và sai/reduced, test direct display/title/model/tooltip/viewport, không form hoặc khóa nav; issue blocker có owner.
++
++**Gate v2.3:** Có repro/log; learner pilot không có ghi FIELD_NOT_VALIDATED.
+ 
+ ## Bàn giao và xử lý sai lệch
+ Skill13 nhận issue register và evidence độc lập; lỗi focus/layout thuộc Skill10/11, nội dung Skill03, thiết kế hoạt động Skill04/09, asset Skill07.
+ 
+-> **Ngoại lệ reveal:** “ALL” chỉ là tất cả khối học sinh có quyền nhìn thấy **trước khi trả lời**; không tự lộ key, feedback, modal DIAGNOSE chưa kích hoạt, lời giải RECALL, trạng thái tương lai của mô hình.
++> **Ngoại lệ Direct Display:** “ALL” chỉ là tất cả khối học sinh có quyền nhìn thấy **trước khi trả lời**; không tự lộ key, feedback, modal DIAGNOSE chưa kích hoạt, lời giải RECALL, trạng thái tương lai của mô hình.
+ 
+ ## Quy tắc chung không được bỏ qua
+ - ONE_TOPIC, `topic_id` duy nhất, không hardcode số màn/time của Cookies; giữ mục tiêu và thứ tự `Recall → Review` theo CORE section.
+--- v2.2/skills/skill13/SKILL.md
++++ v2.3/skills/skill13/SKILL.md
+@@ -1,13 +1,13 @@
+ ---
+ name: independent-lesson-quality-reviewer
+-version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.2
++version: 2026.11-ONE_TOPIC-FOCUSLAB-V2.3
+ role: Skill 13 / 13 — ONE_TOPIC
+ status: DEFINITION_UPDATED_PENDING_INTEGRATION_TEST
+ source_basis: MT2-FROZEN Skill 13 + FocusLab v1/v3 + Viewport-fit + ONE_TOPIC v1.5
+ policy: ../../policy/ONE_TOPIC_MASTER_RULES.md
+ ---
+ 
+-# SKILL 13 — Independent Lesson Quality Reviewer (ONE_TOPIC v2.2)
++# SKILL 13 — Independent Lesson Quality Reviewer (ONE_TOPIC v2.3)
+ 
+ ## Mục tiêu và ranh giới
+ Kiểm định độc lập bộ bài **một nội dung** với bằng chứng nguồn, trình duyệt, learner journey và rubric thị giác; không tự gán RELEASE_PASS cho một bộ định nghĩa Skills.
+@@ -22,31 +22,39 @@
+ - Kiểm `PROBLEM_CONTEXT` có đủ **tiêu đề, bối cảnh, thực trạng/nhu cầu, vấn đề/câu hỏi và minh họa** thật có nguồn + bản VI/EN; không khởi đầu bằng một câu hỏi trơ trọi khi đã quyết định dùng PROBLEM_CONTEXT.
+ - Đối chiếu `TWO_SCENES`: mục đích, `evidence`, learner action của A/B khác nhau; Next/Previous qua `scene_id`, không phải subslide chia chữ; không lộ tên giải pháp khi mục tiêu OBSERVE/DIAGNOSE còn cần khám phá.
+ - Khi nguồn bối cảnh không rõ/giả số liệu, hình minh họa chỉ mới SPEC_ONLY, ảnh bị cắt, hoặc B lặp lại y nguyên A, đánh `NEEDS_REVIEW/BLOCKED` theo mức độ, không tự RELEASE_PASS.
+-- Checklist độc lập: kiểm nhịp hai pha, instant/reduced, fixed nav, viewport, focus, a11y, VI/EN, fallback offline và sự nối mạch problem→inquiry→TEACH/INTRODUCTION; ghi issue owner đúng Skill.
++- Checklist direct display/title 3s, no pedagogical labels, inline tooltip, fixed nav, viewport, VI/EN, offline và problem→inquiry.
+ - Đầu ra bổ sung `13-problem-context-compliance.csv`; rà mọi màn đặt vấn đề đã quyết định `TWO_SCENES` trước khi nghiệm thu.
+ 
+ 1. Kiểm nguồn và ma trận mục tiêu→nội dung→hoạt động→scene→Recall/Review→EXIT. Không để CORE bị bỏ qua vì scene layout không chứa nổi; teacher key phải ở ngoài website học sinh.
+ 2. Kiểm 14 kind enum cùng việc **chọn kind đúng bản chất**; INTRODUCTION không trùng TEACH; OBSERVE câu hỏi trung tâm; DIAGNOSE đúng có modal kiến thức nền + minh họa, sai Recovery; modal/tooltip accessibility.
+-3. Kiểm visual attention: một focal target, animation có mục đích, không chớp/lặp, không bắt học sinh chờ; **two-phase 2–3s → full reveal cùng lúc** ở mọi màn, instant và reduced modes phân biệt; không tự động chuyển cảnh.
++3. Kiểm direct t=0, title highlight 3s chậm, reduced motion, không layout shift/auto advance; không nhãn dư.
+ 4. Kiểm viewport/fixed nav thực tế trên matrix, no-scroll/no-clipping/readability, modal, labels, CTA. Cấm `scene_id:part_id`, `Phần 1/2` chỉ vì nội dung tràn, cấm duplicate model CTA, tiny font, bắt buộc nút Next/Previous fixed.
+ 5. Kiểm mọi `MODEL_REQUIRED`: `model_id`, input, output, before/after, replay/reset, case thường/ngoại lệ, evidence, reduced motion behavior. Học liệu tĩnh không được mạo nhận simulation.
+-6. Kiểm routing guard cho Next/Prev/TOC/keyboard/resume/deeplink, save/restore, VI/EN, offline, zoom, localStorage blocked, keyboard focus và escape. Test riêng `instant_reveal` khi timer đang chạy và race đổi màn.
++6. Kiểm router tự do Next/Prev/TOC/keyboard/resume/deeplink, lưu lựa chọn, VI/EN, offline, zoom/storage denied, keyboard/Esc, không tự mastery.
+ 7. Review độc lập các lỗi lịch sử Cookies Skill13: bypass recall, missing tracking mechanism content, tooltip focus, reset shared device, dịch thiếu. Không khẳng định lỗi cũ đã sửa nếu chỉ tham chiếu thiết kế.
+ 8. Chấm rubric 100 điểm như tài liệu đề xuất (25 mục tiêu/kiến thức, 20 attention/layout, 15 motion, 25 interaction, 15 usability/a11y) và **blockers thắng mọi điểm**. Phân biệt `STATIC_DEFINITION_PASS`, `RUNTIME_BROWSER_PASS`, `FIELD_VALIDATED`, `RELEASE_PASS`.
+ 9. Báo `issues` severity/repro/owner/evidence/retest và quyết định `RELEASE_PASS` chỉ khi tất cả gate yêu cầu có chứng cứ; nếu chưa test trực tiếp `NOT_RUN`, chưa có HS thật `FIELD_NOT_VALIDATED`.
+ 
++### Direct Learning v2.3 — yêu cầu bắt buộc
++- Độc lập đối chiếu DL01–DL07 theo từng scene và cả 13 Skills. Kiểm không nhãn sư phạm, kiến thức hiển thị, tooltip, highlight, không form, câu hỏi đóng, Recall, model view, nav tự do. Kiểm offline và thực địa riêng; không áp blocker cũ do không nộp câu hỏi mở.
++- Đọc và áp dụng `../../policy/DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07); quy tắc cũ trong tài liệu lịch sử không còn hiệu lực.
++
+ ## Đầu ra bắt buộc
++Bổ sung `13-direct-learning-release-checklist.csv`.
++
+ **Mới (canonical ONE_TOPIC):** `13-one-topic-objective-coverage.csv`, `13-independent-browser-results.json`, `13-release-gates.json`, `13-final-release-decision.md`, `13-visual-interaction-audit.csv`.
+ 
+ Mỗi đầu ra có ID, đường dẫn, trạng thái, bằng chứng, hash khi là file thực; không tự nhận đã hoàn thành chỉ vì đã mô tả. `output_manifest.json` tại thư mục của lần chạy ghi `skill_id=SKILL13`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`.
+ 
+ ## Điều kiện nghiệm thu riêng (Gate 13)
+-Block khi P0/P1, CORE thiếu, model không tương tác, clipped required content, fixed-nav sai, key rò, nav bypass, intro/diag bắt buộc thiếu, timer sai, VI/EN thiếu; không dùng score để che blocker.
++Block P0/P1, thiếu CORE, model sai/không tương tác, clip, fixed nav sai, key rò, khóa nav trái DL04, VI/EN thiếu, delay ẩn nội dung; điểm không che blocker.
++
++**Gate v2.3:** Mọi tiêu chí bắt buộc có bằng chứng, chưa thử không PASS.
+ 
+ ## Bàn giao và xử lý sai lệch
+ Bàn giao kết quả và chủ lỗi, giữ từng mốc review; không sửa source trong lúc đóng vai auditor mà không tạo change request và kiểm thử lại. Bản Cookies cũ vẫn `RELEASE_BLOCKED`.
+ 
+-> **Ngoại lệ reveal:** “ALL” chỉ là tất cả khối học sinh có quyền nhìn thấy **trước khi trả lời**; không tự lộ key, feedback, modal DIAGNOSE chưa kích hoạt, lời giải RECALL, trạng thái tương lai của mô hình.
++> **Ngoại lệ Direct Display:** “ALL” chỉ là tất cả khối học sinh có quyền nhìn thấy **trước khi trả lời**; không tự lộ key, feedback, modal DIAGNOSE chưa kích hoạt, lời giải RECALL, trạng thái tương lai của mô hình.
+ 
+ ## Quy tắc chung không được bỏ qua
+ - ONE_TOPIC, `topic_id` duy nhất, không hardcode số màn/time của Cookies; giữ mục tiêu và thứ tự `Recall → Review` theo CORE section.
+--- v2.2/policy/DIRECT_LEARNING_STANDARD_V2_3.md
++++ v2.3/policy/DIRECT_LEARNING_STANDARD_V2_3.md
+@@ -0,0 +1,31 @@
++# Direct Learning v2.3 — chuẩn bắt buộc liên Skill
++
++Áp dụng mọi bài ONE_TOPIC; thay thế quy tắc nhịp hai pha, thu thập bài làm tự do và guard bắt buộc nộp ở v2.2. Các nội dung học thuật, 14 Scene Kind, 5512, một viewport, VI/EN, mô hình thật, trợ năng, offline và QA vẫn giữ nguyên. Tham chiếu lịch sử trong `history_v2_2/` và `legacy/` không phải đầu vào active.
++
++## DL01 — Direct Display và Title Attention
++- Render toàn bộ khối được phép ở lần render đầu; không timer ẩn nội dung, skeleton chờ theo scene, nút Hiện tất cả, hay tự chuyển cảnh. Đáp án/feedback chưa kích hoạt, modal DIAGNOSE, trạng thái mô hình tương lai và giai đoạn Recall chưa được chọn vẫn có điều kiện sư phạm riêng, không phải delay.
++- Chỉ tiêu đề chính chuyển màu nền/chữ chậm, 1–2 chu kỳ trong 3000 ms, kết thúc trở về màu bình thường. Không làm chữ biến mất, không nháy gắt, không đổi kích thước, không layout shift. Màu tương phản đủ ở mọi keyframe. Trigger khi vào scene khác, không chạy lại do đổi ngôn ngữ/chọn đáp án/rerender model. Hủy hiệu ứng cũ khi rời scene. Reduced motion: không pulse; có thể highlight tĩnh ngắn rồi trở về bình thường, hoặc tắt toàn bộ highlight. Không bắt đầu mô hình tự động. Giữ tùy chọn giảm/tắt chuyển động mô hình.
++- Hợp đồng `display.mode=DIRECT`, `delay_ms=0`, `title_highlight.duration_ms=3000`, `cycles=1|2`, `auto_advance=false`, `restart_on_rerender=false`. Không dùng trường reveal cũ làm cấu hình active.
++
++## DL02 — Giao diện sạch, không nhãn sư phạm
++- Không render nhãn phân loại hoặc tên trường dữ liệu như “Kiến thức cần nhớ”, “Bối cảnh”, “Thực trạng”, “Đặt vấn đề”, “Câu hỏi gợi mở”, “Nhiệm vụ”, “Kết luận”, “Minh chứng”, “CORE 01”, “TEACH”, “Scene Kind”, “Active Recall” chỉ để báo tên phương pháp; áp dụng cả bản EN (Key knowledge, Context, Current situation, Guiding question, Task, Conclusion, Evidence…). Không thay bằng badge/icon có cùng chức năng trang trí. Các tên này có thể tồn tại trong giáo án, schema, mục kiểm định hoặc nội dung giáo viên, không xuất như nhãn UI học sinh.
++- Giữ tiêu đề nội dung cụ thể, tên khái niệm, đề mục thực sự mang nghĩa học thuật, đơn vị đo, nhãn dữ liệu trên mô hình, nhãn điều khiển hữu ích, nguồn/caption cần thiết, câu hỏi và phản hồi. Không xóa đoạn văn bối cảnh hay kiến thức chuẩn chỉ vì bỏ nhãn.
++- Định nghĩa/kết luận bắt buộc trình bày trực tiếp như SGK: câu hoàn chỉnh chính xác, từ khóa đậm, khoảng trắng, màu nền/viền nhẹ hoặc bố cục riêng; không cần heading “Kiến thức cần nhớ”. Sau khám phá phải chuẩn hóa phần phải nhớ, không giấu trong tooltip hoặc chỉ mô hình. Phân tầng `core`, `support`, `prompt`, `teacher_only` ở dữ liệu, không in tên tầng.
++
++## DL03 — Inline Keyword Tooltip
++- Không có panel/glossary riêng, chip dấu hỏi riêng. Thuật ngữ nằm trong câu văn, in đậm; hover hiện bong bóng phía trên chính từ đó, tự ẩn khi rời vùng từ + popup. Không che nội dung chính, không đẩy layout; nếu thiếu chỗ thì clamp/flip phù hợp viewport. Focus bàn phím mở, Escape đóng; touch chạm mở/chạm ngoài đóng. Cung cấp nội dung accessible, VI/EN. Chú giải bổ trợ ngắn, không bắt buộc để hiểu CORE. Không lộ đáp án tại Recall/Review/Assess; tắt tooltip có thể spoil trong lượt độc lập.
++
++## DL04 — Câu hỏi và điều hướng
++- `PROBLEM` (đặt vấn đề), `GUIDING` (gợi mở): chỉ hiển thị câu hỏi tự nhiên, không ô trả lời, không nút ghi nhận, không checkbox xác nhận đã nói, không log cảm nhận/giả thuyết/lý do skip. Trả lời miệng tự nguyện/giáo viên quan sát ngoài website. `CONFIRMATION`: câu hỏi đóng có phản hồi, hỗ trợ single/multi-select, true-false, matching, ordering, hotspot, classification, fill-from-options; chọn dạng theo KU, ít nhất hai dạng phù hợp mỗi CORE review. Không ép nhập chữ vào bất kỳ màn học nào; tùy chọn nhập tên/URL trong mô hình thực sự là tham số kỹ thuật, không phải bài làm tự do.
++- Điều hướng Previous/Next/TOC/keyboard/resume/deeplink thống nhất, tự do; không guard đòi hoàn thành quiz/model/recall hay nhập lý do. DIAGNOSE chọn sai vẫn được đề xuất RECOVERY, chọn đúng mở recap; có thể quay lại tuyến chính. Quiz chưa làm ghi `UNANSWERED`, sai `INCORRECT`, đúng `CORRECT`; xem scene `SEEN`, thao tác model `MODELED`; không tự `MASTERED`/`VERIFIED`. Chỉ lưu lựa chọn và tiến độ cần thiết; không bắt nộp bài tự do. Giáo viên có thể quan sát/đánh giá bên ngoài, không tự xác nhận thay họ. Lời giải assessment độc lập không tự lộ; key cần bảo mật thực sự không nằm trong student bundle; đáp án quiz luyện tập được xử lý cục bộ sau hành động check, không coi đó là bảo mật.
++
++## DL05 — Active Recall không biểu mẫu
++- Mỗi CORE kết thúc `RECALL → REVIEW`. RECALL: từng từ khóa thuộc nội dung vừa học, do HS/GV bấm tiếp/trước (không timer); sau từ khóa cuối, hiện tập câu hỏi gợi nhớ. Không chú giải/định nghĩa/đáp án, không ô nhập, không chấm, không nộp, không ép qua hết từ khóa mới cho Next. Trạng thái đang xem keyword/question không chứng minh ghi nhớ. REVIEW mới dùng câu hỏi đóng có phản hồi và sửa sai tự nguyện.
++- Mindmap: ghép thẻ, nối mũi tên, sắp thứ tự; Learning by Teaching: sơ đồ và câu hỏi để giảng miệng; Flashcard lật tự do; game phục vụ review. Không ép self-rating, không biến thành form hành chính. Giữ cả 5 phương pháp có giá trị.
++
++## DL06 — Không trùng màn / model view
++- Mỗi scene có mục tiêu nhận thức riêng, nội dung chính, tác vụ, view và điểm khác biệt kiểm chứng được. Không đổi mỗi tiêu đề mà render lại cùng nội dung. Có thể tái dùng engine state nhưng cấu hình `model_view_id`, điều kiện và controls riêng; kiểm tra dữ liệu scene-specific thực sự được render. Audit cặp màn cùng model; gộp nếu không có mục đích độc lập.
++- DNS minh họa: màn 09 là MISS-only, luồng 4 bước SGK, Step/Back/Play/Reset; màn 10 là so sánh cache HIT/MISS/EXPIRED có dữ liệu trạng thái, đường đi và bước bỏ qua, kết luận riêng. Cùng engine nhưng view khác, không ép hoàn thành tất cả trước khi Next. Tình huống SGK giản lược, DNS trả IP chứ không HTML.
++
++## DL07 — QA và phạm vi
++- Block P1 nếu còn delay ẩn nội dung, form phản tư bắt buộc, nav bị khóa bởi câu hỏi gợi mở, nhãn sư phạm dư thừa lấn át nội dung, thiếu kiến thức chính, Recall lộ lời giải, hai màn trùng nội dung hoặc model sai view; phân loại chính xác severity theo ảnh hưởng. Kiểm t=0, 1.5s, ≥3s, reduced motion, rerender/đổi scene nhanh, tooltip hover/focus/touch, quiz đa dạng, Recall keyword→questions, model độc lập, nav khi chưa trả lời, VI/EN, viewport, offline/storage và accessibility. Kiểm định định nghĩa/schema không đồng nghĩa runtime hay học sinh thật.
+--- v2.2/policy/ONE_TOPIC_MASTER_RULES.md
++++ v2.3/policy/ONE_TOPIC_MASTER_RULES.md
+@@ -1,17 +1,17 @@
+-# Quy tắc hợp nhất — ONE_TOPIC FocusLab v2.2 (23/11/2026)
++# Quy tắc hợp nhất — ONE_TOPIC FocusLab v2.3 (24/11/2026)
+ 
+ **Hiệu lực:** bắt buộc cho cả 13 `skills/skillXX/SKILL.md`. Được thiết kế trên nền định nghĩa MT2-FROZEN để sản xuất **một nội dung kiến thức** tại một thời điểm. Đây là *bản định nghĩa*, không xác nhận đã chạy bài thật hay website đã qua nghiệm thu. Bản Cookies v1.2 `RELEASE_BLOCKED` vẫn là mốc lỗi cần kiểm soát.
+ 
+ ## 0. Phạm vi, ưu tiên, trách nhiệm
+ - `ONE_TOPIC`: một `topic_id` trong một lượt chạy. Có thể có nhiều `section_id` CORE của chính topic đó nếu thực sự cần. Không bắt buộc bridge DNS→HTTP→Cookie và không gộp nhiều chủ đề chỉ để đủ buổi.
+ - Mức ưu tiên: chỉ đạo cụ thể của người dùng > quy tắc an toàn/chính xác > **policy ONE_TOPIC này** > `skills/skillXX/SKILL.md` > tài liệu MT2 lưu trong `legacy/`. Nếu có mâu thuẫn về nội dung đa topic của MT2, áp dụng `ONE_TOPIC` cho lượt chạy này; không sửa bản MT3 đa topic.
+-- Nguồn trình bày ưu tiên bản đã duyệt sau cùng: `ONE_VIEWPORT v1.5` (thay thế cơ chế `part_id` v1.4), nhịp **hai pha v3** (thay hoàn toàn adaptive dwell v2), motion/model v1.3 được kế thừa nơi không mâu thuẫn. Số 30/31 màn Cookies **không** là ngưỡng bắt buộc.
++- Nguồn trình bày: ONE_VIEWPORT v1.5 và Direct Learning v2.3 thay toàn bộ reveal cũ; motion/model v1.3 được kế thừa khi không mâu thuẫn.
+ - `lesson_id`, `topic_id`, `section_id`, `ku_id`, `objective_id`, `scene_id`, `activity_id`, `asset_id`, `model_id`, `question_id` phải nhất quán và truy vết. Không tái dùng ID cho một đối tượng khác, không viết `scene_id:part_id`.
+ - Mỗi skill cần xuất: `skill_id`, `version`, `input_refs`, `output_files`, `evidence`, `open_issues`, `gate_status`, `next_skill`; chưa chạy thực tế ghi `NOT_RUN`, chưa test ghi `NOT_TESTED`.
+ 
+ ## 1. Kiến trúc học tập
+ - Người học chủ động: **dự đoán → tương tác/quan sát → giải thích bằng chứng → chuẩn hóa → thử lại/vận dụng** khi nội dung là cơ chế; định nghĩa đơn giản có thể TEACH ngắn rồi teach-back. Không ép inquiry cho mọi KU.
+-- Cuối mỗi **CORE section**, thực hiện **ACTIVE_RECALL → REVIEW_QUIZ**, không áp cho mỗi bullet hoặc mỗi màn. Recall yêu cầu học sinh tự nói/ghi/vẽ trước khi xem đối chiếu; Quiz đa dạng ≥2 hình thức khi phù hợp, có giải thích sai; EXIT độc lập và không lộ đáp án.
++- Cuối mỗi CORE: ACTIVE_RECALL (từng từ khóa rồi câu hỏi, không nộp) → REVIEW_QUIZ (ít nhất hai dạng câu hỏi đóng khi phù hợp). EXIT độc lập, không lộ đáp án; giáo viên quan sát lời giải thích ngoài web.
+ - Giữ năm thành phần nếu có giá trị sư phạm: Active Recall, Game, Mindmap, Flashcard, Learning by Teaching. Game theo buổi (không lặp máy móc); tổ chức hoạt động theo 4 bước Công văn 5512: chuyển giao → HS thực hiện → báo cáo/thảo luận → đánh giá/kết luận.
+ - Số màn sinh ra từ **mục tiêu, nhiệm vụ, khả năng đọc và bằng chứng**; không đặt một chỉ tiêu số màn cố định hoặc phân nhỏ kiểu `Part 1/2` khi chỉ vì layout tràn.
+ 
+@@ -20,29 +20,25 @@
+ - `scene.kind` mô tả **hoạt động nhận thức**; `scene.layout_mode` (SLIDE/STORY/LAB/MAP/FOCUS/ASSESSMENT hay biến thể hợp lý) mô tả cách bố trí, không đánh đồng hai khái niệm.
+ - `PROBLEM_CONTEXT` (tùy chọn) đặt **tình huống có nghĩa** trước khi làm hoạt động quan sát: **tiêu đề, bối cảnh cụ thể, thực trạng/nhu cầu, khoảng trống chưa giải thích, hình minh họa có mục đích và câu hỏi/vấn đề**. Nguồn phải có căn cứ; ví dụ giả định phải được ghi rõ. Không lộ câu trả lời cần khám phá ở scene sau.
+ - Màn đặt vấn đề phải có **cầu nối từ bối cảnh sang hoạt động mới**, thay vì chỉ một câu hỏi. Chỉ tách `PROBLEM_CONTEXT → OBSERVE/EXPLORE/DIAGNOSE` nếu hai scene có **student_task/evidence nhận thức khác nhau**. Trường hợp đơn giản gộp bối cảnh vào OBSERVE. Cấm dùng hai scene để giấu tràn chữ hoặc tạo hai câu hỏi trùng lặp; hai scene có thể chung activity_id của giáo án.
+-- Với màn `PROBLEM_CONTEXT`, áp dụng quy tắc hai pha nhất quán: pha 1 **tiêu đề/lời dẫn** hiện ngay; sau 2–3s toàn bộ **bối cảnh + minh họa + vấn đề/câu hỏi** xuất hiện đồng thời. Không tự Next; Previous/Next cố định; instant reveal được phép bỏ chờ.
++- PROBLEM_CONTEXT hiển thị ngay tiêu đề, đoạn bối cảnh, minh họa, vấn đề; không in các nhãn trường dữ liệu. Next chủ động.
+ - `INTRODUCTION` được dùng có chọn lọc trước TEACH khi giới thiệu **tên công cụ/giải pháp/khái niệm mới**; gồm tên, lợi ích, ví dụ và minh họa ngắn, không thay phần TEACH cốt lõi. Không ép INTRODUCTION cho mỗi TEACH.
+ - `OBSERVE`: câu hỏi tình huống hoặc lời dẫn là điểm nhìn **rõ ràng nhất**, ở trung tâm vùng trình chiếu hoặc thành spotlight; dữ kiện vẫn phải quan sát được khi mở đủ nội dung.
+ - `DIAGNOSE`: đúng → hiện modal ngắn kiến thức cũ với minh họa/mô hình liên hệ bài mới; sai → phản hồi và đi `RECOVERY` có thể thử lại. Không kéo dài chẩn đoán thành một bài dạy mới, không tự gọi 'đã nắm vững' chỉ từ một câu.
+-- `RECALL` / `REVIEW` / `ASSESS`: không tự lộ đáp án/gợi ý trước lượt làm độc lập; phím Next hay mở mô hình trợ giúp không được phá guard.
++- RECALL/REVIEW/ASSESS không tự lộ đáp án; Next tự do không làm phát sinh kết quả đúng hay mastery.
+ 
+ ## 3. Hợp đồng thị giác/hiệu ứng
+-- **Mọi scene có `attention_plan`**, nhưng không bắt buộc có vật thể chuyển động: chọn ONE focal target và chuyển động đúng mục đích (spotlight, emphasis, flow path, phản hồi). Ưu tiên bố cục, tương phản, phân cấp cỡ chữ trước animation.
+-- `opening_cue`: **tiêu đề màn, câu hỏi tình huống hoặc lời dẫn ngắn** hiện ngay khi mở. `opening_pause_s`: mặc định **2.5s**, được cấu hình 2–3s; không ước lượng theo số chữ, không tự chia thời gian cho các khối nội dung.
+-- Sau khoảng 2–3s, `full_reveal_group=ALL`: **toàn bộ nội dung học sinh được phép xem ở thời điểm đó xuất hiện cùng lúc**, bao gồm lý thuyết, hình minh họa, lựa chọn, mô hình ở trạng thái ban đầu, CTA. Ngoại lệ tuyệt đối: đáp án/feedback bị khóa theo lượt thử (Recall/Review/Assess), đáp án giáo viên, trạng thái mô hình trong tương lai và modal sau một hành động **không** được tự lộ ở pha 2. Không `stagger` hoặc chờ lần lượt. Chuyển pha có thể fade nhẹ 150–350ms và không làm layout giật.
+-- **Hiện tất cả ngay / Tắt animation · Hiện tất cả**: bỏ mọi chờ, render toàn bộ nội dung ngay, không tự chạy mô hình, không trả lời câu hỏi, không tự đánh dấu hoàn thành. Chế độ **Giảm chuyển động** là một chế độ độc lập: bỏ các hiệu ứng chuyển động nhưng có thể giữ nhịp hai pha.
+-- Không bắt học sinh đợi trước khi tương tác. Được bỏ qua pha chờ ở bất kỳ lúc nào; sau khi nội dung hiện, không tự tắt, tự chuyển màn, hay giới hạn thời gian đọc. Tắt timer cũ khi Next/Prev/TOC/deeplink, giữ trạng thái khi đổi ngôn ngữ; có thể phát lại lời dẫn theo yêu cầu.
+-- Cấm hiệu ứng chớp liên tục, chữ rung, animation lặp gây phân tâm; giảm chuyển động theo `prefers-reduced-motion` và cài đặt. Motion bên trong mô hình chỉ chạy khi có lệnh tương tác hoặc bật play riêng.
++- Áp dụng `DIRECT_LEARNING_STANDARD_V2_3.md` (DL01–DL07) bắt buộc: render tất cả nội dung hợp lệ ngay; highlight tiêu đề chậm 3 giây rồi trở lại bình thường; không timer reveal, không nút hiện tất cả. Giảm chuyển động theo hệ thống; không tự chạy model hoặc lộ đáp án. Không in nhãn sư phạm; ưu tiên kiến thức chuẩn hóa và inline keyword tooltip.
++- `attention_plan` vẫn mô tả focal target nội dung; title highlight không làm gián đoạn hoạt động. Recall chỉ đổi keyword/câu hỏi bằng thao tác chủ động.
+ 
+ ## 4. Viewport-fit, fixed navigation và không cắt nội dung
+ - **Một scene = một viewport**; tối thiểu duyệt tại **1280×720**, **1366×768**, **1600×900**, **1920×1080**; stress test **900×600**, **390×844**, **360×640**, **640×360** và zoom 200%. Thiết kế dựa trên **visual viewport thực tế** thay vì số pixel vật lý của màn hình.
+ - Desktop mặc định 100%: không cuộn trang/nội dung chính; không che khuất chữ, mô hình, nút hoặc đáp án. `overflow:hidden` không được dùng làm cách che lỗi; `NO_SCROLL ∧ NO_CLIP ∧ READABLE_TEXT ∧ FIXED_NAV` phải cùng đúng. Tại màn hình nhỏ cố giữ một viewport qua thiết kế lại; khi phóng to chữ hoặc có nhu cầu trợ năng, ưu tiên **không mất nội dung**, cho phép cuộn có kiểm soát như fallback, báo rõ ngoại lệ thay vì khóa nội dung.
+-- **Previous cố định dưới trái, Next cố định dưới phải**, chỉ số màn ở giữa, điều hướng theo scene_id thực; luôn nằm cùng vị trí tương đối và không che CTA/đầu vào. Tính safe area, khu vực header/main/footer; không layout lại bất ngờ khi reveal từ pha 1 sang 2.
++- Previous cố định dưới trái, Next dưới phải, chỉ số giữa; tính safe area/header/main/footer, không che CTA, không layout shift do highlight.
+ - Để nội dung vừa viewport: giảm chrome thừa → xác định một nhiệm vụ → bố trí 1/2 cột → rút gọn mà không thiếu kiến thức → đưa thông tin bổ trợ *tùy chọn* vào tooltip/modal → nếu vẫn quá tải, thiết kế **scene độc lập có mục tiêu/sản phẩm riêng**. **Không** dùng `scene_id:part_id`, `Phần 1/2`, Next nội bộ chỉ vì tràn; **không** thu nhỏ font quá mức hay giấu nội dung chính trong popup bắt buộc.
+ - Mỗi scene phải có tên/mục tiêu/nhiệm vụ/sản phẩm rõ; hai điều kiện khác nhau không được tạo hai màn giống nhau chỉ đổi ảnh. Các nội dung **cần so sánh đồng thời** phải cùng có mặt trên một màn hoặc trong mô hình so sánh phù hợp.
+ 
+ ## 5. Tooltip, modal và CTA
+-- Tooltip: hover/focus hiện chú thích, **tự ẩn khi rời vùng kích hoạt+tooltip**; không cần bấm X trên desktop. Touch/click có chế độ mở–đóng bằng chạm ngoài hoặc Esc; focus không bị mất khi dùng bàn phím.
++- Tooltip chỉ là từ khóa in đậm trong câu; bong bóng phía trên, tự ẩn khi rời hover vùng từ + popup; focus/touch/Escape tương đương, không panel riêng.
+ - Modal kiến thức nền DIAGNOSE: `prior_knowledge`, `illustration`, `link_to_new_topic`; ở trung tâm, có nút đóng/tiếp tục, Escape/focus trap/restore focus; không tự đóng khi đang đọc. Không lấy modal làm chỗ giấu phần kiến thức CORE bắt buộc.
+ - Một hành động → **một CTA chính** có nhãn động từ cụ thể: “Gửi yêu cầu”, “Chọn tiếng Việt”, “Xóa Cookie”. Không để đồng thời nhiều nút “Thử / Thử mô hình / Chạy mô hình” cùng một chức năng. Mô hình inline có điều khiển rồi thì không thêm CTA mở chính nó lần nữa.
+ 
+@@ -53,11 +49,11 @@
+ - Phân biệt `READY_REFERENCE`, `READY_ASSET`, `PROTOTYPE`, `SPEC_ONLY`, `BLOCKED`; không công nhận có mô hình chạy thật chỉ vì có storyboard hoặc screenshot.
+ 
+ ## 7. Kiểm soát điều hướng, QA và trạng thái
+-- Next, Previous, TOC, phím tắt, resume, deeplink đều gọi **một navigation guard**; tránh bỏ qua cặp Recall→Review thiếu cảnh báo, xác nhận và trạng thái `SKIPPED`. `SEEN`, `ATTEMPTED`, `SUBMITTED`, `MASTERED`, `VERIFIED`, `SKIPPED` khác nhau.
+-- Mỗi scene có: `scene_id`, `kind`, `objective_id`, `student_task`, `opening_cue`, `attention_plan`, `layout_mode`, `content_blocks`, `model_id` (nếu có), `model_action`, `completion_gate`, `next_scene_id`, `state_dependency`, `viewport_fallback`, `evidence`. Template đầy đủ trong `templates/scene_contract.schema.json`.
+-- QA kiểm tra qua **DOM geometry + ảnh chụp thực + thao tác thực**; `scrollHeight/Width`, boundingRect, click reachability, no clipping/overlap, 2 ngôn ngữ, từng kind, phase 1→2, instant, nav fixed, tooltip/modal, model state, offline, a11y/zoom. Geometry pass không đủ chứng minh chữ dễ đọc/sư phạm đúng.
++- Điều hướng dùng chung router không khóa học; `SEEN`, `UNANSWERED`, `INCORRECT`, `CORRECT`, `MODELED` khác `MASTERED/VERIFIED`; không yêu cầu lý do bỏ qua.
++- Scene có ID/kind/objective/task/opening_cue/attention_plan/display/layout/content_blocks/model_id/model_action/next_scene_id/state_dependency/viewport_fallback/evidence; `completion_gate=NON_BLOCKING` chỉ là tương thích dữ liệu, không khóa điều hướng.
++- QA qua DOM geometry + ảnh + thao tác: direct t=0, title highlight 3s, reduced motion, fixed nav, tooltip, Recall, quiz, model, offline, VI/EN, zoom; geometry không chứng minh học được.
+ - Gate: `DRAFT`, `PROTOTYPE`, `NEEDS_REVIEW`, `TESTED_AUTOMATED`, `VERIFIED_IN_PRACTICE`, `BLOCKED`; tách `STATIC_DEFINITION_PASS`, `BROWSER_PASS`, `FIELD_VALIDATED`, `RELEASE_PASS`. Chưa test thực không tự ghi PASS.
+-- **Block release** nếu core kiến thức thiếu/bị cắt, mô hình cơ chế thiếu tương tác, nút duplicate, điều hướng guard bị bypass, lộ đáp án, thiếu khả năng điều khiển/tắt chuyển động, không fixed nav ở viewport chuẩn hoặc năng lực VI/EN giả.
++- Block release nếu CORE thiếu/cắt, model không tương tác, duplicate CTA, khóa điều hướng trái chính sách, lộ đáp án, không tắt motion, không fixed nav desktop, VI/EN thiếu hoặc vi phạm DL01–DL07 ảnh hưởng học tập.
+ 
+ ## 8. Quy tắc thực thi
+ - Chạy **một Skill tại một thời điểm** và đưa kết quả để người dùng duyệt. Không tự chạy tiếp sau cổng `NEEDS_REVIEW`; khi người dùng duyệt mới chuyển Skill tiếp. Sửa lỗi phải chỉ rõ Skill sở hữu và ảnh hưởng downstream.
+--- v2.2/policy/PROBLEM_CONTEXT_DESIGN_STANDARD.md
++++ v2.3/policy/PROBLEM_CONTEXT_DESIGN_STANDARD.md
+@@ -25,7 +25,7 @@
+ 
+ ## 3. Thiết kế bố cục và chuyển động
+ - Thiết kế một viewport desktop: header/leading cue ở trên; story và minh họa ở vùng chính; câu hỏi trọng tâm ở khối rộng đủ đọc. Cân ngân sách chiều cao sau fixed footer.
+-- Pha 1: **title/short lead** hiện ngay; t=2–3 giây: bối cảnh, minh họa và câu hỏi hiện **đồng thời**. Không stagger theo từng đoạn, không yêu cầu học sinh chờ để có quyền tương tác; instant reveal mở nội dung hợp lệ ngay.
++- Render ngay toàn bộ tiêu đề, lời dẫn, bối cảnh, minh họa, câu hỏi; highlight tiêu đề chậm 3 giây. Không in nhãn Bối cảnh/Thực trạng/Đặt vấn đề; không yêu cầu nhập giả thuyết.
+ - Không tự chuyển scene sau timer; footer Previous/Next cố định. Animation của mô hình chỉ chạy do thao tác của HS/GV.
+ - Ảnh và chữ không bị che/cắt tại 1280×720, 1366×768, 1600×900, 1920×1080 ở VI/EN; zoom/thiết bị nhỏ ưu tiên tiếp cận và cho phép cuộn có kiểm soát.
+ - Không làm mờ quá mức bối cảnh đã xuất hiện; không nhấp nháy; một tiêu điểm chính tại một thời điểm.
+@@ -42,4 +42,4 @@
+ Hai scene dùng cùng hoạt động mở đầu `ACT-DNS-01`, không làm tăng 11 hoạt động dạy học. Minh họa bối cảnh riêng cần có asset được sản xuất và kiểm định; bản chỉ đặc tả không được ghi đã hoàn thành.
+ 
+ ## 6. Nghiệm thu / chặn
+-**PASS chỉ khi**: context có nguồn, 5 nội dung yêu cầu+minh họa, question sinh ra từ context; scene B có nhiệm vụ/evidence khác; không spoil; được thực hiện hai pha, instant, VI/EN, no-scroll/fixed nav; nguồn hình đúng. **BLOCK/NEEDS_REVIEW** nếu chỉ một câu hỏi, tràn chữ, thiếu hình, tách lặp hoặc phân cảnh để chữa lỗi bố cục.
++**PASS chỉ khi** bối cảnh có nguồn, hình thật, câu hỏi tự nhiên; A/B có nhiệm vụ khác nhau, không spoil; direct display, title highlight, VI/EN, viewport, fixed nav. Không nhãn dư hoặc form phản tư.
+--- v2.2/policy/QA_VIEWPORT_AND_TIMING.md
++++ v2.3/policy/QA_VIEWPORT_AND_TIMING.md
+@@ -11,21 +11,18 @@
+ | Landscape stress | 640×360 | Điều hướng vẫn dùng được, nội dung không mất; ghi ngoại lệ được duyệt nếu cần |
+ | A11y | Zoom 200%, keyboard, reduced motion, VI/EN | Không mất nội dung/thiếu thao tác; scroll fallback nếu cần cho phóng to chữ |
+ 
+-## Test pha và timer
+-
+-1. Mở scene → chỉ opening cue trong vùng trình chiếu, không có khối nội dung chính khác tràn ra.
+-2. Sau **2.0, 2.5, 3.0 giây**, kiểm tra xuất hiện **đồng thời toàn bộ nội dung còn lại**. Không render lần lượt từng block theo delay.
+-3. Bấm **Hiện tất cả ngay** trước mốc chờ → toàn bộ nội dung hiện lập tức, animation dừng; trạng thái mô hình chưa tự chạy, đáp án chưa tự lộ.
+-4. `reduce_motion` vẫn giữ khả năng học; nếu có 2-phase timer thì chỉ hiển thị tức thời không chuyển động ở pha 2.
+-5. Next/Prev/TOC/resume/deeplink trong lúc timer chạy → hủy timer cũ; không xuất hiện nội dung màn trước nhầm vào màn mới.
+-6. Chuyển VI↔EN → không reset progress, không thay đổi nghĩa câu hỏi hoặc làm tràn viewport.
+-7. Hoạt ảnh mô hình: Play/Pause/Step/Reset (nếu có chuỗi), test trạng thái thực với hai đầu vào, tắt animation vẫn quan sát được kết quả.
+-8. Modal DIAGNOSE: đúng cho kiến thức nền + minh họa, sai có route recovery; đóng bằng Esc/Tab/click hợp lệ. Tooltip tự tắt khi rời hover, keyboard/touch tương đương.
+-9. `Previous` và `Next` cố định cạnh dưới trên mỗi scene, không trôi khi đổi loại scene/reveal/modal, guard không cho skip học phần cốt lõi không cảnh báo.
++## Test Direct Display, attention và hoạt động
++1. t=0: mọi nội dung hợp lệ visible và tương tác được; không nút Hiện tất cả. Title highlight 1–2 chu kỳ chậm trong 3000ms, trở về bình thường, không shift; kiểm t=0, 1.5s, ≥3s và reduced motion.
++2. Next/Prev/TOC/resume/deeplink khi chưa trả lời vẫn hoạt động, không tự mastery; hủy hiệu ứng cũ, không restart vì rerender hoặc VI/EN.
++3. Không nhãn sư phạm trên UI; bối cảnh và định nghĩa CORE vẫn đủ, rõ như SGK; kiểm cả hai ngôn ngữ. Inline bold tooltip trên từ khóa, hover leave/focus/touch/Esc, không overflow, không spoil.
++4. Recall keyword từng lượt bấm → tập câu hỏi, không form, không key; Review có ít nhất 2 dạng đóng phù hợp, feedback đúng/sai, chưa làm không tự đúng. Mindmap ghép thẻ, teach-back miệng, flashcard tự do.
++5. Mô hình state thật, Step/Reset/Play khi phù hợp, motion off cùng kết quả; kiểm khác biệt model_view_id, nội dung và control giữa các màn dùng cùng engine.
++6. DIAGNOSE đúng mở recap, sai Recovery, đóng modal/thoát tuyến không mất lựa chọn; fixed nav và a11y; offline/localStorage/export-import khi có thể.
++7. Kiểm từng scene bằng DOM + ảnh + thao tác; rubric và bằng chứng thực địa tách riêng.
+ 
+ ## Hạng lỗi chặn RELEASE
+ - `P0`: rò answer key/đánh giá độc lập, hành động nguy hiểm ngoài phạm vi.
+-- `P1`: CORE không học được, clipped content, lỗi router/guard, fixed-nav che nội dung, mô hình cơ chế không đổi trạng thái, duplicate CTA, animation không tắt được, thiếu fallback khả dụng.
++- `P1`: CORE không học được, clipped content, lỗi router hoặc khóa điều hướng trái DL04, fixed-nav che nội dung, mô hình cơ chế không đổi trạng thái, duplicate CTA, animation không tắt được, thiếu fallback khả dụng.
+ - `P2`: giảm chất lượng như focus kém, nhãn không rõ, chuyển động hơi gây phân tán, tooltip vướng nhưng còn đường dùng khác.
+ - `P3`: thẩm mỹ không thiết yếu.
+ 
+--- v2.2/policy/SCENE_KIND_REFERENCE.md
++++ v2.3/policy/SCENE_KIND_REFERENCE.md
+@@ -2,20 +2,20 @@
+ 
+ | `kind` | Học sinh thực hiện | Focus target | Mô hình/hiệu ứng | Cổng quan trọng |
+ |---|---|---|---|---|
+-| `PROBLEM_CONTEXT` | Hiểu bối cảnh, chỉ ra thực trạng/nhu cầu và câu hỏi cần giải | Bối cảnh + điểm chưa giải thích + câu hỏi nổi bật | Tình huống, ảnh/SVG minh họa có nguồn; hai pha title/lead→2.5s→ALL | Tách scene chỉ khi nhiệm vụ/evidence khác OBSERVE; không spoil giải pháp, không chỉ một câu hỏi |
++| `PROBLEM_CONTEXT` | Hiểu bối cảnh, chỉ ra thực trạng/nhu cầu và câu hỏi cần giải | Bối cảnh + điểm chưa giải thích + câu hỏi nổi bật | Tình huống, ảnh/SVG minh họa có nguồn; direct display; title highlight 3s | Tách scene chỉ khi nhiệm vụ/evidence khác OBSERVE; không spoil giải pháp, không chỉ một câu hỏi |
+ | `OBSERVE` | Quan sát hiện tượng, phát hiện vấn đề | Câu hỏi tình huống ở trung tâm | Spotlight nhẹ, quan sát hai trạng thái | Phải xem được bằng chứng, không phải xem một animation có sẵn rồi bấm Next |
+ | `DIAGNOSE` | Bộc lộ kiến thức nền | Câu hỏi và lựa chọn | Feedback; đúng→modal kiến thức cũ minh họa, sai→RECOVERY | Modal không là bài kiểm tra, không lộ đáp án cho assessment |
+ | `RECOVERY` | Bù lỗ hổng cụ thể | Điểm hiểu sai | Minh họa/điều khiển một bước rồi thử lại | Không mở tuyến học dài không cần thiết |
+ | `INTRODUCTION` | Nhận diện tên công cụ/phương án | Tên khái niệm + ích lợi | Hình/mô hình preview tương tác ngắn | Dùng có chọn lọc trước TEACH; không thay đầy đủ TEACH |
+ | `TEACH` | Đọc, hiểu giải thích chính | Cơ chế hoặc nội dung cốt lõi | Chú giải, mô hình inline khi là cơ chế | Không ép nhập câu trả lời chỉ để được đọc kiến thức |
+-| `EXPLORE` | Thử giả thuyết, điều chỉnh đầu vào | Mô hình + biến thay đổi | Tương tác trạng thái, thử bình thường/ngoại lệ | Có quan sát và kết luận của HS |
++| `EXPLORE` | Thử giả thuyết, điều chỉnh đầu vào | Mô hình + biến thay đổi | Tương tác trạng thái, thử bình thường/ngoại lệ | Quan sát, kết luận chuẩn hóa trực tiếp; câu hỏi miệng tùy chọn |
+ | `COMPARE` | So sánh các trường hợp | Khác biệt trọng điểm | Cùng màn/cùng mô hình; highlight khác biệt | Không tách hai thứ bắt buộc đặt cạnh nhau |
+ | `PRACTISE` | Vận dụng có phản hồi | Nhiệm vụ thao tác | Phản hồi theo thao tác, có sửa sai | Không thay chứng cứ bằng click ngẫu nhiên |
+-| `RECALL` | Tự tái hiện không gợi đáp án | Câu hỏi/cue nhớ lại | Hiện cue, tự nói/ghi rồi mới đối chiếu | Feedback bị khóa đến khi tự thử |
++| `RECALL` | Tự tái hiện không gợi đáp án | Câu hỏi/cue nhớ lại | Từng keyword do bấm → câu hỏi gợi nhớ, không nhập/nộp | Không đáp án, không chấm; Next tự do |
+ | `REVIEW` | Ôn tập đánh giá có phản hồi | Câu hỏi/đáp án đã thử | Feedback, có thử lại | ≥2 dạng câu phù hợp mỗi CORE section |
+ | `RECALL_TEACH_BACK` | Giải thích lại bằng lời/sơ đồ | Mạch lập luận | Dựng lại sơ đồ, chỉ dẫn sau lượt thử | Có tiêu chí diễn đạt đúng |
+ | `ASSESS_INTRO` | Hiểu yêu cầu đánh giá | Tiêu chí/nhiệm vụ | Brief tĩnh, không gợi đáp án | Giữ độc lập bài đánh giá |
+-| `ASSESS` | Thực hiện đánh giá độc lập | Bài làm | Không cue gợi kết quả trước nộp | Key không ở student bundle; cấm tự MASTERED vì Next |
++| `ASSESS` | Thực hiện đánh giá độc lập | Bài làm | Câu hỏi đóng, không cue gợi kết quả trước check | Key không ở student bundle; cấm tự MASTERED vì Next |
+ 
+ **Scene mode** (SLIDE/STORY/LAB/MAP/FOCUS/ASSESSMENT) là lựa chọn **bố cục**, không phải `kind`. Scene có thể đặt `kind=TEACH`, `layout_mode=LAB` nếu cần mô hình giải thích cơ chế. Khi lựa chọn hình thức, ưu tiên học sinh có thể tìm được điểm nhìn chính, hiểu nhiệm vụ và có điều khiển rõ ràng.
+ 
+@@ -25,3 +25,6 @@
+ - **TWO_SCENES:** `PROBLEM_CONTEXT` cần nhiệm vụ 'hiểu tình huống và nhận ra vấn đề'; scene B có hành động *khác* (quan sát bằng chứng, thao tác, giả thuyết, DIAGNOSE). Cùng `activity_id` nếu thuộc một hoạt động giáo án, nhưng `scene_id`, evidence và learning task khác nhau.
+ - **BLOCK:** Chia màn chỉ để tràn bố cục, cùng câu hỏi/ảnh/lời dẫn lặp lại, dẫn tên giải pháp trước khi HS được khám phá, không có asset minh họa, người đọc không biết làm gì sau khi bấm Next.
+ - **Không bắt buộc** mọi topic đều dùng PROBLEM_CONTEXT; INTRODUCTION vẫn là chức năng *gọi tên giải pháp*, không trùng PROBLEM_CONTEXT.
++
++## Quy tắc trình bày v2.3
++Áp dụng DL01–DL07: tên kind là metadata, không hiện như nhãn màn học. Không form phản tư. Mỗi view có nội dung và nhiệm vụ riêng.
+--- v2.2/policy/SKILL07_MODEL_DESIGN_STANDARD.md
++++ v2.3/policy/SKILL07_MODEL_DESIGN_STANDARD.md
+@@ -43,12 +43,12 @@
+ - Step Next chỉ hợp lệ khi trước đó đã đạt precondition; nếu sai cần phản hồi ngắn, có cách khắc phục.
+ - Reset hủy mọi animation/timer chưa kết thúc, xóa dữ liệu sai của lượt trước, trở về state READY; đổi VI/EN không làm mất state.
+ - Previous / Replay không được tạo hai bản sao cùng sự kiện hoặc chạy chồng animation.
+-- Không cho nút `Hiện tất cả` tự tăng tiến trình state, mở lời giải hoặc trả lời bài kiểm tra.
++- Việc hiển thị trực tiếp và title highlight không tự tăng tiến trình state, mở lời giải hoặc trả lời bài kiểm tra.
+ - Tách rõ hoàn thành mô hình (`MODELED`) và hiểu bài (`VERIFIED`); nhấn Run không tự chấm học sinh đã nắm kiến thức.
+ 
+ ## 4. Hệ thống hoạt ảnh — Motion Contract
+ 
+-**Hai lớp phải độc lập:** (A) hiệu ứng màn học (`opening_cue` → sau 2–3 giây hiện đồng thời toàn bộ nội dung được phép), và (B) chuyển động bên trong mô hình chỉ chạy sau khi học sinh điều khiển. Khi nhấn `Hiện tất cả ngay`, chỉ bỏ chờ lớp A, không chạy lớp B.
++**Hai lớp phải độc lập:** màn học render ngay nội dung hợp lệ và highlight tiêu đề 3s; mô hình chỉ chạy khi có lệnh. Tắt motion không đổi logic, không lộ đáp án.
+ 
+ **Công thức:** `state_next = transition(state, event, input)`, rồi `render(state_next)` và `animate(state_prev, state_next)` tùy motion setting. Không điều khiển trạng thái kiến thức bằng `animationend` hoặc các mốc thời gian giả.
+ 
+@@ -102,7 +102,7 @@
+ - [ ] Mô hình thật có file chạy được; input→state→output không giả; >=2 tình huống phân biệt; reset và thử lại.
+ - [ ] Luồng kỹ thuật chính xác, mũi tên + payload không sai, đơn giản hóa được chú thích.
+ - [ ] Mọi `MODEL_REQUIRED` trong nội dung CORE có mô hình thực tế hoặc đánh dấu `BLOCKED` (không giả nhận pass).
+-- [ ] Tắt motion / hiện tất cả không làm sai state, lộ lời giải hoặc đơ mô hình.
++- [ ] Tắt motion / direct display không làm sai state, lộ lời giải hoặc đơ mô hình.
+ - [ ] Có thao tác bàn phím, thông tin không phụ thuộc chỉ màu, giao diện không cắt phần kiến thức CORE.
+ - [ ] Student bundle không chứa teacher key/đáp án bảo mật của bài đánh giá.
+ - [ ] Có minh chứng browser test thật cho các chức năng được tuyên bố đã hoạt động; nếu chỉ `set_content` không được nhận đã thử `file://`/iframe/offline.
+@@ -110,7 +110,7 @@
+ ### Kiểm thử thường xuyên
+ 1. Basic path; cache HIT/MISS/EXPIRED; web no IP / IP only / request / HTML / render.
+ 2. Spam Next/Back, Reset ở giữa animation, thay tham số khi đang chạy, đổi VI/EN, chuyển scene và quay lại.
+-3. Motion on/off, instant reveal trước/sau 2.5s, slow device, hidden tab.
++3. Motion on/off, direct display tại t=0, title highlight kết thúc 3s, slow device, hidden tab.
+ 4. Viewports 1280×720/1366×768/1600×900/1920×1080, 390×844, 360×640, zoom 200%; 2 ngôn ngữ.
+ 5. Keyboard-only + focus + screen reader smoke; file://, localhost, network offline, no external dependency.
+ 6. Hỏi học sinh: dự đoán trước, tự thay input, chỉ ra payload đang truyền, giải thích nguyên nhân, thử lại trường hợp khác.
