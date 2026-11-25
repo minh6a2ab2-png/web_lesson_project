@@ -1,0 +1,51 @@
+{
+  "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+  "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+  "scene_id": "DNS-OBSERVE-01",
+  "kind": "OBSERVE",
+  "objective_id": "OBJ-DNS-01",
+  "student_task": "Quan sát đầu vào tên máy chủ và trạng thái tải trang, chỉ ra bước trung gian bị ẩn và nêu giả thuyết.",
+  "opening_cue": "Em quan sát thấy dữ kiện nào? Bước nào chưa được giải thích?",
+  "reveal": {
+    "opening_pause_s": 2.5,
+    "full_reveal_group": "ALL",
+    "instant_reveal": true,
+    "auto_advance": false,
+    "staggered": false
+  },
+  "attention_plan": {
+    "primary_focus_target": "observation-evidence",
+    "cue_type": "EMPHASIS",
+    "motion_purpose": "làm nổi bật bằng chứng hiện tượng, không tiết lộ cơ chế"
+  },
+  "layout_mode": "STORY",
+  "content_blocks": [
+    {
+      "block_id": "input-hostname",
+      "type": "observation"
+    },
+    {
+      "block_id": "page-state",
+      "type": "observation"
+    },
+    {
+      "block_id": "learner-hypothesis",
+      "type": "response"
+    }
+  ],
+  "model_id": null,
+  "model_action": null,
+  "completion_gate": "Học sinh chỉ ra dữ kiện và ghi/đọc một giả thuyết trước khi Next",
+  "next_scene_id": "DNS-DIAGNOSE-01",
+  "state_dependency": [
+    "DNS-CONTEXT-01"
+  ],
+  "viewport_fallback": "hai trạng thái xếp theo cột; không gộp lại context text hoặc lộ DNS answer",
+  "evidence": "EVD-OPEN: dữ kiện quan sát + một giả thuyết; không trùng evidence context",
+  "navigation": {
+    "previous_fixed_bottom_left": true,
+    "next_fixed_bottom_right": true,
+    "guard_unified": true
+  },
+  "activity_id": "ACT-DNS-01"
+}

@@ -1,0 +1,17 @@
+{
+  "version": "2.6-rc1",
+  "base_commit": "1984f3e892de5ce50c60ee3b3a2255ae52b447c9",
+  "base_tree": "7e205fd379eb8c23db50b006c154284718ca7c37",
+  "pilot_commit": "a61b3ae69a2464eb2628ad37f5ecc7825e714d2c",
+  "baseline_manifest_version": "2.5",
+  "baseline_file_count": 189,
+  "baseline_registry_blob": "7a2e028c20fe6a18f1964371be9513772e7ad97d",
+  "engine_source_sha256": {
+    "engines/orchestrator.py": "c8e51175656713f759f7a14968688f5e58ef97f4cb02b9ee4dae838705ad3e3a",
+    "engines/game-engine-generalized.js": "5eaf0c78a4fff1e60f153d7b971e16b6e8c6933c9f11df992e4d521ea37ce539",
+    "engines/motion-engine.js": "ac703474496036510f4bcd45d69f8c44816a9a542bb95bf712d7ceb72f28bf32"
+  },
+  "historical_validators": "../FocusLab_13_Skills_v2.5/tests/",
+  "backlog": "packs/BACKLOG.md",
+  "backlog_review": "packs/BACKLOG_REVIEW.md"
+}

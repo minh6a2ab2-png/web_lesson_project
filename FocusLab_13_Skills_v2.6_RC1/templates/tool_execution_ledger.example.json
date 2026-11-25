@@ -1,0 +1,21 @@
+{
+  "scope": "synthetic example; no executed task",
+  "tasks": [
+    {
+      "task_id": "EXAMPLE",
+      "engine": "Asset",
+      "route": "NATIVE",
+      "tool_version": "NOT_RUN",
+      "input_refs": [],
+      "output_files": [],
+      "status": "NOT_RUN",
+      "test_status": "NOT_RUN",
+      "field_status": "NOT_RUN",
+      "issues": [],
+      "human_actions": 0,
+      "human_minutes": null,
+      "elapsed_seconds": null
+    }
+  ],
+  "release_status": "NEEDS_REVIEW"
+}

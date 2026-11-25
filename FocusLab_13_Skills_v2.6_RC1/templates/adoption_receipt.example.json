@@ -1,0 +1,14 @@
+{
+  "scope": "synthetic example, not approval",
+  "skill_id": "SKILL07",
+  "topic_id": "EXAMPLE",
+  "source_version": "2.5",
+  "archive_sha256": null,
+  "status": "PENDING",
+  "evidence_ref": null,
+  "compatibility": "NOT_RUN",
+  "missing_contracts": [
+    "07-tool-execution-ledger.json",
+    "07-gate-status.json"
+  ]
+}

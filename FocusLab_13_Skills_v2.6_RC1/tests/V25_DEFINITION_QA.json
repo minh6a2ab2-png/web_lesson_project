@@ -1,0 +1,201 @@
+{
+  "scope": "overlay schema/structure/reference hash + mock merge/verification only; real base merge NOT_RUN; lesson runtime NOT_RUN",
+  "results": [
+    {
+      "case": "13 definitions and registry entries",
+      "passed": true
+    },
+    {
+      "case": "SKILL01 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "SKILL02 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "SKILL03 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "SKILL04 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "SKILL05 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "SKILL06 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "SKILL07 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "SKILL08 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "SKILL09 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "SKILL10 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "SKILL11 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "SKILL12 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "SKILL13 output and base lock",
+      "passed": true
+    },
+    {
+      "case": "layout 12+workspace",
+      "passed": true
+    },
+    {
+      "case": "8 styles and 6 backgrounds",
+      "passed": true
+    },
+    {
+      "case": "15 kinds preserved",
+      "passed": true
+    },
+    {
+      "case": "base schema byte verified",
+      "passed": true
+    },
+    {
+      "case": "legacy constraints preserved",
+      "passed": true
+    },
+    {
+      "case": "scene positive",
+      "passed": true
+    },
+    {
+      "case": "missing VE rejected",
+      "passed": true
+    },
+    {
+      "case": "footer rejected",
+      "passed": true
+    },
+    {
+      "case": "workspace missing map rejected",
+      "passed": true
+    },
+    {
+      "case": "workspace valid",
+      "passed": true
+    },
+    {
+      "case": "map positive",
+      "passed": true
+    },
+    {
+      "case": "map reject idle drift",
+      "passed": true
+    },
+    {
+      "case": "map reject wrong colors",
+      "passed": true
+    },
+    {
+      "case": "map reject duplicate ID",
+      "passed": true
+    },
+    {
+      "case": "map reject missing parent",
+      "passed": true
+    },
+    {
+      "case": "map reject wrong tier",
+      "passed": true
+    },
+    {
+      "case": "map reject self cycle",
+      "passed": true
+    },
+    {
+      "case": "map reject offboard root",
+      "passed": true
+    },
+    {
+      "case": "map reject missing asset",
+      "passed": true
+    },
+    {
+      "case": "map reject oversize",
+      "passed": true
+    },
+    {
+      "case": "rubric weights",
+      "passed": true
+    },
+    {
+      "case": "rubric blank scores",
+      "passed": true
+    },
+    {
+      "case": "20 test cases honest NOT_RUN",
+      "passed": true
+    },
+    {
+      "case": "reference hash R5_SPEC.md",
+      "passed": true
+    },
+    {
+      "case": "reference hash eight-screen-contact-sheet.jpg",
+      "passed": true
+    },
+    {
+      "case": "reference hash embedded-preview.png",
+      "passed": true
+    },
+    {
+      "case": "reference hash free-drawing-r2.zip",
+      "passed": true
+    },
+    {
+      "case": "reference hash mindmap-completed.png",
+      "passed": true
+    },
+    {
+      "case": "reference hash mindmap-r5.zip",
+      "passed": true
+    },
+    {
+      "case": "reference hash mindmap-start.png",
+      "passed": true
+    },
+    {
+      "case": "reference hash visual-upgrade-eight.zip",
+      "passed": true
+    },
+    {
+      "case": "merge retains originals",
+      "passed": true
+    },
+    {
+      "case": "assembler mock verify",
+      "passed": true
+    },
+    {
+      "case": "assembler rejects modified bytes",
+      "passed": true
+    },
+    {
+      "case": "no production release claim",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "status": "PASS",
+  "passed": 62,
+  "total": 62,
+  "scope": "static definition / schema / fixtures only; browser and field NOT_RUN",
+  "results": [
+    {
+      "test": "13 active definitions",
+      "pass": true
+    },
+    {
+      "test": "skill01 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill01 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "skill02 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill02 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "skill03 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill03 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "skill04 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill04 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "skill05 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill05 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "skill06 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill06 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "skill07 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill07 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "skill08 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill08 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "skill09 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill09 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "skill10 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill10 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "skill11 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill11 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "skill12 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill12 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "skill13 updated procedure output gate",
+      "pass": true
+    },
+    {
+      "test": "skill13 obsolete delay instructions absent",
+      "pass": true
+    },
+    {
+      "test": "15 scene kinds",
+      "pass": true
+    },
+    {
+      "test": "valid scene schema",
+      "pass": true
+    },
+    {
+      "test": "dns_context_scene.valid.json",
+      "pass": true
+    },
+    {
+      "test": "dns_lead.valid.json",
+      "pass": true
+    },
+    {
+      "test": "dns_model_view_09.valid.json",
+      "pass": true
+    },
+    {
+      "test": "dns_model_view_10.valid.json",
+      "pass": true
+    },
+    {
+      "test": "dns_observe_scene.valid.json",
+      "pass": true
+    },
+    {
+      "test": "dns_recall.valid.json",
+      "pass": true
+    },
+    {
+      "test": "dns_review.valid.json",
+      "pass": true
+    },
+    {
+      "test": "dns_two_scene_pair.valid.json",
+      "pass": true
+    },
+    {
+      "test": "valid_scene.json",
+      "pass": true
+    },
+    {
+      "test": "reject delay",
+      "pass": true
+    },
+    {
+      "test": "reject legacy reveal",
+      "pass": true
+    },
+    {
+      "test": "reject labels",
+      "pass": true
+    },
+    {
+      "test": "reject reflection",
+      "pass": true
+    },
+    {
+      "test": "reject nav guard",
+      "pass": true
+    },
+    {
+      "test": "reject short highlight",
+      "pass": true
+    },
+    {
+      "test": "reject restart",
+      "pass": true
+    },
+    {
+      "test": "reject missing view",
+      "pass": true
+    },
+    {
+      "test": "reject missing quiz format",
+      "pass": true
+    },
+    {
+      "test": "reject recall forced submission",
+      "pass": true
+    },
+    {
+      "test": "reject recall answer",
+      "pass": true
+    },
+    {
+      "test": "shared engine distinct views/tasks",
+      "pass": true
+    },
+    {
+      "test": "model_contract.example.json",
+      "pass": true
+    },
+    {
+      "test": "model_contract.dns.example.json",
+      "pass": true
+    },
+    {
+      "test": "30 model QA criteria",
+      "pass": true
+    },
+    {
+      "test": "legacy baseline retained",
+      "pass": true
+    },
+    {
+      "test": "prior artifacts archived",
+      "pass": true
+    },
+    {
+      "test": "15 visual identities",
+      "pass": true
+    },
+    {
+      "test": "reject footer",
+      "pass": true
+    },
+    {
+      "test": "reject wrong visual identity",
+      "pass": true
+    },
+    {
+      "test": "reject nav style",
+      "pass": true
+    },
+    {
+      "test": "reject invalid dns_lead.valid.json",
+      "pass": true
+    },
+    {
+      "test": "reject invalid dns_recall.valid.json",
+      "pass": true
+    },
+    {
+      "test": "reject invalid dns_review.valid.json",
+      "pass": true
+    }
+  ]
+}

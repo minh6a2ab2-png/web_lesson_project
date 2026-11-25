@@ -1,0 +1,52 @@
+name: FocusLab RC1 definition regression
+on:
+  pull_request:
+    branches: [focuslab-v2.6-automation-pilot]
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'FocusLab_13_Skills_v2.6_RC1/**'
+      - '.github/workflows/focuslab-rc1.yml'
+permissions:
+  contents: read
+concurrency:
+  group: focuslab-rc1-definition
+  cancel-in-progress: true
+jobs:
+  definition-qa:
+    if: github.head_ref == 'focuslab-v2.6-rc1' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Install validator
+        run: |
+          python3 -m venv .rc1-venv
+          .rc1-venv/bin/pip install --disable-pip-version-check jsonschema==4.25.1
+      - name: Run frozen baseline and RC1 regression
+        run: |
+          mkdir -p rc1-evidence
+          .rc1-venv/bin/python FocusLab_13_Skills_v2.5/tests/check_consolidation.py | tee rc1-evidence/v25-consolidation.txt
+          .rc1-venv/bin/python FocusLab_13_Skills_v2.5/tests/test_active_v25.py | tee rc1-evidence/v25-regression.txt
+          .rc1-venv/bin/python FocusLab_13_Skills_v2.6_RC1/tests/test_rc1.py | tee rc1-evidence/rc1-regression.json
+        shell: bash
+      - name: Package committed definitions only
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, zipfile, subprocess
+          target=Path('rc1-evidence/FocusLab_v2.6_RC1_Definitions.zip')
+          paths=subprocess.check_output(['git','ls-files','-z','FocusLab_13_Skills_v2.5','FocusLab_13_Skills_v2.6_RC1']).decode().split('\0')
+          with zipfile.ZipFile(target,'w',zipfile.ZIP_DEFLATED) as z:
+              for p in paths:
+                  if p:z.write(p,p)
+          (target.parent/'package-sha256.txt').write_text(hashlib.sha256(target.read_bytes()).hexdigest()+'\n')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: focuslab-rc1-definition-evidence
+          path: rc1-evidence/
+          retention-days: 7
+          if-no-files-found: warn

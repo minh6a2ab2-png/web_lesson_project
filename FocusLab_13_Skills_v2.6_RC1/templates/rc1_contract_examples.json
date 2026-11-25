@@ -1,0 +1,157 @@
+{
+  "scope": "Example shapes only; not real handoffs or evidence.",
+  "outputs": {
+    "01-tool-opportunity-register.json": {
+      "opportunities": [
+        {
+          "tool": "",
+          "purpose": "",
+          "source_url": "",
+          "rights": "UNVERIFIED",
+          "availability": "NOT_RUN"
+        }
+      ]
+    },
+    "02-execution-plan.json": {
+      "scope": "",
+      "approval_mode": "DEVELOPMENT",
+      "nodes": [
+        {
+          "skill_id": "SKILL01",
+          "dependencies": [],
+          "status": "READY_TO_RUN",
+          "reason": ""
+        }
+      ],
+      "checkpoint_refs": [],
+      "changed": []
+    },
+    "03-multimedia-content-contract.json": {
+      "assets": [
+        {
+          "asset_id": "",
+          "ku_ids": [],
+          "objective_ids": [],
+          "vi": "",
+          "en": "",
+          "source_refs": [],
+          "spoiler_boundary": ""
+        }
+      ]
+    },
+    "04-tool-fit-decision.json": {
+      "decisions": [
+        {
+          "activity_id": "",
+          "options": [],
+          "selected": "",
+          "rationale": "",
+          "human_minutes_estimate": null
+        }
+      ]
+    },
+    "DESIGN.md": {
+      "fields": [
+        "topic",
+        "visual_intents",
+        "color",
+        "typography",
+        "spacing",
+        "layout",
+        "accessibility",
+        "image_rights",
+        "motion",
+        "fallback"
+      ]
+    },
+    "05-tool-and-acquisition-plan.json": {
+      "assets": [
+        {
+          "asset_id": "",
+          "rights": "UNVERIFIED",
+          "source": "",
+          "direct_url": "",
+          "route": "NOT_RUN",
+          "fallback": ""
+        }
+      ]
+    },
+    "06-media-motion-script.json": {
+      "beats": [
+        {
+          "activity_id": "",
+          "state": "",
+          "cue_vi": "",
+          "cue_en": "",
+          "duration_ms": 0,
+          "static_fallback": ""
+        }
+      ]
+    },
+    "07-tool-execution-ledger.json": {
+      "ref": "tool_execution_ledger.example.json"
+    },
+    "07-gate-status.json": {
+      "ref": "gate07.example.json"
+    },
+    "08-resource-routing-note.md": {
+      "fields": [
+        "activity",
+        "asset_ref",
+        "status",
+        "duration",
+        "fallback",
+        "evidence"
+      ]
+    },
+    "09-component-dependency-map.json": {
+      "components": [
+        {
+          "component_id": "",
+          "scene_id": "",
+          "dependencies": [],
+          "lifecycle": "",
+          "asset_refs": []
+        }
+      ]
+    },
+    "10-comparison-evidence.json": {
+      "comparisons": [],
+      "reviewer_role": "SELF_REVIEW",
+      "rubric_ref": "",
+      "status": "NOT_RUN"
+    },
+    "11-engine-integration-manifest.json": {
+      "engines": [
+        {
+          "name": "",
+          "version": "",
+          "sha256": "",
+          "local_path": "",
+          "lifecycle": "",
+          "rights": ""
+        }
+      ]
+    },
+    "12-engine-regression.json": {
+      "checks": [
+        {
+          "scope": "actual file",
+          "status": "NOT_RUN",
+          "evidence_refs": [],
+          "issue_id": ""
+        }
+      ]
+    },
+    "13-benchmark-and-human-effort.json": {
+      "wall_seconds": null,
+      "manual_actions": null,
+      "manual_minutes": null,
+      "cost": null,
+      "comparisons": [],
+      "release_blockers": [],
+      "reviewer_role": "SELF_REVIEW",
+      "field_status": "NOT_RUN"
+    }
+  }
+}

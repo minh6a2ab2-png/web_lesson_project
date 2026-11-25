@@ -1,0 +1,6 @@
+{
+  "version": "2.4.1",
+  "status": "NOT_RUN",
+  "scope": "full JSON Schema regression",
+  "reason": "jsonschema is unavailable; network dependency installation could not resolve pypi.org. The separate semantic suite passed 165/165. Prior v2.4 results archived separately."
+}

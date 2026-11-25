@@ -1,0 +1,8 @@
+{
+  "suite": "ONE_TOPIC definition static inspection",
+  "files": 13,
+  "policy_rules": 15,
+  "errors": [],
+  "status": "PASS",
+  "meaning": "Only definitions, schema and source-preservation checks; NOT browser or learner pilot validation"
+}

@@ -1,0 +1,30 @@
+{
+  "checks": [
+    {
+      "name": "definition_static",
+      "pass": true,
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\n  \"suite\": \"ONE_TOPIC definition static inspection\",\n  \"files\": 13,\n  \"policy_rules\": 13,\n  \"errors\": [],\n  \"status\": \"PASS\",\n  \"meaning\": \"Only definitions, schema and source-preservation checks; NOT browser or learner pilot validation\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "valid_scene",
+      "pass": true,
+      "returncode": 0,
+      "expected_returncode": 0,
+      "stdout": "{\n  \"file\": \"/mnt/data/ONE_TOPIC_13_SKILLS_FOCUSLAB_V2_2026-11-23/fixtures/valid_scene.json\",\n  \"status\": \"PASS\",\n  \"errors\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "invalid_scene_rejected",
+      "pass": true,
+      "returncode": 1,
+      "expected_returncode": 1,
+      "stdout": "{\n  \"file\": \"/mnt/data/ONE_TOPIC_13_SKILLS_FOCUSLAB_V2_2026-11-23/fixtures/invalid_scene_FOR_TEST_ONLY.json\",\n  \"status\": \"FAIL\",\n  \"errors\": [\n    \"sub-page/part_id forbidden\",\n    \"reveal.instant_reveal must be True\",\n    \"reveal.staggered must be False\",\n    \"opening_pause_s outside 2–3\",\n    \"navigation.next_fixed_bottom_right must true\"\n  ]\n}\n",
+      "stderr": ""
+    }
+  ],
+  "result": "PASS",
+  "note": "negative fixture intentionally rejected; only contracts validated"
+}

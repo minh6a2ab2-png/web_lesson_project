@@ -1,0 +1,535 @@
+{
+  "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+  "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+  "sections": [
+    {
+      "section_id": "CORE-DNS",
+      "core": true
+    }
+  ],
+  "scenes": [
+    {
+      "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+      "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+      "scene_id": "DNS-CONTEXT-01",
+      "kind": "PROBLEM_CONTEXT",
+      "objective_id": "OBJ-DNS-01",
+      "student_task": "Nhận diện bối cảnh và nêu vấn đề cần giải thích trước khi tìm hiểu cơ chế.",
+      "opening_cue": "Làm sao máy tính tìm đúng website?",
+      "attention_plan": {
+        "primary_focus_target": "problem-question",
+        "cue_type": "SPOTLIGHT",
+        "motion_purpose": "hướng sự chú ý đến vấn đề, không tiết lộ lời giải"
+      },
+      "layout_mode": "STORY",
+      "content_blocks": [
+        {
+          "block_id": "context-story",
+          "type": "context"
+        },
+        {
+          "block_id": "unknown-address-illustration",
+          "type": "illustration"
+        },
+        {
+          "block_id": "problem",
+          "type": "question"
+        }
+      ],
+      "model_id": null,
+      "model_action": null,
+      "completion_gate": "NON_BLOCKING",
+      "next_scene_id": "DNS-OBSERVE-01",
+      "state_dependency": [],
+      "viewport_fallback": "cô đọng bối cảnh, giữ hình và câu hỏi đủ lớn trong 1 viewport; mobile/zoom dùng reflow có thể cuộn",
+      "evidence": "EVD-CONTEXT-01: học sinh phát biểu được vì sao cần tìm địa chỉ",
+      "navigation": {
+        "previous_fixed_bottom_left": true,
+        "next_fixed_bottom_right": true,
+        "mode": "FREE",
+        "require_skip_reason": false,
+        "style": "FLOATING_FIXED",
+        "footer": false,
+        "count_location": "HEADER_OR_COMPACT"
+      },
+      "activity_id": "ACT-DNS-01",
+      "problem_split": {
+        "mode": "TWO_SCENES",
+        "reason": "Bối cảnh cần được nhận diện trước khi học sinh quan sát/dự đoán; hai nhiệm vụ và bằng chứng khác nhau.",
+        "shared_activity_id": "ACT-DNS-01",
+        "next_scene_id": "DNS-OBSERVE-01",
+        "context_evidence_id": "EVD-CONTEXT-01",
+        "next_scene_evidence_id": "EVD-OPEN"
+      },
+      "context_problem": {
+        "title_vi": "Làm sao máy tính tìm đúng website?",
+        "title_en": "How does a computer find the right website?",
+        "setting_vi": "Em mở trình duyệt và nhập www.hoddereducation.co.uk.",
+        "setting_en": "You open a browser and type www.hoddereducation.co.uk.",
+        "observed_reality_vi": "Em không nhập địa chỉ IP nhưng trình duyệt có thể tải trang khi truy cập thành công.",
+        "observed_reality_en": "You do not type an IP address, yet the browser can load the page when the connection succeeds.",
+        "knowledge_gap_vi": "Máy cần xác định địa chỉ máy chủ đích nhưng em chưa nhìn thấy bước tìm địa chỉ.",
+        "knowledge_gap_en": "The computer needs the destination server address, but the lookup step is not yet visible.",
+        "problem_question_vi": "Máy xác định địa chỉ IP tương ứng với tên website bằng cách nào?",
+        "problem_question_en": "How does the computer find the IP address for the website hostname?",
+        "illustration_asset_ids": [
+          "A-CONTEXT-DNS-01"
+        ],
+        "next_learning_action_vi": "Sang màn quan sát để tìm điểm còn thiếu và nêu giả thuyết.",
+        "next_learning_action_en": "Go to the observation scene to identify the missing step and make a prediction.",
+        "source_status": "SGK p.183 simplified scenario; new illustration not yet produced (SPEC_ONLY)",
+        "spoiler_boundary": "Không hiện tên DNS hoặc chiều truy vấn trước hoạt động INTRODUCTION/EXPLORE."
+      },
+      "display": {
+        "mode": "DIRECT",
+        "delay_ms": 0,
+        "auto_advance": false,
+        "title_highlight": {
+          "duration_ms": 3000,
+          "cycles": 2,
+          "restart_on_rerender": false,
+          "reduced_motion": "OFF"
+        }
+      },
+      "ui": {
+        "pedagogical_labels": false,
+        "reflection_forms": false,
+        "glossary_mode": "INLINE_KEYWORD",
+        "core_visible": true
+      },
+      "question_intents": [
+        "PROBLEM"
+      ],
+      "model_view_id": null,
+      "visual_identity": "PROBLEM_CONTEXT",
+      "section_id": "CORE-DNS",
+      "activity_cluster_id": "CL-DNS-OPEN"
+    },
+    {
+      "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+      "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+      "scene_id": "DNS-OBSERVE-01",
+      "kind": "OBSERVE",
+      "objective_id": "OBJ-DNS-01",
+      "student_task": "Quan sát đầu vào tên máy chủ và trạng thái tải trang, chỉ ra bước trung gian bị ẩn và nêu giả thuyết.",
+      "opening_cue": "Em quan sát thấy dữ kiện nào? Bước nào chưa được giải thích?",
+      "attention_plan": {
+        "primary_focus_target": "observation-evidence",
+        "cue_type": "EMPHASIS",
+        "motion_purpose": "làm nổi bật bằng chứng hiện tượng, không tiết lộ cơ chế"
+      },
+      "layout_mode": "STORY",
+      "content_blocks": [
+        {
+          "block_id": "input-hostname",
+          "type": "observation"
+        },
+        {
+          "block_id": "page-state",
+          "type": "observation"
+        },
+        {
+          "block_id": "learner-hypothesis",
+          "type": "response"
+        }
+      ],
+      "model_id": null,
+      "model_action": null,
+      "completion_gate": "NON_BLOCKING",
+      "next_scene_id": "DNS-09",
+      "state_dependency": [],
+      "viewport_fallback": "hai trạng thái xếp theo cột; không gộp lại context text hoặc lộ DNS answer",
+      "evidence": "EVD-OPEN: dữ kiện quan sát + một giả thuyết; không trùng evidence context",
+      "navigation": {
+        "previous_fixed_bottom_left": true,
+        "next_fixed_bottom_right": true,
+        "mode": "FREE",
+        "require_skip_reason": false,
+        "style": "FLOATING_FIXED",
+        "footer": false,
+        "count_location": "HEADER_OR_COMPACT"
+      },
+      "activity_id": "ACT-DNS-01",
+      "display": {
+        "mode": "DIRECT",
+        "delay_ms": 0,
+        "auto_advance": false,
+        "title_highlight": {
+          "duration_ms": 3000,
+          "cycles": 2,
+          "restart_on_rerender": false,
+          "reduced_motion": "OFF"
+        }
+      },
+      "ui": {
+        "pedagogical_labels": false,
+        "reflection_forms": false,
+        "glossary_mode": "INLINE_KEYWORD",
+        "core_visible": true
+      },
+      "question_intents": [
+        "GUIDING"
+      ],
+      "model_view_id": null,
+      "visual_identity": "OBSERVE",
+      "section_id": "CORE-DNS",
+      "activity_cluster_id": "CL-DNS-OPEN"
+    },
+    {
+      "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+      "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+      "scene_id": "DNS-09",
+      "kind": "EXPLORE",
+      "objective_id": "OBJ-DNS-09-EXAMPLE",
+      "student_task": "Quan sát bốn bước MISS trong ví dụ SGK",
+      "opening_cue": "Quá trình tra cứu DNS",
+      "attention_plan": {
+        "primary_focus_target": "opening-question",
+        "cue_type": "SPOTLIGHT",
+        "motion_purpose": "nhấn mạnh câu hỏi tình huống"
+      },
+      "layout_mode": "LAB",
+      "content_blocks": [
+        {
+          "block_id": "DNS-MISS-ONLY",
+          "type": "model"
+        },
+        {
+          "block_id": "DNS-MISS-ONLY-core",
+          "type": "core",
+          "role": "core"
+        }
+      ],
+      "model_id": "MC-DNS-SHARED",
+      "model_action": "Quan sát bốn bước MISS trong ví dụ SGK",
+      "completion_gate": "NON_BLOCKING",
+      "next_scene_id": "DNS-RECALL-01",
+      "state_dependency": [],
+      "viewport_fallback": "hai trạng thái xếp dọc nếu vẫn nhìn đủ; thiết kế scene khác nếu không",
+      "evidence": "Quan sát tùy chọn; không khóa Next",
+      "navigation": {
+        "previous_fixed_bottom_left": true,
+        "next_fixed_bottom_right": true,
+        "mode": "FREE",
+        "require_skip_reason": false,
+        "style": "FLOATING_FIXED",
+        "footer": false,
+        "count_location": "HEADER_OR_COMPACT"
+      },
+      "display": {
+        "mode": "DIRECT",
+        "delay_ms": 0,
+        "auto_advance": false,
+        "title_highlight": {
+          "duration_ms": 3000,
+          "cycles": 2,
+          "restart_on_rerender": false,
+          "reduced_motion": "OFF"
+        }
+      },
+      "ui": {
+        "pedagogical_labels": false,
+        "reflection_forms": false,
+        "glossary_mode": "INLINE_KEYWORD",
+        "core_visible": true
+      },
+      "question_intents": [
+        "GUIDING"
+      ],
+      "model_view_id": "DNS-MISS-ONLY",
+      "visual_identity": "EXPLORE",
+      "section_id": "CORE-DNS",
+      "activity_cluster_id": "CL-DNS-OPEN"
+    },
+    {
+      "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+      "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+      "scene_id": "DNS-RECALL-01",
+      "kind": "RECALL",
+      "objective_id": "OBJ-01",
+      "student_task": "Gợi nhớ bằng từ khóa và câu hỏi",
+      "opening_cue": "DNS",
+      "attention_plan": {
+        "primary_focus_target": "opening-question",
+        "cue_type": "SPOTLIGHT",
+        "motion_purpose": "nhấn mạnh câu hỏi tình huống"
+      },
+      "layout_mode": "STORY",
+      "content_blocks": [
+        {
+          "block_id": "keywords",
+          "type": "recall"
+        }
+      ],
+      "model_id": null,
+      "model_action": null,
+      "completion_gate": "NON_BLOCKING",
+      "next_scene_id": "DNS-LEAD-RECALL-01",
+      "state_dependency": [],
+      "viewport_fallback": "hai trạng thái xếp dọc nếu vẫn nhìn đủ; thiết kế scene khác nếu không",
+      "evidence": "Quan sát GV nếu có; không chấm",
+      "navigation": {
+        "previous_fixed_bottom_left": true,
+        "next_fixed_bottom_right": true,
+        "mode": "FREE",
+        "require_skip_reason": false,
+        "style": "FLOATING_FIXED",
+        "footer": false,
+        "count_location": "HEADER_OR_COMPACT"
+      },
+      "display": {
+        "mode": "DIRECT",
+        "delay_ms": 0,
+        "auto_advance": false,
+        "title_highlight": {
+          "duration_ms": 3000,
+          "cycles": 2,
+          "restart_on_rerender": false,
+          "reduced_motion": "OFF"
+        }
+      },
+      "ui": {
+        "pedagogical_labels": false,
+        "reflection_forms": false,
+        "glossary_mode": "INLINE_KEYWORD",
+        "core_visible": true
+      },
+      "question_intents": [
+        "GUIDING"
+      ],
+      "model_view_id": null,
+      "recall": {
+        "keywords": [
+          {
+            "vi": "Tên máy chủ",
+            "en": "Hostname",
+            "cue_asset_id": "A-RECALL-1",
+            "cue_alt_vi": "Hình đối tượng Tên máy chủ",
+            "cue_alt_en": "Illustration of Hostname",
+            "cue_no_answer": true
+          },
+          {
+            "vi": "DNS",
+            "en": "DNS",
+            "cue_asset_id": "A-RECALL-2",
+            "cue_alt_vi": "Hình đối tượng DNS",
+            "cue_alt_en": "Illustration of DNS",
+            "cue_no_answer": true
+          }
+        ],
+        "questions": [
+          {
+            "vi": "DNS có vai trò gì?",
+            "en": "What is the role of DNS?"
+          }
+        ],
+        "advance": "MANUAL",
+        "sequence": "KEYWORDS_THEN_QUESTIONS",
+        "answer_required": false,
+        "show_answers": false
+      },
+      "visual_identity": "RECALL",
+      "section_id": "CORE-DNS",
+      "activity_cluster_id": "CL-DNS-OPEN"
+    },
+    {
+      "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+      "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+      "scene_id": "DNS-LEAD-RECALL-01",
+      "kind": "LEAD_IN",
+      "objective_id": "OBJ-01",
+      "student_task": "Chuẩn bị tự gợi nhớ",
+      "opening_cue": "Em còn nhớ gì?",
+      "attention_plan": {
+        "primary_focus_target": "opening-question",
+        "cue_type": "SPOTLIGHT",
+        "motion_purpose": "nhấn mạnh câu hỏi tình huống"
+      },
+      "layout_mode": "STORY",
+      "content_blocks": [
+        {
+          "block_id": "lead",
+          "type": "lead"
+        }
+      ],
+      "model_id": null,
+      "model_action": null,
+      "completion_gate": "NON_BLOCKING",
+      "next_scene_id": "DNS-REVIEW-01",
+      "state_dependency": [],
+      "viewport_fallback": "hai trạng thái xếp dọc nếu vẫn nhìn đủ; thiết kế scene khác nếu không",
+      "evidence": "Quan sát GV nếu có; không chấm",
+      "navigation": {
+        "previous_fixed_bottom_left": true,
+        "next_fixed_bottom_right": true,
+        "mode": "FREE",
+        "require_skip_reason": false,
+        "style": "FLOATING_FIXED",
+        "footer": false,
+        "count_location": "HEADER_OR_COMPACT"
+      },
+      "display": {
+        "mode": "DIRECT",
+        "delay_ms": 0,
+        "auto_advance": false,
+        "title_highlight": {
+          "duration_ms": 3000,
+          "cycles": 2,
+          "restart_on_rerender": false,
+          "reduced_motion": "OFF"
+        }
+      },
+      "ui": {
+        "pedagogical_labels": false,
+        "reflection_forms": false,
+        "glossary_mode": "INLINE_KEYWORD",
+        "core_visible": true
+      },
+      "question_intents": [
+        "GUIDING"
+      ],
+      "model_view_id": null,
+      "visual_identity": "LEAD_IN",
+      "lead_in": {
+        "target_scene_id": "DNS-REVIEW-01",
+        "copy_vi": "Em vừa tìm hiểu DNS. Hãy thử nhớ lại các từ khóa.",
+        "copy_en": "You have explored DNS. Try recalling the keywords.",
+        "illustration_asset_id": "A-LEAD-RECALL",
+        "no_answer_spoiler": true
+      },
+      "section_id": "CORE-DNS",
+      "activity_cluster_id": "CL-DNS-REVIEW"
+    },
+    {
+      "lesson_id": "LESSON-OT-WEB-RETRIEVAL-DNS-001",
+      "topic_id": "OT-WEB-RETRIEVAL-DNS-001",
+      "scene_id": "DNS-REVIEW-01",
+      "kind": "REVIEW",
+      "objective_id": "OBJ-01",
+      "student_task": "Kiểm chứng bằng câu hỏi",
+      "opening_cue": "DNS",
+      "attention_plan": {
+        "primary_focus_target": "opening-question",
+        "cue_type": "SPOTLIGHT",
+        "motion_purpose": "nhấn mạnh câu hỏi tình huống"
+      },
+      "layout_mode": "STORY",
+      "content_blocks": [
+        {
+          "block_id": "review",
+          "type": "quiz"
+        }
+      ],
+      "model_id": null,
+      "model_action": null,
+      "completion_gate": "NON_BLOCKING",
+      "next_scene_id": null,
+      "state_dependency": [],
+      "viewport_fallback": "hai trạng thái xếp dọc nếu vẫn nhìn đủ; thiết kế scene khác nếu không",
+      "evidence": "Quan sát GV nếu có; không chấm",
+      "navigation": {
+        "previous_fixed_bottom_left": true,
+        "next_fixed_bottom_right": true,
+        "mode": "FREE",
+        "require_skip_reason": false,
+        "style": "FLOATING_FIXED",
+        "footer": false,
+        "count_location": "HEADER_OR_COMPACT"
+      },
+      "display": {
+        "mode": "DIRECT",
+        "delay_ms": 0,
+        "auto_advance": false,
+        "title_highlight": {
+          "duration_ms": 3000,
+          "cycles": 2,
+          "restart_on_rerender": false,
+          "reduced_motion": "OFF"
+        }
+      },
+      "ui": {
+        "pedagogical_labels": false,
+        "reflection_forms": false,
+        "glossary_mode": "INLINE_KEYWORD",
+        "core_visible": true
+      },
+      "question_intents": [
+        "CONFIRMATION"
+      ],
+      "model_view_id": null,
+      "visual_identity": "REVIEW",
+      "question_formats": [
+        "SINGLE_SELECT",
+        "ORDERING"
+      ],
+      "review": {
+        "visual_cue_ids": [
+          "A-REVIEW-DNS"
+        ],
+        "feedback_after_check": true,
+        "adaptive_retry": true,
+        "summary_after_attempt": true,
+        "answer_required_for_navigation": false,
+        "initial_question_ids": [
+          "Q-DNS-1",
+          "Q-DNS-2"
+        ],
+        "retry_map": {
+          "Q-DNS-1": "Q-DNS-1-EQ",
+          "Q-DNS-2": "Q-DNS-2-EQ"
+        },
+        "retry_limit_per_question": 1,
+        "progress_policy": "ORIGINAL_AND_RETRY_SEPARATE",
+        "summary_policy": "AFTER_ORIGINAL_ROUND_ATTEMPTED_OR_SKIPPED"
+      },
+      "section_id": "CORE-DNS",
+      "activity_cluster_id": "CL-DNS-REVIEW"
+    }
+  ],
+  "activity_entries": [
+    {
+      "activity_cluster_id": "CL-DNS-OPEN",
+      "entry_scene_id": "DNS-CONTEXT-01",
+      "target_scene_id": "DNS-OBSERVE-01",
+      "mode": "REUSE",
+      "reuse_reason": "Context establishes the question before observing."
+    },
+    {
+      "activity_cluster_id": "CL-DNS-REVIEW",
+      "entry_scene_id": "DNS-LEAD-RECALL-01",
+      "target_scene_id": "DNS-REVIEW-01",
+      "mode": "NEW"
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "Q-DNS-1",
+      "equivalence_group_id": "EQ-DNS-1",
+      "ku_ids": [
+        "KU-DNS-1"
+      ]
+    },
+    {
+      "question_id": "Q-DNS-1-EQ",
+      "equivalence_group_id": "EQ-DNS-1",
+      "ku_ids": [
+        "KU-DNS-1"
+      ]
+    },
+    {
+      "question_id": "Q-DNS-2",
+      "equivalence_group_id": "EQ-DNS-2",
+      "ku_ids": [
+        "KU-DNS-2"
+      ]
+    },
+    {
+      "question_id": "Q-DNS-2-EQ",
+      "equivalence_group_id": "EQ-DNS-2",
+      "ku_ids": [
+        "KU-DNS-2"
+      ]
+    }
+  ],
+  "fixture_scope": "Semantic contract example only; not a complete lesson, source content or assets."
+}

@@ -1,0 +1,365 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/internal/one-topic/model-contract.schema.json",
+  "title": "ONE_TOPIC Skill 07 Interactive Model Contract v1",
+  "description": "Local contract for educational interactive model, not an external official standard.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "model_id",
+    "model_type",
+    "topic_id",
+    "objective_ids",
+    "ku_ids",
+    "activity_ids",
+    "learning_question",
+    "actors",
+    "inputs",
+    "states",
+    "initial_state",
+    "events",
+    "transitions",
+    "invariants",
+    "visual_channels",
+    "controls",
+    "predict_prompt",
+    "explain_prompt",
+    "test_cases",
+    "offline",
+    "locales",
+    "reduced_motion_behavior",
+    "limitations",
+    "runtime_status"
+  ],
+  "properties": {
+    "model_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "model_type": {
+      "enum": [
+        "FLOW",
+        "STATE_MACHINE",
+        "CAUSAL_SANDBOX",
+        "BRANCHING",
+        "COMPARISON",
+        "HYBRID"
+      ]
+    },
+    "topic_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "objective_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "ku_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "activity_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "learning_question": {
+      "type": "object",
+      "required": [
+        "vi",
+        "en"
+      ],
+      "properties": {
+        "vi": {
+          "type": "string",
+          "minLength": 5
+        },
+        "en": {
+          "type": "string",
+          "minLength": 5
+        }
+      },
+      "additionalProperties": false
+    },
+    "actors": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label_vi",
+          "label_en"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label_vi": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label_en": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "inputs": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": true
+    },
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "initial_state": {
+      "type": "string"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "transitions": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "from",
+          "event",
+          "to",
+          "observable"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "event": {
+            "type": "string"
+          },
+          "guard": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "observable": {
+            "type": "object",
+            "required": [
+              "vi",
+              "en"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "vi": {
+                "type": "string",
+                "minLength": 2
+              },
+              "en": {
+                "type": "string",
+                "minLength": 2
+              }
+            }
+          },
+          "payload": {
+            "type": "string"
+          },
+          "source_actor": {
+            "type": "string"
+          },
+          "target_actor": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "visual_channels": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "enum": [
+          "ACTOR_HIGHLIGHT",
+          "FLOW_TOKEN",
+          "ROUTE_HIGHLIGHT",
+          "STATE_BADGE",
+          "STEP_LOG",
+          "PAYLOAD_LABEL",
+          "COMPARISON_PANEL",
+          "OUTPUT_PREVIEW"
+        ]
+      }
+    },
+    "controls": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "enum": [
+          "NEXT_STEP",
+          "PREVIOUS_STEP",
+          "START",
+          "RESET",
+          "REPLAY",
+          "PAUSE",
+          "RESUME",
+          "SKIP_MOTION",
+          "SET_INPUT",
+          "COMPARE",
+          "CHANGE_LANGUAGE"
+        ]
+      }
+    },
+    "predict_prompt": {
+      "type": "object",
+      "required": [
+        "vi",
+        "en"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "vi": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        }
+      }
+    },
+    "explain_prompt": {
+      "type": "object",
+      "required": [
+        "vi",
+        "en"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "vi": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        }
+      }
+    },
+    "test_cases": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "action_sequence",
+          "expected_state",
+          "expected_observation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "action_sequence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "expected_state": {
+            "type": "string"
+          },
+          "expected_observation": {
+            "type": "string"
+          },
+          "motion_off_expected_same_state": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "offline": {
+      "type": "object",
+      "required": [
+        "standalone",
+        "external_dependencies"
+      ],
+      "properties": {
+        "standalone": {
+          "type": "boolean"
+        },
+        "external_dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "locales": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "reduced_motion_behavior": {
+      "type": "string",
+      "minLength": 8
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "runtime_status": {
+      "enum": [
+        "SPEC_ONLY",
+        "PROTOTYPE",
+        "READY_ASSET",
+        "BLOCKED"
+      ]
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

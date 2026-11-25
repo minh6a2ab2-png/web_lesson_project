@@ -1,0 +1,13 @@
+{
+  "version": "2.4.1",
+  "base_version": "2.4",
+  "lineage": [
+    "USER_SUPPLIED_LATEST_13_SKILLS",
+    "2.3",
+    "2.4",
+    "2.4.1"
+  ],
+  "scope": "13 definitions, shared policies, schemas, fixtures and validators",
+  "lesson_rerun": false,
+  "installed_in_chatgpt": false
+}
