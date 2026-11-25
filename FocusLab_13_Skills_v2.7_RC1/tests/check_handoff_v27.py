@@ -4,6 +4,13 @@ import hashlib,json,re,sys
 
 def check_manifest(d,root=None,registry=None):
  if not isinstance(d,dict):return ['manifest must be an object']
+ # Fail closed on the complete active schema before semantic and file checks.
+ try:
+  import jsonschema
+  schema=json.loads((Path(__file__).resolve().parents[1]/'templates/output_manifest.schema.json').read_text(encoding='utf-8'))
+  errors=list(jsonschema.Draft202012Validator(schema).iter_errors(d))
+  if errors:return ['manifest schema: '+str(x.message) for x in errors]
+ except Exception as exc:return ['manifest schema validation unavailable: '+str(exc).splitlines()[0]]
  e=[]
  for k in ['run_id','skill_id','version','topic_id','input_refs','output_files','evidence','open_issues','gate_status','next_skill','approval_status','test_status','field_status']:
   if k not in d:e.append('missing '+k)
