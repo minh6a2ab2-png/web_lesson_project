@@ -39,3 +39,14 @@ R02 local sample: 312/312 checks in direct Chromium rendering (2 variants, 3 vie
 | M05 | P1 | Phase 5 | Independent motion/readability and performance audit | Measured frame behavior and cognitive task review; no fabricated learner evidence |
 
 Motion R01: 630/630 local direct-render deterministic checks. Original MC04 R04 control and native WAAPI prototype; no exact file navigation, full deck, or field claim. Preserve A01-A12 and V01-V05. No issues silently closed. npm DNS blocked; optional GSAP adapter not exercised locally.
+
+## Phase 3 — Multimedia R01
+GSAP run 45589153888, artifact 15010351809: 13/13 actual runtime checks, verified outer digest 2b478c4b398e4e7a9c9c9ad1aa1b10010c5fd48b543167420263f2e7ab0b650d and 2/2 inner hashes. M01 partially resolved only; offline package/license and R04 integration remain open. Preserve all A/V/M issues.
+| ID | Priority | Target | Open problem | Acceptance evidence |
+|---|---|---|---|---|
+| MM01 | P1 | Phase 5 | Remotion actual runtime and licensing | Confirm lawful production terms, test only if authorized; FFmpeg default remains usable |
+| MM02 | P1 | Phase 5 | Natural Vietnamese/English narration | Review pronunciation, intelligibility and language coverage; approved TTS or silent fallback |
+| MM03 | P0 | Before production release | Offline playback, captions, transcript, keyboard and language integration | Test actual lesson package in browser, no forced playback, no spoiler |
+| MM04 | P1 | Phase 5 | Reusable media cache and scene-level invalidation | Verify separate workflow runs and selective rebuild |
+| MM05 | P1 | Phase 5 | Independent learning and motion/audio quality | Evaluate whether video adds value over stills; actual learner evidence if available |
+R01: two educational MP4s, 5 scenes each, 720p, H264/AAC, eSpeak VI/EN, timed captions, 42/42 local technical checks. No Remotion, Lemo, or KittenTTS execution. No private checkpoint published. No claims of independent voice or pedagogical acceptance.
