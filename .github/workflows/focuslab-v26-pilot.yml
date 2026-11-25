@@ -1,0 +1,42 @@
+name: FocusLab v2.6 infrastructure R02
+on:
+  pull_request:
+    branches: [focuslab-13-skills-v2.5]
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'FocusLab_v2.6_pilot/**'
+      - '.github/workflows/focuslab-v26-pilot.yml'
+permissions:
+  contents: read
+concurrency:
+  group: focuslab-v26-pilot
+  cancel-in-progress: true
+jobs:
+  smoke:
+    if: github.head_ref == 'focuslab-v2.6-automation-pilot' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout trusted same-repository pilot
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Prepare isolated dependencies
+        run: |
+          python3 -m venv .pilot-venv
+          .pilot-venv/bin/pip install --disable-pip-version-check Pillow==11.3.0 playwright==1.55.0
+          .pilot-venv/bin/python -m playwright install --with-deps chromium
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y ffmpeg
+          fi
+      - name: Execute bounded pilot
+        run: .pilot-venv/bin/python FocusLab_v2.6_pilot/r02.py
+      - name: Publish public-data evidence only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: focuslab-v26-r02-evidence
+          path: FocusLab_v2.6_pilot/r02-evidence/
+          if-no-files-found: warn
+          retention-days: 7
